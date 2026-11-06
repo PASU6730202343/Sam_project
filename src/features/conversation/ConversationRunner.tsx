@@ -25,7 +25,7 @@ export function ConversationRunner({ lesson, lang }: Props) {
   const [index, setIndex] = useState(0);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [busy, setBusy] = useState(false);
-  const [result, setResult] = useState<{ outcome: FinishOutcome | null; xp: { awarded: boolean; amount: number } | null } | null>(null);
+  const [result, setResult] = useState<{ outcome: FinishOutcome | null; xp: { awarded: boolean; amount: number } | null; saveFailed: boolean } | null>(null);
   const htmlLang = lang === 'en' ? 'en' : 'zh-CN';
 
   const step = steps[index];
@@ -52,8 +52,16 @@ export function ConversationRunner({ lesson, lang }: Props) {
     setBusy(true);
     try {
       const outcome = await finishConv(lesson, lang, good, scored.length, turns.length - scored.length);
-      const xp = await completeLesson(lesson, lang);
-      setResult({ outcome, xp });
+      let xp: { awarded: boolean; amount: number } | null = null;
+      let saveFailed = false;
+      try {
+        xp = await completeLesson(lesson, lang);
+      } catch (e) {
+        // บันทึกการจบบทไม่สำเร็จ (เช่น เครือข่ายล้ม) — ยังต้องโชว์สรุปคะแนน แล้วให้ลองใหม่ได้
+        console.warn('บันทึกการจบบทไม่สำเร็จ', e);
+        saveFailed = true;
+      }
+      setResult({ outcome, xp, saveFailed });
     } finally {
       setBusy(false);
     }
@@ -86,7 +94,12 @@ export function ConversationRunner({ lesson, lang }: Props) {
             {result.outcome?.passed ? <Badge tone="green">ผ่านเกณฑ์ ✓</Badge> : <Badge>ควรทบทวน (ต้องเหมาะสม ≥ {Math.ceil(scored.length * PASS_RATIO_CONVERSATION)} ขั้น)</Badge>}
           </div>
         )}
-        <p className="mt-3 font-semibold" role="status">
+        {result.saveFailed && (
+          <p role="alert" className="mt-3 rounded-2xl bg-red-50 p-3 font-semibold text-red-900">
+            ⚠️ บันทึกการจบบทไม่สำเร็จ (เชื่อมต่อเซิร์ฟเวอร์ไม่ได้) คะแนนรอบนี้ยังดูได้ที่หน้า “คะแนน” กด “ลองสนทนาอีกรอบ” เมื่อเครือข่ายพร้อมเพื่อบันทึกการจบบทอีกครั้ง
+          </p>
+        )}
+        <p hidden={result.saveFailed} className="mt-3 font-semibold" role="status">
           {result.xp?.awarded
             ? `เรียนครบทุกขั้น ได้ ${result.xp.amount} XP (${lang.toUpperCase()}) 🎖️ และปลดล็อกบทถัดไปแล้ว`
             : `ทบทวนบทนี้แล้ว — เคยได้ ${XP_LESSON} XP ของบทนี้ใน${langName}ไปแล้ว จึงไม่ได้เพิ่ม`}

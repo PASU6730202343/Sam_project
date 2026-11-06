@@ -30,6 +30,16 @@ const passes = (correct: number, total: number, ratio: number) => total === 0 ||
 
 export const useProgressStore = create<ProgressState>((set, get) => {
   const user = () => useAuth.getState().user;
+  // สถิติฝั่งเซิร์ฟเวอร์เป็นงานเสริม: คะแนนรอบถูกบันทึกลงสมุดบันทึกในเครื่องไปแล้ว
+  // ถ้าเครือข่าย/เซิร์ฟเวอร์ล้มต้องไม่ทำให้หน้าสรุปผลคะแนนไม่ขึ้น
+  const syncStats = async (userId: string, lang: Lang, delta: Parameters<typeof storage.recordStudy>[2]) => {
+    try {
+      await storage.recordStudy(userId, lang, delta);
+      await get().load(userId);
+    } catch (e) {
+      console.warn('บันทึกสถิติไม่สำเร็จ (คะแนนรอบยังถูกเก็บไว้ในเครื่อง)', e);
+    }
+  };
 
   return {
     progress: null,
@@ -48,8 +58,7 @@ export const useProgressStore = create<ProgressState>((set, get) => {
       if (!u) return null;
       const passed = passes(correct, total, PASS_RATIO_PRACTICE);
       useJournal.getState().addAttempt({ lang, lessonId: lesson.id, kind, correct, total, skipped, passed });
-      await storage.recordStudy(u.id, lang, { practiceRuns: 1 });
-      await get().load(u.id);
+      await syncStats(u.id, lang, { practiceRuns: 1 });
       return { passed };
     },
 
@@ -58,8 +67,7 @@ export const useProgressStore = create<ProgressState>((set, get) => {
       if (!u) return null;
       const passed = passes(appropriate, total, PASS_RATIO_CONVERSATION);
       useJournal.getState().addAttempt({ lang, lessonId: lesson.id, kind: 'conversation', correct: appropriate, total, skipped, passed });
-      await storage.recordStudy(u.id, lang, { conversationsDone: 1 });
-      await get().load(u.id);
+      await syncStats(u.id, lang, { conversationsDone: 1 });
       return { passed };
     },
 
