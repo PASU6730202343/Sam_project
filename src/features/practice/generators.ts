@@ -116,20 +116,23 @@ function listening(lesson: Lesson, lang: Lang, rng: Rng): ChoiceQuestion[] {
   });
 }
 
-function pronunciationQs(lesson: Lesson, lang: Lang): SpeakQuestion[] {
-  return lesson.words.map((w) => ({
-    id: `${lesson.id}:pronunciation:${w.id}`,
-    kind: 'pronunciation',
-    type: 'speak',
-    wordId: w.id,
-    promptTh: 'พูดคำนี้ให้ชัด',
-    target: targetWord(w, lang),
-    lang,
-    meaningTh: w.th,
-    pron: pronunciation(w, lang, true),
-    icon: w.icon,
-    explainTh: `${targetWord(w, lang)} อ่านว่า ${pronunciation(w, lang, true)}`,
-  }));
+function pronunciationQs(lesson: Lesson, lang: Lang, showPinyin: boolean): SpeakQuestion[] {
+  return lesson.words.map((w) => {
+    const pron = pronunciation(w, lang, showPinyin);
+    return {
+      id: `${lesson.id}:pronunciation:${w.id}`,
+      kind: 'pronunciation',
+      type: 'speak',
+      wordId: w.id,
+      promptTh: 'พูดคำนี้ให้ชัด',
+      target: targetWord(w, lang),
+      lang,
+      meaningTh: w.th,
+      pron,
+      icon: w.icon,
+      explainTh: pron ? `${targetWord(w, lang)} อ่านว่า ${pron}` : `${targetWord(w, lang)} = ${w.th}`,
+    };
+  });
 }
 
 function sentence(lesson: Lesson, lang: Lang, rng: Rng): OrderQuestion[] {
@@ -176,12 +179,13 @@ function scenario(lesson: Lesson, lang: Lang, rng: Rng): ChoiceQuestion[] {
   });
 }
 
-export function generateQuestions(lesson: Lesson, lang: Lang, kind: PracticeKind, rng: Rng = Math.random): Question[] {
+/** showPinyin = false (ภาษาจีน) → ไม่ใส่พินอินในโจทย์ออกเสียงและคำอธิบาย */
+export function generateQuestions(lesson: Lesson, lang: Lang, kind: PracticeKind, rng: Rng = Math.random, showPinyin = true): Question[] {
   switch (kind) {
     case 'memory': return memory(lesson, lang, rng);
     case 'reading': return reading(lesson, lang, rng);
     case 'listening': return listening(lesson, lang, rng);
-    case 'pronunciation': return pronunciationQs(lesson, lang);
+    case 'pronunciation': return pronunciationQs(lesson, lang, showPinyin);
     case 'sentence': return sentence(lesson, lang, rng);
     case 'scenario': return scenario(lesson, lang, rng);
   }

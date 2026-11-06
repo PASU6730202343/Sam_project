@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AudioButton } from '../../components/AudioButton';
+import { Pinyin } from '../../components/Pinyin';
 import { Button } from '../../components/ui';
 import type { OrderQuestion } from './types';
 
@@ -37,6 +38,7 @@ export function OrderView({ q, locked, onAnswer }: Props) {
             className="rounded-xl bg-pistachio px-3 py-2 font-semibold text-ink transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-denim"
           >
             {q.tokens[ti]}
+            <Pinyin text={q.tokens[ti]} lang={q.lang} className="!text-xs !text-ink/80" />
           </button>
         ))}
       </div>
@@ -51,6 +53,7 @@ export function OrderView({ q, locked, onAnswer }: Props) {
             className="rounded-xl border border-frost-200 bg-white px-3 py-2 font-semibold text-denim shadow-sm transition hover:-translate-y-0.5 hover:bg-frost-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-denim disabled:opacity-30 disabled:hover:translate-y-0"
           >
             {t}
+            <Pinyin text={t} lang={q.lang} className="!text-xs" />
           </button>
         ))}
       </div>
@@ -66,6 +69,7 @@ export function OrderView({ q, locked, onAnswer }: Props) {
           <>
             <span lang={lang} className="ml-2 font-semibold">
               {q.sentence}
+              <Pinyin text={q.sentence} lang={q.lang} />
             </span>
             <AudioButton text={q.sentence} lang={q.lang} label="ฟังประโยคที่ถูกต้อง" />
           </>

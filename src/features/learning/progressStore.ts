@@ -1,35 +1,35 @@
 import { create } from 'zustand';
-import type { Lang, Lesson, UserProgress, XpSource } from '../../types';
+import type { Lang, Lesson, UserProgress } from '../../types';
 import { storage, type AwardXpResult } from '../../services/storage';
 import { useAuth } from '../auth/authStore';
-import { PASS_RATIO_CONVERSATION, PASS_RATIO_PRACTICE, XP_CONVERSATION, XP_LESSON, XP_PRACTICE } from './xp';
+import type { PracticeKind } from '../practice/types';
+import { useJournal } from './journal';
+import { PASS_RATIO_CONVERSATION, PASS_RATIO_PRACTICE, XP_LESSON } from './xp';
 
 export interface FinishOutcome {
+  /** ผ่านเกณฑ์คะแนน (ถ้าข้ามทุกข้อ ถือว่าไม่มีคะแนนให้ตัดสิน = ผ่าน) */
   passed: boolean;
-  /** null = ไม่ผ่านเกณฑ์ จึงไม่พยายามให้ XP */
-  xp: AwardXpResult | null;
 }
 
 interface ProgressState {
   progress: UserProgress | null;
   load: (userId: string | null) => Promise<void>;
   toggleStar: (lang: Lang, wordId: string) => Promise<void>;
-  /** จบบทเรียน: บันทึกว่าจบ + ให้ XP (service ตรวจว่าเคยได้แล้วหรือไม่) */
+  /** จบรอบแบบฝึก 1 แบบ: บันทึกคะแนนของรอบ (ไม่ทำให้บทจบ) */
+  finishPractice: (lesson: Lesson, lang: Lang, kind: PracticeKind, correct: number, total: number, skipped?: number) => Promise<FinishOutcome | null>;
+  /** จบรอบสนทนา: บันทึกคะแนน (บทจบเมื่อกดจบบทเรียนผ่าน completeLesson) */
+  finishConversation: (lesson: Lesson, lang: Lang, appropriate: number, total: number, skipped?: number) => Promise<FinishOutcome | null>;
+  /**
+   * จบบทเรียน (เรียนครบทุกขั้นแล้ว): บันทึกว่าจบ → ปลดล็อกบทถัดไป + ให้ XP ครั้งแรกต่อ (ผู้ใช้, ภาษา, บท)
+   * เรียกซ้ำตอนทบทวนได้ ไม่ได้ XP เพิ่ม
+   */
   completeLesson: (lesson: Lesson, lang: Lang) => Promise<AwardXpResult | null>;
-  /** จบรอบแบบฝึก: ผ่านเกณฑ์ → นับบทว่าจบ + ขอ XP; ทุกรอบนับสถิติ */
-  finishPractice: (lesson: Lesson, lang: Lang, correct: number, total: number) => Promise<FinishOutcome | null>;
-  /** จบรอบสนทนา: ผ่านเกณฑ์ → นับบทว่าจบ + ขอ XP */
-  finishConversation: (lesson: Lesson, lang: Lang, appropriate: number, total: number) => Promise<FinishOutcome | null>;
 }
+
+const passes = (correct: number, total: number, ratio: number) => total === 0 || correct / total >= ratio;
 
 export const useProgressStore = create<ProgressState>((set, get) => {
   const user = () => useAuth.getState().user;
-
-  async function award(lesson: Lesson, lang: Lang, source: XpSource, amount: number) {
-    const u = user()!;
-    await storage.markLessonCompleted(u.id, lang, lesson.id, lesson.careerId);
-    return storage.awardXp(u.id, { lang, lessonId: lesson.id, careerId: lesson.careerId, source, amount });
-  }
 
   return {
     progress: null,
@@ -43,33 +43,35 @@ export const useProgressStore = create<ProgressState>((set, get) => {
       await get().load(u.id);
     },
 
+    finishPractice: async (lesson, lang, kind, correct, total, skipped = 0) => {
+      const u = user();
+      if (!u) return null;
+      const passed = passes(correct, total, PASS_RATIO_PRACTICE);
+      useJournal.getState().addAttempt({ lang, lessonId: lesson.id, kind, correct, total, skipped, passed });
+      await storage.recordStudy(u.id, lang, { practiceRuns: 1 });
+      await get().load(u.id);
+      return { passed };
+    },
+
+    finishConversation: async (lesson, lang, appropriate, total, skipped = 0) => {
+      const u = user();
+      if (!u) return null;
+      const passed = passes(appropriate, total, PASS_RATIO_CONVERSATION);
+      useJournal.getState().addAttempt({ lang, lessonId: lesson.id, kind: 'conversation', correct: appropriate, total, skipped, passed });
+      await storage.recordStudy(u.id, lang, { conversationsDone: 1 });
+      await get().load(u.id);
+      return { passed };
+    },
+
     completeLesson: async (lesson, lang) => {
       const u = user();
       if (!u) return null;
-      const result = await award(lesson, lang, 'lesson', XP_LESSON);
+      await storage.markLessonCompleted(u.id, lang, lesson.id, lesson.careerId);
+      const result = await storage.awardXp(u.id, { lang, lessonId: lesson.id, careerId: lesson.careerId, source: 'lesson', amount: XP_LESSON });
       if (result.awarded) await storage.recordStudy(u.id, lang, { sessions: 1, wordsReviewed: lesson.words.length });
+      useJournal.getState().markStep(lang, lesson.id, 'conversation');
       await get().load(u.id);
       return result;
-    },
-
-    finishPractice: async (lesson, lang, correct, total) => {
-      const u = user();
-      if (!u) return null;
-      await storage.recordStudy(u.id, lang, { practiceRuns: 1 });
-      const passed = total > 0 && correct / total >= PASS_RATIO_PRACTICE;
-      const xp = passed ? await award(lesson, lang, 'practice', XP_PRACTICE) : null;
-      await get().load(u.id);
-      return { passed, xp };
-    },
-
-    finishConversation: async (lesson, lang, appropriate, total) => {
-      const u = user();
-      if (!u) return null;
-      await storage.recordStudy(u.id, lang, { conversationsDone: 1 });
-      const passed = total > 0 && appropriate / total >= PASS_RATIO_CONVERSATION;
-      const xp = passed ? await award(lesson, lang, 'conversation', XP_CONVERSATION) : null;
-      await get().load(u.id);
-      return { passed, xp };
     },
   };
 });

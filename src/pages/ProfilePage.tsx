@@ -96,13 +96,16 @@ export default function ProfilePage() {
           <Stat label="รอบสนทนา" value={stats.conversationsDone} />
           <Stat label="เรียนล่าสุด" value={stats.lastStudyAt ? new Date(stats.lastStudyAt).toLocaleDateString('th-TH') : '-'} />
         </div>
-        {next && (
-          <div className="mt-4">
+        <div className="mt-4 flex flex-wrap gap-3">
+          {next && (
             <Link to={`/lesson/${next.id}`}>
               <Button>{started ? 'เรียนต่อ' : 'เริ่มเรียน'}: บท {next.order} {next.titleTh} →</Button>
             </Link>
-          </div>
-        )}
+          )}
+          <Link to="/scores">
+            <Button variant="secondary">ดูคะแนนแบบฝึกและสนทนา</Button>
+          </Link>
+        </div>
       </Card>
 
       <Card className="mb-4">

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AudioButton } from '../../components/AudioButton';
+import { Pinyin } from '../../components/Pinyin';
 import { IconWord } from '../../components/ui';
 import { speak } from '../../services/speech';
 import type { ChoiceQuestion } from './types';
@@ -25,9 +26,13 @@ export function ChoiceView({ q, locked, onAnswer }: Props) {
         {q.icon && <IconWord icon={q.icon} size="lg" />}
         <div className="min-w-0 flex-1">
           {q.display ? (
-            <p lang={q.displayLang === 'zh' ? 'zh-CN' : q.displayLang} className="text-2xl font-bold sm:text-3xl">
-              {q.display}
-            </p>
+            <>
+              <p lang={q.displayLang === 'zh' ? 'zh-CN' : q.displayLang} className="text-2xl font-bold sm:text-3xl">
+                {q.display}
+              </p>
+              {/* โจทย์ "อ่านคำศัพท์" ให้เลือกพินอินเอง จึงห้ามโชว์พินอินใต้โจทย์ (จะเฉลยคำตอบ) */}
+              {q.displayLang === 'zh' && q.kind !== 'reading' && <Pinyin text={q.display} lang="zh" />}
+            </>
           ) : (
             <p className="text-lg">🎧 กดปุ่มเสียงเพื่อฟัง</p>
           )}
@@ -60,6 +65,7 @@ export function ChoiceView({ q, locked, onAnswer }: Props) {
                 {locked && isAnswer && <span aria-hidden>✓ </span>}
                 {locked && isPicked && !isAnswer && <span aria-hidden>✗ </span>}
                 {opt}
+                {q.optionsLang === 'zh' && <Pinyin text={opt} lang="zh" />}
               </button>
             </li>
           );

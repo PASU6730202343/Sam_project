@@ -2,12 +2,15 @@ import { useEffect } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../features/auth/authStore';
 import { useSettings } from '../../features/settings/settingsStore';
+import { useJournal } from '../../features/learning/journal';
 import { useProgressStore } from '../../features/learning/progressStore';
+import { PinyinToggle } from '../PinyinToggle';
 import { Button, ToastViewport } from '../ui';
 
 const links = [
   { to: '/', label: 'หน้าหลัก', end: true },
   { to: '/careers', label: 'หมวดอาชีพ' },
+  { to: '/scores', label: 'คะแนน' },
   { to: '/starred', label: 'คำที่ติดดาว' },
   { to: '/profile', label: 'โปรไฟล์' },
 ];
@@ -17,9 +20,11 @@ export function AppLayout() {
   const { lang, setLang } = useSettings();
   const navigate = useNavigate();
   const loadProgress = useProgressStore((s) => s.load);
+  const loadJournal = useJournal((s) => s.load);
   useEffect(() => {
+    loadJournal(user?.id ?? null);
     void loadProgress(user?.id ?? null);
-  }, [user, loadProgress]);
+  }, [user, loadProgress, loadJournal]);
 
   return (
     <div className="min-h-screen bg-frost text-denim">
@@ -45,7 +50,8 @@ export function AppLayout() {
               </NavLink>
             ))}
           </nav>
-          <div className="ml-auto flex items-center gap-2">
+          <div className="ml-auto flex flex-wrap items-center gap-2">
+            <PinyinToggle />
             <div role="group" aria-label="ภาษาที่เรียน" className="inline-flex rounded-2xl bg-frost-200 p-1">
               {(['en', 'zh'] as const).map((l) => (
                 <button

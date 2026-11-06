@@ -30,15 +30,29 @@ export default function LanguagePage() {
           </Card>
         ))}
       </div>
-      <Card className="mt-6 flex items-center justify-between gap-4">
-        <div>
-          <p className="font-bold">แสดงพินอิน (ภาษาจีน)</p>
-          <p className="text-sm">ระบบจำค่าที่ตั้งไว้</p>
+      <Card className="mt-6">
+        <p className="font-bold">ภาษาจีน: ต้องการให้มีพินอินไหม?</p>
+        <p className="mb-3 text-sm">
+          เลือก “มีพินอิน” = ทุกที่ที่มีตัวจีน (คำศัพท์ ประโยค ไวยากรณ์ สนทนา แบบฝึก) จะมีพินอินกำกับเสมอ · เลือก “ไม่มีพินอิน” = ไม่แสดงพินอินเลย (รอบแบบฝึก “อ่านคำศัพท์” จะถูกข้าม) · เปลี่ยนได้ทุกเมื่อ ระบบจำค่าไว้
+        </p>
+        <div role="radiogroup" aria-label="แสดงพินอินหรือไม่" className="flex flex-wrap gap-3">
+          {([true, false] as const).map((v) => (
+            <button
+              key={String(v)}
+              type="button"
+              role="radio"
+              aria-checked={showPinyin === v}
+              onClick={() => setShowPinyin(v)}
+              className={`rounded-2xl border-2 px-5 py-3 text-left font-semibold transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-denim ${
+                showPinyin === v ? 'border-pistachio bg-pistachio-100 text-ink' : 'border-frost-200 bg-white text-denim hover:bg-frost-200'
+              }`}
+            >
+              <span aria-hidden>{showPinyin === v ? '● ' : '○ '}</span>
+              {v ? 'มีพินอิน' : 'ไม่มีพินอิน'}
+              <span className="block text-sm font-normal">{v ? 'เช่น 欢迎 — huānyíng' : 'เช่น 欢迎 (ตัวจีนล้วน)'}</span>
+            </button>
+          ))}
         </div>
-        <label className="inline-flex cursor-pointer items-center gap-2">
-          <input type="checkbox" role="switch" className="h-5 w-5 accent-denim" checked={showPinyin} onChange={(e) => setShowPinyin(e.target.checked)} />
-          <span>{showPinyin ? 'เปิด' : 'ปิด'}</span>
-        </label>
       </Card>
       <div className="mt-6">
         <Link to="/careers">

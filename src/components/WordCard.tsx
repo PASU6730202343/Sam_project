@@ -1,6 +1,7 @@
 import type { Lang, Word } from '../types';
 import { Card, IconWord } from './ui';
 import { AudioButton } from './AudioButton';
+import { Pinyin } from './Pinyin';
 import { StarButton } from './StarButton';
 import { pronunciation, targetExample, targetWord } from '../features/learning/wordView';
 
@@ -36,6 +37,7 @@ export function WordCard({ word, lang, showPinyin, large }: Props) {
           <p lang={lang === 'en' ? 'en' : 'zh-CN'} className={large ? 'text-lg' : ''}>
             {example}
           </p>
+          <Pinyin text={example} lang={lang} />
           <p className="text-sm">{word.exampleTh}</p>
         </div>
         <AudioButton text={example} lang={lang} label={`ฟังประโยคตัวอย่างของคำว่า ${text}`} />

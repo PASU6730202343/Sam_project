@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Lang } from '../types';
 import { isRecognitionSupported, startRecognition, type RecognitionSession } from '../services/recognition';
 
-/** พูดใส่ไมค์ → ข้อความ; supported=false ให้ UI ตกไปใช้การพิมพ์ */
+/** พูดใส่ไมค์ → ข้อความ; supported=false ให้ UI แจ้งเตือนและให้กดข้าม */
 export function useSpeechInput(lang: Lang, onText: (text: string) => void) {
   const supported = isRecognitionSupported();
   const [listening, setListening] = useState(false);
@@ -28,7 +28,7 @@ export function useSpeechInput(lang: Lang, onText: (text: string) => void) {
       onEnd: () => setListening(false),
     });
     if (!s) {
-      setError('เริ่มใช้ไมโครโฟนไม่ได้ กรุณาพิมพ์คำตอบแทน');
+      setError('เริ่มใช้ไมโครโฟนไม่ได้ กรุณากดข้ามข้อนี้');
       return;
     }
     session.current = s;

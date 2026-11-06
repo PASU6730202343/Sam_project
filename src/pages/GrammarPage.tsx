@@ -1,49 +1,47 @@
-import { Link } from 'react-router-dom';
-import { Badge, Button, Card, useToast } from '../components/ui';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button, Card } from '../components/ui';
 import { LessonFrame } from '../components/layout/LessonFrame';
 import { AudioButton } from '../components/AudioButton';
+import { Pinyin } from '../components/Pinyin';
 import { SpeechNotice } from '../components/SpeechNotice';
-import { PinyinToggle } from '../components/PinyinToggle';
-import { getAdjacentLessons } from '../data';
+import { stepPath } from '../features/learning/access';
+import { useJournal } from '../features/learning/journal';
 import { useSettings } from '../features/settings/settingsStore';
-import { useProgress } from '../hooks/useProgress';
-import { useProgressStore } from '../features/learning/progressStore';
 import { targetExample, pronunciation } from '../features/learning/wordView';
 import type { Lesson } from '../types';
 
 function GrammarContent({ lesson }: { lesson: Lesson }) {
   const { lang, showPinyin } = useSettings();
-  const { progress } = useProgress();
-  const complete = useProgressStore((s) => s.completeLesson);
-  const push = useToast((s) => s.push);
+  const markStep = useJournal((s) => s.markStep);
+  const navigate = useNavigate();
   const note = lesson.grammar[lang];
-  const done = progress?.completed.some((c) => c.lang === lang && c.lessonId === lesson.id);
-  const { next } = getAdjacentLessons(lesson);
-  const langName = lang === 'en' ? 'ภาษาอังกฤษ' : 'ภาษาจีน';
+  const htmlLang = lang === 'en' ? 'en' : 'zh-CN';
 
-  const finish = async () => {
-    const res = await complete(lesson, lang);
-    if (res?.awarded) push(`เรียนจบบทแล้ว! ได้ ${res.amount} XP (${langName})`, 'success');
-    else push(`ทบทวนบทนี้แล้ว — เคยได้ XP ของบทนี้ใน${langName}ไปแล้ว จึงไม่ได้เพิ่ม`, 'info');
+  // อ่านครบแล้วกดไปต่อ → นับว่าจบขั้นไวยากรณ์ และปลดล็อกขั้นฝึกฝน
+  const finish = () => {
+    markStep(lang, lesson.id, 'grammar');
+    navigate(stepPath(lesson.id, 'practice'));
   };
 
   return (
     <>
-      <div className="mb-4 flex justify-end">
-        <PinyinToggle />
-      </div>
       <SpeechNotice lang={lang} />
       <Card className="mb-6">
-        <h2 className="text-xl font-bold">{note.title}</h2>
+        <h2 lang={htmlLang} className="text-xl font-bold">{note.title}</h2>
+        <Pinyin text={note.title} lang={lang} />
         <p className="mt-2">{note.explanationTh}</p>
-        <p className="mt-3 rounded-2xl bg-pistachio-100 p-3 font-mono text-ink">{note.pattern}</p>
+        <div className="mt-3 rounded-2xl bg-pistachio-100 p-3 text-ink">
+          <p lang={htmlLang} className="font-mono">{note.pattern}</p>
+          <Pinyin text={note.pattern} lang={lang} className="!text-ink/80" />
+        </div>
         <ul className="mt-4 space-y-3">
           {note.examples.map((e) => (
             <li key={e.text} className="flex items-center gap-3 rounded-2xl bg-frost p-3">
               <div className="flex-1">
-                <p lang={lang === 'en' ? 'en' : 'zh-CN'} className="text-lg font-semibold">
+                <p lang={htmlLang} className="text-lg font-semibold">
                   {e.text}
                 </p>
+                <Pinyin text={e.text} lang={lang} />
                 <p className="text-sm">{e.th}</p>
               </div>
               <AudioButton text={e.text} lang={lang} label={`ฟังประโยค ${e.text}`} />
@@ -63,9 +61,10 @@ function GrammarContent({ lesson }: { lesson: Lesson }) {
                 {w.icon}
               </span>
               <div className="flex-1">
-                <p lang={lang === 'en' ? 'en' : 'zh-CN'} className="text-lg">
+                <p lang={htmlLang} className="text-lg">
                   {s}
                 </p>
+                <Pinyin text={s} lang={lang} />
                 <p className="text-sm">{w.exampleTh}</p>
                 {pron && (
                   <p className="text-xs">
@@ -81,26 +80,15 @@ function GrammarContent({ lesson }: { lesson: Lesson }) {
 
       <Card className="mt-8 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="font-bold">จบบทเรียนนี้</p>
-          <p className="text-sm">กดเมื่อเรียนคำศัพท์และไวยากรณ์เสร็จแล้ว</p>
+          <p className="font-bold">อ่านครบแล้วใช่ไหม?</p>
+          <p className="text-sm">ขั้นถัดไปคือแบบฝึก ทำตามลำดับทีละรอบ</p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          {done && <Badge tone="green">เรียนจบแล้ว ✓</Badge>}
-          <Button onClick={finish}>{done ? 'ทบทวนอีกครั้ง' : 'จบบทเรียน (รับ XP)'}</Button>
-          {done && next && (
-            <Link to={`/lesson/${next.id}`}>
-              <Button variant="secondary">บทถัดไป →</Button>
-            </Link>
-          )}
-          {done && !next && (
-            <Link to="/careers">
-              <Button variant="secondary">กลับหมวดอาชีพ</Button>
-            </Link>
-          )}
-        </div>
+        <Button size="lg" onClick={finish}>
+          จบขั้นนี้ ไปต่อ: ฝึกฝน →
+        </Button>
       </Card>
       <div className="mt-4">
-        <Link to={`/lesson/${lesson.id}/vocab`}>
+        <Link to={stepPath(lesson.id, 'vocab')}>
           <Button variant="ghost">← กลับไปคำศัพท์</Button>
         </Link>
       </div>

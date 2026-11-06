@@ -16,6 +16,8 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
+    // เทสต์ต้องไม่ยิง Supabase จริงแม้ .env จะตั้ง backend เป็น supabase
+    env: { VITE_STORAGE_BACKEND: 'local' },
     include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 });

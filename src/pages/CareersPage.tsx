@@ -1,7 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { Badge, Card, ProgressBar } from '../components/ui';
 import { PageHeader } from '../components/layout/PageHeader';
+import { Pinyin } from '../components/Pinyin';
 import { careers, getCareer, getLessonsByCareer } from '../data';
+import { isLessonUnlocked } from '../features/learning/access';
 import { useSettings } from '../features/settings/settingsStore';
 import { useProgress } from '../hooks/useProgress';
 import { lessonTitle } from '../features/learning/wordView';
@@ -46,23 +48,29 @@ export default function CareersPage() {
               </p>
               <ProgressBar value={(done / lessons.length) * 100} label={`ความคืบหน้าหมวด ${career.nameTh}`} />
             </Card>
+            <p className="mb-3 text-sm">เรียนไปตามลำดับ: จบบทก่อนหน้าแล้วบทถัดไปจึงจะปลดล็อก</p>
             <ol className="grid gap-3 sm:grid-cols-2">
-              {lessons.map((l) => (
-                <li key={l.id}>
-                  <Link to={`/lesson/${l.id}`}>
-                    <Card interactive className="flex h-full items-center gap-4">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pistachio-100 text-xl font-bold text-ink">{l.order}</span>
-                      <div className="flex-1">
-                        <p className="font-bold">{l.titleTh}</p>
-                        <p lang={lang === 'en' ? 'en' : 'zh-CN'} className="text-sm">
-                          {lessonTitle(l, lang)}
-                        </p>
-                      </div>
-                      {doneIds.has(l.id) && <Badge tone="green">จบแล้ว ✓</Badge>}
-                    </Card>
-                  </Link>
-                </li>
-              ))}
+              {lessons.map((l, i) => {
+                const unlocked = isLessonUnlocked(l, doneIds);
+                const body = (
+                  <Card interactive={unlocked} className={`flex h-full items-center gap-4 ${unlocked ? '' : 'opacity-60'}`}>
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pistachio-100 text-xl font-bold text-ink">
+                      <span aria-hidden>{unlocked ? l.order : '🔒'}</span>
+                      <span className="sr-only">บท {l.order}</span>
+                    </span>
+                    <div className="flex-1">
+                      <p className="font-bold">{l.titleTh}</p>
+                      <p lang={lang === 'en' ? 'en' : 'zh-CN'} className="text-sm">
+                        {lessonTitle(l, lang)}
+                      </p>
+                      <Pinyin text={lessonTitle(l, lang)} lang={lang} />
+                      {!unlocked && <p className="mt-1 text-xs">ล็อก — จบบท {lessons[i - 1].order} ก่อน</p>}
+                    </div>
+                    {doneIds.has(l.id) && <Badge tone="green">จบแล้ว ✓</Badge>}
+                  </Card>
+                );
+                return <li key={l.id}>{unlocked ? <Link to={`/lesson/${l.id}`}>{body}</Link> : <div aria-disabled="true">{body}</div>}</li>;
+              })}
             </ol>
           </>
         )}
