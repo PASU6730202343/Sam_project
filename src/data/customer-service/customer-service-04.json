@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-04",
+  "careerId": "customer-service",
+  "order": 4,
+  "titleTh": "เสนอทางแก้ปัญหา",
+  "titleEn": "Offering Solutions",
+  "titleZh": "提供解决方案",
+  "words": [
+    { "en": "solution", "enPron": "โซ-ลู-เชิน", "th": "ทางแก้ปัญหา", "zh": "解决方案", "pinyin": "jiějué fāng'àn", "icon": "💡",
+      "exampleEn": "I have a solution for you.", "exampleZh": "我为您找到了解决方案。", "exampleTh": "ดิฉัน/ผมมีทางแก้ปัญหาให้คุณค่ะ/ครับ" },
+    { "en": "refund", "enPron": "รี-ฟันด์", "th": "คืนเงิน", "zh": "退款", "pinyin": "tuìkuǎn", "icon": "💸",
+      "exampleEn": "We can give you a full refund.", "exampleZh": "我们可以为您全额退款。", "exampleTh": "เราคืนเงินเต็มจำนวนให้คุณได้ค่ะ/ครับ" },
+    { "en": "exchange", "enPron": "อิกซ์-เชนจ์", "th": "เปลี่ยนสินค้า", "zh": "换货", "pinyin": "huànhuò", "icon": "🔄",
+      "exampleEn": "You can exchange it for a new one.", "exampleZh": "您可以换货,换一个新的。", "exampleTh": "คุณเปลี่ยนเป็นชิ้นใหม่ได้ค่ะ/ครับ" },
+    { "en": "repair", "enPron": "รี-แพร์", "th": "ซ่อมแซม", "zh": "维修", "pinyin": "wéixiū", "icon": "🛠️",
+      "exampleEn": "We will repair it free of charge.", "exampleZh": "我们会免费维修。", "exampleTh": "เราซ่อมให้ฟรีค่ะ/ครับ" },
+    { "en": "coupon", "enPron": "คู-ปอน", "th": "คูปองส่วนลด", "zh": "优惠券", "pinyin": "yōuhuìquàn", "icon": "🎟️",
+      "exampleEn": "Here is a coupon for your next order.", "exampleZh": "这是您下次订单的优惠券。", "exampleTh": "นี่คือคูปองส่วนลดสำหรับคำสั่งซื้อครั้งหน้าค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "If + present, we will + verb (เงื่อนไข)",
+      "explanationTh": "If + ประโยคปัจจุบัน, we will + กริยา ใช้บอกเงื่อนไขและผลลัพธ์ที่แน่นอน เช่น ขั้นตอนคืนสินค้าหรือขอคืนเงิน",
+      "pattern": "If + you + verb, we will + verb",
+      "examples": [
+        { "text": "If you send it back, we will give you a refund.", "th": "ถ้าคุณส่งคืน เราจะคืนเงินให้ค่ะ/ครับ" },
+        { "text": "If you call us, we will arrange a repair.", "th": "ถ้าคุณโทรมา เราจะจัดการซ่อมให้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "如果……,我们就…… (เงื่อนไข)",
+      "explanationTh": "如果 + เงื่อนไข, 我们就 + ผลลัพธ์ ใช้บอกเงื่อนไขและสิ่งที่จะเกิดขึ้น",
+      "pattern": "如果 + 条件,我们就 + 结果",
+      "examples": [
+        { "text": "如果您寄回商品,我们就为您全额退款。", "th": "ถ้าคุณส่งสินค้าคืน เราจะคืนเงินเต็มจำนวนให้ค่ะ/ครับ" },
+        { "text": "如果您来电,我们就安排维修。", "th": "ถ้าคุณโทรมา เราจะจัดการซ่อมให้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ลูกค้าได้รับเครื่องปั่นที่ชำรุด คุณต้องเสนอทางเลือกซ่อม คืนเงิน หรือเปลี่ยนสินค้า อธิบายระยะเวลา และมอบคูปองเป็นการชดเชย",
+    "steps": [
+      {
+        "prompt": { "en": "The blender I bought is broken.", "zh": "我买的搅拌机坏了。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry. I have a solution for you. We can repair it or give you a refund.", "I'm sorry about that. I have a solution: we can repair it or give you a refund."],
+          "zh": ["很抱歉。我为您找到了解决方案,可以维修或者退款。", "非常抱歉,解决方案是:我们可以维修,或者为您退款。"]
+        },
+        "keywords": { "en": ["solution", "repair", "refund"], "zh": ["解决方案", "维修", "退款"] },
+        "tipTh": "ขอโทษแล้วเสนอทางเลือกหลายทางทันที"
+      },
+      {
+        "prompt": { "en": "I want a refund.", "zh": "我想要退款。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. If you send it back, we will give you a full refund.", "Certainly. If you send the product back, we will give you a full refund."],
+          "zh": ["好的。如果您寄回商品,我们就为您全额退款。", "没问题,如果您寄回商品,我们就为您全额退款。"]
+        },
+        "keywords": { "en": ["refund", "send it back", "full"], "zh": ["寄回", "全额退款", "如果"] },
+        "tipTh": "อธิบายเงื่อนไขที่ต้องทำเพื่อให้ได้เงินคืนอย่างชัดเจน"
+      },
+      {
+        "prompt": { "en": "How long does the refund take?", "zh": "退款要多久?" },
+        "suggestedAnswers": {
+          "en": ["The refund takes five working days to reach your account.", "The refund will reach your account in five working days."],
+          "zh": ["退款需要五个工作日到账。", "退款会在五个工作日内到账。"]
+        },
+        "keywords": { "en": ["refund", "five working days", "account"], "zh": ["退款", "五个工作日", "到账"] },
+        "tipTh": "บอกระยะเวลาเป็นวันทำการเสมอ ไม่ใช้คำว่า 'เร็วๆ นี้'"
+      },
+      {
+        "prompt": { "en": "Can I get another blender instead?", "zh": "可以换一台新的吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you can exchange it for a new one. We will send it free of charge.", "Yes, you can exchange it for a new one, and we will send it free of charge."],
+          "zh": ["可以,您可以换货,我们免费寄新的给您。", "可以换货,我们会免费寄一台新的给您。"]
+        },
+        "keywords": { "en": ["exchange", "new one", "free of charge"], "zh": ["换货", "新的", "免费"] },
+        "tipTh": "ถ้ามีทางเลือกอื่นให้เสนอ พร้อมบอกค่าใช้จ่ายให้ชัด"
+      },
+      {
+        "prompt": { "en": "That's good. Any compensation for the trouble?", "zh": "这样不错。给我的麻烦有补偿吗?" },
+        "suggestedAnswers": {
+          "en": ["Here is a coupon for your next order. Thank you for your understanding.", "Please accept a coupon for your next order. Thank you for your understanding."],
+          "zh": ["这是您下次订单的优惠券,感谢您的理解。", "请收下下次订单可用的优惠券,感谢您的理解。"]
+        },
+        "keywords": { "en": ["coupon", "next order", "understanding"], "zh": ["优惠券", "下次订单", "理解"] },
+        "tipTh": "ปิดด้วยการชดเชยเล็กน้อยและขอบคุณ"
+      }
+    ]
+  }
+}

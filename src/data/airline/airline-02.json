@@ -1,0 +1,91 @@
+{
+  "id": "airline-02",
+  "careerId": "airline",
+  "order": 2,
+  "titleTh": "สัมภาระ",
+  "titleEn": "Baggage",
+  "titleZh": "行李托运",
+  "words": [
+    { "en": "checked baggage", "enPron": "เช็กดฺ แบ็ก-เกจ", "th": "สัมภาระโหลดใต้เครื่อง", "zh": "托运行李", "pinyin": "tuōyùn xíngli", "icon": "🧳",
+      "exampleEn": "Your checked baggage will go straight to Tokyo.", "exampleZh": "您的托运行李会直接运到东京。", "exampleTh": "สัมภาระโหลดใต้เครื่องของคุณจะถูกส่งตรงไปโตเกียวค่ะ/ครับ" },
+    { "en": "carry-on", "enPron": "แคร์-รี-ออน", "th": "สัมภาระถือขึ้นเครื่อง", "zh": "随身行李", "pinyin": "suíshēn xíngli", "icon": "🎒",
+      "exampleEn": "Your carry-on must fit under the seat.", "exampleZh": "您的随身行李必须能放在座位下面。", "exampleTh": "สัมภาระถือขึ้นเครื่องต้องใส่ใต้เบาะที่นั่งได้ค่ะ/ครับ" },
+    { "en": "baggage tag", "enPron": "แบ็ก-เกจ แท็ก", "th": "ป้ายสัมภาระ", "zh": "行李牌", "pinyin": "xínglipái", "icon": "🏷️",
+      "exampleEn": "Please keep your baggage tag until you arrive.", "exampleZh": "请保管好您的行李牌,直到抵达。", "exampleTh": "กรุณาเก็บป้ายสัมภาระไว้จนกว่าจะถึงที่หมายค่ะ/ครับ" },
+    { "en": "overweight", "enPron": "โอ-เวอร์-เวท", "th": "น้ำหนักเกิน", "zh": "超重", "pinyin": "chāozhòng", "icon": "⚖️",
+      "exampleEn": "Your bag is overweight by two kilos.", "exampleZh": "您的行李超重了两公斤。", "exampleTh": "กระเป๋าของคุณน้ำหนักเกินสองกิโลกรัมค่ะ/ครับ" },
+    { "en": "fragile", "enPron": "แฟรจ-จาย", "th": "แตกง่าย", "zh": "易碎", "pinyin": "yìsuì", "icon": "🥂",
+      "exampleEn": "Do you have any fragile items inside?", "exampleZh": "请问里面有易碎物品吗?", "exampleTh": "ข้างในมีของแตกง่ายไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Do you have + noun? (ถามว่ามีสิ่งของไหม)",
+      "explanationTh": "Do you have ... ? ใช้ถามว่าผู้โดยสารมีสิ่งของนั้นหรือไม่ ใช้ any นำหน้านามพหูพจน์หรือนามนับไม่ได้ในประโยคคำถาม",
+      "pattern": "Do you have + any / a + noun?",
+      "examples": [
+        { "text": "Do you have any fragile items?", "th": "คุณมีของแตกง่ายไหมคะ/ครับ" },
+        { "text": "Do you have a carry-on bag?", "th": "คุณมีกระเป๋าถือขึ้นเครื่องไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您有 + 名词 + 吗? (ถามว่ามีสิ่งของไหม)",
+      "explanationTh": "ใช้ 有 แปลว่า 'มี' และเติม 吗 ท้ายประโยคเพื่อทำเป็นคำถาม ตอบรับว่า 有 ตอบปฏิเสธว่า 没有",
+      "pattern": "您有 + 名词 + 吗?",
+      "examples": [
+        { "text": "您有易碎物品吗?", "th": "คุณมีของแตกง่ายไหมคะ/ครับ" },
+        { "text": "您有随身行李吗?", "th": "คุณมีสัมภาระถือขึ้นเครื่องไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ภาคพื้นดิน (Baggage Check-in Agent)",
+    "context": "ผู้โดยสารนำกระเป๋ามาโหลดที่เคาน์เตอร์ คุณต้องชั่งน้ำหนัก แจ้งกรณีน้ำหนักเกิน ติดป้ายของแตกง่าย และมอบป้ายสัมภาระ",
+    "steps": [
+      {
+        "prompt": { "en": "I have two suitcases to check in.", "zh": "我有两个行李箱要托运。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Please put your checked baggage on the scale, one at a time.", "Of course. Could you place each suitcase on the scale?"],
+          "zh": ["好的,请把托运行李逐个放到秤上。", "没问题,请把行李箱依次放在秤上。"]
+        },
+        "keywords": { "en": ["checked baggage", "scale", "one at a time"], "zh": ["托运行李", "秤", "逐个"] },
+        "tipTh": "บอกให้วางกระเป๋าทีละใบเพื่อชั่งน้ำหนักให้ถูกต้อง"
+      },
+      {
+        "prompt": { "en": "Is the weight okay?", "zh": "重量可以吗?" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, your bag is overweight by two kilos. The limit is twenty kilos.", "Your first bag is fine, but the second bag is overweight."],
+          "zh": ["不好意思,您的行李超重了两公斤,限重二十公斤。", "第一件没问题,第二件超重了。"]
+        },
+        "keywords": { "en": ["overweight", "two kilos", "limit"], "zh": ["超重", "两公斤", "限重"] },
+        "tipTh": "แจ้งข่าวไม่ดีด้วยการขอโทษก่อน พร้อมบอกตัวเลขน้ำหนักที่เกินและเพดานน้ำหนัก"
+      },
+      {
+        "prompt": { "en": "What can I do?", "zh": "那我该怎么办?" },
+        "suggestedAnswers": {
+          "en": ["You can move two kilos into your carry-on, or pay an extra fee.", "Would you like to move some items to your carry-on bag?"],
+          "zh": ["您可以把两公斤物品放进随身行李,或者支付额外费用。", "您想把一些物品转移到随身行李里吗?"]
+        },
+        "keywords": { "en": ["carry-on", "extra fee", "move"], "zh": ["随身行李", "额外费用", "放进"] },
+        "tipTh": "เสนอทางเลือกอย่างน้อยสองทาง ให้ผู้โดยสารตัดสินใจเอง"
+      },
+      {
+        "prompt": { "en": "I'll move some things. By the way, there is a glass bottle inside.", "zh": "我来挪一些东西。对了,里面有一个玻璃瓶。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for telling me. I will put a fragile sticker on your bag.", "Since it is fragile, we will handle your bag with care."],
+          "zh": ["谢谢告知,我给您的行李贴上易碎标签。", "因为里面有易碎物品,我们会小心搬运。"]
+        },
+        "keywords": { "en": ["fragile", "sticker", "thank you"], "zh": ["易碎", "标签", "谢谢"] },
+        "tipTh": "ขอบคุณที่แจ้ง และบอกว่าจะติดป้ายของแตกง่ายให้"
+      },
+      {
+        "prompt": { "en": "Thanks. Is that all?", "zh": "谢谢。这样就可以了吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes. Here is your baggage tag. Please keep it until you arrive.", "All done. Please keep your baggage tag safe."],
+          "zh": ["办好了,这是您的行李牌,请保管好,直到抵达。", "好了,请保管好您的行李牌。"]
+        },
+        "keywords": { "en": ["baggage tag", "keep", "arrive"], "zh": ["行李牌", "保管", "抵达"] },
+        "tipTh": "ปิดงานด้วยการให้ป้ายสัมภาระและบอกให้เก็บไว้ใช้ตอนรับกระเป๋า"
+      }
+    ]
+  }
+}

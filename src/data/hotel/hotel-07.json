@@ -1,0 +1,91 @@
+{
+  "id": "hotel-07",
+  "careerId": "hotel",
+  "order": 7,
+  "titleTh": "แก้ปัญหาและข้อร้องเรียน",
+  "titleEn": "Handling Complaints",
+  "titleZh": "处理投诉",
+  "words": [
+    { "en": "noise", "enPron": "นอยซ์", "th": "เสียงรบกวน", "zh": "噪音", "pinyin": "zàoyīn", "icon": "🔊",
+      "exampleEn": "I am sorry about the noise.", "exampleZh": "对于噪音,我们深表歉意。", "exampleTh": "ขออภัยในเสียงรบกวนค่ะ/ครับ" },
+    { "en": "broken", "enPron": "โบร-เคิน", "th": "เสีย / พัง", "zh": "坏了", "pinyin": "huài le", "icon": "🔧",
+      "exampleEn": "I understand the television is broken.", "exampleZh": "我知道电视坏了。", "exampleTh": "ดิฉัน/ผมเข้าใจว่าโทรทัศน์เสียค่ะ/ครับ" },
+    { "en": "leak", "enPron": "ลีก", "th": "น้ำรั่ว", "zh": "漏水", "pinyin": "lòushuǐ", "icon": "💧",
+      "exampleEn": "There is a leak in the bathroom.", "exampleZh": "浴室漏水了。", "exampleTh": "ในห้องน้ำมีน้ำรั่วค่ะ/ครับ" },
+    { "en": "apology", "enPron": "อะ-พอล-ละ-จี", "th": "คำขอโทษ", "zh": "道歉", "pinyin": "dàoqiàn", "icon": "🙏",
+      "exampleEn": "Please accept our apology.", "exampleZh": "请接受我们的道歉。", "exampleTh": "กรุณารับคำขอโทษจากเราค่ะ/ครับ" },
+    { "en": "replace", "enPron": "รี-เพลส", "th": "เปลี่ยน / ทดแทน", "zh": "更换", "pinyin": "gēnghuàn", "icon": "🔄",
+      "exampleEn": "We will replace the remote control.", "exampleZh": "我们会更换遥控器。", "exampleTh": "เราจะเปลี่ยนรีโมตให้ใหม่ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "I apologize for + noun (กล่าวขอโทษ)",
+      "explanationTh": "ใช้ I apologize for ตามด้วยคำนามเพื่อขอโทษอย่างเป็นทางการ หรือใช้ I'm sorry to hear that เมื่อแขกเล่าปัญหา ควรขอโทษก่อนแล้วจึงเสนอทางแก้ไข",
+      "pattern": "I apologize for + noun / the + noun",
+      "examples": [
+        { "text": "I apologize for the noise.", "th": "ขออภัยในเสียงรบกวนค่ะ/ครับ" },
+        { "text": "I apologize for the inconvenience.", "th": "ขออภัยในความไม่สะดวกค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "很抱歉 + 原因 (กล่าวขอโทษ)",
+      "explanationTh": "很抱歉 ใช้ขึ้นต้นประโยคเพื่อขอโทษ แล้วตามด้วยสาเหตุ ใช้ได้ทั้งขอโทษเรื่องใหญ่และเรื่องเล็ก น้ำเสียงสุภาพเหมาะกับงานบริการ",
+      "pattern": "很抱歉,+ 原因",
+      "examples": [
+        { "text": "很抱歉,打扰您休息了。", "th": "ขออภัยที่รบกวนการพักผ่อนของคุณค่ะ/ครับ" },
+        { "text": "很抱歉,让您久等了。", "th": "ขออภัยที่ให้คุณรอนานค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้จัดการฝ่ายต้อนรับ (Duty Manager)",
+    "context": "แขกโทรมาร้องเรียนเรื่องเสียงดัง อุปกรณ์เสีย และน้ำรั่ว คุณต้องรับฟัง ขอโทษอย่างจริงใจ และเสนอทางแก้ไขที่เป็นรูปธรรม",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, the room next door is very loud.", "zh": "打扰一下,隔壁房间太吵了。" },
+        "suggestedAnswers": {
+          "en": ["I'm so sorry about the noise. May I have your room number?", "I apologize for the noise. May I have your room number, please?"],
+          "zh": ["对于噪音,我们非常抱歉。请问您的房间号是多少?", "很抱歉让您受到噪音干扰。请问您的房间号是多少?"]
+        },
+        "keywords": { "en": ["sorry", "noise", "room number"], "zh": ["抱歉", "噪音", "房间号"] },
+        "tipTh": "ขอโทษก่อนทุกครั้ง แล้วจึงถามข้อมูลเพื่อแก้ปัญหา"
+      },
+      {
+        "prompt": { "en": "Room 806. It has been loud since 10 p.m.", "zh": "806房,从晚上十点就一直很吵。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. I will send a security officer to speak to the guests right now.", "Thank you for telling us. I will send security to talk to them right now."],
+          "zh": ["谢谢您。我马上派保安去和那位客人沟通。", "谢谢您告诉我们。我马上让保安去沟通。"]
+        },
+        "keywords": { "en": ["send", "security", "right now"], "zh": ["保安", "马上", "沟通"] },
+        "tipTh": "บอกการกระทำที่จะทำทันที ไม่ใช้คำคลุมเครือ"
+      },
+      {
+        "prompt": { "en": "Also, the television is broken.", "zh": "另外,电视也坏了。" },
+        "suggestedAnswers": {
+          "en": ["I apologize for that. I will ask a technician to check it.", "I'm very sorry. A technician will check the television shortly."],
+          "zh": ["非常抱歉,我请技术人员去检查。", "很抱歉,技术人员马上去检查电视。"]
+        },
+        "keywords": { "en": ["apologize", "technician", "check"], "zh": ["抱歉", "技术人员", "检查"] },
+        "tipTh": "รับเรื่องแต่ละปัญหาแยกกัน และบอกว่าใครจะมาแก้"
+      },
+      {
+        "prompt": { "en": "And there is a leak in the bathroom!", "zh": "而且浴室还漏水了!" },
+        "suggestedAnswers": {
+          "en": ["I'm very sorry. We can replace your room with another one. Would you like that?", "I apologize. May I replace your room with another room right away?"],
+          "zh": ["非常抱歉,我们可以为您更换房间,您看可以吗?", "很抱歉,我们马上为您更换一间房,可以吗?"]
+        },
+        "keywords": { "en": ["replace", "room", "sorry"], "zh": ["更换", "房间", "抱歉"] },
+        "tipTh": "เมื่อปัญหาร้ายแรง ให้เสนอทางออกใหญ่ เช่น เปลี่ยนห้อง"
+      },
+      {
+        "prompt": { "en": "Yes, please change it. Thank you for your help.", "zh": "好的,请帮我换。谢谢你的帮助。" },
+        "suggestedAnswers": {
+          "en": ["Please accept our apology. Your new key card will be ready in five minutes.", "Thank you for your patience. Please accept our apology. Your new key card will be ready in five minutes."],
+          "zh": ["请接受我们的道歉,新的房卡五分钟后准备好。", "感谢您的耐心,请接受我们的道歉。新房卡五分钟后就好。"]
+        },
+        "keywords": { "en": ["apology", "key card", "five minutes"], "zh": ["道歉", "房卡", "五分钟"] },
+        "tipTh": "ปิดเรื่องด้วยคำขอโทษอีกครั้งและบอกเวลาที่จะแก้ไขเสร็จ"
+      }
+    ]
+  }
+}

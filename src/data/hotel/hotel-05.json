@@ -1,0 +1,91 @@
+{
+  "id": "hotel-05",
+  "careerId": "hotel",
+  "order": 5,
+  "titleTh": "อาหารเช้าและห้องอาหาร",
+  "titleEn": "Breakfast and Dining",
+  "titleZh": "早餐与用餐",
+  "words": [
+    { "en": "breakfast", "enPron": "เบรก-เฟิสต์", "th": "อาหารเช้า", "zh": "早餐", "pinyin": "zǎocān", "icon": "🍳",
+      "exampleEn": "Breakfast is served from six to ten.", "exampleZh": "早餐供应时间是六点到十点。", "exampleTh": "เสิร์ฟอาหารเช้าตั้งแต่หกโมงถึงสิบโมงค่ะ/ครับ" },
+    { "en": "buffet", "enPron": "บุฟ-เฟ่ย์", "th": "บุฟเฟต์", "zh": "自助餐", "pinyin": "zìzhùcān", "icon": "🍽️",
+      "exampleEn": "We offer a breakfast buffet every morning.", "exampleZh": "我们每天早上提供自助餐。", "exampleTh": "เรามีบุฟเฟต์อาหารเช้าทุกเช้าค่ะ/ครับ" },
+    { "en": "menu", "enPron": "เมน-นู", "th": "เมนูอาหาร", "zh": "菜单", "pinyin": "càidān", "icon": "📋",
+      "exampleEn": "Here is the menu, madam.", "exampleZh": "女士,这是菜单。", "exampleTh": "นี่คือเมนูค่ะ/ครับ คุณผู้หญิง" },
+    { "en": "room service", "enPron": "รูม เซอร์-วิส", "th": "บริการอาหารในห้องพัก", "zh": "送餐服务", "pinyin": "sòngcān fúwù", "icon": "🛎️",
+      "exampleEn": "You can order room service until midnight.", "exampleZh": "送餐服务可以点到午夜。", "exampleTh": "สั่งบริการอาหารในห้องพักได้จนถึงเที่ยงคืนค่ะ/ครับ" },
+    { "en": "vegetarian", "enPron": "เว็จ-จิ-แทร์-เรียน", "th": "มังสวิรัติ", "zh": "素食", "pinyin": "sùshí", "icon": "🥗",
+      "exampleEn": "We have a vegetarian menu as well.", "exampleZh": "我们也有素食菜单。", "exampleTh": "เรามีเมนูมังสวิรัติด้วยค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "We offer / We serve + noun (บอกบริการของโรงแรม)",
+      "explanationTh": "ใช้ We offer สำหรับบริการหรือตัวเลือก และ We serve สำหรับอาหารเครื่องดื่ม เป็นประโยคพื้นฐานในการแนะนำสิ่งที่โรงแรมมี",
+      "pattern": "We offer / serve + noun (+ time / place)",
+      "examples": [
+        { "text": "We serve breakfast from six to ten.", "th": "เราเสิร์ฟอาหารเช้าตั้งแต่หกโมงถึงสิบโมงค่ะ/ครับ" },
+        { "text": "We offer a vegetarian menu.", "th": "เรามีเมนูมังสวิรัติให้บริการค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "我们提供 + 名词 (บอกบริการของโรงแรม)",
+      "explanationTh": "提供 แปลว่า 'จัดให้/มีให้บริการ' ใช้แนะนำบริการหรือสิ่งอำนวยความสะดวก ตามด้วยคำนามได้ทันที",
+      "pattern": "我们提供 + 名词",
+      "examples": [
+        { "text": "我们提供自助早餐。", "th": "เรามีบริการอาหารเช้าแบบบุฟเฟต์ค่ะ/ครับ" },
+        { "text": "我们提供送餐服务。", "th": "เรามีบริการส่งอาหารถึงห้องค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับ/คอนเซียร์จ (Front Desk)",
+    "context": "แขกสอบถามเรื่องอาหารเช้า ห้องอาหาร และบริการอาหารในห้อง คุณต้องแจ้งเวลา สถานที่ และตัวเลือกอย่างครบถ้วน",
+    "steps": [
+      {
+        "prompt": { "en": "Good morning. What time is breakfast?", "zh": "早上好,早餐几点开始?" },
+        "suggestedAnswers": {
+          "en": ["Good morning. Breakfast is served from six to ten in the restaurant on the first floor.", "Good morning. We serve breakfast from six to ten on the first floor."],
+          "zh": ["早上好,早餐从六点到十点,在一楼餐厅。", "早上好,早餐供应时间是六点到十点,地点在一楼。"]
+        },
+        "keywords": { "en": ["breakfast", "six", "first floor"], "zh": ["早餐", "六点", "一楼"] },
+        "tipTh": "ตอบทั้งเวลาและสถานที่ในประโยคเดียว"
+      },
+      {
+        "prompt": { "en": "Is it a buffet or a set menu?", "zh": "是自助餐还是套餐?" },
+        "suggestedAnswers": {
+          "en": ["It is a buffet, but you can also order from the menu.", "We offer a buffet, and you may also order from the menu."],
+          "zh": ["是自助餐,您也可以点菜单上的菜。", "我们提供自助餐,您也可以看菜单点餐。"]
+        },
+        "keywords": { "en": ["buffet", "menu", "order"], "zh": ["自助餐", "菜单", "点"] },
+        "tipTh": "ตอบคำถามแบบเลือกข้อและบอกทางเลือกเพิ่มเติมที่มี"
+      },
+      {
+        "prompt": { "en": "I'm vegetarian. Are there options for me?", "zh": "我吃素,有适合我的选择吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we have a vegetarian menu. I will bring it to you.", "Certainly. We offer a vegetarian menu. Let me bring it for you."],
+          "zh": ["有的,我们有素食菜单,我给您拿来。", "当然有。我们提供素食菜单,我这就拿给您。"]
+        },
+        "keywords": { "en": ["vegetarian", "menu", "bring"], "zh": ["素食", "菜单", "拿"] },
+        "tipTh": "ยืนยันว่ามีตัวเลือกและลงมือช่วยทันที (นำเมนูมาให้)"
+      },
+      {
+        "prompt": { "en": "Can I eat in my room tomorrow instead?", "zh": "明天我可以在房间里吃吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we offer room service. Please call extension 5.", "Of course. We have room service. You can dial extension 5."],
+          "zh": ["可以,我们提供送餐服务,请拨分机5。", "当然可以,我们有送餐服务,请拨打分机5。"]
+        },
+        "keywords": { "en": ["room service", "call", "extension"], "zh": ["送餐服务", "拨", "分机"] },
+        "tipTh": "บอกวิธีใช้บริการ เช่น หมายเลขโทรภายใน"
+      },
+      {
+        "prompt": { "en": "Great. Until what time can I order room service?", "zh": "太好了。送餐服务可以点到几点?" },
+        "suggestedAnswers": {
+          "en": ["You can order room service until midnight.", "Room service is available until midnight."],
+          "zh": ["送餐服务可以点到午夜。", "送餐服务提供到午夜十二点。"]
+        },
+        "keywords": { "en": ["midnight", "room service", "until"], "zh": ["午夜", "送餐服务", "到"] },
+        "tipTh": "ตอบเวลาให้ชัด และใช้ until เพื่อบอกเวลาสิ้นสุด"
+      }
+    ]
+  }
+}

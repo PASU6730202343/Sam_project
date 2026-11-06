@@ -1,0 +1,91 @@
+{
+  "id": "mice-03",
+  "careerId": "mice",
+  "order": 3,
+  "titleTh": "อาหารและการจัดที่นั่ง",
+  "titleEn": "Catering and Seating",
+  "titleZh": "餐饮与座位安排",
+  "words": [
+    { "en": "coffee break", "enPron": "คอฟ-ฟี่ เบรก", "th": "พักเบรกกาแฟ", "zh": "茶歇", "pinyin": "chá xiē", "icon": "☕",
+      "exampleEn": "The coffee break is at ten thirty.", "exampleZh": "茶歇时间是十点半。", "exampleTh": "เวลาพักเบรกกาแฟคือสิบโมงครึ่งค่ะ/ครับ" },
+    { "en": "banquet", "enPron": "แบง-เควท", "th": "งานเลี้ยง", "zh": "宴会", "pinyin": "yànhuì", "icon": "🥂",
+      "exampleEn": "The banquet starts at seven.", "exampleZh": "宴会晚上七点开始。", "exampleTh": "งานเลี้ยงเริ่มตอนหนึ่งทุ่มค่ะ/ครับ" },
+    { "en": "seating plan", "enPron": "ซี-ทิง แพลน", "th": "ผังที่นั่ง", "zh": "座位安排", "pinyin": "zuòwèi ānpái", "icon": "🗺️",
+      "exampleEn": "Here is the seating plan.", "exampleZh": "这是今晚的座位安排。", "exampleTh": "นี่คือผังที่นั่งค่ะ/ครับ" },
+    { "en": "lunch box", "enPron": "ลันช์ บ็อกซ์", "th": "ข้าวกล่อง", "zh": "盒饭", "pinyin": "héfàn", "icon": "🍱",
+      "exampleEn": "Lunch boxes are available at the door.", "exampleZh": "盒饭在门口领取。", "exampleTh": "ข้าวกล่องรับได้ที่ประตูค่ะ/ครับ" },
+    { "en": "round table", "enPron": "ราวด์ เท-เบิล", "th": "โต๊ะกลม", "zh": "圆桌", "pinyin": "yuánzhuō", "icon": "⭕",
+      "exampleEn": "Each round table seats ten guests.", "exampleZh": "每张圆桌坐十位客人。", "exampleTh": "โต๊ะกลมแต่ละตัวนั่งได้สิบท่านค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "will be served / will be held (กิจกรรมที่กำหนดไว้)",
+      "explanationTh": "will be + past participle เป็น passive แบบอนาคต ใช้ประกาศกิจกรรมที่กำหนดไว้ เช่น มื้ออาหารหรืองานเลี้ยง โดยไม่ต้องระบุผู้ทำ",
+      "pattern": "Event / food + will be served / held + at + time",
+      "examples": [
+        { "text": "Lunch will be served at noon.", "th": "อาหารกลางวันจะเสิร์ฟตอนเที่ยงค่ะ/ครับ" },
+        { "text": "The dinner will be held in the ballroom.", "th": "งานเลี้ยงจะจัดขึ้นที่ห้องบอลรูมค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "将于…… / ……开始 (กิจกรรมที่กำหนดไว้)",
+      "explanationTh": "ใช้ 将于 + เวลา/สถานที่ + กริยา ประกาศกิจกรรมอย่างเป็นทางการ หรือใช้ 在 + สถานที่ + 开始 แบบทั่วไป",
+      "pattern": "活动 + 将于 + 时间 + 在 + 地点 + 举行",
+      "examples": [
+        { "text": "午餐将于中午开始供应。", "th": "อาหารกลางวันจะเริ่มเสิร์ฟตอนเที่ยงค่ะ/ครับ" },
+        { "text": "晚宴将在宴会厅举行。", "th": "งานเลี้ยงจะจัดที่ห้องบอลรูมค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้ประสานงานด้านอาหาร (Catering Coordinator)",
+    "context": "ผู้เข้าร่วมประชุมสอบถามเวลาเบรกกาแฟ อาหารกลางวัน งานเลี้ยงค่ำ และที่นั่ง คุณต้องตอบข้อมูลให้ครบ รวมถึงรับเรื่องอาหารมังสวิรัติ",
+    "steps": [
+      {
+        "prompt": { "en": "What time is the coffee break?", "zh": "茶歇是几点?" },
+        "suggestedAnswers": {
+          "en": ["The coffee break is at ten thirty in the foyer.", "The coffee break is at ten thirty. It will be served in the foyer."],
+          "zh": ["茶歇时间是十点半,在大厅。", "茶歇十点半开始,地点在大厅。"]
+        },
+        "keywords": { "en": ["coffee break", "ten thirty", "foyer"], "zh": ["茶歇", "十点半", "大厅"] },
+        "tipTh": "ตอบเวลาและสถานที่ในประโยคเดียว"
+      },
+      {
+        "prompt": { "en": "Where will we have lunch?", "zh": "我们在哪里吃午餐?" },
+        "suggestedAnswers": {
+          "en": ["Lunch will be served at noon. Lunch boxes are available at the door.", "Lunch will be served at noon, and lunch boxes are available at the door."],
+          "zh": ["午餐中午开始供应,盒饭在门口领取。", "午餐将于中午开始供应,盒饭在门口领取。"]
+        },
+        "keywords": { "en": ["lunch", "noon", "lunch boxes"], "zh": ["午餐", "中午", "盒饭"] },
+        "tipTh": "บอกเวลาเสิร์ฟและจุดรับข้าวกล่อง"
+      },
+      {
+        "prompt": { "en": "And the gala dinner tonight?", "zh": "那今晚的晚宴呢?" },
+        "suggestedAnswers": {
+          "en": ["The banquet starts at seven in the ballroom. Each round table seats ten guests.", "The banquet starts at seven in the ballroom, with ten guests at each round table."],
+          "zh": ["宴会晚上七点在宴会厅开始,每张圆桌坐十位客人。", "宴会七点在宴会厅开始,每张圆桌十位客人。"]
+        },
+        "keywords": { "en": ["banquet", "seven", "round table"], "zh": ["宴会", "七点", "圆桌"] },
+        "tipTh": "บอกเวลา สถานที่ และรูปแบบโต๊ะ"
+      },
+      {
+        "prompt": { "en": "Where am I sitting?", "zh": "我坐哪里?" },
+        "suggestedAnswers": {
+          "en": ["Here is the seating plan. You are at table five.", "Please see the seating plan here. You are at table five."],
+          "zh": ["这是座位安排,您在五号桌。", "这是座位安排,您的位置是五号桌。"]
+        },
+        "keywords": { "en": ["seating plan", "table five", "here"], "zh": ["座位安排", "五号桌", "这是"] },
+        "tipTh": "ชี้ผังที่นั่งและบอกหมายเลขโต๊ะ"
+      },
+      {
+        "prompt": { "en": "I am vegetarian.", "zh": "我吃素。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for telling me. We will prepare a vegetarian meal for you at table five.", "Thank you. We will prepare a vegetarian meal for you at table five."],
+          "zh": ["谢谢告知,我们会在五号桌为您准备素食餐。", "谢谢,我们会在五号桌给您准备素食餐。"]
+        },
+        "keywords": { "en": ["vegetarian", "prepare", "table five"], "zh": ["素食", "准备", "五号桌"] },
+        "tipTh": "รับเรื่องข้อจำกัดด้านอาหาร และยืนยันว่าจะเตรียมให้ที่โต๊ะ"
+      }
+    ]
+  }
+}

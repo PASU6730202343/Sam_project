@@ -1,0 +1,91 @@
+{
+  "id": "airline-01",
+  "careerId": "airline",
+  "order": 1,
+  "titleTh": "เคาน์เตอร์เช็กอิน",
+  "titleEn": "Check-in Counter",
+  "titleZh": "值机柜台",
+  "words": [
+    { "en": "boarding pass", "enPron": "บอร์ด-ดิง พาส", "th": "บอร์ดดิงพาส", "zh": "登机牌", "pinyin": "dēngjīpái", "icon": "🎫",
+      "exampleEn": "Your boarding pass shows your seat number.", "exampleZh": "登机牌上有您的座位号。", "exampleTh": "บอร์ดดิงพาสของคุณมีหมายเลขที่นั่งระบุอยู่ค่ะ/ครับ" },
+    { "en": "ticket", "enPron": "ทิค-เก็ต", "th": "ตั๋วเครื่องบิน", "zh": "机票", "pinyin": "jīpiào", "icon": "🎟️",
+      "exampleEn": "May I see your ticket, please?", "exampleZh": "请问可以看一下您的机票吗?", "exampleTh": "ขอดูตั๋วเครื่องบินของคุณหน่อยได้ไหมคะ/ครับ" },
+    { "en": "counter", "enPron": "เคาน์-เตอร์", "th": "เคาน์เตอร์", "zh": "柜台", "pinyin": "guìtái", "icon": "🏢",
+      "exampleEn": "Please go to counter number five.", "exampleZh": "请您到五号柜台办理手续。", "exampleTh": "กรุณาไปที่เคาน์เตอร์หมายเลขห้าค่ะ/ครับ" },
+    { "en": "seat", "enPron": "ซีท", "th": "ที่นั่ง", "zh": "座位", "pinyin": "zuòwèi", "icon": "💺",
+      "exampleEn": "Your seat is next to the window.", "exampleZh": "您的座位在靠窗的位置。", "exampleTh": "ที่นั่งของคุณอยู่ติดหน้าต่างค่ะ/ครับ" },
+    { "en": "flight", "enPron": "ไฟลต์", "th": "เที่ยวบิน", "zh": "航班", "pinyin": "hángbān", "icon": "✈️",
+      "exampleEn": "Your flight leaves at ten thirty.", "exampleZh": "您的航班十点半起飞。", "exampleTh": "เที่ยวบินของคุณออกเวลาสิบโมงครึ่งค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Could you + verb ...? (ขอร้องผู้โดยสารอย่างสุภาพ)",
+      "explanationTh": "Could you + กริยาช่องที่ 1 ใช้ขอให้ผู้โดยสารทำสิ่งใดสิ่งหนึ่งอย่างสุภาพ นุ่มนวลกว่าการสั่งตรงๆ และมักใส่ please ท้ายประโยค",
+      "pattern": "Could you + verb + (object), please?",
+      "examples": [
+        { "text": "Could you show me your passport, please?", "th": "ช่วยแสดงหนังสือเดินทางให้ดูหน่อยได้ไหมคะ/ครับ" },
+        { "text": "Could you put your bag on the scale?", "th": "ช่วยวางกระเป๋าบนเครื่องชั่งหน่อยได้ไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请您 + 动词 (ขอร้องผู้โดยสารอย่างสุภาพ)",
+      "explanationTh": "请您 + กริยา ใช้เชิญหรือขอให้ผู้โดยสารทำสิ่งใดสิ่งหนึ่ง สุภาพกว่าพูดกริยาตรงๆ ใช้ 您 แทน 你 เสมอเมื่อพูดกับผู้โดยสาร",
+      "pattern": "请您 + 动词 + (名词)",
+      "examples": [
+        { "text": "请您出示护照。", "th": "กรุณาแสดงหนังสือเดินทางค่ะ/ครับ" },
+        { "text": "请您把行李放在秤上。", "th": "กรุณาวางสัมภาระบนเครื่องชั่งค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ภาคพื้นดิน (Check-in Agent)",
+    "context": "ผู้โดยสารมาเช็กอินเที่ยวบินไปโตเกียวที่เคาน์เตอร์ คุณต้องตรวจเอกสาร ยืนยันเที่ยวบิน จัดที่นั่ง และมอบบอร์ดดิงพาส",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, I'm checking in for my flight to Tokyo.", "zh": "你好,我要办理去东京的航班值机。" },
+        "suggestedAnswers": {
+          "en": ["Good morning. Could you show me your passport and ticket, please?", "Welcome. May I see your passport and ticket, please?"],
+          "zh": ["早上好。请您出示护照和机票。", "欢迎。请问可以看一下您的护照和机票吗?"]
+        },
+        "keywords": { "en": ["passport", "ticket", "please"], "zh": ["护照", "机票", "请"] },
+        "tipTh": "ทักทายแล้วขอเอกสารสำคัญ (หนังสือเดินทาง/ตั๋ว) ด้วยสำนวนสุภาพทันที"
+      },
+      {
+        "prompt": { "en": "Here you go.", "zh": "给您。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. I found your flight to Tokyo. It leaves at ten thirty.", "Thank you. Your flight to Tokyo leaves at ten thirty."],
+          "zh": ["谢谢。找到您去东京的航班了,十点半起飞。", "谢谢您。您去东京的航班十点半起飞。"]
+        },
+        "keywords": { "en": ["flight", "tokyo", "ten thirty"], "zh": ["航班", "东京", "十点半"] },
+        "tipTh": "ทวนปลายทางและเวลาบิน เพื่อให้ผู้โดยสารยืนยันว่าถูกเที่ยวบิน"
+      },
+      {
+        "prompt": { "en": "Can I have a window seat?", "zh": "我可以坐靠窗的座位吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. I will give you a window seat. It is seat 24A.", "Of course. Seat 24A is by the window."],
+          "zh": ["可以,我给您安排靠窗的座位,是24A。", "没问题,24A座位靠窗。"]
+        },
+        "keywords": { "en": ["window seat", "24a", "certainly"], "zh": ["靠窗", "座位", "24A"] },
+        "tipTh": "ยืนยันตามคำขอและบอกหมายเลขที่นั่งให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Do I need to check this bag?", "zh": "这个包需要托运吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, please put your bag on the scale. It is within the weight limit.", "Yes, could you place your bag on the scale, please?"],
+          "zh": ["需要托运,请您把包放在秤上,没有超重。", "需要,请您把行李放到秤上。"]
+        },
+        "keywords": { "en": ["bag", "scale", "limit"], "zh": ["托运", "秤", "超重"] },
+        "tipTh": "ให้คำแนะนำทีละขั้น: วางกระเป๋าบนเครื่องชั่งก่อนแจ้งผลน้ำหนัก"
+      },
+      {
+        "prompt": { "en": "Where do I go now?", "zh": "我现在去哪里?" },
+        "suggestedAnswers": {
+          "en": ["Here is your boarding pass. Your gate is B12, and boarding starts at nine forty.", "This is your boarding pass. Please go to gate B12."],
+          "zh": ["这是您的登机牌,登机口是B12,九点四十分开始登机。", "这是您的登机牌,请到B12登机口。"]
+        },
+        "keywords": { "en": ["boarding pass", "gate", "b12"], "zh": ["登机牌", "登机口", "B12"] },
+        "tipTh": "ปิดท้ายด้วยการมอบบอร์ดดิงพาสพร้อมบอกประตูขึ้นเครื่องและเวลา"
+      }
+    ]
+  }
+}

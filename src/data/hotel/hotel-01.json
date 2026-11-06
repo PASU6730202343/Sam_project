@@ -1,0 +1,91 @@
+{
+  "id": "hotel-01",
+  "careerId": "hotel",
+  "order": 1,
+  "titleTh": "ต้อนรับและเช็กอิน",
+  "titleEn": "Welcome and Check-in",
+  "titleZh": "欢迎与入住",
+  "words": [
+    { "en": "welcome", "enPron": "เวล-คัม", "th": "ยินดีต้อนรับ", "zh": "欢迎", "pinyin": "huānyíng", "icon": "👋",
+      "exampleEn": "Welcome to our hotel, sir.", "exampleZh": "欢迎光临我们的酒店,先生。", "exampleTh": "ยินดีต้อนรับสู่โรงแรมของเราค่ะ/ครับ คุณผู้ชาย" },
+    { "en": "reservation", "enPron": "เรส-เซอะ-เวย์-เชิน", "th": "การจอง", "zh": "预订", "pinyin": "yùdìng", "icon": "📅",
+      "exampleEn": "Do you have a reservation?", "exampleZh": "请问您有预订吗?", "exampleTh": "คุณมีการจองไว้ไหมคะ/ครับ" },
+    { "en": "passport", "enPron": "แพส-พอร์ต", "th": "หนังสือเดินทาง", "zh": "护照", "pinyin": "hùzhào", "icon": "🛂",
+      "exampleEn": "May I see your passport, please?", "exampleZh": "请问可以看一下您的护照吗?", "exampleTh": "ขอดูหนังสือเดินทางของคุณหน่อยได้ไหมคะ/ครับ" },
+    { "en": "check-in", "enPron": "เช็ก-อิน", "th": "การเช็กอิน", "zh": "入住", "pinyin": "rùzhù", "icon": "🛎️",
+      "exampleEn": "Check-in starts at two o'clock.", "exampleZh": "入住时间从下午两点开始。", "exampleTh": "เช็กอินเริ่มตั้งแต่บ่ายสองโมงค่ะ/ครับ" },
+    { "en": "key card", "enPron": "คี-การ์ด", "th": "คีย์การ์ด", "zh": "房卡", "pinyin": "fángkǎ", "icon": "🔑",
+      "exampleEn": "Here is your key card.", "exampleZh": "这是您的房卡。", "exampleTh": "นี่คือคีย์การ์ดของคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "May I + verb ...? (ขออนุญาตอย่างสุภาพ)",
+      "explanationTh": "ใช้ May I + กริยาช่องที่ 1 เพื่อขออนุญาตหรือขอข้อมูลจากแขกอย่างสุภาพ เหมาะกับงานต้อนรับมากกว่า Can I และมักปิดท้ายด้วย please",
+      "pattern": "May I + verb + (object), please?",
+      "examples": [
+        { "text": "May I have your name, please?", "th": "ขอทราบชื่อของคุณได้ไหมคะ/ครับ" },
+        { "text": "May I see your passport?", "th": "ขอดูหนังสือเดินทางได้ไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请问 + ……?(ขอถามอย่างสุภาพ)",
+      "explanationTh": "请问 ใช้นำหน้าคำถามเพื่อถามอย่างสุภาพ ใช้ได้กับทั้งขอข้อมูลและขออนุญาต เช่น 请问……吗? หรือ 请问……?",
+      "pattern": "请问 + 您 + ……?",
+      "examples": [
+        { "text": "请问您贵姓?", "th": "ขอถามหน่อยค่ะ/ครับ ท่านแซ่อะไร" },
+        { "text": "请问需要帮忙吗?", "th": "ขอถามหน่อยค่ะ/ครับ ต้องการให้ช่วยไหม" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับ (Front Desk)",
+    "context": "แขกเดินทางถึงโรงแรมตอนบ่ายและต้องการเช็กอิน คุณคือพนักงานต้อนรับที่ต้องทักทาย ตรวจการจอง ขอหนังสือเดินทาง และมอบคีย์การ์ด",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, I'd like to check in.", "zh": "你好,我要办理入住。" },
+        "suggestedAnswers": {
+          "en": ["Welcome to our hotel. Do you have a reservation?", "Good afternoon, welcome. May I have your name, please?"],
+          "zh": ["欢迎光临!请问您有预订吗?", "您好,欢迎。请问您贵姓?"]
+        },
+        "keywords": { "en": ["welcome", "reservation", "name"], "zh": ["欢迎", "预订", "请问"] },
+        "tipTh": "ทักทายด้วยรอยยิ้มและถามทันทีว่าแขกมีการจองไว้หรือไม่"
+      },
+      {
+        "prompt": { "en": "Yes, under the name Smith.", "zh": "有的,用史密斯的名字订的。" },
+        "suggestedAnswers": {
+          "en": ["Thank you, Mr. Smith. May I see your passport, please?", "I found your booking. May I have your passport, please?"],
+          "zh": ["谢谢您。请问可以看一下您的护照吗?", "找到您的预订了。请出示您的护照,好吗?"]
+        },
+        "keywords": { "en": ["passport", "may", "please"], "zh": ["护照", "请", "谢谢"] },
+        "tipTh": "ขอหนังสือเดินทางด้วย May I... please เสมอ ไม่สั่งตรงๆ"
+      },
+      {
+        "prompt": { "en": "Here you are.", "zh": "给您。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. You have a reservation for two nights, correct?", "Thank you. That is two nights, is that correct?"],
+          "zh": ["谢谢。您预订了两晚,对吗?", "谢谢您。住两晚,对吗?"]
+        },
+        "keywords": { "en": ["two nights", "correct", "thank"], "zh": ["两晚", "对吗", "谢谢"] },
+        "tipTh": "ยืนยันจำนวนคืนกับแขกทุกครั้งเพื่อป้องกันข้อผิดพลาด"
+      },
+      {
+        "prompt": { "en": "Yes, that's right. Can I go to my room now?", "zh": "对,没错。我现在可以进房间吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, your room is ready. Check-in is available now.", "Certainly. Your room is ready for check-in."],
+          "zh": ["可以,您的房间已经准备好了,现在可以入住。", "当然可以,房间已经准备好入住了。"]
+        },
+        "keywords": { "en": ["ready", "check-in", "room"], "zh": ["准备好", "入住", "房间"] },
+        "tipTh": "แจ้งสถานะห้องให้ชัดเจน ถ้ายังไม่พร้อมให้ขออภัยและเสนอฝากสัมภาระ"
+      },
+      {
+        "prompt": { "en": "Great, thank you.", "zh": "太好了,谢谢。" },
+        "suggestedAnswers": {
+          "en": ["Here is your key card. Your room is 806 on the eighth floor. Enjoy your stay!", "Here is your key card. You are in room 806. Enjoy your stay!"],
+          "zh": ["这是您的房卡,房间在八楼806。祝您入住愉快!", "这是您的房卡,您的房间是806。祝您入住愉快!"]
+        },
+        "keywords": { "en": ["key card", "room", "enjoy"], "zh": ["房卡", "806", "愉快"] },
+        "tipTh": "ปิดท้ายด้วยการบอกเลขห้อง ชั้น และอวยพรให้เข้าพักอย่างมีความสุข"
+      }
+    ]
+  }
+}

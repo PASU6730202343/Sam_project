@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-05",
+  "careerId": "restaurant",
+  "order": 5,
+  "titleTh": "บริการระหว่างรับประทานอาหาร",
+  "titleEn": "During the Meal",
+  "titleZh": "用餐期间的服务",
+  "words": [
+    { "en": "chopsticks", "enPron": "ช็อป-สติกส์", "th": "ตะเกียบ", "zh": "筷子", "pinyin": "kuàizi", "icon": "🥢",
+      "exampleEn": "Here are your chopsticks.", "exampleZh": "这是您的筷子。", "exampleTh": "นี่คือตะเกียบของคุณค่ะ/ครับ" },
+    { "en": "spoon", "enPron": "สปูน", "th": "ช้อน", "zh": "勺子", "pinyin": "sháozi", "icon": "🥄",
+      "exampleEn": "Would you like a spoon as well?", "exampleZh": "您还需要勺子吗?", "exampleTh": "คุณต้องการช้อนด้วยไหมคะ/ครับ" },
+    { "en": "napkin", "enPron": "แนป-คิน", "th": "ผ้าเช็ดปาก", "zh": "餐巾", "pinyin": "cānjīn", "icon": "🧻",
+      "exampleEn": "Here is a napkin for you.", "exampleZh": "这是给您的餐巾。", "exampleTh": "นี่คือผ้าเช็ดปากสำหรับคุณค่ะ/ครับ" },
+    { "en": "refill", "enPron": "รี-ฟิล", "th": "เติมเครื่องดื่ม", "zh": "续杯", "pinyin": "xùbēi", "icon": "🫗",
+      "exampleEn": "Would you like a refill?", "exampleZh": "请问您需要续杯吗?", "exampleTh": "ต้องการเติมเครื่องดื่มไหมคะ/ครับ" },
+    { "en": "plate", "enPron": "เพลท", "th": "จาน", "zh": "盘子", "pinyin": "pánzi", "icon": "🍽️",
+      "exampleEn": "May I take your plate?", "exampleZh": "我可以收走您的盘子吗?", "exampleTh": "ขออนุญาตเก็บจานของคุณนะคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Is everything + adjective? (ตรวจสอบความพึงพอใจ)",
+      "explanationTh": "ใช้ถามลูกค้าระหว่างมื้ออาหารเพื่อดูว่ามีอะไรต้องแก้ไขหรือไม่ ควรถามหลังเสิร์ฟประมาณสองถึงสามนาทีและไม่รบกวนขณะลูกค้าคุยกัน",
+      "pattern": "Is everything + all right / OK / to your liking?",
+      "examples": [
+        { "text": "Is everything all right with your meal?", "th": "อาหารเป็นอย่างไรบ้างคะ/ครับ ทุกอย่างเรียบร้อยดีไหม" },
+        { "text": "Is the food to your liking?", "th": "อาหารถูกปากคุณไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "一切都……吗? (ตรวจสอบความพึงพอใจ)",
+      "explanationTh": "一切都还好吗 และ 合您的口味吗 เป็นประโยคถามความพึงพอใจที่ใช้บ่อยในร้านอาหารจีน",
+      "pattern": "一切都还好吗? / 合您的口味吗?",
+      "examples": [
+        { "text": "一切都还好吗?", "th": "ทุกอย่างเรียบร้อยดีไหมคะ/ครับ" },
+        { "text": "菜品合您的口味吗?", "th": "อาหารถูกปากคุณไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ (Waiter)",
+    "context": "ระหว่างลูกค้ากำลังรับประทานอาหาร คุณต้องนำอุปกรณ์ที่ลูกค้าขอ เติมเครื่องดื่ม ตรวจสอบความพึงพอใจ และเก็บจาน",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, can we get chopsticks?", "zh": "打扰一下,可以给我们筷子吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Here are your chopsticks. Would you like a spoon as well?", "Of course. Here are your chopsticks. Do you need a spoon too?"],
+          "zh": ["好的,这是您的筷子,您还需要勺子吗?", "没问题,这是筷子,还需要勺子吗?"]
+        },
+        "keywords": { "en": ["chopsticks", "spoon", "certainly"], "zh": ["筷子", "勺子", "需要"] },
+        "tipTh": "นำของที่ขอมาให้และเสนอของที่เกี่ยวข้องเพิ่ม"
+      },
+      {
+        "prompt": { "en": "A napkin too, please.", "zh": "也请给我一张餐巾。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Here is a napkin for you.", "Certainly. Here is a napkin for you, sir."],
+          "zh": ["没问题,这是给您的餐巾。", "好的,这是您要的餐巾。"]
+        },
+        "keywords": { "en": ["napkin", "here", "of course"], "zh": ["餐巾", "这是", "没问题"] },
+        "tipTh": "ยื่นของให้ด้วยมือที่เหมาะสมพร้อมคำพูดสั้นๆ"
+      },
+      {
+        "prompt": { "en": "The soup is great! Can I get more?", "zh": "这汤太好喝了!可以再来一点吗?" },
+        "suggestedAnswers": {
+          "en": ["I'm glad you like it. Would you like a refill?", "I'm so glad you like it. A refill is coming right away."],
+          "zh": ["很高兴您喜欢,需要续杯吗?", "很高兴您喜欢,马上为您续杯。"]
+        },
+        "keywords": { "en": ["glad", "refill", "like"], "zh": ["高兴", "续杯", "喜欢"] },
+        "tipTh": "ตอบรับคำชมก่อน แล้วเสนอบริการเติมให้"
+      },
+      {
+        "prompt": { "en": "We're almost done.", "zh": "我们快吃完了。" },
+        "suggestedAnswers": {
+          "en": ["Is everything all right with your meal? May I take your plate?", "Is everything all right? May I take your plate when you are finished?"],
+          "zh": ["一切都还好吗?我可以收走您的盘子吗?", "一切都还满意吗?吃完后我来收走盘子。"]
+        },
+        "keywords": { "en": ["everything", "plate", "take"], "zh": ["一切", "盘子", "收走"] },
+        "tipTh": "ถามความพึงพอใจและขออนุญาตก่อนเก็บจานเสมอ"
+      },
+      {
+        "prompt": { "en": "Yes, everything was perfect. Thank you.", "zh": "是的,一切都很完美,谢谢。" },
+        "suggestedAnswers": {
+          "en": ["Thank you very much. I'm so happy to hear that. Would you like anything else?", "Thank you. We are happy to hear that. Is there anything else you need?"],
+          "zh": ["非常感谢,听到这个我们很开心,还需要别的吗?", "谢谢您,听到这个我们很开心,请问还需要别的吗?"]
+        },
+        "keywords": { "en": ["thank you", "happy", "anything else"], "zh": ["感谢", "开心", "别的"] },
+        "tipTh": "ขอบคุณสำหรับคำชมและถามต่อว่าต้องการอะไรเพิ่มอีกไหม"
+      }
+    ]
+  }
+}

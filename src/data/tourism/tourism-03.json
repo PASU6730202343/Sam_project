@@ -1,0 +1,91 @@
+{
+  "id": "tourism-03",
+  "careerId": "tourism",
+  "order": 3,
+  "titleTh": "บอกทาง",
+  "titleEn": "Giving Directions",
+  "titleZh": "指路",
+  "words": [
+    { "en": "left", "enPron": "เลฟท์", "th": "ซ้าย", "zh": "左边", "pinyin": "zuǒbian", "icon": "⬅️",
+      "exampleEn": "Turn left at the second street.", "exampleZh": "在第二条街往左边走。", "exampleTh": "เลี้ยวซ้ายที่ถนนเส้นที่สองค่ะ/ครับ" },
+    { "en": "right", "enPron": "ไรท์", "th": "ขวา", "zh": "右边", "pinyin": "yòubian", "icon": "➡️",
+      "exampleEn": "The station is on the right.", "exampleZh": "车站在右边。", "exampleTh": "สถานีอยู่ทางขวามือค่ะ/ครับ" },
+    { "en": "go straight", "enPron": "โก สเตรท", "th": "ตรงไป", "zh": "直走", "pinyin": "zhí zǒu", "icon": "⬆️",
+      "exampleEn": "Please go straight for two hundred metres.", "exampleZh": "请直走两百米。", "exampleTh": "กรุณาเดินตรงไปสองร้อยเมตรค่ะ/ครับ" },
+    { "en": "intersection", "enPron": "อิน-เตอร์-เสค-เชิน", "th": "สี่แยก", "zh": "路口", "pinyin": "lùkǒu", "icon": "🚦",
+      "exampleEn": "Turn at the next intersection.", "exampleZh": "在下一个路口转弯。", "exampleTh": "เลี้ยวที่สี่แยกถัดไปค่ะ/ครับ" },
+    { "en": "near", "enPron": "เนียร์", "th": "ใกล้", "zh": "附近", "pinyin": "fùjìn", "icon": "📌",
+      "exampleEn": "The station is near the hotel.", "exampleZh": "车站就在酒店附近。", "exampleTh": "สถานีอยู่ใกล้โรงแรมค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Go / Turn + direction (คำสั่งบอกทาง)",
+      "explanationTh": "ใช้คำกริยารูปคำสั่ง (imperative) บอกทาง โดยไม่ต้องมีประธาน ตามด้วยทิศทางและจุดอ้างอิง เช่น at the corner, after the bank",
+      "pattern": "Go / Turn + direction + (at / after + landmark)",
+      "examples": [
+        { "text": "Go straight and turn left at the bank.", "th": "เดินตรงไปแล้วเลี้ยวซ้ายที่ธนาคารค่ะ/ครับ" },
+        { "text": "Turn right after the bridge.", "th": "เลี้ยวขวาหลังข้ามสะพานค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "往 + 方向 + 走 (บอกทิศทาง)",
+      "explanationTh": "往 + ทิศทาง + 走 แปลว่า 'เดินไปทาง...' ใช้บอกทิศทาง เช่น 往左走 (ไปทางซ้าย) 往前走 (เดินตรงไป)",
+      "pattern": "往 + 左 / 右 / 前 + 走",
+      "examples": [
+        { "text": "往前走,然后往左走。", "th": "เดินตรงไป แล้วเลี้ยวซ้ายค่ะ/ครับ" },
+        { "text": "过了桥往右走。", "th": "ข้ามสะพานแล้วเลี้ยวขวาค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์/เจ้าหน้าที่ให้ข้อมูลนักท่องเที่ยว (Tourist Information)",
+    "context": "นักท่องเที่ยวถามทางไปสถานีรถไฟ คุณต้องบอกทางให้ชัดเจนทีละขั้น โดยใช้จุดอ้างอิง เช่น สี่แยกและธนาคาร",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, where is the train station?", "zh": "打扰一下,火车站在哪里?" },
+        "suggestedAnswers": {
+          "en": ["The station is near the hotel. I'll show you the way.", "The train station is near the hotel. Let me show you the way."],
+          "zh": ["车站就在酒店附近,我告诉您怎么走。", "火车站在酒店附近,我来告诉您怎么走。"]
+        },
+        "keywords": { "en": ["station", "near", "show"], "zh": ["车站", "附近", "怎么走"] },
+        "tipTh": "บอกก่อนว่าอยู่ใกล้อะไร แล้วค่อยอธิบายเส้นทาง"
+      },
+      {
+        "prompt": { "en": "How do I get there?", "zh": "我怎么去?" },
+        "suggestedAnswers": {
+          "en": ["Please go straight for two hundred metres.", "Go straight for two hundred metres, please."],
+          "zh": ["请直走两百米。", "您先直走两百米。"]
+        },
+        "keywords": { "en": ["go straight", "two hundred", "metres"], "zh": ["直走", "两百米", "请"] },
+        "tipTh": "บอกระยะทางเป็นตัวเลขชัดเจน"
+      },
+      {
+        "prompt": { "en": "And then?", "zh": "然后呢?" },
+        "suggestedAnswers": {
+          "en": ["At the next intersection, turn left. You will see a bank.", "Turn left at the next intersection. There is a bank on the corner."],
+          "zh": ["在下一个路口往左边走,您会看到一家银行。", "下一个路口往左边走,路口有一家银行。"]
+        },
+        "keywords": { "en": ["intersection", "turn left", "bank"], "zh": ["路口", "左边", "银行"] },
+        "tipTh": "ใช้สี่แยกและสถานที่สังเกตง่ายเป็นจุดอ้างอิง"
+      },
+      {
+        "prompt": { "en": "Is it on the right or on the left?", "zh": "车站在右边还是左边?" },
+        "suggestedAnswers": {
+          "en": ["The station is on the right, after the bank.", "It is on the right. You will pass the bank first."],
+          "zh": ["车站在右边,过了银行就是。", "在右边,您会先经过银行。"]
+        },
+        "keywords": { "en": ["right", "station", "bank"], "zh": ["右边", "车站", "银行"] },
+        "tipTh": "ตอบคำถามเลือกข้อให้ตรง พร้อมจุดอ้างอิงยืนยัน"
+      },
+      {
+        "prompt": { "en": "How long does it take?", "zh": "要走多久?" },
+        "suggestedAnswers": {
+          "en": ["About five minutes on foot. It is easy to find.", "It takes about five minutes on foot, and it is easy to find."],
+          "zh": ["步行大约五分钟,很好找。", "走路大概五分钟,很好找。"]
+        },
+        "keywords": { "en": ["five minutes", "on foot", "easy"], "zh": ["五分钟", "步行", "好找"] },
+        "tipTh": "บอกเวลาเดินและให้กำลังใจว่าหาง่าย"
+      }
+    ]
+  }
+}

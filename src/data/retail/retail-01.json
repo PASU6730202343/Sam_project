@@ -1,0 +1,91 @@
+{
+  "id": "retail-01",
+  "careerId": "retail",
+  "order": 1,
+  "titleTh": "ทักทายและถามความต้องการ",
+  "titleEn": "Greeting and Finding Needs",
+  "titleZh": "迎客与了解需求",
+  "words": [
+    { "en": "browse", "enPron": "เบราซ์", "th": "ดูเล่น / เลือกดู", "zh": "随便看看", "pinyin": "suíbiàn kànkan", "icon": "👀",
+      "exampleEn": "Feel free to browse.", "exampleZh": "您可以随便看看,有需要请叫我。", "exampleTh": "เชิญเลือกดูได้ตามสบายค่ะ/ครับ" },
+    { "en": "size", "enPron": "ไซซ์", "th": "ขนาด / ไซซ์", "zh": "尺码", "pinyin": "chǐmǎ", "icon": "📏",
+      "exampleEn": "What size do you wear?", "exampleZh": "请问您穿什么尺码?", "exampleTh": "คุณสวมไซซ์อะไรคะ/ครับ" },
+    { "en": "color", "enPron": "คัล-เลอร์", "th": "สี", "zh": "颜色", "pinyin": "yánsè", "icon": "🎨",
+      "exampleEn": "We have it in three colors.", "exampleZh": "这一款有三种颜色。", "exampleTh": "รุ่นนี้มีสามสีค่ะ/ครับ" },
+    { "en": "style", "enPron": "สไตล์", "th": "รูปแบบ / ทรง", "zh": "款式", "pinyin": "kuǎnshì", "icon": "👗",
+      "exampleEn": "This style is very popular.", "exampleZh": "这个款式很受欢迎。", "exampleTh": "ทรงนี้ได้รับความนิยมมากค่ะ/ครับ" },
+    { "en": "stock", "enPron": "สต็อก", "th": "สินค้าคงคลัง", "zh": "库存", "pinyin": "kùcún", "icon": "📦",
+      "exampleEn": "We have it in stock.", "exampleZh": "这一款现在有库存。", "exampleTh": "รุ่นนี้มีสินค้าพร้อมขายค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "What + noun ...? (ถามรายละเอียด)",
+      "explanationTh": "What size / What color / What style ใช้ถามความต้องการของลูกค้าให้เจาะจงขึ้น ตามด้วยประโยคคำถามปกติ",
+      "pattern": "What + noun + do you / would you + verb?",
+      "examples": [
+        { "text": "What size do you wear?", "th": "คุณสวมไซซ์อะไรคะ/ครับ" },
+        { "text": "What color would you like?", "th": "คุณต้องการสีอะไรคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您要什么 + 名词? (ถามรายละเอียด)",
+      "explanationTh": "什么 + นาม ใช้ถามรายละเอียด เช่น 什么颜色 (สีอะไร) 什么尺码 (ไซซ์อะไร) ไม่ต้องกลับลำดับคำ",
+      "pattern": "您要 / 穿 + 什么 + 名词?",
+      "examples": [
+        { "text": "您穿什么尺码?", "th": "คุณสวมไซซ์อะไรคะ/ครับ" },
+        { "text": "您想要什么颜色?", "th": "คุณต้องการสีอะไรคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานขาย (Shop Assistant)",
+    "context": "ลูกค้าเดินเข้ามาในร้านเสื้อผ้า คุณต้องต้อนรับ ถามขนาดและสี แนะนำรุ่นที่ได้รับความนิยม และตรวจสอบสต็อก",
+    "steps": [
+      {
+        "prompt": { "en": "I'm just looking.", "zh": "我只是随便看看。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Feel free to browse, and let me know if you need help.", "Of course. Please feel free to browse. Let me know if you need help."],
+          "zh": ["好的,您可以随便看看,有需要请叫我。", "没问题,请随便看看,需要帮忙请叫我。"]
+        },
+        "keywords": { "en": ["browse", "let me know", "help"], "zh": ["随便看看", "需要", "请"] },
+        "tipTh": "ไม่รบเร้า ให้พื้นที่ลูกค้าแต่แสดงว่าพร้อมช่วยเมื่อต้องการ"
+      },
+      {
+        "prompt": { "en": "I'm looking for a jacket.", "zh": "我想找一件夹克。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. What size do you wear?", "Certainly. What size do you usually wear?"],
+          "zh": ["好的,请问您穿什么尺码?", "好的,请问您平时穿什么尺码?"]
+        },
+        "keywords": { "en": ["certainly", "size", "wear"], "zh": ["好的", "尺码", "穿"] },
+        "tipTh": "ถามขนาดทันทีเพื่อเริ่มกรองสินค้าที่เหมาะสม"
+      },
+      {
+        "prompt": { "en": "Size medium.", "zh": "中码。" },
+        "suggestedAnswers": {
+          "en": ["Medium. What color would you like? We have it in three colors.", "Medium. What color would you like? It comes in three colors."],
+          "zh": ["中码。您想要什么颜色?这款有三种颜色。", "中码。请问您想要什么颜色?这一款有三种颜色。"]
+        },
+        "keywords": { "en": ["medium", "color", "three colors"], "zh": ["中码", "颜色", "三种"] },
+        "tipTh": "ทวนไซซ์ที่ลูกค้าบอก แล้วถามสีต่อ"
+      },
+      {
+        "prompt": { "en": "Black, please. Is this style popular?", "zh": "要黑色的。这个款式受欢迎吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, this style is very popular, and black is our best seller.", "Yes, this style is popular, and black is our best seller."],
+          "zh": ["是的,这个款式很受欢迎,黑色最畅销。", "是的,这个款式很受欢迎,黑色卖得最好。"]
+        },
+        "keywords": { "en": ["style", "popular", "black"], "zh": ["款式", "受欢迎", "黑色"] },
+        "tipTh": "ให้ข้อมูลจริงเรื่องความนิยมเพื่อสร้างความมั่นใจ"
+      },
+      {
+        "prompt": { "en": "Do you have it in stock?", "zh": "有现货吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we have it in stock. I will bring a medium black one.", "Yes, it is in stock. I will bring a medium black one."],
+          "zh": ["有的,这款有库存,我去拿一件中码黑色的。", "有,这款有库存,我去为您拿中码黑色的。"]
+        },
+        "keywords": { "en": ["stock", "medium", "black"], "zh": ["库存", "中码", "黑色"] },
+        "tipTh": "ตอบเรื่องสต็อกให้ตรง และลงมือหยิบสินค้าให้ทันที"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-07",
+  "careerId": "customer-service",
+  "order": 7,
+  "titleTh": "รับมือลูกค้าที่โกรธ",
+  "titleEn": "Handling Angry Customers",
+  "titleZh": "应对愤怒的顾客",
+  "words": [
+    { "en": "angry", "enPron": "แอง-กรี", "th": "โกรธ", "zh": "生气", "pinyin": "shēngqì", "icon": "😠",
+      "exampleEn": "I can see you are angry.", "exampleZh": "我看得出您很生气。", "exampleTh": "ดิฉัน/ผมเห็นว่าคุณกำลังโกรธค่ะ/ครับ" },
+    { "en": "calm", "enPron": "คาล์ม", "th": "ใจเย็น", "zh": "冷静", "pinyin": "lěngjìng", "icon": "😌",
+      "exampleEn": "Let's stay calm and find a solution.", "exampleZh": "我们先保持冷静,一起找办法。", "exampleTh": "เรามาใจเย็นๆ แล้วช่วยกันหาทางออกนะคะ/ครับ" },
+    { "en": "escalate", "enPron": "เอส-คะ-เลท", "th": "ส่งต่อระดับสูง", "zh": "升级处理", "pinyin": "shēngjí chǔlǐ", "icon": "⬆️",
+      "exampleEn": "I will escalate your case.", "exampleZh": "我会为您升级处理这个问题。", "exampleTh": "ดิฉัน/ผมจะส่งเรื่องของคุณต่อไปยังระดับสูงขึ้นค่ะ/ครับ" },
+    { "en": "supervisor", "enPron": "ซู-เปอร์-ไว-เซอร์", "th": "หัวหน้างาน", "zh": "主管", "pinyin": "zhǔguǎn", "icon": "👔",
+      "exampleEn": "I will transfer you to my supervisor.", "exampleZh": "我帮您转接我的主管。", "exampleTh": "ดิฉัน/ผมจะโอนสายไปยังหัวหน้างานให้ค่ะ/ครับ" },
+    { "en": "complaint", "enPron": "คอม-เพลนท์", "th": "ข้อร้องเรียน", "zh": "投诉", "pinyin": "tóusù", "icon": "📣",
+      "exampleEn": "I will record your complaint.", "exampleZh": "我会记录您的投诉。", "exampleTh": "ดิฉัน/ผมจะบันทึกข้อร้องเรียนของคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Allow me to + verb (ขออนุญาตอธิบายหรือทำ)",
+      "explanationTh": "Allow me to + กริยา เป็นสำนวนทางการที่สุภาพมาก ใช้เมื่อต้องการอธิบายหรือช่วยเหลือในสถานการณ์ตึงเครียด",
+      "pattern": "Allow me to + verb + (object)",
+      "examples": [
+        { "text": "Allow me to explain what I can do.", "th": "ขออนุญาตอธิบายสิ่งที่ดิฉัน/ผมช่วยได้นะคะ/ครับ" },
+        { "text": "Allow me to check this for you.", "th": "ขออนุญาตตรวจสอบเรื่องนี้ให้คุณนะคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请允许我 + 动词 (ขออนุญาตอธิบายหรือทำ)",
+      "explanationTh": "请允许我 + กริยา เป็นสำนวนสุภาพ ใช้ตอนต้องการอธิบายหรือขอทำสิ่งใดกับลูกค้าที่กำลังไม่พอใจ",
+      "pattern": "请允许我 + 动词 + (名词)",
+      "examples": [
+        { "text": "请允许我解释一下。", "th": "ขออนุญาตอธิบายสักเล็กน้อยนะคะ/ครับ" },
+        { "text": "请允许我为您查询。", "th": "ขออนุญาตตรวจสอบให้คุณนะคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ลูกค้าโกรธมากและต้องการคืนเงิน คุณต้องใจเย็น ขอโทษ ฟังเขา รับเรื่องร้องเรียน และส่งต่อเรื่องให้หัวหน้างานอย่างมืออาชีพ",
+    "steps": [
+      {
+        "prompt": { "en": "This is ridiculous! I want my money back!", "zh": "这太荒唐了!我要退钱!" },
+        "suggestedAnswers": {
+          "en": ["I can see you are angry, and I'm sorry. Let's stay calm and find a solution.", "I can see you are angry, and I am very sorry. Let's stay calm and find a solution."],
+          "zh": ["我看得出您很生气,非常抱歉。我们先保持冷静,一起找办法。", "我看得出您很生气,深表歉意,我们先冷静下来找办法。"]
+        },
+        "keywords": { "en": ["angry", "sorry", "calm"], "zh": ["生气", "抱歉", "冷静"] },
+        "tipTh": "ยอมรับความรู้สึกของลูกค้าและชวนหาทางออกด้วยน้ำเสียงนิ่ง"
+      },
+      {
+        "prompt": { "en": "You never listen!", "zh": "你们从来不听我说!" },
+        "suggestedAnswers": {
+          "en": ["Allow me to explain what I can do. I will listen carefully.", "Allow me to explain what I can do, and I will listen carefully."],
+          "zh": ["请允许我解释一下我能做什么,我会认真听您说。", "请允许我说明能做的事,我会认真听您的意见。"]
+        },
+        "keywords": { "en": ["allow me", "explain", "listen"], "zh": ["允许", "解释", "认真"] },
+        "tipTh": "ไม่โต้เถียง ใช้ Allow me to เพื่อขอพื้นที่อธิบาย"
+      },
+      {
+        "prompt": { "en": "I want to file a complaint.", "zh": "我要投诉。" },
+        "suggestedAnswers": {
+          "en": ["Of course. I will record your complaint right now.", "Of course. I will record your complaint right away."],
+          "zh": ["没问题,我现在就记录您的投诉。", "没问题,我马上记录您的投诉。"]
+        },
+        "keywords": { "en": ["record", "complaint", "of course"], "zh": ["记录", "投诉", "没问题"] },
+        "tipTh": "ไม่ขัดขวางการร้องเรียน ให้บันทึกทันที"
+      },
+      {
+        "prompt": { "en": "That is not enough. I want to talk to your boss.", "zh": "这不够。我要跟你们领导谈。" },
+        "suggestedAnswers": {
+          "en": ["I understand. I will escalate your case and transfer you to my supervisor.", "I understand. I will escalate this and transfer you to my supervisor."],
+          "zh": ["我理解,我会为您升级处理,并转接我的主管。", "我理解,我会升级处理这件事,并转接给主管。"]
+        },
+        "keywords": { "en": ["escalate", "transfer", "supervisor"], "zh": ["升级处理", "转接", "主管"] },
+        "tipTh": "เมื่อเกินอำนาจให้ส่งต่ออย่างเต็มใจ ไม่ถือว่าเป็นความล้มเหลว"
+      },
+      {
+        "prompt": { "en": "Fine. How long will I wait?", "zh": "好吧,要等多久?" },
+        "suggestedAnswers": {
+          "en": ["Please hold for two minutes. Thank you for your patience.", "Please hold for about two minutes. Thank you for your patience."],
+          "zh": ["请稍等两分钟,感谢您的耐心。", "请稍等大约两分钟,谢谢您的耐心。"]
+        },
+        "keywords": { "en": ["hold", "two minutes", "patience"], "zh": ["稍等", "两分钟", "耐心"] },
+        "tipTh": "บอกเวลารอที่ชัดเจนและขอบคุณที่อดทน"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "hotel-03",
+  "careerId": "hotel",
+  "order": 3,
+  "titleTh": "สิ่งอำนวยความสะดวกในห้อง",
+  "titleEn": "Room Facilities",
+  "titleZh": "客房设施",
+  "words": [
+    { "en": "air conditioner", "enPron": "แอร์ คอน-ดิ-ชัน-เนอะ", "th": "เครื่องปรับอากาศ", "zh": "空调", "pinyin": "kōngtiáo", "icon": "❄️",
+      "exampleEn": "The air conditioner is next to the door.", "exampleZh": "空调在门旁边。", "exampleTh": "เครื่องปรับอากาศอยู่ข้างประตูค่ะ/ครับ" },
+    { "en": "towel", "enPron": "ทาว-เอิล", "th": "ผ้าเช็ดตัว", "zh": "毛巾", "pinyin": "máojīn", "icon": "🧖",
+      "exampleEn": "Clean towels are in the bathroom.", "exampleZh": "浴室里有干净的毛巾。", "exampleTh": "ผ้าเช็ดตัวสะอาดอยู่ในห้องน้ำค่ะ/ครับ" },
+    { "en": "Wi-Fi", "enPron": "ไว-ไฟ", "th": "ไวไฟ", "zh": "无线网络", "pinyin": "wúxiàn wǎngluò", "icon": "📶",
+      "exampleEn": "The Wi-Fi is free for all guests.", "exampleZh": "所有客人都可以免费使用无线网络。", "exampleTh": "ไวไฟใช้ฟรีสำหรับแขกทุกท่านค่ะ/ครับ" },
+    { "en": "hair dryer", "enPron": "แฮร์ ไดร-เออร์", "th": "ไดร์เป่าผม", "zh": "吹风机", "pinyin": "chuīfēngjī", "icon": "💇",
+      "exampleEn": "The hair dryer is in the drawer.", "exampleZh": "吹风机在抽屉里。", "exampleTh": "ไดร์เป่าผมอยู่ในลิ้นชักค่ะ/ครับ" },
+    { "en": "safe", "enPron": "เซฟ", "th": "ตู้เซฟ", "zh": "保险箱", "pinyin": "bǎoxiǎnxiāng", "icon": "🔒",
+      "exampleEn": "You can keep your passport in the safe.", "exampleZh": "您可以把护照放在保险箱里。", "exampleTh": "คุณเก็บหนังสือเดินทางไว้ในตู้เซฟได้ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "There is / There are (บอกว่ามีอะไรอยู่ที่ไหน)",
+      "explanationTh": "ใช้ There is กับนามเอกพจน์ และ There are กับนามพหูพจน์ แล้วตามด้วยบุพบทบอกตำแหน่ง เช่น in, on, next to",
+      "pattern": "There is / There are + noun + place",
+      "examples": [
+        { "text": "There is a safe in the wardrobe.", "th": "มีตู้เซฟอยู่ในตู้เสื้อผ้าค่ะ/ครับ" },
+        { "text": "There are two towels on the bed.", "th": "มีผ้าเช็ดตัวสองผืนอยู่บนเตียงค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "地点 + 有 + 东西 (บอกว่ามีอะไรอยู่ที่ไหน)",
+      "explanationTh": "โครงสร้างบอกสิ่งที่มีอยู่: ขึ้นต้นด้วยสถานที่ ตามด้วย 有 แล้วจึงบอกสิ่งของ ถ้ามีจำนวนให้ใส่ลักษณนามคั่น เช่น 两条毛巾",
+      "pattern": "地点 + 有 + 数量 + 东西",
+      "examples": [
+        { "text": "房间里有吹风机。", "th": "ในห้องมีไดร์เป่าผมค่ะ/ครับ" },
+        { "text": "浴室里有两条毛巾。", "th": "ในห้องน้ำมีผ้าเช็ดตัวสองผืนค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับ (Front Desk)",
+    "context": "แขกเข้าพักแล้วโทรลงมาที่เคาน์เตอร์ด้วยคำถามเกี่ยวกับอุปกรณ์ในห้อง คุณต้องอธิบายตำแหน่งและวิธีใช้อย่างชัดเจนและสุภาพ",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, how do I turn on the air conditioner?", "zh": "你好,空调怎么开?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. The air conditioner remote is on the table. Press the green button.", "Of course. Please use the remote on the table and press the green button."],
+          "zh": ["好的。空调遥控器在桌子上,请按绿色按钮。", "没问题,请用桌子上的遥控器,按绿色按钮。"]
+        },
+        "keywords": { "en": ["remote", "press", "table"], "zh": ["遥控器", "按", "桌子"] },
+        "tipTh": "บอกตำแหน่งของรีโมตและขั้นตอนสั้นๆ ทีละขั้น"
+      },
+      {
+        "prompt": { "en": "Thanks. Is there Wi-Fi in the room?", "zh": "谢谢。房间里有无线网络吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the Wi-Fi is free. The password is on your key card holder.", "Yes, there is free Wi-Fi. You can find the password on the key card holder."],
+          "zh": ["有的,无线网络是免费的,密码在房卡套上。", "有,免费的。密码印在房卡套上。"]
+        },
+        "keywords": { "en": ["wi-fi", "free", "password"], "zh": ["无线网络", "免费", "密码"] },
+        "tipTh": "แจ้งว่าฟรีหรือไม่ และบอกที่อยู่ของรหัสผ่านให้ครบ"
+      },
+      {
+        "prompt": { "en": "I can't find a hair dryer.", "zh": "我找不到吹风机。" },
+        "suggestedAnswers": {
+          "en": ["Sorry about that. There is a hair dryer in the bathroom drawer.", "I am sorry. You will find the hair dryer in the drawer in the bathroom."],
+          "zh": ["不好意思。浴室抽屉里有吹风机。", "抱歉,吹风机在浴室的抽屉里。"]
+        },
+        "keywords": { "en": ["hair dryer", "drawer", "sorry"], "zh": ["吹风机", "抽屉", "不好意思"] },
+        "tipTh": "ขอโทษสั้นๆ ก่อนแล้วบอกตำแหน่งทันที ไม่ต้องอธิบายยาว"
+      },
+      {
+        "prompt": { "en": "Is there somewhere safe to keep my passport?", "zh": "有地方可以安全地放我的护照吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, there is a safe in the wardrobe. You can set your own code.", "Yes, you can keep it in the safe in the wardrobe."],
+          "zh": ["有的,衣柜里有保险箱,您可以设置自己的密码。", "有,您可以把它放在衣柜里的保险箱。"]
+        },
+        "keywords": { "en": ["safe", "wardrobe", "code"], "zh": ["保险箱", "衣柜", "密码"] },
+        "tipTh": "ใช้ There is ... เพื่อบอกว่ามี พร้อมตำแหน่งชัดเจน"
+      },
+      {
+        "prompt": { "en": "Could I have two more towels, please?", "zh": "请再给我两条毛巾,好吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. I will send two towels to your room right away.", "Certainly. Two towels will be sent to your room right away."],
+          "zh": ["当然可以,我马上给您送两条毛巾。", "好的,马上为您送两条毛巾。"]
+        },
+        "keywords": { "en": ["towels", "send", "right away"], "zh": ["毛巾", "马上", "送"] },
+        "tipTh": "ยืนยันจำนวนที่ขอและบอกว่าจะส่งให้ทันที"
+      }
+    ]
+  }
+}

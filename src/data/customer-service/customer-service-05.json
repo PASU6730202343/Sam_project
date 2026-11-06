@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-05",
+  "careerId": "customer-service",
+  "order": 5,
+  "titleTh": "ติดตามพัสดุและการจัดส่ง",
+  "titleEn": "Tracking and Delivery",
+  "titleZh": "物流查询",
+  "words": [
+    { "en": "tracking number", "enPron": "แทร็ค-คิง นัม-เบอร์", "th": "หมายเลขติดตามพัสดุ", "zh": "快递单号", "pinyin": "kuàidì dānhào", "icon": "📦",
+      "exampleEn": "Here is your tracking number.", "exampleZh": "这是您的快递单号。", "exampleTh": "นี่คือหมายเลขติดตามพัสดุของคุณค่ะ/ครับ" },
+    { "en": "shipping", "enPron": "ชิป-ปิง", "th": "การจัดส่ง", "zh": "运送", "pinyin": "yùnsòng", "icon": "🚚",
+      "exampleEn": "Shipping takes three to five days.", "exampleZh": "运送需要三到五天。", "exampleTh": "การจัดส่งใช้เวลาสามถึงห้าวันค่ะ/ครับ" },
+    { "en": "delivered", "enPron": "ดิ-ลิ-เวิร์ดดฺ", "th": "ส่งถึงแล้ว", "zh": "已送达", "pinyin": "yǐ sòngdá", "icon": "📬",
+      "exampleEn": "Your parcel has been delivered.", "exampleZh": "您的包裹已送达。", "exampleTh": "พัสดุของคุณส่งถึงแล้วค่ะ/ครับ" },
+    { "en": "address", "enPron": "แอด-เดรส", "th": "ที่อยู่", "zh": "地址", "pinyin": "dìzhǐ", "icon": "🏠",
+      "exampleEn": "Please confirm your address.", "exampleZh": "请确认您的地址。", "exampleTh": "กรุณายืนยันที่อยู่ของคุณค่ะ/ครับ" },
+    { "en": "courier", "enPron": "คัวร์-เรียร์", "th": "พนักงานส่งพัสดุ", "zh": "快递员", "pinyin": "kuàidìyuán", "icon": "🛵",
+      "exampleEn": "The courier will call you.", "exampleZh": "快递员会给您打电话。", "exampleTh": "พนักงานส่งพัสดุจะโทรหาคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "has / have been + past participle (บอกสถานะ)",
+      "explanationTh": "present perfect passive ใช้บอกสถานะล่าสุดของสิ่งของ เช่น พัสดุถูกส่งแล้ว โดยไม่จำเป็นต้องระบุว่าใครทำ",
+      "pattern": "Noun + has / have been + past participle",
+      "examples": [
+        { "text": "Your parcel has been shipped.", "th": "พัสดุของคุณถูกจัดส่งแล้วค่ะ/ครับ" },
+        { "text": "Your order has been delivered.", "th": "คำสั่งซื้อของคุณส่งถึงแล้วค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "已经……了 (บอกสถานะที่เสร็จแล้ว)",
+      "explanationTh": "已经 + กริยา + 了 บอกว่าการกระทำนั้นเสร็จสิ้นแล้ว ใช้แจ้งสถานะพัสดุ",
+      "pattern": "名词 + 已经 + 动词 + 了",
+      "examples": [
+        { "text": "您的包裹已经发出了。", "th": "พัสดุของคุณถูกส่งออกไปแล้วค่ะ/ครับ" },
+        { "text": "您的订单已经送达了。", "th": "คำสั่งซื้อของคุณส่งถึงแล้วค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ลูกค้าตามหาพัสดุที่ระบบขึ้นว่าส่งถึงแล้วแต่ยังไม่ได้รับ คุณต้องตรวจเลขพัสดุ แจ้งสถานะ ยืนยันที่อยู่ ประสานพนักงานส่ง และรับปากแก้ไข",
+    "steps": [
+      {
+        "prompt": { "en": "Where is my parcel?", "zh": "我的包裹在哪里?" },
+        "suggestedAnswers": {
+          "en": ["Let me check. Could you give me your tracking number?", "I will check for you. May I have your tracking number?"],
+          "zh": ["我来查一下,能告诉我您的快递单号吗?", "我帮您查询,请问您的快递单号是多少?"]
+        },
+        "keywords": { "en": ["check", "tracking number", "give"], "zh": ["查", "快递单号", "告诉"] },
+        "tipTh": "ขอเลขติดตามพัสดุเป็นอย่างแรก"
+      },
+      {
+        "prompt": { "en": "The number is T H one two three.", "zh": "单号是TH123。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Your parcel has been shipped, and shipping takes three to five days.", "Thank you. Your parcel has been shipped. Shipping takes three to five days."],
+          "zh": ["谢谢。您的包裹已经发出了,运送需要三到五天。", "谢谢您,包裹已经发出了,运送需要三到五天。"]
+        },
+        "keywords": { "en": ["shipped", "shipping", "three to five days"], "zh": ["发出", "运送", "三到五天"] },
+        "tipTh": "แจ้งสถานะล่าสุดและระยะเวลาจัดส่งที่คาดไว้"
+      },
+      {
+        "prompt": { "en": "The status says delivered, but I didn't get it.", "zh": "状态显示已送达,但我没收到。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry. The system says it has been delivered. Please confirm your address.", "I'm sorry. The system says it was delivered. Could you confirm your address?"],
+          "zh": ["很抱歉。系统显示已送达,请确认您的地址。", "非常抱歉,系统显示已送达,请您确认一下地址。"]
+        },
+        "keywords": { "en": ["delivered", "address", "confirm"], "zh": ["已送达", "地址", "确认"] },
+        "tipTh": "ตรวจสอบที่อยู่ก่อนกล่าวโทษใคร"
+      },
+      {
+        "prompt": { "en": "The address is correct.", "zh": "地址是对的。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. I will ask the courier to call you today.", "Thank you. The courier will call you today."],
+          "zh": ["谢谢。我会让快递员今天给您打电话。", "谢谢,快递员今天会给您打电话。"]
+        },
+        "keywords": { "en": ["courier", "call", "today"], "zh": ["快递员", "电话", "今天"] },
+        "tipTh": "บอกขั้นตอนต่อไปและกรอบเวลา"
+      },
+      {
+        "prompt": { "en": "Okay, thanks.", "zh": "好的,谢谢。" },
+        "suggestedAnswers": {
+          "en": ["You are welcome. If it does not arrive, we will send a new parcel.", "You are welcome. If it does not arrive, we will send you a new parcel."],
+          "zh": ["不客气,如果没有收到,我们会重新寄一个包裹。", "不客气,如果仍没收到,我们会重新寄包裹。"]
+        },
+        "keywords": { "en": ["welcome", "new parcel", "send"], "zh": ["不客气", "重新", "包裹"] },
+        "tipTh": "ให้หลักประกันว่าหากแก้ไม่ได้จะมีทางออกสุดท้าย"
+      }
+    ]
+  }
+}

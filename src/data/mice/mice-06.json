@@ -1,0 +1,91 @@
+{
+  "id": "mice-06",
+  "careerId": "mice",
+  "order": 6,
+  "titleTh": "ล่ามและการนำเสนอ",
+  "titleEn": "Interpretation and Presentations",
+  "titleZh": "翻译与演讲",
+  "words": [
+    { "en": "interpreter", "enPron": "อิน-เทอร์-พริ-เทอร์", "th": "ล่ามพูด", "zh": "口译员", "pinyin": "kǒuyìyuán", "icon": "🗣️",
+      "exampleEn": "The interpreter will sit at the back.", "exampleZh": "口译员会坐在会场后排。", "exampleTh": "ล่ามจะนั่งอยู่แถวหลังค่ะ/ครับ" },
+    { "en": "translation", "enPron": "แทรนส์-เล-เชิน", "th": "การแปล", "zh": "翻译", "pinyin": "fānyì", "icon": "🌐",
+      "exampleEn": "Translation is available in Chinese.", "exampleZh": "提供中文翻译。", "exampleTh": "มีบริการแปลเป็นภาษาจีนค่ะ/ครับ" },
+    { "en": "presentation", "enPron": "เพรส-เซน-เท-เชิน", "th": "การนำเสนอ", "zh": "演讲", "pinyin": "yǎnjiǎng", "icon": "📊",
+      "exampleEn": "The presentation lasts thirty minutes.", "exampleZh": "演讲时间为三十分钟。", "exampleTh": "การนำเสนอใช้เวลาสามสิบนาทีค่ะ/ครับ" },
+    { "en": "slide", "enPron": "สไลด์", "th": "สไลด์", "zh": "幻灯片", "pinyin": "huàndēngpiàn", "icon": "🖼️",
+      "exampleEn": "Please send your slides by noon.", "exampleZh": "请在中午前发送您的幻灯片。", "exampleTh": "กรุณาส่งสไลด์ของคุณก่อนเที่ยงค่ะ/ครับ" },
+    { "en": "speaker", "enPron": "สปี-เคอร์", "th": "วิทยากร", "zh": "发言人", "pinyin": "fāyánrén", "icon": "🎤",
+      "exampleEn": "The speaker will arrive at nine.", "exampleZh": "发言人九点到达。", "exampleTh": "วิทยากรจะมาถึงตอนเก้าโมงค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "need to + verb (สิ่งที่ต้องทำ)",
+      "explanationTh": "need to + กริยาช่องที่ 1 ใช้บอกสิ่งที่ผู้ฟังต้องทำ เป็นรูปแบบที่สุภาพและชัดเจนกว่าคำสั่งโดยตรง",
+      "pattern": "You need to + verb + (object) + (by + time)",
+      "examples": [
+        { "text": "You need to send your slides by noon.", "th": "คุณต้องส่งสไลด์ก่อนเที่ยงค่ะ/ครับ" },
+        { "text": "You need to arrive at nine.", "th": "คุณต้องมาถึงตอนเก้าโมงค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "需要您 + 动词 (สิ่งที่ต้องทำ)",
+      "explanationTh": "需要您 + กริยา แปลว่า 'ต้องการให้คุณ...' ฟังสุภาพกว่า 你要... และใช้ทั่วไปในการประสานงาน",
+      "pattern": "需要您 + 在 + 时间 + 动词",
+      "examples": [
+        { "text": "需要您在中午前发送幻灯片。", "th": "ต้องการให้คุณส่งสไลด์ก่อนเที่ยงค่ะ/ครับ" },
+        { "text": "需要您九点前到达。", "th": "ต้องการให้คุณมาถึงก่อนเก้าโมงค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้ประสานงานงานประชุม (Event Coordinator)",
+    "context": "วิทยากรต่างชาติกำลังเตรียมนำเสนอ คุณต้องจัดล่าม แจ้งบริการแปล เวลานำเสนอ กำหนดส่งสไลด์ และเวลาที่วิทยากรหลักจะมาถึง",
+    "steps": [
+      {
+        "prompt": { "en": "I need an interpreter for my talk.", "zh": "我的演讲需要口译员。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. The interpreter will sit at the back of the room.", "Certainly. Our interpreter will sit at the back of the room."],
+          "zh": ["好的,口译员会坐在会场后排。", "好的,我们的口译员会坐在会场的后排。"]
+        },
+        "keywords": { "en": ["interpreter", "back", "certainly"], "zh": ["口译员", "后排", "好的"] },
+        "tipTh": "รับคำขอและบอกตำแหน่งของล่ามให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Will there be translation for the audience?", "zh": "听众会有翻译吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, translation is available in Chinese through headphones.", "Yes, translation in Chinese is available through headphones."],
+          "zh": ["有的,通过耳机提供中文翻译。", "有,听众可以通过耳机收听中文翻译。"]
+        },
+        "keywords": { "en": ["translation", "chinese", "headphones"], "zh": ["翻译", "中文", "耳机"] },
+        "tipTh": "บอกภาษาที่แปลและวิธีรับฟัง"
+      },
+      {
+        "prompt": { "en": "How long is my presentation?", "zh": "我的演讲有多长?" },
+        "suggestedAnswers": {
+          "en": ["Your presentation lasts thirty minutes, followed by questions.", "Your presentation is thirty minutes long, followed by questions."],
+          "zh": ["您的演讲时间为三十分钟,之后是提问环节。", "您的演讲三十分钟,之后是提问环节。"]
+        },
+        "keywords": { "en": ["presentation", "thirty minutes", "questions"], "zh": ["演讲", "三十分钟", "提问"] },
+        "tipTh": "บอกความยาวและขั้นตอนต่อไปหลังนำเสนอ"
+      },
+      {
+        "prompt": { "en": "When do you need my slides?", "zh": "你们什么时候需要我的幻灯片?" },
+        "suggestedAnswers": {
+          "en": ["You need to send your slides by noon. Please email them to me.", "Please send your slides by noon. You can email them to me."],
+          "zh": ["需要您在中午前发送幻灯片,请发邮件给我。", "请在中午前发送幻灯片,发邮件给我就可以。"]
+        },
+        "keywords": { "en": ["slides", "noon", "email"], "zh": ["幻灯片", "中午", "邮件"] },
+        "tipTh": "บอกกำหนดส่งและช่องทางส่งให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "When should the main speaker arrive?", "zh": "主讲人应该什么时候到?" },
+        "suggestedAnswers": {
+          "en": ["The speaker will arrive at nine. We will meet them at the entrance.", "The speaker arrives at nine. We will meet them at the entrance."],
+          "zh": ["发言人九点到达,我们会在入口迎接。", "发言人九点到,我们会在入口迎接。"]
+        },
+        "keywords": { "en": ["speaker", "nine", "entrance"], "zh": ["发言人", "九点", "入口"] },
+        "tipTh": "บอกเวลาและจุดรับตัววิทยากร"
+      }
+    ]
+  }
+}

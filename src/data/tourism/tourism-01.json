@@ -1,0 +1,91 @@
+{
+  "id": "tourism-01",
+  "careerId": "tourism",
+  "order": 1,
+  "titleTh": "พบนักท่องเที่ยวและแนะนำตัว",
+  "titleEn": "Meeting the Tour Group",
+  "titleZh": "迎接团队",
+  "words": [
+    { "en": "tour guide", "enPron": "ทัวร์ ไกด์", "th": "ไกด์นำเที่ยว", "zh": "导游", "pinyin": "dǎoyóu", "icon": "🧭",
+      "exampleEn": "I will be your tour guide today.", "exampleZh": "今天由我担任您的导游。", "exampleTh": "วันนี้ดิฉัน/ผมจะเป็นไกด์ของคุณค่ะ/ครับ" },
+    { "en": "group", "enPron": "กรุ๊ป", "th": "กลุ่ม / คณะ", "zh": "团队", "pinyin": "tuánduì", "icon": "👥",
+      "exampleEn": "Please stay with the group.", "exampleZh": "请跟紧团队。", "exampleTh": "กรุณาอยู่กับกลุ่มนะคะ/ครับ" },
+    { "en": "itinerary", "enPron": "ไอ-ทิน-เนอ-เร-รี", "th": "กำหนดการเดินทาง", "zh": "行程", "pinyin": "xíngchéng", "icon": "🗓️",
+      "exampleEn": "Here is your itinerary for today.", "exampleZh": "这是您今天的行程。", "exampleTh": "นี่คือกำหนดการของคุณในวันนี้ค่ะ/ครับ" },
+    { "en": "meeting point", "enPron": "มี-ทิง พอยท์", "th": "จุดนัดพบ", "zh": "集合点", "pinyin": "jíhédiǎn", "icon": "📍",
+      "exampleEn": "Our meeting point is the hotel lobby.", "exampleZh": "我们的集合点是酒店大堂。", "exampleTh": "จุดนัดพบของเราคือล็อบบี้โรงแรมค่ะ/ครับ" },
+    { "en": "tour bus", "enPron": "ทัวร์ บัส", "th": "รถทัวร์", "zh": "旅游巴士", "pinyin": "lǚyóu bāshì", "icon": "🚌",
+      "exampleEn": "The tour bus leaves at eight.", "exampleZh": "旅游巴士八点出发。", "exampleTh": "รถทัวร์ออกเดินทางตอนแปดโมงค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Let's + verb (ชวนทำสิ่งต่างๆ ร่วมกัน)",
+      "explanationTh": "Let's + กริยาช่องที่ 1 ใช้ชวนทั้งกลุ่มทำสิ่งใดสิ่งหนึ่งร่วมกัน เป็นกันเองและเหมาะกับงานนำเที่ยว",
+      "pattern": "Let's + verb + (place / time)",
+      "examples": [
+        { "text": "Let's meet at the lobby at eight.", "th": "เรามาเจอกันที่ล็อบบี้ตอนแปดโมงนะคะ/ครับ" },
+        { "text": "Let's take a group photo.", "th": "เรามาถ่ายรูปหมู่กันนะคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "我们 + 动词 + 吧 (ชวนทำร่วมกัน)",
+      "explanationTh": "ใช้ 吧 ท้ายประโยคเพื่อชวนหรือเสนออย่างอ่อนโยน เหมาะกับการชวนทั้งกลุ่มออกเดินทางหรือถ่ายภาพ",
+      "pattern": "我们 + 动词 + 吧",
+      "examples": [
+        { "text": "我们出发吧。", "th": "เราออกเดินทางกันเถอะค่ะ/ครับ" },
+        { "text": "我们先去寺庙吧。", "th": "เราไปวัดกันก่อนเถอะค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "เช้าวันแรกของทัวร์ คุณพบกลุ่มนักท่องเที่ยวที่ล็อบบี้โรงแรม ต้องแนะนำตัว อธิบายกำหนดการ จุดนัดพบ รถทัวร์ และดูแลความปลอดภัยของกลุ่ม",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, are you our guide?", "zh": "你好,您是我们的导游吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, welcome! I will be your tour guide today.", "Good morning, welcome! I am your tour guide for today."],
+          "zh": ["是的,欢迎!今天由我担任您的导游。", "早上好,欢迎!我是今天的导游。"]
+        },
+        "keywords": { "en": ["welcome", "tour guide", "today"], "zh": ["欢迎", "导游", "今天"] },
+        "tipTh": "แนะนำตัวพร้อมรอยยิ้มและกล่าวต้อนรับ"
+      },
+      {
+        "prompt": { "en": "What is the plan for today?", "zh": "今天的安排是什么?" },
+        "suggestedAnswers": {
+          "en": ["Here is your itinerary. We will visit the temple, the market and the beach.", "This is your itinerary for today: the temple, the market and the beach."],
+          "zh": ["这是您今天的行程,我们会去寺庙、市场和海滩。", "这是今天的行程:寺庙、市场和海滩。"]
+        },
+        "keywords": { "en": ["itinerary", "temple", "market"], "zh": ["行程", "寺庙", "市场"] },
+        "tipTh": "ให้กำหนดการเป็นเอกสารและสรุปสถานที่หลักด้วยปาก"
+      },
+      {
+        "prompt": { "en": "Where do we meet?", "zh": "我们在哪里集合?" },
+        "suggestedAnswers": {
+          "en": ["Our meeting point is the hotel lobby. Please arrive at eight.", "Please meet at the hotel lobby, our meeting point, at eight."],
+          "zh": ["我们的集合点是酒店大堂,请八点到。", "请八点在酒店大堂集合。"]
+        },
+        "keywords": { "en": ["meeting point", "lobby", "eight"], "zh": ["集合点", "大堂", "八点"] },
+        "tipTh": "บอกจุดนัดพบและเวลาให้ชัดเจนทุกครั้ง"
+      },
+      {
+        "prompt": { "en": "How do we get there?", "zh": "我们怎么过去?" },
+        "suggestedAnswers": {
+          "en": ["We will take the tour bus. It leaves at eight thirty.", "Let's take the tour bus. It leaves at eight thirty."],
+          "zh": ["我们乘坐旅游巴士,八点半出发。", "我们坐旅游巴士去吧,八点半出发。"]
+        },
+        "keywords": { "en": ["tour bus", "leaves", "eight thirty"], "zh": ["旅游巴士", "出发", "八点半"] },
+        "tipTh": "บอกวิธีเดินทางและเวลาออกรถ"
+      },
+      {
+        "prompt": { "en": "I'm worried about getting lost.", "zh": "我担心会走丢。" },
+        "suggestedAnswers": {
+          "en": ["Please stay with the group. I will count the headcount often. Call me if you need help.", "Don't worry. Please stay with the group, check the headcount, and call me if you need help."],
+          "zh": ["请跟紧团队,我们会经常清点人数,有事请联系我。", "别担心,请跟紧团队,我会清点人数,有事请联系我。"]
+        },
+        "keywords": { "en": ["stay with the group", "headcount", "call me"], "zh": ["跟紧团队", "清点人数", "联系"] },
+        "tipTh": "ให้ความมั่นใจและบอกวิธีป้องกันการพลัดหลง"
+      }
+    ]
+  }
+}

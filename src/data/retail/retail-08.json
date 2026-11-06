@@ -1,0 +1,91 @@
+{
+  "id": "retail-08",
+  "careerId": "retail",
+  "order": 8,
+  "titleTh": "ของขวัญและการจัดส่ง",
+  "titleEn": "Gifts and Shipping",
+  "titleZh": "礼品与邮寄",
+  "words": [
+    { "en": "gift wrap", "enPron": "กิฟท์ แรพ", "th": "ห่อของขวัญ", "zh": "礼品包装", "pinyin": "lǐpǐn bāozhuāng", "icon": "🎀",
+      "exampleEn": "Would you like gift wrap?", "exampleZh": "您需要礼品包装吗?", "exampleTh": "คุณต้องการห่อของขวัญไหมคะ/ครับ" },
+    { "en": "ship", "enPron": "ชิป", "th": "จัดส่ง / ส่งไปรษณีย์", "zh": "邮寄", "pinyin": "yóujì", "icon": "📮",
+      "exampleEn": "We can ship it to your hotel.", "exampleZh": "我们可以把它邮寄到您的酒店。", "exampleTh": "เราจัดส่งไปที่โรงแรมของคุณได้ค่ะ/ครับ" },
+    { "en": "greeting card", "enPron": "กรี-ทิง การ์ด", "th": "การ์ดอวยพร", "zh": "贺卡", "pinyin": "hèkǎ", "icon": "💌",
+      "exampleEn": "Would you like a greeting card?", "exampleZh": "您需要贺卡吗?", "exampleTh": "คุณต้องการการ์ดอวยพรไหมคะ/ครับ" },
+    { "en": "limited edition", "enPron": "ลิม-มิ-เท็ด อิ-ดิ-เชิน", "th": "รุ่นลิมิเต็ด", "zh": "限量版", "pinyin": "xiànliàngbǎn", "icon": "💎",
+      "exampleEn": "This watch is a limited edition.", "exampleZh": "这款手表是限量版,只有一百只。", "exampleTh": "นาฬิการุ่นนี้เป็นรุ่นลิมิเต็ดค่ะ/ครับ" },
+    { "en": "out of stock", "enPron": "เอาท์ ออฟ สต็อก", "th": "สินค้าหมด", "zh": "缺货", "pinyin": "quēhuò", "icon": "🚫",
+      "exampleEn": "That color is out of stock.", "exampleZh": "这个颜色缺货了。", "exampleTh": "สีนั้นสินค้าหมดค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "It will take + time (ระยะเวลาที่ใช้)",
+      "explanationTh": "It will take + ระยะเวลา ใช้บอกว่ากระบวนการหนึ่งต้องใช้เวลาเท่าใด เช่น การจัดส่ง การห่อของ",
+      "pattern": "It will take + number + days / minutes",
+      "examples": [
+        { "text": "It will take two days.", "th": "จะใช้เวลาสองวันค่ะ/ครับ" },
+        { "text": "It will take five minutes to wrap.", "th": "ใช้เวลาห่อประมาณห้านาทีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "需要 + 时间 (ระยะเวลาที่ใช้)",
+      "explanationTh": "需要 + ระยะเวลา แปลว่า 'ต้องใช้เวลา...' ใช้บอกเวลาของการจัดส่งหรือบริการ",
+      "pattern": "大约需要 + 时间",
+      "examples": [
+        { "text": "邮寄大约需要两天。", "th": "การจัดส่งใช้เวลาประมาณสองวันค่ะ/ครับ" },
+        { "text": "包装大约需要五分钟。", "th": "การห่อใช้เวลาประมาณห้านาทีค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานขาย (Shop Assistant)",
+    "context": "ลูกค้าซื้อนาฬิกาเป็นของขวัญให้คุณแม่ คุณต้องเสนอการห่อของขวัญ การ์ด อธิบายรุ่นพิเศษ แจ้งสีที่หมด และจัดส่งไปที่โรงแรม",
+    "steps": [
+      {
+        "prompt": { "en": "This is a gift for my mother.", "zh": "这是送给我妈妈的礼物。" },
+        "suggestedAnswers": {
+          "en": ["How lovely. Would you like gift wrap?", "How lovely. Would you like gift wrap for it?"],
+          "zh": ["真好。您需要礼品包装吗?", "真好,请问需要礼品包装吗?"]
+        },
+        "keywords": { "en": ["lovely", "gift wrap", "would you like"], "zh": ["礼品包装", "需要", "真好"] },
+        "tipTh": "ตอบรับความรู้สึกของลูกค้าก่อนเสนอบริการ"
+      },
+      {
+        "prompt": { "en": "Yes, and a card too.", "zh": "要,还要一张卡片。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Would you like a greeting card? You can write your message here.", "Certainly. Would you like a greeting card? You may write your message here."],
+          "zh": ["好的,您需要贺卡吗?您可以在这里写祝福语。", "好的,您需要贺卡吗?祝福语可以写在这里。"]
+        },
+        "keywords": { "en": ["greeting card", "message", "certainly"], "zh": ["贺卡", "祝福语", "好的"] },
+        "tipTh": "เสนอการ์ดและบอกจุดที่เขียนข้อความ"
+      },
+      {
+        "prompt": { "en": "Is this watch special?", "zh": "这款手表特别吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, this watch is a limited edition. Only one hundred were made.", "Yes, this watch is a limited edition, and only one hundred were made."],
+          "zh": ["是的,这款手表是限量版,只有一百只。", "是的,这款手表是限量版,全球只有一百只。"]
+        },
+        "keywords": { "en": ["limited edition", "one hundred", "watch"], "zh": ["限量版", "一百只", "手表"] },
+        "tipTh": "บอกจุดเด่นของสินค้าอย่างตรงไปตรงมา"
+      },
+      {
+        "prompt": { "en": "I want it in blue.", "zh": "我想要蓝色的。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, blue is out of stock. We have black and silver.", "I'm sorry, the blue one is out of stock. We have black and silver."],
+          "zh": ["不好意思,蓝色缺货了,我们有黑色和银色。", "抱歉,蓝色缺货,不过有黑色和银色。"]
+        },
+        "keywords": { "en": ["sorry", "out of stock", "black"], "zh": ["缺货", "黑色", "银色"] },
+        "tipTh": "แจ้งว่าสินค้าหมดพร้อมเสนอสีทางเลือกทันที"
+      },
+      {
+        "prompt": { "en": "Silver, and can you send it to my hotel?", "zh": "要银色的,可以寄到我住的酒店吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. We can ship it to your hotel. It will take two days.", "Certainly. We can ship it to your hotel, and it will take two days."],
+          "zh": ["好的,我们可以邮寄到您的酒店,需要两天。", "好的,可以邮寄到您的酒店,大约需要两天。"]
+        },
+        "keywords": { "en": ["ship", "hotel", "two days"], "zh": ["邮寄", "酒店", "两天"] },
+        "tipTh": "ยืนยันบริการจัดส่งและระยะเวลา"
+      }
+    ]
+  }
+}

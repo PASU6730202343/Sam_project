@@ -1,0 +1,91 @@
+{
+  "id": "retail-05",
+  "careerId": "retail",
+  "order": 5,
+  "titleTh": "สินค้าอิเล็กทรอนิกส์",
+  "titleEn": "Electronics",
+  "titleZh": "电子产品",
+  "words": [
+    { "en": "battery", "enPron": "แบต-เทอ-รี", "th": "แบตเตอรี่", "zh": "电池", "pinyin": "diànchí", "icon": "🔋",
+      "exampleEn": "The battery lasts ten hours.", "exampleZh": "这块电池可以使用十个小时。", "exampleTh": "แบตเตอรี่ใช้งานได้สิบชั่วโมงค่ะ/ครับ" },
+    { "en": "charger", "enPron": "ชาร์จ-เจอร์", "th": "ที่ชาร์จ", "zh": "充电器", "pinyin": "chōngdiànqì", "icon": "🔌",
+      "exampleEn": "The charger is included in the box.", "exampleZh": "包装里已经附带了充电器。", "exampleTh": "ที่ชาร์จมีมาให้ในกล่องแล้วค่ะ/ครับ" },
+    { "en": "warranty", "enPron": "วอร์-เรน-ที", "th": "การรับประกัน", "zh": "保修", "pinyin": "bǎoxiū", "icon": "🛡️",
+      "exampleEn": "It comes with a one-year warranty.", "exampleZh": "这款产品有一年保修。", "exampleTh": "สินค้านี้มีประกันหนึ่งปีค่ะ/ครับ" },
+    { "en": "cable", "enPron": "เค-เบิล", "th": "สายเคเบิล", "zh": "数据线", "pinyin": "shùjùxiàn", "icon": "🪢",
+      "exampleEn": "You need a USB cable.", "exampleZh": "您还需要一根数据线。", "exampleTh": "คุณต้องใช้สาย USB ด้วยค่ะ/ครับ" },
+    { "en": "adapter", "enPron": "อะ-แด็พ-เตอร์", "th": "หัวแปลงปลั๊ก", "zh": "转换插头", "pinyin": "zhuǎnhuàn chātóu", "icon": "🔁",
+      "exampleEn": "This adapter works in Thailand.", "exampleZh": "这个转换插头适用于泰国。", "exampleTh": "หัวแปลงปลั๊กนี้ใช้ได้ในประเทศไทยค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "comes with / is included (สิ่งที่แถมมา)",
+      "explanationTh": "comes with + นาม บอกสิ่งที่มาพร้อมสินค้า ส่วน is included in + นาม บอกว่ารวมอยู่ในชุดแล้ว",
+      "pattern": "It comes with + noun / Noun + is included in + noun",
+      "examples": [
+        { "text": "It comes with a one-year warranty.", "th": "สินค้านี้มาพร้อมประกันหนึ่งปีค่ะ/ครับ" },
+        { "text": "The cable is included in the box.", "th": "สายเคเบิลมีมาให้ในกล่องแล้วค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "附带 / 配有 (สิ่งที่แถมมา)",
+      "explanationTh": "附带 และ 配有 แปลว่า 'มีมาพร้อมกัน' ใช้บอกอุปกรณ์เสริมที่มาพร้อมสินค้า",
+      "pattern": "包装里 + 附带 / 配有 + 名词",
+      "examples": [
+        { "text": "包装里附带一根数据线。", "th": "ในกล่องมีสายเคเบิลมาให้หนึ่งเส้นค่ะ/ครับ" },
+        { "text": "这款产品配有一年保修。", "th": "สินค้านี้มีประกันหนึ่งปีค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานขายอุปกรณ์อิเล็กทรอนิกส์ (Electronics Sales Assistant)",
+    "context": "ลูกค้าต่างชาติต้องการซื้อแบตเตอรี่และอุปกรณ์เสริม คุณต้องอธิบายอายุการใช้งาน ของที่แถม สายเคเบิล หัวแปลงปลั๊ก และเงื่อนไขการรับประกัน",
+    "steps": [
+      {
+        "prompt": { "en": "I need a new battery for my device.", "zh": "我的设备需要一块新电池。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. This battery lasts ten hours. It comes with a one-year warranty.", "Certainly. This battery lasts ten hours and comes with a one-year warranty."],
+          "zh": ["好的,这款电池可以使用十个小时,有一年保修。", "好的,这块电池能用十个小时,并有一年保修。"]
+        },
+        "keywords": { "en": ["battery", "ten hours", "warranty"], "zh": ["电池", "十个小时", "保修"] },
+        "tipTh": "บอกอายุการใช้งานและประกันพร้อมกันเพื่อความมั่นใจ"
+      },
+      {
+        "prompt": { "en": "Does it come with a charger?", "zh": "它配有充电器吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the charger is included in the box.", "Yes, a charger is included in the box."],
+          "zh": ["是的,包装里已经附带了充电器。", "是的,充电器已经附带在包装里了。"]
+        },
+        "keywords": { "en": ["charger", "included", "box"], "zh": ["充电器", "附带", "包装"] },
+        "tipTh": "ตอบเรื่องของแถมให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "What about a cable?", "zh": "数据线呢?" },
+        "suggestedAnswers": {
+          "en": ["You need a USB cable. Here is one for two hundred baht.", "You also need a USB cable. This one is two hundred baht."],
+          "zh": ["您需要一根数据线,这根两百泰铢。", "您还需要一根数据线,这根要两百泰铢。"]
+        },
+        "keywords": { "en": ["usb cable", "two hundred", "baht"], "zh": ["数据线", "两百", "泰铢"] },
+        "tipTh": "แนะนำอุปกรณ์เสริมที่จำเป็นพร้อมราคา"
+      },
+      {
+        "prompt": { "en": "I'm traveling to Thailand. Will it work there?", "zh": "我要去泰国,在那里能用吗?" },
+        "suggestedAnswers": {
+          "en": ["This adapter works in Thailand. You can use it with your charger.", "This adapter works in Thailand, and you can use it with your charger."],
+          "zh": ["这个转换插头适用于泰国,可以配合充电器使用。", "这个转换插头适用于泰国,能配合您的充电器使用。"]
+        },
+        "keywords": { "en": ["adapter", "thailand", "charger"], "zh": ["转换插头", "泰国", "充电器"] },
+        "tipTh": "ตรวจสอบความเข้ากันได้กับประเทศปลายทางของลูกค้า"
+      },
+      {
+        "prompt": { "en": "How long is the warranty?", "zh": "保修期有多久?" },
+        "suggestedAnswers": {
+          "en": ["The warranty is one year. Please keep your receipt.", "The warranty is for one year. Please keep your receipt."],
+          "zh": ["保修期是一年,请保管好您的收据。", "保修一年,请您保管好收据。"]
+        },
+        "keywords": { "en": ["warranty", "one year", "receipt"], "zh": ["保修", "一年", "收据"] },
+        "tipTh": "บอกระยะประกันและย้ำให้เก็บใบเสร็จเพื่อใช้เคลม"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "hotel-08",
+  "careerId": "hotel",
+  "order": 8,
+  "titleTh": "เช็กเอาต์และชำระเงิน",
+  "titleEn": "Check-out and Payment",
+  "titleZh": "退房与结账",
+  "words": [
+    { "en": "check-out", "enPron": "เช็ก-เอาต์", "th": "การเช็กเอาต์", "zh": "退房", "pinyin": "tuìfáng", "icon": "🚪",
+      "exampleEn": "Check-out time is twelve noon.", "exampleZh": "退房时间是中午十二点。", "exampleTh": "เวลาเช็กเอาต์คือเที่ยงวันค่ะ/ครับ" },
+    { "en": "bill", "enPron": "บิล", "th": "บิล / ใบแจ้งค่าใช้จ่าย", "zh": "账单", "pinyin": "zhàngdān", "icon": "🧾",
+      "exampleEn": "Here is your bill, sir.", "exampleZh": "先生,这是您的账单。", "exampleTh": "นี่คือบิลของคุณค่ะ/ครับ คุณผู้ชาย" },
+    { "en": "credit card", "enPron": "เครดิต การ์ด", "th": "บัตรเครดิต", "zh": "信用卡", "pinyin": "xìnyòngkǎ", "icon": "💳",
+      "exampleEn": "Would you like to pay by credit card?", "exampleZh": "您想用信用卡支付吗?", "exampleTh": "คุณต้องการชำระด้วยบัตรเครดิตไหมคะ/ครับ" },
+    { "en": "receipt", "enPron": "รี-ซีท", "th": "ใบเสร็จรับเงิน", "zh": "收据", "pinyin": "shōujù", "icon": "📄",
+      "exampleEn": "I will print your receipt now.", "exampleZh": "我现在为您打印收据。", "exampleTh": "ดิฉัน/ผมจะพิมพ์ใบเสร็จให้คุณตอนนี้ค่ะ/ครับ" },
+    { "en": "feedback", "enPron": "ฟีด-แบ็ก", "th": "ข้อเสนอแนะ", "zh": "反馈", "pinyin": "fǎnkuì", "icon": "💬",
+      "exampleEn": "We value your feedback.", "exampleZh": "我们很重视您的反馈。", "exampleTh": "เราให้ความสำคัญกับข้อเสนอแนะของคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Would you like to + verb? (ถามความต้องการอย่างสุภาพ)",
+      "explanationTh": "Would you like to + กริยา ใช้ถามว่าแขกต้องการทำอะไร ต่างจาก Would you like + นาม ที่ใช้เสนอสิ่งของ ใช้บ่อยตอนชำระเงินและส่งแขก",
+      "pattern": "Would you like to + verb + (object)?",
+      "examples": [
+        { "text": "Would you like to pay by credit card?", "th": "คุณต้องการชำระด้วยบัตรเครดิตไหมคะ/ครับ" },
+        { "text": "Would you like to check out now?", "th": "คุณต้องการเช็กเอาต์ตอนนี้เลยไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请 + 动词 (ขอร้องอย่างสุภาพ)",
+      "explanationTh": "ใช้ 请 นำหน้ากริยาเพื่อเชิญหรือขอให้แขกทำสิ่งใดสิ่งหนึ่งอย่างสุภาพ เทียบได้กับ please ในภาษาอังกฤษ",
+      "pattern": "请 + 动词 (+ 地点 / 名词)",
+      "examples": [
+        { "text": "请在这里签名。", "th": "กรุณาเซ็นชื่อตรงนี้ค่ะ/ครับ" },
+        { "text": "请稍等。", "th": "กรุณารอสักครู่ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับ (Front Desk)",
+    "context": "แขกมาเช็กเอาต์ในตอนเช้า คุณต้องรับคีย์การ์ด ตรวจบิล รับชำระเงิน ออกใบเสร็จ และกล่าวลาอย่างประทับใจ",
+    "steps": [
+      {
+        "prompt": { "en": "Good morning. I'd like to check out, please.", "zh": "早上好,我要退房。" },
+        "suggestedAnswers": {
+          "en": ["Good morning. May I have your room number and key card, please?", "Good morning. May I have your room number and your key card?"],
+          "zh": ["早上好。请问您的房间号是多少?请把房卡给我。", "早上好。请告诉我房间号,并把房卡交给我。"]
+        },
+        "keywords": { "en": ["room number", "key card", "may i"], "zh": ["房间号", "房卡", "请"] },
+        "tipTh": "ขอเลขห้องและคีย์การ์ดคืนเป็นขั้นตอนแรกของการเช็กเอาต์"
+      },
+      {
+        "prompt": { "en": "Room 806. Here is the key card.", "zh": "806房,这是房卡。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Here is your bill. Please check the details.", "Thank you. Here is your bill. Please take a look at the details."],
+          "zh": ["谢谢。这是您的账单,请核对一下。", "谢谢您。这是账单,请核对明细。"]
+        },
+        "keywords": { "en": ["bill", "check", "thank"], "zh": ["账单", "核对", "谢谢"] },
+        "tipTh": "ยื่นบิลด้วยมือสองข้างและเชิญให้แขกตรวจรายการ"
+      },
+      {
+        "prompt": { "en": "Everything looks right. Can I pay by credit card?", "zh": "都没问题。我可以刷信用卡吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, of course. Please insert your credit card here.", "Certainly. Please insert your credit card into the machine."],
+          "zh": ["当然可以,请把信用卡插在这里。", "好的,请把信用卡插入机器。"]
+        },
+        "keywords": { "en": ["credit card", "insert", "of course"], "zh": ["信用卡", "插", "当然"] },
+        "tipTh": "ยืนยันวิธีชำระเงินและบอกขั้นตอนทีละขั้น"
+      },
+      {
+        "prompt": { "en": "Done. Could I have a receipt?", "zh": "好了。可以给我收据吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. I will print your receipt now.", "Of course. I will print your receipt right now."],
+          "zh": ["好的,我现在为您打印收据。", "当然可以,我马上为您打印收据。"]
+        },
+        "keywords": { "en": ["receipt", "print", "certainly"], "zh": ["收据", "打印", "好的"] },
+        "tipTh": "ออกใบเสร็จให้ทันทีและยื่นให้ด้วยความสุภาพ"
+      },
+      {
+        "prompt": { "en": "Thanks. I really enjoyed my stay.", "zh": "谢谢。我这次住得很愉快。" },
+        "suggestedAnswers": {
+          "en": ["Thank you! We value your feedback. Have a safe trip, and we hope to see you again.", "We are so glad to hear that. We value your feedback. Have a safe trip, and we hope to see you again."],
+          "zh": ["谢谢您!我们很重视您的反馈,祝您一路平安,期待再次见到您。", "听到这个我们很高兴。我们很重视您的反馈,祝您一路平安,期待再次见到您。"]
+        },
+        "keywords": { "en": ["feedback", "safe trip", "again"], "zh": ["反馈", "一路平安", "再次"] },
+        "tipTh": "ปิดท้ายด้วยคำขอบคุณ ขอข้อเสนอแนะ และเชิญกลับมาใหม่"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "airline-04",
+  "careerId": "airline",
+  "order": 4,
+  "titleTh": "ประตูขึ้นเครื่อง",
+  "titleEn": "Boarding Gate",
+  "titleZh": "登机口",
+  "words": [
+    { "en": "gate", "enPron": "เกท", "th": "ประตูขึ้นเครื่อง", "zh": "登机口", "pinyin": "dēngjīkǒu", "icon": "🚪",
+      "exampleEn": "Your gate has changed to gate twelve.", "exampleZh": "您的登机口改到十二号了。", "exampleTh": "ประตูขึ้นเครื่องของคุณเปลี่ยนเป็นประตูสิบสองค่ะ/ครับ" },
+    { "en": "boarding", "enPron": "บอร์ด-ดิง", "th": "การขึ้นเครื่อง", "zh": "登机", "pinyin": "dēngjī", "icon": "🚶",
+      "exampleEn": "Boarding will start in ten minutes.", "exampleZh": "还有十分钟就开始登机。", "exampleTh": "อีกสิบนาทีจะเริ่มขึ้นเครื่องค่ะ/ครับ" },
+    { "en": "delay", "enPron": "ดิ-เลย์", "th": "ความล่าช้า", "zh": "延误", "pinyin": "yánwù", "icon": "⏳",
+      "exampleEn": "We apologize for the delay.", "exampleZh": "对于航班延误,我们深表歉意。", "exampleTh": "ขออภัยในความล่าช้าค่ะ/ครับ" },
+    { "en": "departure", "enPron": "ดิ-พาร์-เชอร์", "th": "การออกเดินทาง", "zh": "起飞", "pinyin": "qǐfēi", "icon": "🛫",
+      "exampleEn": "The departure time is now eleven fifteen.", "exampleZh": "起飞时间现在改为十一点十五分。", "exampleTh": "เวลาออกเดินทางเปลี่ยนเป็นสิบเอ็ดโมงสิบห้านาทีค่ะ/ครับ" },
+    { "en": "announcement", "enPron": "อะ-เนาซ์-เมินท์", "th": "ประกาศ", "zh": "广播", "pinyin": "guǎngbō", "icon": "📢",
+      "exampleEn": "Please listen for the next announcement.", "exampleZh": "请留意下一次广播通知。", "exampleTh": "กรุณาฟังประกาศครั้งถัดไปค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Will + verb (แจ้งเหตุการณ์ในอนาคต)",
+      "explanationTh": "ใช้ will + กริยาช่องที่ 1 แจ้งสิ่งที่จะเกิดขึ้นหรือสิ่งที่สายการบินจะทำ ใช้บ่อยในประกาศและการแจ้งผู้โดยสาร",
+      "pattern": "Subject + will + verb + (time)",
+      "examples": [
+        { "text": "Boarding will start at ten thirty.", "th": "จะเริ่มขึ้นเครื่องเวลาสิบโมงครึ่งค่ะ/ครับ" },
+        { "text": "We will update you in thirty minutes.", "th": "เราจะแจ้งข้อมูลล่าสุดให้ทราบในสามสิบนาทีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "将 / 会 + 动词 (แจ้งเหตุการณ์ในอนาคต)",
+      "explanationTh": "ใช้ 将 (เป็นทางการ) หรือ 会 (ทั่วไป) นำหน้ากริยาเพื่อบอกสิ่งที่จะเกิดขึ้น 将 มักใช้ในประกาศสนามบิน",
+      "pattern": "主语 + 将 / 会 + 动词 + 时间",
+      "examples": [
+        { "text": "航班将于十点半开始登机。", "th": "เที่ยวบินจะเริ่มขึ้นเครื่องเวลาสิบโมงครึ่งค่ะ/ครับ" },
+        { "text": "我们会在三十分钟后通知您。", "th": "เราจะแจ้งให้ทราบในอีกสามสิบนาทีค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ประจำประตูขึ้นเครื่อง (Gate Agent)",
+    "context": "เที่ยวบินล่าช้า ผู้โดยสารเข้ามาสอบถามที่ประตูขึ้นเครื่อง คุณต้องแจ้งข้อมูลล่าสุด ขอโทษ และแนะนำสิ่งที่ผู้โดยสารควรทำ",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, is this gate twelve for the Tokyo flight?", "zh": "打扰一下,这里是去东京航班的十二号登机口吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, this is gate twelve for the Tokyo flight. May I see your boarding pass?", "That's right. May I see your boarding pass, please?"],
+          "zh": ["是的,这里是去东京航班的十二号登机口,请问可以看一下您的登机牌吗?", "没错,请出示您的登机牌。"]
+        },
+        "keywords": { "en": ["gate twelve", "boarding pass", "yes"], "zh": ["十二号登机口", "登机牌", "是的"] },
+        "tipTh": "ยืนยันประตูและเที่ยวบิน แล้วขอตรวจบอร์ดดิงพาส"
+      },
+      {
+        "prompt": { "en": "It's already ten fifteen. Why hasn't boarding started?", "zh": "已经十点一刻了,为什么还没开始登机?" },
+        "suggestedAnswers": {
+          "en": ["I apologize for the delay. The departure time is now eleven fifteen.", "I'm very sorry for the delay. The flight will now leave at eleven fifteen."],
+          "zh": ["对于延误,我们深表歉意,起飞时间现在改为十一点十五分。", "非常抱歉,航班现在将在十一点十五分起飞。"]
+        },
+        "keywords": { "en": ["delay", "departure", "eleven fifteen"], "zh": ["延误", "起飞", "十一点十五分"] },
+        "tipTh": "ขอโทษก่อน แล้วแจ้งเวลาใหม่ที่ชัดเจน"
+      },
+      {
+        "prompt": { "en": "What is the reason for the delay?", "zh": "延误的原因是什么?" },
+        "suggestedAnswers": {
+          "en": ["The aircraft arrived late because of bad weather. We apologize for the inconvenience.", "Bad weather delayed the aircraft. We apologize for the inconvenience."],
+          "zh": ["由于天气不好,飞机晚到,给您带来不便,我们深表歉意。", "因为天气不好,飞机晚点了,非常抱歉。"]
+        },
+        "keywords": { "en": ["weather", "aircraft", "apologize"], "zh": ["天气", "飞机", "歉意"] },
+        "tipTh": "บอกสาเหตุตามจริงโดยสั้น กระชับ และไม่ตำหนิผู้อื่น"
+      },
+      {
+        "prompt": { "en": "How will I know when boarding starts?", "zh": "开始登机时我怎么知道?" },
+        "suggestedAnswers": {
+          "en": ["Please listen for the next announcement. Boarding will start about thirty minutes before departure.", "We will make an announcement. Please stay near the gate."],
+          "zh": ["请留意下一次广播通知,登机会在起飞前三十分钟开始。", "我们会广播通知,请留在登机口附近。"]
+        },
+        "keywords": { "en": ["announcement", "boarding", "thirty minutes"], "zh": ["广播", "登机", "三十分钟"] },
+        "tipTh": "บอกวิธีรับข่าวสาร (ประกาศ) และเวลาขึ้นเครื่องคร่าวๆ"
+      },
+      {
+        "prompt": { "en": "Okay, thanks. I'll wait here.", "zh": "好的,谢谢。我在这里等。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for your patience. The cafe next to the gate has free drinks for you.", "Thank you for waiting. Please enjoy a free drink at the cafe next to the gate."],
+          "zh": ["感谢您的耐心等待,登机口旁边的咖啡厅为您提供免费饮料。", "谢谢您的等候,请到登机口旁的咖啡厅享用免费饮料。"]
+        },
+        "keywords": { "en": ["patience", "free drinks", "cafe"], "zh": ["耐心", "免费饮料", "咖啡厅"] },
+        "tipTh": "ขอบคุณที่รอ และเสนอบริการชดเชยเล็กน้อยถ้ามี"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "tourism-02",
+  "careerId": "tourism",
+  "order": 2,
+  "titleTh": "แนะนำสถานที่ท่องเที่ยว",
+  "titleEn": "Attractions",
+  "titleZh": "景点介绍",
+  "words": [
+    { "en": "temple", "enPron": "เทม-เพิล", "th": "วัด", "zh": "寺庙", "pinyin": "sìmiào", "icon": "🛕",
+      "exampleEn": "The temple is over two hundred years old.", "exampleZh": "这座寺庙已有两百多年的历史。", "exampleTh": "วัดแห่งนี้มีอายุกว่าสองร้อยปีค่ะ/ครับ" },
+    { "en": "museum", "enPron": "มิว-เซียม", "th": "พิพิธภัณฑ์", "zh": "博物馆", "pinyin": "bówùguǎn", "icon": "🏛️",
+      "exampleEn": "The museum opens at nine.", "exampleZh": "博物馆九点开门。", "exampleTh": "พิพิธภัณฑ์เปิดเก้าโมงค่ะ/ครับ" },
+    { "en": "palace", "enPron": "แพล-ลิส", "th": "พระราชวัง", "zh": "宫殿", "pinyin": "gōngdiàn", "icon": "🏰",
+      "exampleEn": "The palace was built in 1782.", "exampleZh": "这座宫殿建于1782年。", "exampleTh": "พระราชวังแห่งนี้สร้างขึ้นเมื่อปี 1782 ค่ะ/ครับ" },
+    { "en": "beach", "enPron": "บีช", "th": "ชายหาด", "zh": "海滩", "pinyin": "hǎitān", "icon": "🏖️",
+      "exampleEn": "The beach is ten minutes away by bus.", "exampleZh": "海滩离这里坐车十分钟。", "exampleTh": "ชายหาดอยู่ห่างไปสิบนาทีโดยรถบัสค่ะ/ครับ" },
+    { "en": "market", "enPron": "มาร์-เก็ต", "th": "ตลาด", "zh": "市场", "pinyin": "shìchǎng", "icon": "🛒",
+      "exampleEn": "The market is open every evening.", "exampleZh": "这个市场每天晚上都开放。", "exampleTh": "ตลาดเปิดทุกเย็นค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "It is famous for + noun (บอกจุดเด่นของสถานที่)",
+      "explanationTh": "famous for + นาม ใช้บอกสิ่งที่ทำให้สถานที่นั้นโด่งดัง ใช้บ่อยมากเมื่อแนะนำสถานที่ท่องเที่ยว",
+      "pattern": "The + place + is famous for + noun",
+      "examples": [
+        { "text": "The temple is famous for its golden Buddha.", "th": "วัดแห่งนี้มีชื่อเสียงเรื่องพระพุทธรูปทองคำค่ะ/ครับ" },
+        { "text": "The market is famous for fresh fruit.", "th": "ตลาดแห่งนี้มีชื่อเสียงเรื่องผลไม้สดค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "以……闻名 (บอกจุดเด่นของสถานที่)",
+      "explanationTh": "以 + สิ่งที่โดดเด่น + 闻名 แปลว่า 'มีชื่อเสียงจาก...' เป็นสำนวนที่ใช้บ่อยในการแนะนำสถานที่",
+      "pattern": "地点 + 以 + 名词 + 闻名",
+      "examples": [
+        { "text": "这座寺庙以金佛闻名。", "th": "วัดแห่งนี้มีชื่อเสียงเรื่องพระทองคำค่ะ/ครับ" },
+        { "text": "这个市场以新鲜水果闻名。", "th": "ตลาดแห่งนี้มีชื่อเสียงเรื่องผลไม้สดค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "ระหว่างทัวร์ภาคเช้า นักท่องเที่ยวถามเกี่ยวกับสถานที่ต่างๆ ที่เห็นและที่ผ่านมา คุณต้องอธิบายประวัติ จุดเด่น และการเดินทางไปยังสถานที่อื่น",
+    "steps": [
+      {
+        "prompt": { "en": "What is this building?", "zh": "这是什么建筑?" },
+        "suggestedAnswers": {
+          "en": ["This is a temple. It is famous for its golden Buddha.", "This is a famous temple. It is known for its golden Buddha."],
+          "zh": ["这是一座寺庙,以金佛闻名。", "这是一座著名的寺庙,以金佛闻名。"]
+        },
+        "keywords": { "en": ["temple", "famous", "golden buddha"], "zh": ["寺庙", "闻名", "金佛"] },
+        "tipTh": "ตอบชื่อประเภทสถานที่แล้วตามด้วยจุดเด่น"
+      },
+      {
+        "prompt": { "en": "How old is it?", "zh": "它有多少年历史了?" },
+        "suggestedAnswers": {
+          "en": ["The temple is over two hundred years old.", "This temple is more than two hundred years old."],
+          "zh": ["这座寺庙已有两百多年的历史。", "这座寺庙有两百多年的历史了。"]
+        },
+        "keywords": { "en": ["two hundred", "years", "temple"], "zh": ["两百", "历史", "寺庙"] },
+        "tipTh": "บอกอายุเป็นตัวเลขให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Is there a museum nearby?", "zh": "附近有博物馆吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the museum is next to the palace. It opens at nine.", "Yes, the museum is beside the palace and opens at nine."],
+          "zh": ["有的,博物馆在宫殿旁边,九点开门。", "有,博物馆就在宫殿旁边,九点开门。"]
+        },
+        "keywords": { "en": ["museum", "palace", "nine"], "zh": ["博物馆", "宫殿", "九点"] },
+        "tipTh": "บอกตำแหน่งโดยเทียบกับสถานที่ที่รู้จัก พร้อมเวลาเปิด"
+      },
+      {
+        "prompt": { "en": "Where can we swim?", "zh": "我们可以去哪里游泳?" },
+        "suggestedAnswers": {
+          "en": ["The beach is ten minutes away by bus. It is a lovely place.", "You can swim at the beach. It is ten minutes away by bus."],
+          "zh": ["海滩坐车十分钟就到,那里很漂亮。", "可以去海滩游泳,坐车十分钟就到。"]
+        },
+        "keywords": { "en": ["beach", "ten minutes", "bus"], "zh": ["海滩", "十分钟", "坐车"] },
+        "tipTh": "บอกระยะทางเป็นเวลาและวิธีเดินทางไปด้วย"
+      },
+      {
+        "prompt": { "en": "Where can I buy local food?", "zh": "我在哪里可以买到当地美食?" },
+        "suggestedAnswers": {
+          "en": ["Visit the market. It is famous for fresh fruit and is open every evening.", "Please go to the market. It is famous for fresh fruit and open every evening."],
+          "zh": ["可以去市场,那里以新鲜水果闻名,每天晚上都开放。", "请去市场,那里以新鲜水果闻名,晚上都开放。"]
+        },
+        "keywords": { "en": ["market", "fresh fruit", "evening"], "zh": ["市场", "新鲜水果", "晚上"] },
+        "tipTh": "แนะนำสถานที่พร้อมบอกเวลาเปิดและสินค้าเด่น"
+      }
+    ]
+  }
+}

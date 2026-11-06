@@ -1,0 +1,91 @@
+{
+  "id": "hotel-02",
+  "careerId": "hotel",
+  "order": 2,
+  "titleTh": "ประเภทห้องพัก",
+  "titleEn": "Room Types",
+  "titleZh": "房型",
+  "words": [
+    { "en": "single room", "enPron": "ซิง-เกิล รูม", "th": "ห้องเดี่ยว", "zh": "单人间", "pinyin": "dānrénjiān", "icon": "🛏️",
+      "exampleEn": "We have a single room on the fifth floor.", "exampleZh": "我们五楼有一间单人间。", "exampleTh": "เรามีห้องเดี่ยวอยู่ที่ชั้นห้าค่ะ/ครับ" },
+    { "en": "double room", "enPron": "ดับ-เบิล รูม", "th": "ห้องเตียงคู่", "zh": "双人间", "pinyin": "shuāngrénjiān", "icon": "🛌",
+      "exampleEn": "Would you prefer a double room?", "exampleZh": "您想要双人间吗?", "exampleTh": "คุณต้องการห้องเตียงคู่ไหมคะ/ครับ" },
+    { "en": "suite", "enPron": "สวีท", "th": "ห้องสวีท", "zh": "套房", "pinyin": "tàofáng", "icon": "🏰",
+      "exampleEn": "The suite has a separate living room.", "exampleZh": "这间套房有独立的客厅。", "exampleTh": "ห้องสวีทมีห้องนั่งเล่นแยกต่างหากค่ะ/ครับ" },
+    { "en": "sea view", "enPron": "ซี วิว", "th": "วิวทะเล", "zh": "海景", "pinyin": "hǎijǐng", "icon": "🌊",
+      "exampleEn": "This room has a beautiful sea view.", "exampleZh": "这间房有美丽的海景。", "exampleTh": "ห้องนี้มีวิวทะเลที่สวยงามค่ะ/ครับ" },
+    { "en": "non-smoking room", "enPron": "นอน-สโมก-กิง รูม", "th": "ห้องปลอดบุหรี่", "zh": "无烟房", "pinyin": "wúyānfáng", "icon": "🚭",
+      "exampleEn": "Would you like a non-smoking room?", "exampleZh": "您需要无烟房吗?", "exampleTh": "คุณต้องการห้องปลอดบุหรี่ไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Would you like + noun? (เสนอสิ่งที่ให้เลือก)",
+      "explanationTh": "Would you like ... ? ใช้เสนอสิ่งของหรือบริการให้แขกเลือกอย่างสุภาพ สุภาพกว่า Do you want ... ? และใช้เชื่อมตัวเลือกด้วย or",
+      "pattern": "Would you like + a/an + noun (+ or + noun)?",
+      "examples": [
+        { "text": "Would you like a room with a sea view?", "th": "คุณต้องการห้องที่มีวิวทะเลไหมคะ/ครับ" },
+        { "text": "Would you like a suite or a double room?", "th": "คุณต้องการห้องสวีทหรือห้องเตียงคู่คะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您想要……还是……?(ให้เลือกระหว่างสองอย่าง)",
+      "explanationTh": "ใช้ 还是 เชื่อมสองตัวเลือกในประโยคคำถาม ไม่ต้องใส่ 吗 ท้ายประโยค และใช้ 您 กับแขกเพื่อความสุภาพ",
+      "pattern": "您想要 + A + 还是 + B?",
+      "examples": [
+        { "text": "您想要单人间还是双人间?", "th": "คุณต้องการห้องเดี่ยวหรือห้องเตียงคู่คะ/ครับ" },
+        { "text": "您想要海景房还是花园房?", "th": "คุณต้องการห้องวิวทะเลหรือห้องวิวสวนคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับ (Front Desk)",
+    "context": "แขกเดินเข้ามาโดยไม่ได้จองล่วงหน้า (walk-in) และต้องการห้องพักสำหรับคืนนี้ คุณต้องสอบถามความต้องการ เสนอห้อง และปิดการขาย",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, do you have any rooms available tonight?", "zh": "你好,今晚还有空房吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we do. Would you like a single room or a double room?", "Yes, we have a few rooms. How many guests, please?"],
+          "zh": ["有的。您想要单人间还是双人间?", "有空房。请问几位客人?"]
+        },
+        "keywords": { "en": ["single room", "double room", "guests"], "zh": ["单人间", "双人间", "几位"] },
+        "tipTh": "ตอบว่ามีห้องก่อน แล้วถามจำนวนแขกหรือประเภทห้องที่ต้องการ"
+      },
+      {
+        "prompt": { "en": "A double room for two people, please.", "zh": "请给我们一间双人间,两个人。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Would you like a room with a sea view?", "Of course. We have a double room on the sixth floor. Would you like a sea view?"],
+          "zh": ["好的。您想要海景房吗?", "可以。我们六楼有一间双人间,您想要海景吗?"]
+        },
+        "keywords": { "en": ["double room", "sea view", "would you like"], "zh": ["双人间", "海景", "您想要"] },
+        "tipTh": "เสนอตัวเลือกเพิ่มเติม (เช่น วิว) เพื่อให้แขกได้ห้องที่ตรงใจ"
+      },
+      {
+        "prompt": { "en": "Yes, a sea view would be lovely. Is it non-smoking?", "zh": "好的,有海景就太好了。是无烟房吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, all our rooms with a sea view are non-smoking rooms.", "Yes, it is a non-smoking room."],
+          "zh": ["是的,海景房都是无烟房。", "是的,这是无烟房。"]
+        },
+        "keywords": { "en": ["non-smoking", "sea view", "yes"], "zh": ["无烟房", "是的", "海景"] },
+        "tipTh": "ตอบคำถาม Yes/No ให้ตรงและเพิ่มข้อมูลสั้นๆ เพื่อให้แขกมั่นใจ"
+      },
+      {
+        "prompt": { "en": "How much is it per night? Is there a bigger room?", "zh": "一晚多少钱?有更大的房间吗?" },
+        "suggestedAnswers": {
+          "en": ["The double room is 3,500 baht per night. We also have a suite if you would like more space.", "It is 3,500 baht per night. We have a suite if you need a bigger room."],
+          "zh": ["双人间每晚3500泰铢。如果您想要更大的空间,我们还有套房。", "每晚3500泰铢。如果需要更大的房间,我们有套房。"]
+        },
+        "keywords": { "en": ["per night", "suite", "baht"], "zh": ["每晚", "套房", "泰铢"] },
+        "tipTh": "บอกราคาให้ชัดพร้อมหน่วยเงิน และเสนอห้องที่ใหญ่ขึ้นเป็นทางเลือก"
+      },
+      {
+        "prompt": { "en": "The double room is fine. I'll take it.", "zh": "双人间就可以,我要了。" },
+        "suggestedAnswers": {
+          "en": ["Wonderful. I will prepare your key card now.", "Thank you. Your double room with a sea view is ready."],
+          "zh": ["太好了,我现在为您准备房卡。", "谢谢您。您的海景双人间已经准备好了。"]
+        },
+        "keywords": { "en": ["wonderful", "key card", "ready"], "zh": ["房卡", "准备", "太好了"] },
+        "tipTh": "ขอบคุณและแจ้งขั้นตอนต่อไปทันที เช่น เตรียมคีย์การ์ด"
+      }
+    ]
+  }
+}

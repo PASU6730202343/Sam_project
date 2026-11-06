@@ -1,0 +1,91 @@
+{
+  "id": "tourism-07",
+  "careerId": "tourism",
+  "order": 7,
+  "titleTh": "สภาพอากาศและกิจกรรม",
+  "titleEn": "Weather and Activities",
+  "titleZh": "天气与活动",
+  "words": [
+    { "en": "rain", "enPron": "เรน", "th": "ฝนตก", "zh": "下雨", "pinyin": "xiàyǔ", "icon": "🌧️",
+      "exampleEn": "It may rain this afternoon.", "exampleZh": "今天下午可能会下雨。", "exampleTh": "บ่ายนี้ฝนอาจตกค่ะ/ครับ" },
+    { "en": "hot", "enPron": "ฮอท", "th": "ร้อน", "zh": "炎热", "pinyin": "yánrè", "icon": "🥵",
+      "exampleEn": "It is very hot today.", "exampleZh": "今天天气非常炎热。", "exampleTh": "วันนี้อากาศร้อนมากค่ะ/ครับ" },
+    { "en": "snorkeling", "enPron": "สนอร์-เคิล-ลิง", "th": "ดำน้ำตื้น", "zh": "浮潜", "pinyin": "fúqián", "icon": "🤿",
+      "exampleEn": "We can go snorkeling at ten.", "exampleZh": "我们十点可以去浮潜。", "exampleTh": "เราไปดำน้ำตื้นตอนสิบโมงได้ค่ะ/ครับ" },
+    { "en": "island", "enPron": "ไอ-แลนด์", "th": "เกาะ", "zh": "岛屿", "pinyin": "dǎoyǔ", "icon": "🏝️",
+      "exampleEn": "The island is very beautiful.", "exampleZh": "这个岛屿非常美丽。", "exampleTh": "เกาะนี้สวยงามมากค่ะ/ครับ" },
+    { "en": "sunset", "enPron": "ซัน-เซ็ท", "th": "พระอาทิตย์ตก", "zh": "日落", "pinyin": "rìluò", "icon": "🌅",
+      "exampleEn": "We will watch the sunset from the beach.", "exampleZh": "我们将在海边看日落。", "exampleTh": "เราจะดูพระอาทิตย์ตกจากชายหาดค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "It may / might + verb (คาดการณ์)",
+      "explanationTh": "may และ might ใช้บอกความเป็นไปได้ เช่น สภาพอากาศ ไม่ใช่ความแน่นอน เหมาะกับการเตือนนักท่องเที่ยวล่วงหน้า",
+      "pattern": "It may / might + verb + (time)",
+      "examples": [
+        { "text": "It may rain this afternoon.", "th": "บ่ายนี้ฝนอาจตกค่ะ/ครับ" },
+        { "text": "It might be cloudy in the evening.", "th": "ตอนเย็นอาจมีเมฆมากค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "可能会 + 动词 (คาดการณ์)",
+      "explanationTh": "可能会 + กริยา แปลว่า 'อาจจะ...' ใช้บอกความเป็นไปได้ในอนาคต เช่น พยากรณ์อากาศ",
+      "pattern": "时间 + 可能会 + 动词",
+      "examples": [
+        { "text": "今天下午可能会下雨。", "th": "บ่ายนี้ฝนอาจตกค่ะ/ครับ" },
+        { "text": "晚上可能会有云。", "th": "ตอนเย็นอาจมีเมฆค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "ทัวร์เกาะวันที่อากาศร้อนและมีโอกาสฝนตก คุณต้องแจ้งสภาพอากาศ แนะนำกิจกรรม เส้นทาง และเวลาชมพระอาทิตย์ตก",
+    "steps": [
+      {
+        "prompt": { "en": "What's the weather like today?", "zh": "今天天气怎么样?" },
+        "suggestedAnswers": {
+          "en": ["It is very hot today, so please drink plenty of water.", "It is very hot today. Please drink plenty of water."],
+          "zh": ["今天天气非常炎热,请多喝水。", "今天非常炎热,请记得多喝水。"]
+        },
+        "keywords": { "en": ["hot", "water", "today"], "zh": ["炎热", "水", "今天"] },
+        "tipTh": "บอกสภาพอากาศและคำแนะนำที่เกี่ยวข้องทันที"
+      },
+      {
+        "prompt": { "en": "Will it rain?", "zh": "会下雨吗?" },
+        "suggestedAnswers": {
+          "en": ["It may rain this afternoon, so please bring an umbrella.", "It may rain this afternoon. Please bring an umbrella."],
+          "zh": ["今天下午可能会下雨,请带伞。", "下午可能会下雨,请带上伞。"]
+        },
+        "keywords": { "en": ["rain", "afternoon", "umbrella"], "zh": ["下雨", "下午", "伞"] },
+        "tipTh": "ใช้ may บอกความเป็นไปได้ ไม่รับปากเกินจริง"
+      },
+      {
+        "prompt": { "en": "What activities do you recommend?", "zh": "你推荐什么活动?" },
+        "suggestedAnswers": {
+          "en": ["We can go snorkeling at ten. The water is clear.", "I recommend snorkeling at ten. The water is clear."],
+          "zh": ["我们十点可以去浮潜,海水很清澈。", "我推荐十点去浮潜,海水很清澈。"]
+        },
+        "keywords": { "en": ["snorkeling", "ten", "clear"], "zh": ["浮潜", "十点", "清澈"] },
+        "tipTh": "แนะนำกิจกรรมพร้อมเวลาและจุดเด่น"
+      },
+      {
+        "prompt": { "en": "Where is the best place for it?", "zh": "哪里最适合?" },
+        "suggestedAnswers": {
+          "en": ["The island is very beautiful, about thirty minutes by boat.", "The island is the best place. It is thirty minutes by boat."],
+          "zh": ["这个岛屿非常美丽,坐船大约三十分钟。", "岛屿最合适,坐船大约三十分钟。"]
+        },
+        "keywords": { "en": ["island", "boat", "thirty minutes"], "zh": ["岛屿", "船", "三十分钟"] },
+        "tipTh": "บอกสถานที่แนะนำพร้อมเวลาเดินทาง"
+      },
+      {
+        "prompt": { "en": "Can we stay until the evening?", "zh": "我们可以待到傍晚吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we will watch the sunset from the beach.", "Yes, we can. We will watch the sunset from the beach."],
+          "zh": ["可以,我们将在海边看日落。", "可以的,我们会在海边看日落。"]
+        },
+        "keywords": { "en": ["sunset", "beach", "yes"], "zh": ["日落", "海边", "可以"] },
+        "tipTh": "ตอบรับและเพิ่มความน่าสนใจด้วยกิจกรรมปิดท้ายวัน"
+      }
+    ]
+  }
+}

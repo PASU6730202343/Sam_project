@@ -1,0 +1,91 @@
+{
+  "id": "tourism-08",
+  "careerId": "tourism",
+  "order": 8,
+  "titleTh": "วัฒนธรรมและมารยาท",
+  "titleEn": "Culture and Etiquette",
+  "titleZh": "文化与礼仪",
+  "words": [
+    { "en": "dress code", "enPron": "เดรส โคด", "th": "ข้อกำหนดการแต่งกาย", "zh": "着装要求", "pinyin": "zhuózhuāng yāoqiú", "icon": "👗",
+      "exampleEn": "There is a dress code for the temple.", "exampleZh": "寺庙有着装要求。", "exampleTh": "วัดมีข้อกำหนดเรื่องการแต่งกายค่ะ/ครับ" },
+    { "en": "remove shoes", "enPron": "รี-มูฟ ชูส์", "th": "ถอดรองเท้า", "zh": "脱鞋", "pinyin": "tuōxié", "icon": "👟",
+      "exampleEn": "Please remove shoes before entering.", "exampleZh": "进入前请脱鞋。", "exampleTh": "กรุณาถอดรองเท้าก่อนเข้าไปค่ะ/ครับ" },
+    { "en": "respect", "enPron": "รี-สเปคท์", "th": "เคารพ", "zh": "尊重", "pinyin": "zūnzhòng", "icon": "🙏",
+      "exampleEn": "Please respect local culture.", "exampleZh": "请尊重当地的文化。", "exampleTh": "กรุณาเคารพวัฒนธรรมท้องถิ่นค่ะ/ครับ" },
+    { "en": "monk", "enPron": "มังค์", "th": "พระสงฆ์", "zh": "僧侣", "pinyin": "sēnglǚ", "icon": "🧘",
+      "exampleEn": "Women should not touch a monk.", "exampleZh": "女士不要触碰僧侣。", "exampleTh": "ผู้หญิงไม่ควรสัมผัสพระสงฆ์ค่ะ/ครับ" },
+    { "en": "tradition", "enPron": "ทระ-ดิ-เชิน", "th": "ประเพณี", "zh": "传统", "pinyin": "chuántǒng", "icon": "🎎",
+      "exampleEn": "This is an old tradition.", "exampleZh": "这是一个古老的传统。", "exampleTh": "นี่เป็นประเพณีเก่าแก่ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "You must / must not + verb (กฎที่ต้องปฏิบัติ)",
+      "explanationTh": "must ใช้บอกกฎที่ต้องทำ และ must not บอกสิ่งที่ห้ามทำ ใช้กับกฎของสถานที่ศักดิ์สิทธิ์ ควรพูดด้วยน้ำเสียงสุภาพ",
+      "pattern": "You must / must not + verb",
+      "examples": [
+        { "text": "You must remove your shoes.", "th": "คุณต้องถอดรองเท้าค่ะ/ครับ" },
+        { "text": "You must not touch the monks.", "th": "ห้ามสัมผัสพระสงฆ์ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "必须 / 不可以 + 动词 (กฎที่ต้องปฏิบัติ)",
+      "explanationTh": "必须 บอกสิ่งที่ต้องทำ และ 不可以 บอกสิ่งที่ห้ามทำ ใช้อธิบายกฎของสถานที่ท่องเที่ยว",
+      "pattern": "必须 / 不可以 + 动词",
+      "examples": [
+        { "text": "进入大殿前必须脱鞋。", "th": "ก่อนเข้าอุโบสถต้องถอดรองเท้าค่ะ/ครับ" },
+        { "text": "不可以触碰僧侣。", "th": "ห้ามสัมผัสพระสงฆ์ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "ก่อนเข้าวัด คุณต้องอธิบายข้อกำหนดการแต่งกาย มารยาทต่อพระสงฆ์ การถ่ายภาพ และประเพณีใส่บาตรให้นักท่องเที่ยวเข้าใจอย่างสุภาพ",
+    "steps": [
+      {
+        "prompt": { "en": "Can I wear shorts to the temple?", "zh": "我可以穿短裤去寺庙吗?" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, there is a dress code. Please cover your knees and shoulders.", "Sorry, the temple has a dress code. Please cover your knees and shoulders."],
+          "zh": ["不好意思,寺庙有着装要求,请遮住膝盖和肩膀。", "抱歉,寺庙有着装要求,膝盖和肩膀需要遮住。"]
+        },
+        "keywords": { "en": ["dress code", "knees", "shoulders"], "zh": ["着装要求", "膝盖", "肩膀"] },
+        "tipTh": "อธิบายกฎอย่างสุภาพและบอกสิ่งที่ต้องทำ ไม่ใช้น้ำเสียงตำหนิ"
+      },
+      {
+        "prompt": { "en": "What about shoes?", "zh": "鞋子怎么办?" },
+        "suggestedAnswers": {
+          "en": ["You must remove your shoes before entering the hall.", "You must take off your shoes before you enter the hall."],
+          "zh": ["进入大殿前必须脱鞋。", "进大殿之前必须脱鞋。"]
+        },
+        "keywords": { "en": ["remove", "shoes", "must"], "zh": ["脱鞋", "必须", "大殿"] },
+        "tipTh": "ใช้ must เมื่อเป็นกฎที่ต้องทำ ไม่ใช่คำแนะนำ"
+      },
+      {
+        "prompt": { "en": "Can I touch the monks?", "zh": "我可以碰僧侣吗?" },
+        "suggestedAnswers": {
+          "en": ["Women should not touch a monk. Please show respect.", "Women should not touch a monk. Please show respect to them."],
+          "zh": ["女士不可以触碰僧侣,请表示尊重。", "女士不可以触碰僧侣,请对他们表示尊重。"]
+        },
+        "keywords": { "en": ["monk", "touch", "respect"], "zh": ["僧侣", "触碰", "尊重"] },
+        "tipTh": "อธิบายมารยาทที่สำคัญต่อพระสงฆ์โดยไม่ทำให้ผู้ฟังอึดอัด"
+      },
+      {
+        "prompt": { "en": "Can I take photos inside?", "zh": "里面可以拍照吗?" },
+        "suggestedAnswers": {
+          "en": ["Please ask first. Photos of the Buddha statue are usually not allowed.", "Please ask first, because photos of the Buddha statue are usually not allowed."],
+          "zh": ["请先询问,佛像一般不允许拍照。", "请先询问工作人员,佛像一般不允许拍照。"]
+        },
+        "keywords": { "en": ["ask", "photos", "buddha"], "zh": ["询问", "拍照", "佛像"] },
+        "tipTh": "แนะนำให้ถามก่อนถ่ายภาพ เพราะกฎอาจต่างกันในแต่ละสถานที่"
+      },
+      {
+        "prompt": { "en": "Why do people give food to monks?", "zh": "为什么人们要给僧侣食物?" },
+        "suggestedAnswers": {
+          "en": ["It is an old tradition. People give food every morning to show respect.", "It is a tradition. People give food every morning to show respect."],
+          "zh": ["这是一个古老的传统,人们每天早上布施食物表示尊重。", "这是传统,人们每天早上布施食物以表尊重。"]
+        },
+        "keywords": { "en": ["tradition", "food", "morning"], "zh": ["传统", "食物", "早上"] },
+        "tipTh": "อธิบายที่มาของประเพณีสั้นๆ ให้เข้าใจง่าย"
+      }
+    ]
+  }
+}

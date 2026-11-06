@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-02",
+  "careerId": "restaurant",
+  "order": 2,
+  "titleTh": "รับออเดอร์",
+  "titleEn": "Taking Orders",
+  "titleZh": "点菜",
+  "words": [
+    { "en": "order", "enPron": "ออร์-เดอร์", "th": "การสั่งอาหาร", "zh": "点菜", "pinyin": "diǎncài", "icon": "📝",
+      "exampleEn": "May I take your order?", "exampleZh": "请问可以点菜了吗?", "exampleTh": "ขอรับออเดอร์ได้เลยไหมคะ/ครับ" },
+    { "en": "recommend", "enPron": "เร็ค-คอม-เมนด์", "th": "แนะนำ", "zh": "推荐", "pinyin": "tuījiàn", "icon": "👍",
+      "exampleEn": "I recommend the grilled fish.", "exampleZh": "我推荐今天的烤鱼。", "exampleTh": "ดิฉัน/ผมแนะนำปลาย่างวันนี้ค่ะ/ครับ" },
+    { "en": "appetizer", "enPron": "แอพ-พิ-ไท-เซอร์", "th": "อาหารเรียกน้ำย่อย", "zh": "开胃菜", "pinyin": "kāiwèicài", "icon": "🥗",
+      "exampleEn": "Would you like an appetizer first?", "exampleZh": "您想先来一份开胃菜吗?", "exampleTh": "ต้องการอาหารเรียกน้ำย่อยก่อนไหมคะ/ครับ" },
+    { "en": "main course", "enPron": "เมน คอร์ส", "th": "จานหลัก", "zh": "主菜", "pinyin": "zhǔcài", "icon": "🍛",
+      "exampleEn": "What would you like for your main course?", "exampleZh": "您的主菜想吃什么?", "exampleTh": "จานหลักคุณต้องการรับประทานอะไรคะ/ครับ" },
+    { "en": "dessert", "enPron": "ดิ-เซิร์ท", "th": "ของหวาน", "zh": "甜点", "pinyin": "tiándiǎn", "icon": "🍰",
+      "exampleEn": "Would you like a dessert?", "exampleZh": "您想来一份甜点吗?", "exampleTh": "ต้องการของหวานไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "What would you like + to + verb? (ถามความต้องการ)",
+      "explanationTh": "What would you like to ... ? ใช้ถามว่าลูกค้าต้องการทำหรือรับประทานอะไร สุภาพกว่า What do you want",
+      "pattern": "What would you like + to + verb?",
+      "examples": [
+        { "text": "What would you like to drink?", "th": "คุณต้องการดื่มอะไรคะ/ครับ" },
+        { "text": "What would you like to eat?", "th": "คุณต้องการรับประทานอะไรคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您想 + 动词 + 什么? (ถามความต้องการ)",
+      "explanationTh": "您想吃什么 / 您想喝什么 ใช้ถามว่าลูกค้าต้องการอะไร สุภาพและเป็นธรรมชาติในร้านอาหาร",
+      "pattern": "您想 + 吃 / 喝 + 什么?",
+      "examples": [
+        { "text": "您想吃什么?", "th": "คุณอยากรับประทานอะไรคะ/ครับ" },
+        { "text": "您想喝什么?", "th": "คุณอยากดื่มอะไรคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ (Waiter)",
+    "context": "ลูกค้านั่งที่โต๊ะแล้วพร้อมสั่งอาหาร คุณต้องแนะนำเมนู จดออเดอร์จานหลัก อาหารเรียกน้ำย่อย และเสนอของหวาน",
+    "steps": [
+      {
+        "prompt": { "en": "We're ready to order.", "zh": "我们可以点菜了。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Would you like an appetizer first? I can take your order when you are ready.", "Of course. Would you like to start with an appetizer? I am ready to take your order."],
+          "zh": ["好的。可以点菜了吗?您想先来一份开胃菜吗?", "没问题,请问可以点菜了吗?您想先点开胃菜吗?"]
+        },
+        "keywords": { "en": ["appetizer", "order", "ready"], "zh": ["点菜", "开胃菜", "先"] },
+        "tipTh": "ตอบรับและแนะนำให้เริ่มจากอาหารเรียกน้ำย่อย"
+      },
+      {
+        "prompt": { "en": "What do you recommend?", "zh": "你有什么推荐的吗?" },
+        "suggestedAnswers": {
+          "en": ["I recommend the grilled fish. It is our most popular dish.", "I recommend the grilled fish. Many guests love it."],
+          "zh": ["我推荐烤鱼,这是我们最受欢迎的菜。", "我推荐烤鱼,很多客人都喜欢。"]
+        },
+        "keywords": { "en": ["recommend", "grilled fish", "popular"], "zh": ["推荐", "烤鱼", "受欢迎"] },
+        "tipTh": "แนะนำเมนูเด่นพร้อมเหตุผลสั้นๆ"
+      },
+      {
+        "prompt": { "en": "Sounds good. I'll have the fish for my main course.", "zh": "听起来不错。我主菜就点鱼。" },
+        "suggestedAnswers": {
+          "en": ["Excellent choice. One grilled fish for your main course.", "Great choice. Your main course is the grilled fish."],
+          "zh": ["您选得很好,您的主菜是烤鱼。", "好的,主菜一份烤鱼,您选得很好。"]
+        },
+        "keywords": { "en": ["main course", "grilled fish", "choice"], "zh": ["主菜", "烤鱼", "选得"] },
+        "tipTh": "ทวนออเดอร์ทุกครั้งเพื่อกันความผิดพลาด"
+      },
+      {
+        "prompt": { "en": "And for my wife, a soup first.", "zh": "我太太先来一份汤。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. One soup as an appetizer for the lady.", "Of course. A soup as an appetizer for the lady."],
+          "zh": ["好的,一份汤作为这位女士的开胃菜。", "没问题,这位女士的开胃菜是一份汤。"]
+        },
+        "keywords": { "en": ["soup", "appetizer", "lady"], "zh": ["汤", "开胃菜", "女士"] },
+        "tipTh": "ใช้คำเรียกที่สุภาพ เช่น the lady / 这位女士"
+      },
+      {
+        "prompt": { "en": "Do you have dessert?", "zh": "你们有甜点吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we have mango sticky rice and ice cream. Would you like a dessert?", "Yes, we offer mango sticky rice and ice cream as dessert."],
+          "zh": ["有的,我们有芒果糯米饭和冰淇淋,您想来一份甜点吗?", "有,我们的甜点有芒果糯米饭和冰淇淋。"]
+        },
+        "keywords": { "en": ["dessert", "mango", "ice cream"], "zh": ["甜点", "芒果", "冰淇淋"] },
+        "tipTh": "บอกรายการของหวานชัดเจนและชวนสั่งอย่างสุภาพ"
+      }
+    ]
+  }
+}

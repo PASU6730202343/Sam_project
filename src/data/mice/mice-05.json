@@ -1,0 +1,91 @@
+{
+  "id": "mice-05",
+  "careerId": "mice",
+  "order": 5,
+  "titleTh": "ทริปท่องเที่ยวเพื่อเป็นรางวัล",
+  "titleEn": "Incentive Travel",
+  "titleZh": "奖励旅游",
+  "words": [
+    { "en": "incentive trip", "enPron": "อิน-เซน-ทิฟ ทริป", "th": "ทริปรางวัล", "zh": "奖励旅游", "pinyin": "jiǎnglì lǚyóu", "icon": "🏆",
+      "exampleEn": "This is a three-day incentive trip.", "exampleZh": "这是一次为期三天的奖励旅游。", "exampleTh": "นี่คือทริปรางวัลสามวันค่ะ/ครับ" },
+    { "en": "team building", "enPron": "ทีม บิล-ดิง", "th": "กิจกรรมสร้างทีม", "zh": "团建", "pinyin": "tuánjiàn", "icon": "🤝",
+      "exampleEn": "Team building starts at ten.", "exampleZh": "团建活动十点开始。", "exampleTh": "กิจกรรมสร้างทีมเริ่มตอนสิบโมงค่ะ/ครับ" },
+    { "en": "group transfer", "enPron": "กรุ๊ป แทรนส์-เฟอร์", "th": "รถรับส่งเป็นหมู่คณะ", "zh": "团体接送", "pinyin": "tuántǐ jiēsòng", "icon": "🚐",
+      "exampleEn": "Group transfer will wait at the airport.", "exampleZh": "团体接送会在机场等候。", "exampleTh": "รถรับส่งหมู่คณะจะรออยู่ที่สนามบินค่ะ/ครับ" },
+    { "en": "welcome dinner", "enPron": "เวล-คัม ดิน-เนอร์", "th": "งานเลี้ยงต้อนรับ", "zh": "欢迎晚宴", "pinyin": "huānyíng wǎnyàn", "icon": "🍷",
+      "exampleEn": "The welcome dinner is at seven.", "exampleZh": "欢迎晚宴在晚上七点举行。", "exampleTh": "งานเลี้ยงต้อนรับจัดตอนหนึ่งทุ่มค่ะ/ครับ" },
+    { "en": "free time", "enPron": "ฟรี ไทม์", "th": "เวลาว่างส่วนตัว", "zh": "自由活动", "pinyin": "zìyóu huódòng", "icon": "🏝️",
+      "exampleEn": "You have free time in the afternoon.", "exampleZh": "下午是自由活动时间。", "exampleTh": "ช่วงบ่ายเป็นเวลาว่างส่วนตัวค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "from ... to ... (ช่วงเวลา)",
+      "explanationTh": "from + เวลาเริ่ม + to + เวลาสิ้นสุด ใช้บอกช่วงเวลาของกิจกรรมในตารางเดินทาง",
+      "pattern": "from + start time + to + end time",
+      "examples": [
+        { "text": "Free time is from two to five.", "th": "เวลาว่างตั้งแต่สองโมงถึงห้าโมงเย็นค่ะ/ครับ" },
+        { "text": "Team building is from ten to noon.", "th": "กิจกรรมสร้างทีมตั้งแต่สิบโมงถึงเที่ยงค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "从……到…… (ช่วงเวลา)",
+      "explanationTh": "从 + เวลาเริ่ม + 到 + เวลาสิ้นสุด ใช้บอกช่วงเวลา เช่น 从两点到五点 (ตั้งแต่สองโมงถึงห้าโมง)",
+      "pattern": "从 + 开始时间 + 到 + 结束时间",
+      "examples": [
+        { "text": "自由活动是从两点到五点。", "th": "เวลาว่างตั้งแต่สองโมงถึงห้าโมงเย็นค่ะ/ครับ" },
+        { "text": "团建是从十点到中午。", "th": "กิจกรรมสร้างทีมตั้งแต่สิบโมงถึงเที่ยงค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้ประสานงานทริปไมซ์ (MICE Tour Coordinator)",
+    "context": "คุณดูแลกลุ่มพนักงานบริษัทที่มาทริปรางวัล สามวัน ต้องอธิบายวัตถุประสงค์ การรับส่ง งานเลี้ยงต้อนรับ กิจกรรมสร้างทีม และเวลาว่าง",
+    "steps": [
+      {
+        "prompt": { "en": "What is this trip about?", "zh": "这次旅行是做什么的?" },
+        "suggestedAnswers": {
+          "en": ["This is a three-day incentive trip to reward your team's hard work.", "This is a three-day incentive trip. It is a reward for your hard work."],
+          "zh": ["这是一次为期三天的奖励旅游,感谢团队的辛勤付出。", "这是三天的奖励旅游,奖励大家的辛勤付出。"]
+        },
+        "keywords": { "en": ["incentive trip", "three-day", "reward"], "zh": ["奖励旅游", "三天", "辛勤"] },
+        "tipTh": "อธิบายวัตถุประสงค์ของทริปอย่างอบอุ่นและเป็นกันเอง"
+      },
+      {
+        "prompt": { "en": "How do we get from the airport?", "zh": "我们怎么从机场出发?" },
+        "suggestedAnswers": {
+          "en": ["Group transfer will wait at the airport. Please look for our sign.", "Group transfer will wait for you at the airport. Please look for our sign."],
+          "zh": ["团体接送会在机场等候,请留意我们的接机牌。", "团体接送会在机场等您,请留意我们的接机牌。"]
+        },
+        "keywords": { "en": ["group transfer", "airport", "sign"], "zh": ["团体接送", "机场", "接机牌"] },
+        "tipTh": "บอกจุดนัดพบพร้อมสัญลักษณ์ที่ใช้สังเกต"
+      },
+      {
+        "prompt": { "en": "What happens on the first evening?", "zh": "第一天晚上有什么安排?" },
+        "suggestedAnswers": {
+          "en": ["The welcome dinner is at seven in the hotel garden.", "The welcome dinner is at seven, in the hotel garden."],
+          "zh": ["欢迎晚宴在晚上七点举行,地点是酒店花园。", "欢迎晚宴晚上七点在酒店花园举行。"]
+        },
+        "keywords": { "en": ["welcome dinner", "seven", "garden"], "zh": ["欢迎晚宴", "七点", "花园"] },
+        "tipTh": "แจ้งกิจกรรม เวลา และสถานที่ให้ครบ"
+      },
+      {
+        "prompt": { "en": "What activities are planned?", "zh": "计划了哪些活动?" },
+        "suggestedAnswers": {
+          "en": ["Team building starts at ten on the second day, from ten to noon.", "Team building is on the second day, from ten to noon."],
+          "zh": ["第二天十点开始团建活动,从十点到中午。", "团建活动在第二天,从十点到中午。"]
+        },
+        "keywords": { "en": ["team building", "ten", "noon"], "zh": ["团建", "十点", "中午"] },
+        "tipTh": "ใช้ from ... to ... บอกช่วงเวลาของกิจกรรม"
+      },
+      {
+        "prompt": { "en": "Do we have any free time?", "zh": "我们有自由时间吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, free time is from two to five in the afternoon.", "Yes, you have free time from two to five in the afternoon."],
+          "zh": ["有的,自由活动时间是从下午两点到五点。", "有,下午两点到五点是自由活动时间。"]
+        },
+        "keywords": { "en": ["free time", "two to five", "afternoon"], "zh": ["自由活动", "两点到五点", "下午"] },
+        "tipTh": "บอกช่วงเวลาว่างอย่างชัดเจน เพื่อให้ผู้ร่วมทริปวางแผนส่วนตัวได้"
+      }
+    ]
+  }
+}

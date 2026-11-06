@@ -1,0 +1,91 @@
+{
+  "id": "airline-03",
+  "careerId": "airline",
+  "order": 3,
+  "titleTh": "ตรวจความปลอดภัยและตรวจคนเข้าเมือง",
+  "titleEn": "Security and Immigration",
+  "titleZh": "安检与入境",
+  "words": [
+    { "en": "security check", "enPron": "เซ-คิว-ริ-ที เช็ก", "th": "การตรวจความปลอดภัย", "zh": "安检", "pinyin": "ānjiǎn", "icon": "🛃",
+      "exampleEn": "Please go through the security check.", "exampleZh": "请您通过安检口。", "exampleTh": "กรุณาผ่านจุดตรวจความปลอดภัยค่ะ/ครับ" },
+    { "en": "liquids", "enPron": "ลิก-วิดซ์", "th": "ของเหลว", "zh": "液体", "pinyin": "yètǐ", "icon": "🧴",
+      "exampleEn": "Liquids must be in containers under one hundred millilitres.", "exampleZh": "液体必须装在一百毫升以下的容器里。", "exampleTh": "ของเหลวต้องอยู่ในภาชนะไม่เกินหนึ่งร้อยมิลลิลิตรค่ะ/ครับ" },
+    { "en": "visa", "enPron": "วี-ซ่า", "th": "วีซ่า", "zh": "签证", "pinyin": "qiānzhèng", "icon": "📑",
+      "exampleEn": "Do you have a visa for this country?", "exampleZh": "请问您有这个国家的签证吗?", "exampleTh": "คุณมีวีซ่าของประเทศนี้ไหมคะ/ครับ" },
+    { "en": "immigration", "enPron": "อิม-มิ-เกร-เชิน", "th": "ตรวจคนเข้าเมือง", "zh": "入境检查", "pinyin": "rùjìng jiǎnchá", "icon": "🛂",
+      "exampleEn": "Immigration is on the second floor.", "exampleZh": "入境检查在二楼。", "exampleTh": "จุดตรวจคนเข้าเมืองอยู่ชั้นสองค่ะ/ครับ" },
+    { "en": "declare", "enPron": "ดิ-แคร์", "th": "สำแดง / แจ้ง", "zh": "申报", "pinyin": "shēnbào", "icon": "📝",
+      "exampleEn": "Do you have anything to declare?", "exampleZh": "请问您有需要申报的物品吗?", "exampleTh": "คุณมีสิ่งของที่ต้องสำแดงไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Please + verb / Please do not + verb (คำสั่งสุภาพ)",
+      "explanationTh": "ใช้ Please นำหน้ากริยาเพื่อให้คำแนะนำหรือคำสั่งอย่างสุภาพ และใช้ Please do not ... เมื่อต้องห้ามอย่างนุ่มนวล",
+      "pattern": "Please + verb ... / Please do not + verb ...",
+      "examples": [
+        { "text": "Please take off your belt and shoes.", "th": "กรุณาถอดเข็มขัดและรองเท้าค่ะ/ครับ" },
+        { "text": "Please do not carry liquids over one hundred millilitres.", "th": "กรุณาอย่านำของเหลวเกินหนึ่งร้อยมิลลิลิตรค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请 + 动词 / 请勿 + 动词 (คำสั่งสุภาพ)",
+      "explanationTh": "请 + กริยา ใช้ขอร้องหรือแนะนำให้ทำ ส่วน 请勿 + กริยา ใช้ห้ามอย่างสุภาพ ปรากฏบ่อยในป้ายและประกาศ",
+      "pattern": "请 + 动词 + 名词 / 请勿 + 动词",
+      "examples": [
+        { "text": "请把外套和皮带放进托盘。", "th": "กรุณาวางเสื้อโค้ทและเข็มขัดลงในถาดค่ะ/ครับ" },
+        { "text": "请勿携带超过一百毫升的液体。", "th": "กรุณาอย่านำของเหลวเกินหนึ่งร้อยมิลลิลิตรค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ตรวจความปลอดภัย (Security Officer)",
+    "context": "ผู้โดยสารเดินมาถึงจุดตรวจความปลอดภัย คุณต้องแนะนำขั้นตอน ตรวจของเหลว และแนะนำจุดตรวจคนเข้าเมืองและการสำแดงสิ่งของ",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, is this the security check?", "zh": "打扰一下,这里是安检吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, this is the security check. Please put your bag in the tray.", "That's right. Please place your bag and laptop in the tray."],
+          "zh": ["是的,这里是安检口,请把包放进托盘。", "没错,请把包和电脑放进托盘。"]
+        },
+        "keywords": { "en": ["security check", "tray", "please"], "zh": ["安检", "托盘", "请"] },
+        "tipTh": "ยืนยันสถานที่ แล้วบอกขั้นตอนแรกทันที"
+      },
+      {
+        "prompt": { "en": "I have a water bottle. Is that allowed?", "zh": "我有一瓶水,可以带吗?" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, liquids over one hundred millilitres are not allowed. Please drink it or leave it here.", "Liquids must be under one hundred millilitres. You may buy water after security."],
+          "zh": ["不好意思,超过一百毫升的液体不能带,请喝掉或放在这里。", "液体必须在一百毫升以下,过了安检可以再买水。"]
+        },
+        "keywords": { "en": ["liquids", "one hundred", "sorry"], "zh": ["液体", "一百毫升", "不好意思"] },
+        "tipTh": "อธิบายกฎด้วยน้ำเสียงสุภาพ พร้อมเสนอทางออก"
+      },
+      {
+        "prompt": { "en": "Okay. Where is immigration?", "zh": "好的。入境检查在哪里?" },
+        "suggestedAnswers": {
+          "en": ["Immigration is on the second floor. Please follow the signs.", "Go up the escalator. Immigration is on the second floor."],
+          "zh": ["入境检查在二楼,请跟着指示牌走。", "请乘扶梯上去,入境检查在二楼。"]
+        },
+        "keywords": { "en": ["immigration", "second floor", "signs"], "zh": ["入境检查", "二楼", "指示牌"] },
+        "tipTh": "บอกชั้นและแนะนำให้ตามป้าย เพื่อให้ผู้โดยสารหาเองได้"
+      },
+      {
+        "prompt": { "en": "Do I need a visa to enter Japan?", "zh": "去日本需要签证吗?" },
+        "suggestedAnswers": {
+          "en": ["It depends on your passport. Do you have a visa for this country?", "Please check your visa requirements. Do you have a visa?"],
+          "zh": ["这要看您的护照。请问您有这个国家的签证吗?", "请确认签证要求。请问您有签证吗?"]
+        },
+        "keywords": { "en": ["visa", "passport", "depends"], "zh": ["签证", "护照", "要看"] },
+        "tipTh": "ไม่ตอบแน่นอนเกินไปถ้าไม่แน่ใจ ให้ถามและแนะนำให้ตรวจข้อกำหนด"
+      },
+      {
+        "prompt": { "en": "I bought some gifts abroad. Do I have to say anything?", "zh": "我在国外买了一些礼物,需要说明吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, please declare them. Do you have anything to declare?", "You should declare items of high value. Do you have anything to declare?"],
+          "zh": ["需要,请您申报。请问您有需要申报的物品吗?", "贵重物品需要申报。请问您有需要申报的物品吗?"]
+        },
+        "keywords": { "en": ["declare", "anything", "please"], "zh": ["申报", "物品", "请"] },
+        "tipTh": "ใช้คำว่า declare ให้ถูกต้องและถามว่ามีของที่ต้องสำแดงหรือไม่"
+      }
+    ]
+  }
+}

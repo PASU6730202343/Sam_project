@@ -1,0 +1,91 @@
+{
+  "id": "spa-05",
+  "careerId": "spa",
+  "order": 5,
+  "titleTh": "ทรีตเมนต์ผิวหน้า",
+  "titleEn": "Facial and Skin Care",
+  "titleZh": "面部护理",
+  "words": [
+    { "en": "facial", "enPron": "เฟ-เชียล", "th": "ทรีตเมนต์ผิวหน้า", "zh": "面部护理", "pinyin": "miànbù hùlǐ", "icon": "🧖‍♀️",
+      "exampleEn": "Would you like a facial today?", "exampleZh": "您今天想做面部护理吗?", "exampleTh": "วันนี้คุณต้องการทำทรีตเมนต์ผิวหน้าไหมคะ/ครับ" },
+    { "en": "skin type", "enPron": "สกิน ไทป์", "th": "ประเภทผิว", "zh": "肤质", "pinyin": "fūzhì", "icon": "🧴",
+      "exampleEn": "What is your skin type?", "exampleZh": "您的肤质是什么类型?", "exampleTh": "ผิวของคุณเป็นผิวประเภทไหนคะ/ครับ" },
+    { "en": "moisturizer", "enPron": "มอยส์-เจอ-ไร-เซอร์", "th": "ครีมบำรุงความชุ่มชื้น", "zh": "保湿霜", "pinyin": "bǎoshīshuāng", "icon": "🫙",
+      "exampleEn": "I will apply moisturizer after the mask.", "exampleZh": "敷完面膜后我会为您涂保湿霜。", "exampleTh": "หลังมาสก์หน้าดิฉัน/ผมจะทาครีมบำรุงให้ค่ะ/ครับ" },
+    { "en": "scrub", "enPron": "สครับ", "th": "สครับขัดผิว", "zh": "磨砂", "pinyin": "móshā", "icon": "🧽",
+      "exampleEn": "A scrub removes dead skin.", "exampleZh": "磨砂可以去除死皮。", "exampleTh": "สครับช่วยขัดเซลล์ผิวที่ตายแล้วค่ะ/ครับ" },
+    { "en": "mask", "enPron": "มาสก์", "th": "มาสก์หน้า", "zh": "面膜", "pinyin": "miànmó", "icon": "🎭",
+      "exampleEn": "We will apply a mask now.", "exampleZh": "现在为您敷面膜。", "exampleTh": "ตอนนี้เราจะมาสก์หน้าให้คุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "can help + verb / noun (ช่วยให้ดีขึ้น)",
+      "explanationTh": "can help ใช้บอกประโยชน์ของทรีตเมนต์อย่างระมัดระวัง ไม่รับประกันผลเกินจริง เหมาะกับงานสปาและความงาม",
+      "pattern": "Noun + can help + (with) + noun / verb",
+      "examples": [
+        { "text": "A scrub can help remove dead skin.", "th": "สครับช่วยขัดเซลล์ผิวที่ตายแล้วได้ค่ะ/ครับ" },
+        { "text": "Moisturizer can help dry skin.", "th": "ครีมบำรุงช่วยผิวแห้งได้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "有助于 + 动词 / 名词 (ช่วยให้ดีขึ้น)",
+      "explanationTh": "有助于 แปลว่า 'ช่วยให้...' ใช้บอกประโยชน์อย่างสุภาพและไม่เกินจริง ตามด้วยกริยาหรือคำนาม",
+      "pattern": "名词 + 有助于 + 动词 / 名词",
+      "examples": [
+        { "text": "磨砂有助于去除死皮。", "th": "สครับช่วยขัดเซลล์ผิวที่ตายแล้วค่ะ/ครับ" },
+        { "text": "保湿霜有助于改善干燥。", "th": "ครีมบำรุงช่วยแก้ปัญหาผิวแห้งค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "นักบำบัดผิวหน้า (Beauty Therapist)",
+    "context": "แขกมาทำทรีตเมนต์ผิวหน้า คุณต้องถามประเภทผิว แนะนำสครับและมาสก์ อธิบายขั้นตอน และดูแลความสบายของแขกตลอดการทำ",
+    "steps": [
+      {
+        "prompt": { "en": "I'd like a facial.", "zh": "我想做面部护理。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. What is your skin type? Dry, oily or normal?", "Certainly. What is your skin type: dry, oily or normal?"],
+          "zh": ["好的,您的肤质是什么类型?干性、油性还是中性?", "好的,请问您的肤质是干性、油性还是中性?"]
+        },
+        "keywords": { "en": ["skin type", "dry", "oily"], "zh": ["肤质", "干性", "油性"] },
+        "tipTh": "ถามประเภทผิวก่อนเลือกผลิตภัณฑ์"
+      },
+      {
+        "prompt": { "en": "My skin is dry.", "zh": "我的皮肤比较干。" },
+        "suggestedAnswers": {
+          "en": ["A scrub removes dead skin, and moisturizer will help dry skin.", "A scrub removes dead skin, then moisturizer will help your dry skin."],
+          "zh": ["磨砂可以去除死皮,保湿霜有助于改善干燥。", "先用磨砂去除死皮,再用保湿霜改善干燥。"]
+        },
+        "keywords": { "en": ["scrub", "moisturizer", "dry skin"], "zh": ["磨砂", "保湿霜", "干燥"] },
+        "tipTh": "อธิบายขั้นตอนที่เหมาะกับผิวของแขก"
+      },
+      {
+        "prompt": { "en": "Is the scrub strong?", "zh": "磨砂会不会很刺激?" },
+        "suggestedAnswers": {
+          "en": ["No, it is gentle. Please tell me if it feels uncomfortable.", "No, it is gentle. If it feels uncomfortable, please tell me."],
+          "zh": ["不会,很轻柔。如果觉得不舒服,请告诉我。", "不会,手法很轻柔,如果不舒服请告诉我。"]
+        },
+        "keywords": { "en": ["gentle", "tell me", "uncomfortable"], "zh": ["轻柔", "不舒服", "告诉"] },
+        "tipTh": "ให้ความมั่นใจและบอกให้แขกแจ้งเมื่อไม่สบาย"
+      },
+      {
+        "prompt": { "en": "What happens next?", "zh": "接下来做什么?" },
+        "suggestedAnswers": {
+          "en": ["We will apply a mask now. It will stay on for fifteen minutes.", "We will apply a mask now, and it stays on for fifteen minutes."],
+          "zh": ["现在为您敷面膜,需要停留十五分钟。", "现在为您敷面膜,大约要敷十五分钟。"]
+        },
+        "keywords": { "en": ["mask", "fifteen minutes", "apply"], "zh": ["面膜", "十五分钟", "敷"] },
+        "tipTh": "บอกขั้นตอนต่อไปและเวลาที่ใช้"
+      },
+      {
+        "prompt": { "en": "How does my skin look?", "zh": "我的皮肤现在怎么样?" },
+        "suggestedAnswers": {
+          "en": ["Your skin looks fresh. I will apply moisturizer to finish the facial.", "Your skin looks fresh now. I will finish the facial with moisturizer."],
+          "zh": ["您的皮肤看起来很清爽,我来涂保湿霜完成面部护理。", "您的皮肤很清爽,最后涂保湿霜,面部护理就完成了。"]
+        },
+        "keywords": { "en": ["fresh", "moisturizer", "facial"], "zh": ["清爽", "保湿霜", "面部护理"] },
+        "tipTh": "บอกผลลัพธ์อย่างสุภาพ ไม่เกินจริง แล้วปิดด้วยขั้นตอนสุดท้าย"
+      }
+    ]
+  }
+}

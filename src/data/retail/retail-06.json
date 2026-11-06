@@ -1,0 +1,91 @@
+{
+  "id": "retail-06",
+  "careerId": "retail",
+  "order": 6,
+  "titleTh": "ซูเปอร์มาร์เก็ตและสินค้าอาหาร",
+  "titleEn": "Grocery Shopping",
+  "titleZh": "超市购物",
+  "words": [
+    { "en": "fresh", "enPron": "เฟรช", "th": "สด", "zh": "新鲜", "pinyin": "xīnxiān", "icon": "🥬",
+      "exampleEn": "These vegetables are fresh.", "exampleZh": "这些蔬菜很新鲜。", "exampleTh": "ผักเหล่านี้สดมากค่ะ/ครับ" },
+    { "en": "expiry date", "enPron": "เอ็ก-สไป-รี เดท", "th": "วันหมดอายุ", "zh": "保质期", "pinyin": "bǎozhìqī", "icon": "📆",
+      "exampleEn": "Please check the expiry date.", "exampleZh": "请查看保质期。", "exampleTh": "กรุณาตรวจสอบวันหมดอายุค่ะ/ครับ" },
+    { "en": "shelf", "enPron": "เชลฟ์", "th": "ชั้นวางสินค้า", "zh": "货架", "pinyin": "huòjià", "icon": "🗄️",
+      "exampleEn": "It is on the top shelf.", "exampleZh": "它在最上面的货架上。", "exampleTh": "อยู่บนชั้นวางบนสุดค่ะ/ครับ" },
+    { "en": "weigh", "enPron": "เวย์", "th": "ชั่งน้ำหนัก", "zh": "称重", "pinyin": "chēngzhòng", "icon": "⚖️",
+      "exampleEn": "I will weigh it for you.", "exampleZh": "我帮您称重。", "exampleTh": "ดิฉัน/ผมจะชั่งน้ำหนักให้ค่ะ/ครับ" },
+    { "en": "aisle", "enPron": "ไอล์", "th": "ช่องทางเดินระหว่างชั้น", "zh": "过道", "pinyin": "guòdào", "icon": "🛒",
+      "exampleEn": "The milk is in aisle three.", "exampleZh": "牛奶在三号过道。", "exampleTh": "นมอยู่ที่ช่องทางเดินหมายเลขสามค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "in / on / next to (บุพบทบอกตำแหน่ง)",
+      "explanationTh": "in aisle three, on the top shelf, next to the milk ใช้บอกตำแหน่งสินค้า in ใช้กับพื้นที่ on ใช้กับพื้นผิวหรือชั้นวาง",
+      "pattern": "Noun + is + in / on / next to + place",
+      "examples": [
+        { "text": "The snacks are in aisle five.", "th": "ขนมอยู่ที่ช่องทางเดินหมายเลขห้าค่ะ/ครับ" },
+        { "text": "The rice is on the second shelf.", "th": "ข้าวอยู่ที่ชั้นที่สองค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "在 + 位置 (บอกตำแหน่ง)",
+      "explanationTh": "在 + สถานที่ ใช้บอกตำแหน่งของสินค้า ตามด้วยตำแหน่งย่อย เช่น 最上面 (บนสุด) 旁边 (ข้างๆ)",
+      "pattern": "名词 + 在 + 位置",
+      "examples": [
+        { "text": "零食在五号过道。", "th": "ขนมอยู่ที่ช่องทางเดินหมายเลขห้าค่ะ/ครับ" },
+        { "text": "大米在第二层货架上。", "th": "ข้าวอยู่ที่ชั้นที่สองค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานซูเปอร์มาร์เก็ต (Supermarket Assistant)",
+    "context": "ลูกค้านักท่องเที่ยวหาซื้อผักผลไม้และของใช้ คุณต้องตอบเรื่องความสด วันหมดอายุ ตำแหน่งสินค้า และชั่งน้ำหนักผลไม้ให้",
+    "steps": [
+      {
+        "prompt": { "en": "Are these vegetables fresh?", "zh": "这些蔬菜新鲜吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, these vegetables are fresh. They arrived this morning.", "Yes, they are fresh. The vegetables arrived this morning."],
+          "zh": ["是的,这些蔬菜很新鲜,今天早上刚到。", "是的,蔬菜很新鲜,今天早上刚送到。"]
+        },
+        "keywords": { "en": ["fresh", "vegetables", "morning"], "zh": ["新鲜", "蔬菜", "早上"] },
+        "tipTh": "ยืนยันความสดพร้อมหลักฐานง่ายๆ เช่น เวลาที่สินค้ามาถึง"
+      },
+      {
+        "prompt": { "en": "Where is the milk?", "zh": "牛奶在哪里?" },
+        "suggestedAnswers": {
+          "en": ["The milk is in aisle three, on the top shelf.", "The milk is in aisle three, on the top shelf, next to the juice."],
+          "zh": ["牛奶在三号过道,最上面的货架上。", "牛奶在三号过道,最上面的货架上,果汁旁边。"]
+        },
+        "keywords": { "en": ["milk", "aisle three", "shelf"], "zh": ["牛奶", "三号过道", "货架"] },
+        "tipTh": "บอกช่องทางเดินและชั้นวางให้ครบ"
+      },
+      {
+        "prompt": { "en": "How long will it last?", "zh": "它能放多久?" },
+        "suggestedAnswers": {
+          "en": ["Please check the expiry date. It is on the bottom of the carton.", "Please check the expiry date, which is on the bottom of the carton."],
+          "zh": ["请查看保质期,印在纸盒底部。", "请查看保质期,它印在纸盒的底部。"]
+        },
+        "keywords": { "en": ["expiry date", "bottom", "carton"], "zh": ["保质期", "底部", "纸盒"] },
+        "tipTh": "บอกตำแหน่งที่พิมพ์วันหมดอายุให้ลูกค้าเห็นเอง"
+      },
+      {
+        "prompt": { "en": "I'd like a kilo of mangoes.", "zh": "我想买一公斤芒果。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. I will weigh the mangoes for you.", "Certainly. I will weigh the mangoes for you, one kilo."],
+          "zh": ["好的,我帮您称重芒果。", "好的,我帮您称一公斤芒果。"]
+        },
+        "keywords": { "en": ["weigh", "mangoes", "certainly"], "zh": ["称重", "芒果", "好的"] },
+        "tipTh": "รับคำขอและทวนสินค้าที่ต้องชั่ง"
+      },
+      {
+        "prompt": { "en": "Where are the snacks?", "zh": "零食在哪里?" },
+        "suggestedAnswers": {
+          "en": ["The snacks are in aisle five, on the second shelf.", "The snacks are in aisle five, on the second shelf from the top."],
+          "zh": ["零食在五号过道,第二层货架。", "零食在五号过道的第二层货架上。"]
+        },
+        "keywords": { "en": ["snacks", "aisle five", "second shelf"], "zh": ["零食", "五号过道", "货架"] },
+        "tipTh": "บอกช่องทางเดินและลำดับชั้นเพื่อให้หาง่าย"
+      }
+    ]
+  }
+}

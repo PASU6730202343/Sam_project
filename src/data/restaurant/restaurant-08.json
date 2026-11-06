@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-08",
+  "careerId": "restaurant",
+  "order": 8,
+  "titleTh": "อาหารกลับบ้านและเดลิเวอรี",
+  "titleEn": "Takeaway and Delivery",
+  "titleZh": "外带与外送",
+  "words": [
+    { "en": "takeaway", "enPron": "เทค-อะ-เวย์", "th": "ซื้อกลับบ้าน", "zh": "外带", "pinyin": "wàidài", "icon": "🥡",
+      "exampleEn": "Is your order for takeaway?", "exampleZh": "请问您的订单是外带吗?", "exampleTh": "ออเดอร์ของคุณสั่งกลับบ้านใช่ไหมคะ/ครับ" },
+    { "en": "delivery", "enPron": "ดิ-ลิ-เวอ-รี", "th": "จัดส่งถึงที่", "zh": "外送", "pinyin": "wàisòng", "icon": "🛵",
+      "exampleEn": "We offer delivery within five kilometres.", "exampleZh": "我们提供五公里内的外送服务。", "exampleTh": "เรามีบริการจัดส่งในรัศมีห้ากิโลเมตรค่ะ/ครับ" },
+    { "en": "container", "enPron": "คอน-เทน-เนอร์", "th": "กล่องใส่อาหาร", "zh": "餐盒", "pinyin": "cānhé", "icon": "📦",
+      "exampleEn": "I will put it in a container.", "exampleZh": "我把它装进餐盒里。", "exampleTh": "ดิฉัน/ผมจะใส่ลงในกล่องอาหารให้ค่ะ/ครับ" },
+    { "en": "pick up", "enPron": "พิค อัพ", "th": "มารับ", "zh": "取餐", "pinyin": "qǔcān", "icon": "🙋",
+      "exampleEn": "You can pick up your order at the counter.", "exampleZh": "您可以到柜台取餐。", "exampleTh": "คุณมารับออเดอร์ได้ที่เคาน์เตอร์ค่ะ/ครับ" },
+    { "en": "leftovers", "enPron": "เลฟท์-โอ-เวอร์ส", "th": "อาหารเหลือ", "zh": "剩菜", "pinyin": "shèngcài", "icon": "🍱",
+      "exampleEn": "Would you like to take the leftovers home?", "exampleZh": "您想把剩菜带回家吗?", "exampleTh": "ต้องการห่ออาหารที่เหลือกลับบ้านไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "will be ready in + time (บอกเวลาที่จะเสร็จ)",
+      "explanationTh": "ใช้ will be ready in + ระยะเวลา บอกเวลาที่ออเดอร์จะพร้อม ใช้ in กับระยะเวลา เช่น in ten minutes",
+      "pattern": "Your order will be ready in + time",
+      "examples": [
+        { "text": "Your order will be ready in fifteen minutes.", "th": "ออเดอร์ของคุณจะพร้อมในสิบห้านาทีค่ะ/ครับ" },
+        { "text": "Your food will be ready in ten minutes.", "th": "อาหารของคุณจะพร้อมในสิบนาทีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "时间 + 后就能 + 动词 (บอกเวลาที่จะเสร็จ)",
+      "explanationTh": "ใช้ ระยะเวลา + 后就能 + กริยา แปลว่า 'อีก...ก็จะ...ได้' ใช้บอกเวลารออาหาร",
+      "pattern": "时间 + 后就能 + 动词",
+      "examples": [
+        { "text": "十五分钟后就能取餐。", "th": "อีกสิบห้านาทีก็รับอาหารได้ค่ะ/ครับ" },
+        { "text": "十分钟后就能送到。", "th": "อีกสิบนาทีก็ส่งถึงค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานรับออเดอร์ (Cashier)",
+    "context": "ลูกค้าโทรหรือมาที่เคาน์เตอร์สั่งอาหารกลับบ้าน คุณต้องรับออเดอร์ ทวนรายการ แจ้งเวลา แพ็กอย่างดี และแนะนำบริการจัดส่ง",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, I'd like to order food to go.", "zh": "你好,我想点餐带走。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Is it for takeaway, or would you like delivery?", "Of course. Would you like takeaway or delivery?"],
+          "zh": ["好的,请问是外带还是外送?", "没问题,您要外带还是外送?"]
+        },
+        "keywords": { "en": ["takeaway", "delivery", "certainly"], "zh": ["外带", "外送", "好的"] },
+        "tipTh": "ถามวิธีรับอาหารตั้งแต่ต้นเพื่อกำหนดขั้นตอนต่อไป"
+      },
+      {
+        "prompt": { "en": "Takeaway. One green curry and one fried rice.", "zh": "外带。一份绿咖喱和一份炒饭。" },
+        "suggestedAnswers": {
+          "en": ["One green curry and one fried rice for takeaway. Is that correct?", "So, one green curry and one fried rice to go. Is that correct?"],
+          "zh": ["一份绿咖喱和一份炒饭外带,对吗?", "绿咖喱一份,炒饭一份,打包带走,对吗?"]
+        },
+        "keywords": { "en": ["green curry", "fried rice", "correct"], "zh": ["绿咖喱", "炒饭", "对吗"] },
+        "tipTh": "ทวนรายการทุกครั้งก่อนยืนยัน"
+      },
+      {
+        "prompt": { "en": "Yes. How long will it take?", "zh": "对。需要多久?" },
+        "suggestedAnswers": {
+          "en": ["Your order will be ready in fifteen minutes. You can pick up your order at the counter.", "It will be ready in fifteen minutes. Please pick up your order at the counter."],
+          "zh": ["十五分钟后就能取餐,请到柜台取餐。", "十五分钟后就好了,请到柜台取餐。"]
+        },
+        "keywords": { "en": ["fifteen minutes", "pick up", "counter"], "zh": ["十五分钟", "取餐", "柜台"] },
+        "tipTh": "บอกเวลาและสถานที่รับอาหารให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Can you pack it carefully? I have a long trip.", "zh": "可以帮我包装仔细一点吗?路程比较远。" },
+        "suggestedAnswers": {
+          "en": ["Of course. I will put it in a container and seal it well.", "Certainly. I will pack it in a container and seal it well."],
+          "zh": ["没问题,我把它装进餐盒并封好。", "好的,我会装进餐盒,封好口。"]
+        },
+        "keywords": { "en": ["container", "seal", "of course"], "zh": ["餐盒", "封好", "没问题"] },
+        "tipTh": "ยืนยันว่าจะทำตามคำขอและบอกวิธีที่จะแพ็ก"
+      },
+      {
+        "prompt": { "en": "Thank you. Do you deliver to my hotel next time?", "zh": "谢谢。下次你们可以送到我的酒店吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we offer delivery within five kilometres. Just call us.", "Yes, we have delivery within five kilometres. Please call us."],
+          "zh": ["可以,我们提供五公里内的外送服务,请致电我们。", "可以的,五公里内我们提供外送,欢迎致电。"]
+        },
+        "keywords": { "en": ["delivery", "five kilometres", "call"], "zh": ["外送", "五公里", "致电"] },
+        "tipTh": "แนะนำบริการจัดส่งพร้อมเงื่อนไขระยะทางและวิธีติดต่อ"
+      }
+    ]
+  }
+}

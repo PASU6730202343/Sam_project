@@ -1,0 +1,91 @@
+{
+  "id": "retail-07",
+  "careerId": "retail",
+  "order": 7,
+  "titleTh": "คืนสินค้า",
+  "titleEn": "Returns",
+  "titleZh": "退货",
+  "words": [
+    { "en": "return", "enPron": "รี-เทิร์น", "th": "คืนสินค้า", "zh": "退货", "pinyin": "tuìhuò", "icon": "↩️",
+      "exampleEn": "You can return it within seven days.", "exampleZh": "您可以在七天内退货。", "exampleTh": "คุณคืนสินค้าได้ภายในเจ็ดวันค่ะ/ครับ" },
+    { "en": "defective", "enPron": "ดิ-เฟค-ทิฟ", "th": "มีตำหนิ / ชำรุด", "zh": "瑕疵", "pinyin": "xiácī", "icon": "⚠️",
+      "exampleEn": "This item is defective.", "exampleZh": "这件商品有瑕疵。", "exampleTh": "สินค้าชิ้นนี้มีตำหนิค่ะ/ครับ" },
+    { "en": "policy", "enPron": "พอล-ลิ-ซี", "th": "นโยบาย", "zh": "政策", "pinyin": "zhèngcè", "icon": "📜",
+      "exampleEn": "Our return policy is seven days.", "exampleZh": "我们的退货政策是七天。", "exampleTh": "นโยบายการคืนสินค้าของเราคือเจ็ดวันค่ะ/ครับ" },
+    { "en": "original packaging", "enPron": "โอ-ริจ-จิ-เนิล แพ็ค-คะ-จิง", "th": "บรรจุภัณฑ์เดิม", "zh": "原包装", "pinyin": "yuánbāozhuāng", "icon": "📦",
+      "exampleEn": "Please keep the original packaging.", "exampleZh": "请您保留原包装。", "exampleTh": "กรุณาเก็บบรรจุภัณฑ์เดิมไว้ค่ะ/ครับ" },
+    { "en": "store credit", "enPron": "สตอร์ เครด-ดิท", "th": "เครดิตร้านค้า", "zh": "购物抵用券", "pinyin": "gòuwù dǐyòngquàn", "icon": "🎫",
+      "exampleEn": "We can give you store credit.", "exampleZh": "我们可以给您购物抵用券。", "exampleTh": "เรามอบเครดิตร้านค้าให้คุณได้ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "within + period (ภายในระยะเวลา)",
+      "explanationTh": "within + ระยะเวลา แปลว่า 'ภายใน...' ใช้บอกเงื่อนไขเวลาในการคืนสินค้าหรือรับประกัน",
+      "pattern": "You can + verb + within + number + days / weeks",
+      "examples": [
+        { "text": "You can return it within seven days.", "th": "คุณคืนได้ภายในเจ็ดวันค่ะ/ครับ" },
+        { "text": "Refunds are made within five working days.", "th": "คืนเงินภายในห้าวันทำการค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "在……内 (ภายในระยะเวลา)",
+      "explanationTh": "在 + ระยะเวลา + 内 แปลว่า 'ภายใน...' ใช้บอกเงื่อนไขเวลาของการคืนสินค้า",
+      "pattern": "在 + 时间 + 内 + 动词",
+      "examples": [
+        { "text": "您可以在七天内退货。", "th": "คุณคืนสินค้าได้ภายในเจ็ดวันค่ะ/ครับ" },
+        { "text": "退款会在五个工作日内到账。", "th": "เงินคืนจะเข้าบัญชีภายในห้าวันทำการค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานบริการลูกค้าหน้าร้าน (Service Desk Staff)",
+    "context": "ลูกค้านำสินค้ามาขอคืนเพราะซิปเสีย คุณต้องตรวจใบเสร็จ อธิบายนโยบาย ตรวจบรรจุภัณฑ์ และเสนอทางเลือกคืนเงินหรือเครดิตร้านค้า",
+    "steps": [
+      {
+        "prompt": { "en": "I'd like to return this.", "zh": "我想退这件商品。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. May I see your receipt? You can return it within seven days.", "Certainly. May I see your receipt, please? You can return it within seven days."],
+          "zh": ["好的,请问可以看一下收据吗?您可以在七天内退货。", "好的,请出示您的收据,您可以在七天内退货。"]
+        },
+        "keywords": { "en": ["receipt", "return", "seven days"], "zh": ["收据", "退货", "七天"] },
+        "tipTh": "ขอใบเสร็จและแจ้งกรอบเวลาที่คืนได้"
+      },
+      {
+        "prompt": { "en": "The zipper is broken. It's defective.", "zh": "拉链坏了,这是次品。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry. This item is defective, so we can return it. Do you have the original packaging?", "I'm sorry. Since the item is defective, we can return it. Do you have the original packaging?"],
+          "zh": ["很抱歉,这件商品有瑕疵,请问您有原包装吗?", "非常抱歉,这件商品确实有瑕疵,请问还有原包装吗?"]
+        },
+        "keywords": { "en": ["defective", "original packaging", "sorry"], "zh": ["瑕疵", "原包装", "抱歉"] },
+        "tipTh": "ยอมรับปัญหาสินค้าแล้วถามเอกสารที่จำเป็น"
+      },
+      {
+        "prompt": { "en": "I threw the box away.", "zh": "我把盒子扔掉了。" },
+        "suggestedAnswers": {
+          "en": ["That's okay. Our return policy allows returns with a receipt.", "That is okay. Our return policy allows a return with the receipt."],
+          "zh": ["没关系,我们的退货政策允许凭收据退货。", "没关系,按照我们的退货政策,有收据就可以退。"]
+        },
+        "keywords": { "en": ["return policy", "receipt", "okay"], "zh": ["退货政策", "收据", "没关系"] },
+        "tipTh": "ถ้านโยบายยืดหยุ่นได้ให้บอกทางออกทันที"
+      },
+      {
+        "prompt": { "en": "Can I get my money back?", "zh": "我可以拿回钱吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you can get a refund to your card, or we can give you store credit.", "Yes, you can get a refund to your card, or take store credit."],
+          "zh": ["可以,可以退款到您的银行卡,也可以给您购物抵用券。", "可以,您可以选择退款到银行卡,或者领取购物抵用券。"]
+        },
+        "keywords": { "en": ["refund", "store credit", "card"], "zh": ["退款", "购物抵用券", "银行卡"] },
+        "tipTh": "ให้ตัวเลือกระหว่างคืนเงินและเครดิตร้านค้า"
+      },
+      {
+        "prompt": { "en": "I'll take store credit.", "zh": "我要购物抵用券。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Here is your store credit. It is valid for six months.", "Certainly. Here is your store credit, valid for six months."],
+          "zh": ["好的,这是您的购物抵用券,有效期六个月。", "好的,这是购物抵用券,有效期是六个月。"]
+        },
+        "keywords": { "en": ["store credit", "valid", "six months"], "zh": ["购物抵用券", "有效期", "六个月"] },
+        "tipTh": "มอบเครดิตและบอกอายุการใช้งานให้ชัดเจน"
+      }
+    ]
+  }
+}

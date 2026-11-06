@@ -1,0 +1,91 @@
+{
+  "id": "mice-04",
+  "careerId": "mice",
+  "order": 4,
+  "titleTh": "งานแสดงสินค้า",
+  "titleEn": "Exhibition",
+  "titleZh": "展览会",
+  "words": [
+    { "en": "booth", "enPron": "บูธ", "th": "บูธ", "zh": "展位", "pinyin": "zhǎnwèi", "icon": "🏪",
+      "exampleEn": "Your booth is number twelve.", "exampleZh": "您的展位是十二号。", "exampleTh": "บูธของคุณคือหมายเลขสิบสองค่ะ/ครับ" },
+    { "en": "exhibitor", "enPron": "อิก-ซิบ-บิ-เทอร์", "th": "ผู้ออกบูธ", "zh": "参展商", "pinyin": "cānzhǎnshāng", "icon": "🏷️",
+      "exampleEn": "Exhibitors can enter at seven.", "exampleZh": "参展商七点可以入场。", "exampleTh": "ผู้ออกบูธเข้างานได้ตอนเจ็ดโมงค่ะ/ครับ" },
+    { "en": "brochure", "enPron": "โบร-ชัวร์", "th": "โบรชัวร์", "zh": "宣传册", "pinyin": "xuānchuáncè", "icon": "📄",
+      "exampleEn": "Please take a brochure.", "exampleZh": "请拿一份宣传册。", "exampleTh": "เชิญรับโบรชัวร์ได้เลยค่ะ/ครับ" },
+    { "en": "sample", "enPron": "แซม-เพิล", "th": "ตัวอย่างสินค้า", "zh": "样品", "pinyin": "yàngpǐn", "icon": "🎁",
+      "exampleEn": "You can try a free sample.", "exampleZh": "您可以免费试用样品。", "exampleTh": "คุณลองตัวอย่างสินค้าฟรีได้ค่ะ/ครับ" },
+    { "en": "business card", "enPron": "บิส-เนส การ์ด", "th": "นามบัตร", "zh": "名片", "pinyin": "míngpiàn", "icon": "🪪",
+      "exampleEn": "May I have your business card?", "exampleZh": "请问可以要一张您的名片吗?", "exampleTh": "ขอนามบัตรของคุณได้ไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Where is / are ...? (ถามตำแหน่ง)",
+      "explanationTh": "Where is + นามเอกพจน์ / Where are + นามพหูพจน์ ใช้ถามตำแหน่ง ตอบด้วยบุพบทบอกตำแหน่ง เช่น at the end of, on the right",
+      "pattern": "Where is / are + noun? — It is at / on / next to ...",
+      "examples": [
+        { "text": "Where is booth twelve?", "th": "บูธสิบสองอยู่ที่ไหนคะ/ครับ" },
+        { "text": "It is at the end of hall B, on the right.", "th": "อยู่ปลายโถง B ทางขวามือค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "……在哪里? (ถามตำแหน่ง)",
+      "explanationTh": "名词 + 在哪里 ใช้ถามตำแหน่ง ตอบด้วย 在 + สถานที่ เช่น 在B馆尽头 (อยู่ปลายโถง B)",
+      "pattern": "名词 + 在哪里? — 在 + 地点",
+      "examples": [
+        { "text": "十二号展位在哪里?", "th": "บูธสิบสองอยู่ที่ไหนคะ/ครับ" },
+        { "text": "在B馆尽头,右手边。", "th": "อยู่ปลายโถง B ทางขวามือค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ประสานงานงานแสดงสินค้า (Exhibition Staff)",
+    "context": "วันเปิดงานแสดงสินค้า ผู้ออกบูธมาตรวจสอบพื้นที่ คุณต้องบอกหมายเลขบูธ ตำแหน่ง วิธีจัดเอกสารโปรโมต และรับนามบัตรผู้เยี่ยมชม",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, I'm an exhibitor. Where is my booth?", "zh": "你好,我是参展商,我的展位在哪里?" },
+        "suggestedAnswers": {
+          "en": ["Welcome. Exhibitors can enter at seven. Your booth is number twelve.", "Welcome. Exhibitors can enter at seven, and your booth is number twelve."],
+          "zh": ["欢迎。参展商七点可以入场,您的展位是十二号。", "欢迎,参展商七点入场,您的展位是十二号。"]
+        },
+        "keywords": { "en": ["exhibitors", "booth", "twelve"], "zh": ["参展商", "展位", "十二号"] },
+        "tipTh": "บอกเวลาเข้างานและหมายเลขบูธพร้อมกัน"
+      },
+      {
+        "prompt": { "en": "Where is booth twelve?", "zh": "十二号展位在哪里?" },
+        "suggestedAnswers": {
+          "en": ["Booth twelve is at the end of hall B, on the right.", "Booth twelve is at the end of hall B, on your right."],
+          "zh": ["十二号展位在B馆尽头,右手边。", "十二号展位在B馆最里面,右手边。"]
+        },
+        "keywords": { "en": ["booth twelve", "hall b", "right"], "zh": ["十二号展位", "B馆", "右手边"] },
+        "tipTh": "บอกตำแหน่งโดยใช้โถงและทิศทาง"
+      },
+      {
+        "prompt": { "en": "Visitors will want product information.", "zh": "访客会想了解产品信息。" },
+        "suggestedAnswers": {
+          "en": ["Please put brochures on the table, and let visitors try a sample.", "Please place brochures on the table and let visitors try a sample."],
+          "zh": ["请把宣传册放在桌上,让访客试用样品。", "请把宣传册摆在桌子上,并让访客试用样品。"]
+        },
+        "keywords": { "en": ["brochures", "sample", "table"], "zh": ["宣传册", "样品", "桌"] },
+        "tipTh": "แนะนำการจัดโต๊ะให้เข้าถึงง่ายและกระตุ้นให้ผู้เยี่ยมชมลอง"
+      },
+      {
+        "prompt": { "en": "A visitor asks: Can I try this?", "zh": "有访客问:我可以试一下吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. You can try a free sample. May I have your business card?", "Of course. Try a free sample, and may I have your business card?"],
+          "zh": ["当然可以,您可以免费试用样品,请问可以要一张您的名片吗?", "当然可以,请免费试用样品,可以留一张名片吗?"]
+        },
+        "keywords": { "en": ["sample", "free", "business card"], "zh": ["样品", "免费", "名片"] },
+        "tipTh": "ให้ลองสินค้าก่อนแล้วจึงขอข้อมูลติดต่ออย่างสุภาพ"
+      },
+      {
+        "prompt": { "en": "Here's my card.", "zh": "这是我的名片。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. I will send you our brochure and prices by email.", "Thank you. I will email you our brochure and prices."],
+          "zh": ["谢谢,我会通过邮件把宣传册和价格发给您。", "谢谢您,我会把宣传册和价格发到您的邮箱。"]
+        },
+        "keywords": { "en": ["thank you", "brochure", "email"], "zh": ["谢谢", "宣传册", "邮件"] },
+        "tipTh": "รับนามบัตรด้วยความเคารพและสัญญาว่าจะติดตามต่อ"
+      }
+    ]
+  }
+}

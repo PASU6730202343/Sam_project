@@ -1,0 +1,91 @@
+{
+  "id": "retail-02",
+  "careerId": "retail",
+  "order": 2,
+  "titleTh": "ห้องลองเสื้อ",
+  "titleEn": "Fitting Room",
+  "titleZh": "试衣间",
+  "words": [
+    { "en": "fitting room", "enPron": "ฟิท-ติง รูม", "th": "ห้องลองเสื้อ", "zh": "试衣间", "pinyin": "shìyījiān", "icon": "🚪",
+      "exampleEn": "The fitting room is over there.", "exampleZh": "试衣间在那边。", "exampleTh": "ห้องลองเสื้ออยู่ทางโน้นค่ะ/ครับ" },
+    { "en": "try on", "enPron": "ทราย ออน", "th": "ลองสวม", "zh": "试穿", "pinyin": "shìchuān", "icon": "👕",
+      "exampleEn": "You can try on this jacket.", "exampleZh": "您可以试穿这件夹克。", "exampleTh": "คุณลองสวมเสื้อแจ็กเก็ตตัวนี้ได้ค่ะ/ครับ" },
+    { "en": "too small", "enPron": "ทู สมอล", "th": "เล็กเกินไป", "zh": "太小", "pinyin": "tài xiǎo", "icon": "🔽",
+      "exampleEn": "I'm sorry, this one is too small.", "exampleZh": "不好意思,这件太小了。", "exampleTh": "ขออภัยค่ะ/ครับ ตัวนี้เล็กเกินไป" },
+    { "en": "too large", "enPron": "ทู ลาร์จ", "th": "ใหญ่เกินไป", "zh": "太大", "pinyin": "tài dà", "icon": "🔼",
+      "exampleEn": "This one might be too large.", "exampleZh": "这件可能太大了。", "exampleTh": "ตัวนี้อาจจะใหญ่เกินไปค่ะ/ครับ" },
+    { "en": "fit", "enPron": "ฟิท", "th": "พอดีตัว", "zh": "合身", "pinyin": "héshēn", "icon": "✅",
+      "exampleEn": "Does it fit you well?", "exampleZh": "这件穿起来合身吗?", "exampleTh": "ใส่แล้วพอดีตัวไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Why don't you + verb? (เสนอแนะ)",
+      "explanationTh": "Why don't you + กริยาช่องที่ 1 ใช้เสนอแนะอย่างเป็นมิตร ฟังเป็นกันเองกว่า You should",
+      "pattern": "Why don't you + verb + (object)?",
+      "examples": [
+        { "text": "Why don't you try a larger size?", "th": "ลองไซซ์ใหญ่ขึ้นดูไหมคะ/ครับ" },
+        { "text": "Why don't you check the mirror?", "th": "ลองดูกระจกไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "要不要试试……? (เสนอแนะ)",
+      "explanationTh": "要不要试试 + ... ใช้เสนอแนะอย่างเป็นมิตร เหมาะกับการแนะนำสินค้าหรือไซซ์ที่เหมาะกว่า",
+      "pattern": "要不要试试 + 名词?",
+      "examples": [
+        { "text": "要不要试试大一号的?", "th": "ลองไซซ์ใหญ่ขึ้นหนึ่งเบอร์ไหมคะ/ครับ" },
+        { "text": "要不要试试这个颜色?", "th": "ลองสีนี้ดูไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานขาย (Shop Assistant)",
+    "context": "ลูกค้าต้องการลองเสื้อแจ็กเก็ต คุณต้องพาไปห้องลองเสื้อ แนะนำเมื่อไซซ์ไม่พอดี หาไซซ์ที่เหมาะ และปิดการขายอย่างนุ่มนวล",
+    "steps": [
+      {
+        "prompt": { "en": "Can I try this on?", "zh": "我可以试穿这件吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. You can try on this jacket. The fitting room is over there.", "Of course. Please try on this jacket. The fitting room is over there."],
+          "zh": ["当然可以,您可以试穿,试衣间在那边。", "当然可以,请试穿,试衣间就在那边。"]
+        },
+        "keywords": { "en": ["try on", "fitting room", "over there"], "zh": ["试穿", "试衣间", "那边"] },
+        "tipTh": "ตอบรับทันทีและชี้ตำแหน่งห้องลองเสื้อ"
+      },
+      {
+        "prompt": { "en": "It's too small for me.", "zh": "这件对我来说太小了。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, this one is too small. Why don't you try a large?", "I'm sorry, it is too small. Why don't you try a large?"],
+          "zh": ["不好意思,这件太小了,要不要试试大码?", "抱歉,这件太小了,要不要试试大码的?"]
+        },
+        "keywords": { "en": ["too small", "try", "large"], "zh": ["太小", "试试", "大码"] },
+        "tipTh": "ขอโทษสั้นๆ แล้วเสนอไซซ์ที่ใหญ่ขึ้นทันที"
+      },
+      {
+        "prompt": { "en": "The large is loose around the waist.", "zh": "大码的腰部有点松。" },
+        "suggestedAnswers": {
+          "en": ["This one might be too large. Let me bring a size in between.", "That might be too large. Let me bring you a size in between."],
+          "zh": ["这件可能太大了,我去拿一个中间的尺码。", "这件可能太大了,我给您拿个中间的尺码。"]
+        },
+        "keywords": { "en": ["too large", "size", "bring"], "zh": ["太大", "尺码", "拿"] },
+        "tipTh": "หาทางเลือกระหว่างไซซ์ แทนการให้ลูกค้าเลือกระหว่างสองแบบที่ไม่พอดี"
+      },
+      {
+        "prompt": { "en": "This one feels right.", "zh": "这件感觉对了。" },
+        "suggestedAnswers": {
+          "en": ["Does it fit you well? Please check the mirror.", "Does it fit you well? Please look in the mirror."],
+          "zh": ["这件穿起来合身吗?请照照镜子。", "穿起来合身吗?请到镜子前看看。"]
+        },
+        "keywords": { "en": ["fit", "well", "mirror"], "zh": ["合身", "镜子", "照"] },
+        "tipTh": "ถามความพึงพอใจและเชิญให้ดูกระจก"
+      },
+      {
+        "prompt": { "en": "I like it.", "zh": "我很喜欢。" },
+        "suggestedAnswers": {
+          "en": ["It looks great on you. Shall I take it to the cashier?", "It looks great on you. Shall I take it to the cashier for you?"],
+          "zh": ["您穿很好看,我帮您拿去收银台好吗?", "您穿着很好看,我帮您拿到收银台好吗?"]
+        },
+        "keywords": { "en": ["looks great", "cashier", "shall i"], "zh": ["好看", "收银台", "好吗"] },
+        "tipTh": "ชมอย่างจริงใจและเสนอขั้นตอนถัดไปทันที"
+      }
+    ]
+  }
+}

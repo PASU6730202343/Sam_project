@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-08",
+  "careerId": "customer-service",
+  "order": 8,
+  "titleTh": "ปิดเคสและติดตามผล",
+  "titleEn": "Closing and Follow-up",
+  "titleZh": "结案与跟进",
+  "words": [
+    { "en": "follow up", "enPron": "ฟอล-โลว์ อัพ", "th": "ติดตามผล", "zh": "跟进", "pinyin": "gēnjìn", "icon": "📲",
+      "exampleEn": "I will follow up with you tomorrow.", "exampleZh": "我明天会跟进这件事。", "exampleTh": "ดิฉัน/ผมจะติดตามเรื่องนี้กับคุณพรุ่งนี้ค่ะ/ครับ" },
+    { "en": "survey", "enPron": "เซอร์-เวย์", "th": "แบบสอบถาม", "zh": "问卷", "pinyin": "wènjuàn", "icon": "📝",
+      "exampleEn": "Please complete a short survey.", "exampleZh": "请填写一份简短的问卷。", "exampleTh": "กรุณากรอกแบบสอบถามสั้นๆ ค่ะ/ครับ" },
+    { "en": "resolved", "enPron": "รี-ซอลฟ์ดฺ", "th": "แก้ไขเรียบร้อย", "zh": "已解决", "pinyin": "yǐ jiějué", "icon": "✅",
+      "exampleEn": "Your issue has been resolved.", "exampleZh": "您的问题已解决。", "exampleTh": "ปัญหาของคุณได้รับการแก้ไขเรียบร้อยแล้วค่ะ/ครับ" },
+    { "en": "ticket number", "enPron": "ทิค-เก็ต นัม-เบอร์", "th": "หมายเลขเคส", "zh": "工单号", "pinyin": "gōngdānhào", "icon": "🎫",
+      "exampleEn": "Your ticket number is 8890.", "exampleZh": "您的工单号是8890。", "exampleTh": "หมายเลขเคสของคุณคือ 8890 ค่ะ/ครับ" },
+    { "en": "satisfied", "enPron": "แซท-ทิส-ไฟดฺ", "th": "พึงพอใจ", "zh": "满意", "pinyin": "mǎnyì", "icon": "😊",
+      "exampleEn": "Are you satisfied with our service?", "exampleZh": "您对我们的服务满意吗?", "exampleTh": "คุณพึงพอใจกับบริการของเราไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Is there anything else I can + verb? (ถามส่งท้าย)",
+      "explanationTh": "ใช้ถามก่อนจบการสนทนาเพื่อให้แน่ใจว่าลูกค้าไม่มีเรื่องค้างคา เป็นมาตรฐานการปิดเคสในงานบริการ",
+      "pattern": "Is there anything else I can + help you with?",
+      "examples": [
+        { "text": "Is there anything else I can help you with?", "th": "มีอะไรให้ช่วยอีกไหมคะ/ครับ" },
+        { "text": "Is there anything else you need today?", "th": "วันนี้ต้องการอะไรเพิ่มเติมอีกไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "还有其他需要我……的吗? (ถามส่งท้าย)",
+      "explanationTh": "还有其他需要 + ... + 吗 ใช้ถามก่อนจบการสนทนาว่าลูกค้ามีเรื่องอื่นให้ช่วยอีกไหม",
+      "pattern": "还有其他需要我帮您的吗?",
+      "examples": [
+        { "text": "还有其他需要我帮您的吗?", "th": "มีอะไรให้ช่วยอีกไหมคะ/ครับ" },
+        { "text": "还有别的问题吗?", "th": "มีปัญหาอื่นอีกไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ปัญหาของลูกค้าได้รับการแก้ไขแล้ว คุณต้องแจ้งผล ให้หมายเลขเคส ถามว่ามีเรื่องอื่นไหม ชวนทำแบบสอบถาม และปิดสายอย่างประทับใจ",
+    "steps": [
+      {
+        "prompt": { "en": "Is my problem solved now?", "zh": "我的问题现在解决了吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, your issue has been resolved. Your ticket number is 8890.", "Yes, it has been resolved. Your ticket number is 8890."],
+          "zh": ["是的,您的问题已解决,您的工单号是8890。", "是的,问题已解决,您的工单号是8890。"]
+        },
+        "keywords": { "en": ["resolved", "ticket number", "8890"], "zh": ["已解决", "工单号", "8890"] },
+        "tipTh": "แจ้งผลชัดเจนพร้อมหมายเลขเคสเสมอ"
+      },
+      {
+        "prompt": { "en": "Thank you. What if it happens again?", "zh": "谢谢。如果再发生怎么办?" },
+        "suggestedAnswers": {
+          "en": ["Please call us and give your ticket number. I will follow up with you tomorrow.", "Please call us with your ticket number. I will follow up with you tomorrow."],
+          "zh": ["请致电我们并提供工单号,我明天会跟进这件事。", "请致电并告知工单号,我明天会跟进这件事。"]
+        },
+        "keywords": { "en": ["ticket number", "follow up", "tomorrow"], "zh": ["工单号", "跟进", "明天"] },
+        "tipTh": "บอกขั้นตอนหากเกิดซ้ำและนัดเวลาติดตามผลล่วงหน้า"
+      },
+      {
+        "prompt": { "en": "Good. Anything else I should know?", "zh": "好的。还有什么我需要知道的吗?" },
+        "suggestedAnswers": {
+          "en": ["Is there anything else I can help you with today?", "Is there anything else I can help you with?"],
+          "zh": ["还有其他需要我帮您的吗?", "请问还有其他需要我帮您的吗?"]
+        },
+        "keywords": { "en": ["anything else", "help", "today"], "zh": ["其他", "帮", "需要"] },
+        "tipTh": "ถามส่งท้ายเพื่อให้ลูกค้าไม่ต้องโทรซ้ำ"
+      },
+      {
+        "prompt": { "en": "No, that's all.", "zh": "没有了,就这些。" },
+        "suggestedAnswers": {
+          "en": ["Before you go, could you complete a short survey about our service?", "Before you go, would you please complete a short survey about our service?"],
+          "zh": ["在您离开之前,请填写一份关于我们服务的简短问卷。", "离开之前,请您填写一份关于服务的简短问卷。"]
+        },
+        "keywords": { "en": ["survey", "service", "short"], "zh": ["问卷", "服务", "简短"] },
+        "tipTh": "ชวนทำแบบสอบถามอย่างสุภาพ และบอกว่าใช้เวลาไม่นาน"
+      },
+      {
+        "prompt": { "en": "Sure. I'm happy now.", "zh": "好的。我现在很满意。" },
+        "suggestedAnswers": {
+          "en": ["I'm glad you are satisfied. Thank you for calling, and have a nice day.", "I'm glad you are satisfied. Thank you for calling, and have a nice day!"],
+          "zh": ["很高兴您感到满意,感谢您的来电,祝您愉快。", "很高兴您满意,感谢来电,祝您愉快。"]
+        },
+        "keywords": { "en": ["satisfied", "thank you", "nice day"], "zh": ["满意", "感谢", "愉快"] },
+        "tipTh": "ปิดสายด้วยคำขอบคุณและอวยพรให้วันดี"
+      }
+    ]
+  }
+}

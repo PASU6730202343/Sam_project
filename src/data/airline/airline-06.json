@@ -1,0 +1,91 @@
+{
+  "id": "airline-06",
+  "careerId": "airline",
+  "order": 6,
+  "titleTh": "ผู้โดยสารที่ต้องการความช่วยเหลือพิเศษ",
+  "titleEn": "Special Assistance",
+  "titleZh": "特殊协助",
+  "words": [
+    { "en": "wheelchair", "enPron": "วีล-แชร์", "th": "รถเข็นนั่ง", "zh": "轮椅", "pinyin": "lúnyǐ", "icon": "♿",
+      "exampleEn": "We can arrange a wheelchair for you.", "exampleZh": "我们可以为您安排轮椅。", "exampleTh": "เราจัดรถเข็นนั่งให้คุณได้ค่ะ/ครับ" },
+    { "en": "infant", "enPron": "อิน-เฟินท์", "th": "ทารก", "zh": "婴儿", "pinyin": "yīng'ér", "icon": "👶",
+      "exampleEn": "Infants may sit on an adult's lap.", "exampleZh": "婴儿可以坐在大人的腿上。", "exampleTh": "ทารกนั่งบนตักผู้ใหญ่ได้ค่ะ/ครับ" },
+    { "en": "assistance", "enPron": "อะ-ซิส-เติ่นซ์", "th": "ความช่วยเหลือ", "zh": "协助", "pinyin": "xiézhù", "icon": "🤝",
+      "exampleEn": "Do you need any assistance?", "exampleZh": "请问您需要协助吗?", "exampleTh": "คุณต้องการความช่วยเหลือไหมคะ/ครับ" },
+    { "en": "medication", "enPron": "เมด-ดิ-เค-เชิน", "th": "ยา", "zh": "药物", "pinyin": "yàowù", "icon": "💊",
+      "exampleEn": "Please keep your medication in your carry-on.", "exampleZh": "请把药物放在随身行李里。", "exampleTh": "กรุณาเก็บยาไว้ในสัมภาระถือขึ้นเครื่องค่ะ/ครับ" },
+    { "en": "allergy", "enPron": "แอล-เลอร์-จี", "th": "อาการแพ้", "zh": "过敏", "pinyin": "guòmǐn", "icon": "🤧",
+      "exampleEn": "Do you have any food allergy?", "exampleZh": "请问您有食物过敏吗?", "exampleTh": "คุณแพ้อาหารอะไรไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Let me + verb (ขอเสนอช่วยทันที)",
+      "explanationTh": "Let me + กริยาช่องที่ 1 ใช้เมื่อเจ้าหน้าที่ลงมือช่วยเหลือผู้โดยสารเองทันที ฟังอบอุ่นและเป็นกันเอง แต่ยังสุภาพ",
+      "pattern": "Let me + verb + (object)",
+      "examples": [
+        { "text": "Let me help you with your bag.", "th": "ให้ดิฉัน/ผมช่วยถือกระเป๋าให้นะคะ/ครับ" },
+        { "text": "Let me arrange a wheelchair.", "th": "ให้ดิฉัน/ผมจัดรถเข็นนั่งให้นะคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "让我来 + 动词 (ขอเสนอช่วยทันที)",
+      "explanationTh": "让我来 + กริยา ใช้เสนอลงมือช่วยเหลือผู้โดยสารเอง แปลว่า 'ให้ฉันช่วย...' ฟังเป็นมิตรและมั่นใจ",
+      "pattern": "让我来 + 动词 + (名词)",
+      "examples": [
+        { "text": "让我来帮您拿行李。", "th": "ให้ดิฉัน/ผมช่วยถือสัมภาระนะคะ/ครับ" },
+        { "text": "让我来为您安排轮椅。", "th": "ให้ดิฉัน/ผมจัดรถเข็นนั่งให้นะคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ดูแลผู้โดยสารพิเศษ (Special Assistance Agent)",
+    "context": "ผู้โดยสารเดินทางพร้อมคุณแม่สูงอายุและทารก คุณต้องจัดรถเข็น อธิบายเรื่องทารก ยา และแจ้งอาการแพ้ของผู้โดยสารให้ลูกเรือทราบ",
+    "steps": [
+      {
+        "prompt": { "en": "I need help. My mother cannot walk far.", "zh": "我需要帮助,我妈妈走不了很远。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Do you need any assistance? We can arrange a wheelchair for her.", "Certainly. Let me arrange a wheelchair for your mother."],
+          "zh": ["当然可以。请问您需要协助吗?我们可以为她安排轮椅。", "没问题,让我来为您母亲安排轮椅。"]
+        },
+        "keywords": { "en": ["assistance", "wheelchair", "arrange"], "zh": ["协助", "轮椅", "安排"] },
+        "tipTh": "เสนอความช่วยเหลือทันทีและบอกสิ่งที่จะจัดให้"
+      },
+      {
+        "prompt": { "en": "Yes, please. How long will it take?", "zh": "好的,麻烦了。要等多久?" },
+        "suggestedAnswers": {
+          "en": ["A wheelchair will arrive in five minutes. Let me stay with you until then.", "It will take about five minutes. I will stay with you."],
+          "zh": ["轮椅五分钟后会到,在这之前让我来陪着你们。", "大约要五分钟,我会陪着你们。"]
+        },
+        "keywords": { "en": ["wheelchair", "five minutes", "stay"], "zh": ["轮椅", "五分钟", "陪"] },
+        "tipTh": "บอกเวลาที่ชัดเจนและอยู่เป็นเพื่อนระหว่างรอ"
+      },
+      {
+        "prompt": { "en": "I'm traveling with my baby, too.", "zh": "我还带着我的宝宝一起旅行。" },
+        "suggestedAnswers": {
+          "en": ["Infants may sit on an adult's lap. Do you need a baby seat belt?", "Congratulations. Your baby may sit on your lap during the flight."],
+          "zh": ["婴儿可以坐在大人的腿上,需要婴儿安全带吗?", "恭喜您,飞行中宝宝可以坐在您的腿上。"]
+        },
+        "keywords": { "en": ["infants", "lap", "baby"], "zh": ["婴儿", "大人", "安全带"] },
+        "tipTh": "อธิบายกฎสำหรับทารกให้ชัดเจนและเสนออุปกรณ์เสริม"
+      },
+      {
+        "prompt": { "en": "My mother takes medicine every day.", "zh": "我妈妈每天都要吃药。" },
+        "suggestedAnswers": {
+          "en": ["Please keep her medication in your carry-on so you can reach it easily.", "Please keep her medication with you in the cabin."],
+          "zh": ["请把她的药物放在随身行李里,方便随时取用。", "请把药物带在身边,不要托运。"]
+        },
+        "keywords": { "en": ["medication", "carry-on", "reach"], "zh": ["药物", "随身行李", "方便"] },
+        "tipTh": "แนะนำให้เก็บยาไว้กับตัว เพราะอาจต้องใช้ระหว่างเที่ยวบิน"
+      },
+      {
+        "prompt": { "en": "She is allergic to nuts.", "zh": "她对坚果过敏。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for telling me. I will inform the crew about her allergy.", "Thank you. I will let the crew know about her allergy."],
+          "zh": ["谢谢告知,我会通知空乘人员她的过敏情况。", "谢谢您,我会让空乘人员知道她过敏。"]
+        },
+        "keywords": { "en": ["allergy", "inform", "crew"], "zh": ["过敏", "通知", "空乘人员"] },
+        "tipTh": "ขอบคุณที่แจ้ง และสัญญาว่าจะส่งต่อข้อมูลสำคัญให้ทีมงาน"
+      }
+    ]
+  }
+}

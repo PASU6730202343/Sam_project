@@ -1,0 +1,91 @@
+{
+  "id": "spa-04",
+  "careerId": "spa",
+  "order": 4,
+  "titleTh": "สิ่งอำนวยความสะดวกในสปา",
+  "titleEn": "Spa Facilities",
+  "titleZh": "水疗设施",
+  "words": [
+    { "en": "locker", "enPron": "ลอค-เกอร์", "th": "ตู้เก็บของ", "zh": "储物柜", "pinyin": "chǔwùguì", "icon": "🗄️",
+      "exampleEn": "Your locker number is twelve.", "exampleZh": "您的储物柜是十二号。", "exampleTh": "ตู้เก็บของของคุณคือหมายเลขสิบสองค่ะ/ครับ" },
+    { "en": "robe", "enPron": "โรบ", "th": "เสื้อคลุมอาบน้ำ", "zh": "浴袍", "pinyin": "yùpáo", "icon": "🥼",
+      "exampleEn": "Please put on the robe.", "exampleZh": "请换上浴袍。", "exampleTh": "กรุณาสวมเสื้อคลุมอาบน้ำค่ะ/ครับ" },
+    { "en": "slippers", "enPron": "สลิป-เพอร์ส", "th": "รองเท้าแตะ", "zh": "拖鞋", "pinyin": "tuōxié", "icon": "🩴",
+      "exampleEn": "Here are your slippers.", "exampleZh": "这是您的拖鞋。", "exampleTh": "นี่คือรองเท้าแตะของคุณค่ะ/ครับ" },
+    { "en": "sauna", "enPron": "ซาว-น่า", "th": "ซาวน่า", "zh": "桑拿", "pinyin": "sāngná", "icon": "🧖",
+      "exampleEn": "The sauna is on the second floor.", "exampleZh": "桑拿房在二楼。", "exampleTh": "ห้องซาวน่าอยู่ชั้นสองค่ะ/ครับ" },
+    { "en": "shower", "enPron": "ชาว-เออร์", "th": "อาบน้ำฝักบัว", "zh": "淋浴", "pinyin": "línyù", "icon": "🚿",
+      "exampleEn": "Please take a shower first, then change.", "exampleZh": "请您先淋浴,然后再换衣服。", "exampleTh": "กรุณาอาบน้ำก่อน แล้วค่อยเปลี่ยนชุดค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Please put on / take off (ขอให้สวม / ถอด)",
+      "explanationTh": "put on ใช้กับการสวมเสื้อผ้า และ take off ใช้กับการถอด ใช้บ่อยตอนให้แขกเตรียมตัวเข้าสปา",
+      "pattern": "Please put on / take off + noun",
+      "examples": [
+        { "text": "Please put on the robe.", "th": "กรุณาสวมเสื้อคลุมอาบน้ำค่ะ/ครับ" },
+        { "text": "Please take off your jewelry.", "th": "กรุณาถอดเครื่องประดับค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请把……放进 / 换上…… (ขอให้ทำ)",
+      "explanationTh": "请把 + สิ่งของ + กริยา + สถานที่ เป็นโครงสร้างประโยค 把 ที่ใช้บ่อยเวลาขอให้ลูกค้าวางหรือเปลี่ยนสิ่งของ",
+      "pattern": "请把 + 名词 + 放进 / 换上 + 名词",
+      "examples": [
+        { "text": "请把贵重物品放进储物柜。", "th": "กรุณาวางของมีค่าลงในตู้เก็บของค่ะ/ครับ" },
+        { "text": "请换上浴袍和拖鞋。", "th": "กรุณาเปลี่ยนเป็นเสื้อคลุมและรองเท้าแตะค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานดูแลสปา (Spa Attendant)",
+    "context": "แขกมาถึงสปาและต้องเตรียมตัวก่อนทรีตเมนต์ คุณต้องให้ตู้เก็บของ เสื้อคลุม รองเท้าแตะ แนะนำการอาบน้ำ และห้องซาวน่า",
+    "steps": [
+      {
+        "prompt": { "en": "Where can I leave my things?", "zh": "我的东西可以放在哪里?" },
+        "suggestedAnswers": {
+          "en": ["Your locker number is twelve. Please keep your valuables in the locker.", "Your locker is number twelve. Please put your valuables in the locker."],
+          "zh": ["您的储物柜是十二号,请把贵重物品放进储物柜。", "您的储物柜是十二号,贵重物品请放进去。"]
+        },
+        "keywords": { "en": ["locker", "twelve", "valuables"], "zh": ["储物柜", "十二号", "贵重物品"] },
+        "tipTh": "ให้หมายเลขตู้และเตือนเรื่องของมีค่า"
+      },
+      {
+        "prompt": { "en": "What should I wear?", "zh": "我应该穿什么?" },
+        "suggestedAnswers": {
+          "en": ["Please put on the robe. Here are your slippers.", "Please put on this robe, and here are your slippers."],
+          "zh": ["请换上浴袍,这是您的拖鞋。", "请先换上浴袍,这是您的拖鞋。"]
+        },
+        "keywords": { "en": ["robe", "slippers", "put on"], "zh": ["浴袍", "拖鞋", "换上"] },
+        "tipTh": "บอกสิ่งที่ต้องสวมและส่งมอบอุปกรณ์ทันที"
+      },
+      {
+        "prompt": { "en": "Do I need to shower?", "zh": "我需要先冲淋浴吗?" },
+        "suggestedAnswers": {
+          "en": ["Please take a shower first. The showers are next to the lockers.", "Yes, please take a shower first. The showers are next to the lockers."],
+          "zh": ["请先淋浴,淋浴间在储物柜旁边。", "请先淋浴,淋浴间就在储物柜旁边。"]
+        },
+        "keywords": { "en": ["shower", "first", "lockers"], "zh": ["淋浴", "先", "储物柜"] },
+        "tipTh": "บอกลำดับขั้นตอนและตำแหน่งของห้องอาบน้ำ"
+      },
+      {
+        "prompt": { "en": "Can I use the sauna?", "zh": "我可以用桑拿吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the sauna is on the second floor. It is open until nine.", "Yes, you can. The sauna is on the second floor and open until nine."],
+          "zh": ["可以,桑拿房在二楼,开放到晚上九点。", "可以的,桑拿房在二楼,开放到九点。"]
+        },
+        "keywords": { "en": ["sauna", "second floor", "nine"], "zh": ["桑拿", "二楼", "九点"] },
+        "tipTh": "บอกตำแหน่งและเวลาปิดของห้องซาวน่า"
+      },
+      {
+        "prompt": { "en": "How long can I stay?", "zh": "我可以待多久?" },
+        "suggestedAnswers": {
+          "en": ["You can stay in the sauna for ten minutes. Please drink water afterwards.", "Please stay in the sauna for ten minutes, and drink water afterwards."],
+          "zh": ["桑拿最多停留十分钟,之后请多喝水。", "桑拿请不要超过十分钟,之后记得喝水。"]
+        },
+        "keywords": { "en": ["sauna", "ten minutes", "water"], "zh": ["桑拿", "十分钟", "喝水"] },
+        "tipTh": "ให้คำแนะนำด้านความปลอดภัย เช่น ระยะเวลาและการดื่มน้ำ"
+      }
+    ]
+  }
+}

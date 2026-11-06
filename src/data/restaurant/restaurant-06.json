@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-06",
+  "careerId": "restaurant",
+  "order": 6,
+  "titleTh": "จัดการข้อร้องเรียน",
+  "titleEn": "Handling Complaints",
+  "titleZh": "处理投诉",
+  "words": [
+    { "en": "cold", "enPron": "โคลด์", "th": "เย็นชืด", "zh": "凉了", "pinyin": "liáng le", "icon": "🥶",
+      "exampleEn": "I'm sorry, the soup is cold.", "exampleZh": "对不起,汤凉了。", "exampleTh": "ขออภัยค่ะ/ครับ ซุปเย็นชืดแล้ว" },
+    { "en": "too salty", "enPron": "ทู ซอล-ที่", "th": "เค็มเกินไป", "zh": "太咸", "pinyin": "tài xián", "icon": "🧂",
+      "exampleEn": "I'm sorry, the dish is too salty.", "exampleZh": "对不起,这道菜太咸了。", "exampleTh": "ขออภัยค่ะ/ครับ อาหารจานนี้เค็มเกินไป" },
+    { "en": "wrong order", "enPron": "รอง ออร์-เดอร์", "th": "ออเดอร์ผิด", "zh": "上错", "pinyin": "shàng cuò", "icon": "🔀",
+      "exampleEn": "I'm sorry, we brought the wrong order.", "exampleZh": "对不起,我们上错菜了。", "exampleTh": "ขออภัยค่ะ/ครับ เราเสิร์ฟออเดอร์ผิด" },
+    { "en": "remake", "enPron": "รี-เมค", "th": "ทำใหม่", "zh": "重做", "pinyin": "chóngzuò", "icon": "🔁",
+      "exampleEn": "We will remake the dish for you.", "exampleZh": "我们会为您重做这道菜。", "exampleTh": "เราจะทำอาหารจานนี้ใหม่ให้คุณค่ะ/ครับ" },
+    { "en": "manager", "enPron": "แมน-นิ-เจอร์", "th": "ผู้จัดการ", "zh": "经理", "pinyin": "jīnglǐ", "icon": "👔",
+      "exampleEn": "I will ask the manager to come.", "exampleZh": "我请经理过来。", "exampleTh": "ดิฉัน/ผมจะเชิญผู้จัดการมาพบค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Would you prefer + noun or noun? (ให้เลือกทางแก้ไข)",
+      "explanationTh": "Would you prefer ... or ... ? ใช้ให้ลูกค้าเลือกวิธีแก้ปัญหา ทำให้ลูกค้ารู้สึกว่ามีส่วนร่วมในการตัดสินใจ",
+      "pattern": "Would you prefer + A + or + B?",
+      "examples": [
+        { "text": "Would you prefer a new dish or a different one?", "th": "คุณต้องการให้ทำจานใหม่หรือเปลี่ยนเป็นจานอื่นคะ/ครับ" },
+        { "text": "Would you prefer a refund or a replacement?", "th": "คุณต้องการคืนเงินหรือเปลี่ยนจานใหม่คะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您希望 A 还是 B? (ให้เลือกทางแก้ไข)",
+      "explanationTh": "您希望……还是……? ใช้ให้ลูกค้าเลือกวิธีแก้ปัญหา เช่น ทำใหม่หรือเปลี่ยนเมนู",
+      "pattern": "您希望 + A + 还是 + B?",
+      "examples": [
+        { "text": "您希望重做还是换一道菜?", "th": "คุณต้องการให้ทำใหม่หรือเปลี่ยนเมนูคะ/ครับ" },
+        { "text": "您希望退款还是换菜?", "th": "คุณต้องการคืนเงินหรือเปลี่ยนเมนูคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ (Waiter)",
+    "context": "ลูกค้าไม่พอใจอาหารหลายอย่างในมื้อเดียว คุณต้องขอโทษ เสนอทางแก้ไข เรียกผู้จัดการ และทำให้ลูกค้ากลับมาพึงพอใจ",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, my soup is cold.", "zh": "打扰一下,我的汤凉了。" },
+        "suggestedAnswers": {
+          "en": ["I'm so sorry. We will remake the soup for you right away.", "I apologize. We will remake it for you right away."],
+          "zh": ["非常抱歉,我们马上为您重做这碗汤。", "对不起,我们马上给您重做。"]
+        },
+        "keywords": { "en": ["sorry", "remake", "right away"], "zh": ["抱歉", "重做", "马上"] },
+        "tipTh": "ขอโทษทันทีและเสนอวิธีแก้ไขที่ทำได้เลย"
+      },
+      {
+        "prompt": { "en": "And this dish is too salty.", "zh": "而且这道菜太咸了。" },
+        "suggestedAnswers": {
+          "en": ["I apologize. Would you prefer a new dish or a different one?", "I apologize for that. Would you prefer a new dish or something different?"],
+          "zh": ["非常抱歉。您希望重做还是换一道菜?", "很抱歉,您希望重做还是换一道菜?"]
+        },
+        "keywords": { "en": ["apologize", "prefer", "new dish"], "zh": ["抱歉", "希望", "换一道菜"] },
+        "tipTh": "ให้ลูกค้าเลือกวิธีแก้ปัญหาด้วย Would you prefer"
+      },
+      {
+        "prompt": { "en": "Also, you brought the wrong order. We asked for fish.", "zh": "另外你们上错菜了,我们点的是鱼。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry, we brought the wrong order. I will bring the fish immediately.", "I'm very sorry for the wrong order. The fish is coming immediately."],
+          "zh": ["对不起,我们上错菜了,马上为您上鱼。", "非常抱歉上错菜了,鱼马上就来。"]
+        },
+        "keywords": { "en": ["wrong order", "fish", "immediately"], "zh": ["上错", "鱼", "马上"] },
+        "tipTh": "ยอมรับความผิดพลาดตรงๆ ไม่แก้ตัว แล้วแก้ไขทันที"
+      },
+      {
+        "prompt": { "en": "This is unacceptable. I want to talk to someone in charge.", "zh": "这太不像话了,我要找负责人。" },
+        "suggestedAnswers": {
+          "en": ["I understand. I will ask the manager to come to your table.", "I completely understand. The manager will come to your table now."],
+          "zh": ["我理解,我请经理到您的桌边来。", "我完全理解,经理马上到您的桌边来。"]
+        },
+        "keywords": { "en": ["manager", "understand", "table"], "zh": ["经理", "理解", "桌"] },
+        "tipTh": "ลูกค้าโกรธให้รับฟังและเรียกผู้จัดการทันที ไม่โต้เถียง"
+      },
+      {
+        "prompt": { "en": "Thank you. I appreciate your help.", "zh": "谢谢,我很感谢你们的帮助。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for your patience. Today's meal is free of charge. We hope to see you again.", "Thank you for your patience. This meal is free of charge, and we hope to see you again."],
+          "zh": ["感谢您的耐心,今天这顿饭免单,期待您再次光临。", "谢谢您的耐心,这顿饭免单,期待您再次光临。"]
+        },
+        "keywords": { "en": ["patience", "free of charge", "again"], "zh": ["耐心", "免单", "再次光临"] },
+        "tipTh": "ปิดด้วยการขอบคุณที่อดทน และเชิญกลับมาใหม่"
+      }
+    ]
+  }
+}

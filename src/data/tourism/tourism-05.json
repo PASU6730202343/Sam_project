@@ -1,0 +1,91 @@
+{
+  "id": "tourism-05",
+  "careerId": "tourism",
+  "order": 5,
+  "titleTh": "ถ่ายภาพและของที่ระลึก",
+  "titleEn": "Photos and Souvenirs",
+  "titleZh": "拍照与纪念品",
+  "words": [
+    { "en": "photo", "enPron": "โฟ-โท", "th": "รูปถ่าย", "zh": "照片", "pinyin": "zhàopiàn", "icon": "📸",
+      "exampleEn": "May I take a photo of you?", "exampleZh": "我可以给您拍一张照片吗?", "exampleTh": "ขอถ่ายรูปให้คุณได้ไหมคะ/ครับ" },
+    { "en": "souvenir", "enPron": "ซู-เว-เนียร์", "th": "ของที่ระลึก", "zh": "纪念品", "pinyin": "jìniànpǐn", "icon": "🎎",
+      "exampleEn": "This souvenir is handmade.", "exampleZh": "这件纪念品是手工制作的。", "exampleTh": "ของที่ระลึกชิ้นนี้ทำด้วยมือค่ะ/ครับ" },
+    { "en": "discount", "enPron": "ดิส-เคาน์ท์", "th": "ส่วนลด", "zh": "折扣", "pinyin": "zhékòu", "icon": "🏷️",
+      "exampleEn": "I can ask for a ten percent discount.", "exampleZh": "我可以帮您争取百分之十的折扣。", "exampleTh": "ดิฉัน/ผมช่วยขอส่วนลดสิบเปอร์เซ็นต์ให้ได้ค่ะ/ครับ" },
+    { "en": "bargain", "enPron": "บาร์-เกน", "th": "ต่อราคา", "zh": "讲价", "pinyin": "jiǎngjià", "icon": "🤝",
+      "exampleEn": "You can bargain at this market.", "exampleZh": "在这个市场您可以讲价。", "exampleTh": "ที่ตลาดนี้คุณต่อราคาได้ค่ะ/ครับ" },
+    { "en": "gift", "enPron": "กิฟท์", "th": "ของขวัญ", "zh": "礼物", "pinyin": "lǐwù", "icon": "🎁",
+      "exampleEn": "This is a nice gift for your family.", "exampleZh": "这是送给家人的好礼物。", "exampleTh": "นี่เป็นของขวัญที่ดีสำหรับครอบครัวของคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "How much is / are ...? (ถามราคา)",
+      "explanationTh": "How much is + นามเอกพจน์ / How much are + นามพหูพจน์ ใช้ถามราคา ลูกค้านักท่องเที่ยวถามประโยคนี้บ่อยที่สุดตอนซื้อของ",
+      "pattern": "How much is / are + this / these + noun?",
+      "examples": [
+        { "text": "How much is this souvenir?", "th": "ของที่ระลึกชิ้นนี้ราคาเท่าไรคะ/ครับ" },
+        { "text": "How much are these scarves?", "th": "ผ้าพันคอเหล่านี้ราคาเท่าไรคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "……多少钱? (ถามราคา)",
+      "explanationTh": "名词 + 多少钱 ใช้ถามราคาตรงๆ ถ้าจะสุภาพขึ้นให้เติม 请问 นำหน้า",
+      "pattern": "请问 + 这个 + 名词 + 多少钱?",
+      "examples": [
+        { "text": "请问这件纪念品多少钱?", "th": "ขอถามหน่อยค่ะ/ครับ ของที่ระลึกชิ้นนี้ราคาเท่าไร" },
+        { "text": "这条丝巾多少钱?", "th": "ผ้าพันคอไหมผืนนี้ราคาเท่าไรคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "ที่ตลาดของที่ระลึก นักท่องเที่ยวขอให้ถ่ายรูป ถามราคา ขอต่อรอง และปรึกษาเรื่องของฝากให้ครอบครัว",
+    "steps": [
+      {
+        "prompt": { "en": "Can you take a photo of us?", "zh": "你可以帮我们拍张照片吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. Please stand in front of the temple. I'll take the photo.", "Of course. Please stand in front of the temple, and I will take a photo."],
+          "zh": ["当然可以,请站在寺庙前面,我来拍照片。", "没问题,请站在寺庙前,我来给你们拍照片。"]
+        },
+        "keywords": { "en": ["photo", "stand", "of course"], "zh": ["照片", "站", "当然"] },
+        "tipTh": "ตอบรับทันทีและบอกตำแหน่งยืนที่ถ่ายสวย"
+      },
+      {
+        "prompt": { "en": "Where can I buy souvenirs?", "zh": "我在哪里可以买纪念品?" },
+        "suggestedAnswers": {
+          "en": ["There is a souvenir shop near the exit. They sell handmade items.", "A souvenir shop near the exit sells handmade items."],
+          "zh": ["出口附近有纪念品商店,卖手工制品。", "出口附近有一家纪念品店,有很多手工制品。"]
+        },
+        "keywords": { "en": ["souvenir", "exit", "handmade"], "zh": ["纪念品", "出口", "手工"] },
+        "tipTh": "บอกตำแหน่งร้านและลักษณะสินค้าที่น่าสนใจ"
+      },
+      {
+        "prompt": { "en": "How much is this?", "zh": "这个多少钱?" },
+        "suggestedAnswers": {
+          "en": ["This souvenir is two hundred baht.", "The price of this souvenir is two hundred baht."],
+          "zh": ["这件纪念品两百泰铢。", "这件纪念品的价格是两百泰铢。"]
+        },
+        "keywords": { "en": ["souvenir", "two hundred", "baht"], "zh": ["纪念品", "两百", "泰铢"] },
+        "tipTh": "บอกราคาพร้อมสกุลเงินเสมอ"
+      },
+      {
+        "prompt": { "en": "That's expensive. Can I bargain?", "zh": "有点贵,我可以讲价吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you can bargain at this market. I can ask for a ten percent discount.", "You can bargain here. I will ask for a ten percent discount."],
+          "zh": ["可以,在这个市场您可以讲价,我帮您争取百分之十的折扣。", "可以讲价,我帮您争取百分之十的折扣。"]
+        },
+        "keywords": { "en": ["bargain", "ten percent", "discount"], "zh": ["讲价", "百分之十", "折扣"] },
+        "tipTh": "ช่วยต่อรองให้ลูกค้าอย่างสุภาพและไม่เสียมารยาทต่อพ่อค้า"
+      },
+      {
+        "prompt": { "en": "It's for my family. Any gift suggestions?", "zh": "是给家人的,有什么礼物推荐吗?" },
+        "suggestedAnswers": {
+          "en": ["This is a nice gift for your family. A silk scarf is very popular.", "A silk scarf is a nice gift for your family, and it is very popular."],
+          "zh": ["这是送给家人的好礼物,丝巾很受欢迎。", "丝巾是送给家人的好礼物,很受欢迎。"]
+        },
+        "keywords": { "en": ["gift", "family", "silk scarf"], "zh": ["礼物", "家人", "丝巾"] },
+        "tipTh": "แนะนำของฝากที่นิยมพร้อมเหตุผล"
+      }
+    ]
+  }
+}

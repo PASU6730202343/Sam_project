@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-03",
+  "careerId": "restaurant",
+  "order": 3,
+  "titleTh": "เครื่องดื่ม",
+  "titleEn": "Drinks",
+  "titleZh": "饮品",
+  "words": [
+    { "en": "water", "enPron": "วอ-เทอร์", "th": "น้ำเปล่า", "zh": "水", "pinyin": "shuǐ", "icon": "💧",
+      "exampleEn": "I will bring you some water right away.", "exampleZh": "我马上给您拿一杯水。", "exampleTh": "ดิฉัน/ผมจะนำน้ำมาให้ทันทีค่ะ/ครับ" },
+    { "en": "coffee", "enPron": "คอฟ-ฟี่", "th": "กาแฟ", "zh": "咖啡", "pinyin": "kāfēi", "icon": "☕",
+      "exampleEn": "Would you like your coffee with milk?", "exampleZh": "您的咖啡要加牛奶吗?", "exampleTh": "กาแฟของคุณต้องการใส่นมไหมคะ/ครับ" },
+    { "en": "tea", "enPron": "ที", "th": "ชา", "zh": "茶", "pinyin": "chá", "icon": "🍵",
+      "exampleEn": "We have hot tea and iced tea.", "exampleZh": "我们有热茶和冰茶。", "exampleTh": "เรามีชาร้อนและชาเย็นค่ะ/ครับ" },
+    { "en": "juice", "enPron": "จูซ", "th": "น้ำผลไม้", "zh": "果汁", "pinyin": "guǒzhī", "icon": "🧃",
+      "exampleEn": "We make fresh juice every morning.", "exampleZh": "我们每天早上现榨新鲜的果汁。", "exampleTh": "เราคั้นน้ำผลไม้สดทุกเช้าค่ะ/ครับ" },
+    { "en": "ice", "enPron": "ไอซ์", "th": "น้ำแข็ง", "zh": "冰", "pinyin": "bīng", "icon": "🧊",
+      "exampleEn": "Would you like ice in your drink?", "exampleZh": "您的饮料要加冰吗?", "exampleTh": "เครื่องดื่มของคุณต้องการใส่น้ำแข็งไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "with / without + noun (ใส่ / ไม่ใส่)",
+      "explanationTh": "ใช้ with เมื่อใส่ส่วนผสมเพิ่ม และ without เมื่อไม่ใส่ ใช้ถามความต้องการของลูกค้าเรื่องเครื่องดื่มและอาหาร",
+      "pattern": "noun + with / without + noun",
+      "examples": [
+        { "text": "Would you like your coffee with milk?", "th": "กาแฟของคุณใส่นมไหมคะ/ครับ" },
+        { "text": "One orange juice without ice, please.", "th": "น้ำส้มหนึ่งแก้ว ไม่ใส่น้ำแข็งค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "要不要加 + 名词? (ใส่หรือไม่)",
+      "explanationTh": "要不要加 ใช้ถามว่าจะเพิ่มส่วนผสมหรือไม่ ตอบว่า 加 (ใส่) หรือ 不加 (ไม่ใส่)",
+      "pattern": "要不要加 + 名词? / 不加 + 名词",
+      "examples": [
+        { "text": "要不要加牛奶?", "th": "ใส่นมไหมคะ/ครับ" },
+        { "text": "一杯不加冰的橙汁。", "th": "น้ำส้มหนึ่งแก้ว ไม่ใส่น้ำแข็งค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ (Waiter)",
+    "context": "ลูกค้าสั่งเครื่องดื่มก่อนอาหาร คุณต้องรับออเดอร์น้ำเปล่า กาแฟ ชา และน้ำผลไม้ พร้อมถามรายละเอียด เช่น นม น้ำแข็ง",
+    "steps": [
+      {
+        "prompt": { "en": "Could we get some water, please?", "zh": "请先给我们一些水,好吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. I will bring you some water right away.", "Of course. I will bring the water right away."],
+          "zh": ["好的,我马上给您拿水。", "没问题,我马上去拿一壶水。"]
+        },
+        "keywords": { "en": ["water", "bring", "right away"], "zh": ["水", "马上", "拿"] },
+        "tipTh": "รับคำขอทันทีและบอกว่าจะนำมาให้เดี๋ยวนี้"
+      },
+      {
+        "prompt": { "en": "And a coffee for me.", "zh": "我要一杯咖啡。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Would you like your coffee with milk?", "Certainly. Would you like milk in your coffee?"],
+          "zh": ["好的,您的咖啡要加牛奶吗?", "没问题,咖啡要不要加牛奶?"]
+        },
+        "keywords": { "en": ["coffee", "milk", "would you like"], "zh": ["咖啡", "牛奶", "加"] },
+        "tipTh": "ถามรายละเอียดเสมอ เช่น นม น้ำตาล"
+      },
+      {
+        "prompt": { "en": "My wife would like some tea.", "zh": "我太太想喝茶。" },
+        "suggestedAnswers": {
+          "en": ["We have hot tea and iced tea. Which would you prefer?", "We offer hot tea and iced tea. Which do you prefer?"],
+          "zh": ["我们有热茶和冰茶,您喜欢哪一种?", "我们有热茶和冰茶,请问您想要哪一种?"]
+        },
+        "keywords": { "en": ["hot tea", "iced tea", "prefer"], "zh": ["热茶", "冰茶", "哪一种"] },
+        "tipTh": "ให้ตัวเลือกชัดเจนแล้วถามว่าชอบแบบไหน"
+      },
+      {
+        "prompt": { "en": "Iced tea, please. Do you have juice for the kids?", "zh": "冰茶,谢谢。有给孩子的果汁吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we have fresh juice: orange, apple and mango.", "Yes, we make fresh juice every morning: orange, apple and mango."],
+          "zh": ["有的,我们有新鲜的果汁:橙汁、苹果汁和芒果汁。", "有,我们每天现榨果汁:橙汁、苹果汁和芒果汁。"]
+        },
+        "keywords": { "en": ["juice", "orange", "apple"], "zh": ["果汁", "橙汁", "苹果汁"] },
+        "tipTh": "บอกรายการน้ำผลไม้ทั้งหมดที่มี ไม่ต้องรอให้ถามทีละอย่าง"
+      },
+      {
+        "prompt": { "en": "Orange juice please, no ice.", "zh": "请给我橙汁,不要冰。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. One orange juice without ice. I will bring the drinks shortly.", "Of course. An orange juice without ice. The drinks will come shortly."],
+          "zh": ["好的,一杯不加冰的橙汁,饮料马上送到。", "没问题,橙汁不加冰,饮料马上就到。"]
+        },
+        "keywords": { "en": ["orange juice", "without ice", "shortly"], "zh": ["橙汁", "不加冰", "马上"] },
+        "tipTh": "ทวนออเดอร์ที่มีเงื่อนไขพิเศษ (ไม่ใส่น้ำแข็ง) เพื่อกันผิดพลาด"
+      }
+    ]
+  }
+}

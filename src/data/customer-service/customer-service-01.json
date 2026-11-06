@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-01",
+  "careerId": "customer-service",
+  "order": 1,
+  "titleTh": "รับสายและทักทายลูกค้า",
+  "titleEn": "Answering the Call",
+  "titleZh": "接听来电",
+  "words": [
+    { "en": "customer", "enPron": "คัส-ทะ-เมอร์", "th": "ลูกค้า", "zh": "顾客", "pinyin": "gùkè", "icon": "🧑‍💼",
+      "exampleEn": "Dear customer, thank you for your patience.", "exampleZh": "尊敬的顾客,感谢您的耐心。", "exampleTh": "เรียนลูกค้า ขอบคุณที่อดทนรอค่ะ/ครับ" },
+    { "en": "call", "enPron": "คอล", "th": "สายโทรศัพท์", "zh": "来电", "pinyin": "láidiàn", "icon": "📞",
+      "exampleEn": "Thank you for your call.", "exampleZh": "感谢您的来电。", "exampleTh": "ขอบคุณที่โทรเข้ามาค่ะ/ครับ" },
+    { "en": "help", "enPron": "เฮลป์", "th": "ช่วยเหลือ", "zh": "帮助", "pinyin": "bāngzhù", "icon": "🆘",
+      "exampleEn": "How can I help you today?", "exampleZh": "请问有什么可以帮助您的吗?", "exampleTh": "วันนี้ให้ดิฉัน/ผมช่วยอะไรดีคะ/ครับ" },
+    { "en": "name", "enPron": "เนม", "th": "ชื่อ", "zh": "姓名", "pinyin": "xìngmíng", "icon": "🪪",
+      "exampleEn": "May I have your full name, please?", "exampleZh": "请问您的姓名是什么?", "exampleTh": "ขอทราบชื่อ-นามสกุลของคุณได้ไหมคะ/ครับ" },
+    { "en": "account", "enPron": "อะ-เคานท์", "th": "บัญชี", "zh": "账户", "pinyin": "zhànghù", "icon": "💳",
+      "exampleEn": "Could you give me your account number?", "exampleZh": "请问您的账户号码是多少?", "exampleTh": "ช่วยบอกหมายเลขบัญชีของคุณหน่อยได้ไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "How can I + verb? (เสนอความช่วยเหลือ)",
+      "explanationTh": "How can I help you? เป็นประโยคเปิดการสนทนามาตรฐานของงานบริการ จะใช้ How may I assist you? ก็ได้ ซึ่งเป็นทางการมากกว่า",
+      "pattern": "How can / may I + help / assist + you?",
+      "examples": [
+        { "text": "How can I help you today?", "th": "วันนี้ให้ดิฉัน/ผมช่วยอะไรดีคะ/ครับ" },
+        { "text": "How may I assist you?", "th": "ให้ดิฉัน/ผมช่วยเหลืออะไรได้บ้างคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "有什么可以……的吗? (เสนอความช่วยเหลือ)",
+      "explanationTh": "有什么可以帮您的吗 เป็นประโยคเปิดการสนทนามาตรฐานของงานบริการภาษาจีน ใช้ 您 เพื่อให้เกียรติ",
+      "pattern": "请问有什么可以帮您的吗?",
+      "examples": [
+        { "text": "请问有什么可以帮您的吗?", "th": "ขอถามหน่อยค่ะ/ครับ มีอะไรให้ช่วยไหม" },
+        { "text": "请问有什么可以为您服务?", "th": "มีอะไรให้บริการไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่คอลเซ็นเตอร์ (Call Center Agent)",
+    "context": "ลูกค้าโทรเข้ามาที่ศูนย์บริการเพื่อสอบถามเรื่องบิล คุณต้องทักทาย ถามชื่อ ขอหมายเลขบัญชี ยืนยันข้อมูล และเริ่มตรวจสอบ",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, is this customer service?", "zh": "你好,这里是客服吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, thank you for calling. How can I help you today?", "Yes, it is. Thank you for calling. How can I help you today?"],
+          "zh": ["是的,感谢您的来电。请问有什么可以帮助您的吗?", "是的,感谢来电,请问有什么可以帮您的?"]
+        },
+        "keywords": { "en": ["calling", "help", "today"], "zh": ["来电", "帮助", "请问"] },
+        "tipTh": "รับสายด้วยการขอบคุณและถามทันทีว่าให้ช่วยอะไร"
+      },
+      {
+        "prompt": { "en": "I have a problem with my phone bill.", "zh": "我的话费账单有问题。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry to hear that. May I have your full name, please?", "I'm sorry about that. May I have your name, please?"],
+          "zh": ["很抱歉听到这个。请问您的姓名是什么?", "抱歉给您带来困扰。请问您的姓名是?"]
+        },
+        "keywords": { "en": ["sorry", "name", "may i"], "zh": ["抱歉", "姓名", "请问"] },
+        "tipTh": "แสดงความเห็นใจก่อนขอข้อมูลลูกค้า"
+      },
+      {
+        "prompt": { "en": "My name is Alex Brown.", "zh": "我叫亚历克斯·布朗。" },
+        "suggestedAnswers": {
+          "en": ["Thank you, Mr. Brown. Could you give me your account number?", "Thank you, Mr. Brown. May I have your account number?"],
+          "zh": ["谢谢您,布朗先生。请问您的账户号码是多少?", "谢谢布朗先生,请告诉我您的账户号码。"]
+        },
+        "keywords": { "en": ["thank you", "account", "number"], "zh": ["谢谢", "账户", "号码"] },
+        "tipTh": "เรียกชื่อลูกค้าให้ถูกต้องและขอข้อมูลถัดไปอย่างสุภาพ"
+      },
+      {
+        "prompt": { "en": "It's four five six seven.", "zh": "是四五六七。" },
+        "suggestedAnswers": {
+          "en": ["Let me confirm: four five six seven. Is that correct?", "Let me confirm that number: four five six seven. Is that correct?"],
+          "zh": ["我来确认一下:四五六七,对吗?", "我跟您确认:账户号码是四五六七,对吗?"]
+        },
+        "keywords": { "en": ["confirm", "correct", "seven"], "zh": ["确认", "四五六七", "对吗"] },
+        "tipTh": "ทวนตัวเลขกลับไปเสมอ เพื่อป้องกันการฟังผิด"
+      },
+      {
+        "prompt": { "en": "Yes, that's right.", "zh": "对,没错。" },
+        "suggestedAnswers": {
+          "en": ["Thank you, dear customer. Please hold for a moment while I check.", "Thank you, dear customer. Please hold while I check your account."],
+          "zh": ["谢谢,尊敬的顾客,请稍等,我来查询。", "谢谢您,尊敬的顾客,请稍等,我马上查询。"]
+        },
+        "keywords": { "en": ["customer", "hold", "check"], "zh": ["顾客", "稍等", "查询"] },
+        "tipTh": "ขอให้ลูกค้ารอสักครู่ก่อนตรวจสอบ และบอกว่ากำลังทำอะไร"
+      }
+    ]
+  }
+}

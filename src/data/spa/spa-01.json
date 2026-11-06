@@ -1,0 +1,91 @@
+{
+  "id": "spa-01",
+  "careerId": "spa",
+  "order": 1,
+  "titleTh": "ต้อนรับและปรึกษา",
+  "titleEn": "Welcome and Consultation",
+  "titleZh": "迎宾与咨询",
+  "words": [
+    { "en": "treatment", "enPron": "ทรีท-เมนท์", "th": "การบำบัด / ทรีตเมนต์", "zh": "护理", "pinyin": "hùlǐ", "icon": "💆",
+      "exampleEn": "Which treatment would you like today?", "exampleZh": "您今天想做哪种护理?", "exampleTh": "วันนี้คุณต้องการทรีตเมนต์แบบไหนคะ/ครับ" },
+    { "en": "massage", "enPron": "มะ-ซาจ", "th": "นวด", "zh": "按摩", "pinyin": "ànmó", "icon": "🙌",
+      "exampleEn": "Would you like a massage?", "exampleZh": "您想做按摩吗?", "exampleTh": "คุณต้องการนวดไหมคะ/ครับ" },
+    { "en": "appointment", "enPron": "อะ-พอยท์-เมนท์", "th": "การนัดหมาย", "zh": "预约", "pinyin": "yùyuē", "icon": "📅",
+      "exampleEn": "Do you have an appointment?", "exampleZh": "请问您有预约吗?", "exampleTh": "คุณมีนัดหมายล่วงหน้าไหมคะ/ครับ" },
+    { "en": "consultation", "enPron": "คอน-ซัล-เท-เชิน", "th": "การปรึกษา", "zh": "咨询", "pinyin": "zīxún", "icon": "🗣️",
+      "exampleEn": "A short consultation comes first.", "exampleZh": "首先会有一个简短的咨询。", "exampleTh": "เริ่มด้วยการปรึกษาสั้นๆ ก่อนค่ะ/ครับ" },
+    { "en": "package", "enPron": "แพ็ค-เกจ", "th": "แพ็กเกจ", "zh": "套餐", "pinyin": "tàocān", "icon": "🎁",
+      "exampleEn": "We have a relaxing package.", "exampleZh": "我们有一个放松套餐。", "exampleTh": "เรามีแพ็กเกจผ่อนคลายค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Which + noun would you like? (ถามให้เลือก)",
+      "explanationTh": "Which + นาม ใช้ถามให้เลือกจากตัวเลือกที่มีจำนวนจำกัด ต่างจาก What ที่ไม่จำกัดตัวเลือก",
+      "pattern": "Which + noun + would you like?",
+      "examples": [
+        { "text": "Which treatment would you like today?", "th": "วันนี้คุณต้องการทรีตเมนต์แบบไหนคะ/ครับ" },
+        { "text": "Which package would you like?", "th": "คุณต้องการแพ็กเกจไหนคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您想要哪一种……? (ถามให้เลือก)",
+      "explanationTh": "哪一种 + นาม ใช้ถามให้เลือกจากตัวเลือกที่มี ตามด้วยลักษณนามหรือคำนามได้",
+      "pattern": "您想要哪一种 + 名词?",
+      "examples": [
+        { "text": "您想要哪一种护理?", "th": "คุณต้องการทรีตเมนต์แบบไหนคะ/ครับ" },
+        { "text": "您想要哪一种套餐?", "th": "คุณต้องการแพ็กเกจไหนคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับสปา (Spa Receptionist)",
+    "context": "แขกเดินเข้ามาที่สปาโดยไม่ได้นัดไว้ คุณต้องต้อนรับ ตรวจคิวว่าง แนะนำแพ็กเกจ อธิบายการปรึกษาก่อนเริ่ม และพาไปห้องทรีตเมนต์",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, I'd like to relax today.", "zh": "你好,我今天想放松一下。" },
+        "suggestedAnswers": {
+          "en": ["Welcome to our spa. Do you have an appointment?", "Welcome to our spa. Have you made an appointment?"],
+          "zh": ["欢迎光临水疗中心,请问您有预约吗?", "欢迎来到水疗中心,请问您预约了吗?"]
+        },
+        "keywords": { "en": ["welcome", "spa", "appointment"], "zh": ["欢迎", "水疗", "预约"] },
+        "tipTh": "ต้อนรับด้วยน้ำเสียงนุ่มนวลและถามเรื่องนัดหมาย"
+      },
+      {
+        "prompt": { "en": "No, I don't. Is there a free slot?", "zh": "没有。现在有空位吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we have a free slot at two. Which treatment would you like?", "Yes, there is a free slot at two. Which treatment would you like?"],
+          "zh": ["有的,两点有空位,您想做哪种护理?", "有,两点有空位,您想选哪种护理?"]
+        },
+        "keywords": { "en": ["free slot", "two", "treatment"], "zh": ["空位", "两点", "护理"] },
+        "tipTh": "ตอบว่ามีคิวว่างพร้อมเวลา แล้วถามการรักษาที่ต้องการ"
+      },
+      {
+        "prompt": { "en": "What do you recommend?", "zh": "你有什么推荐?" },
+        "suggestedAnswers": {
+          "en": ["We have a relaxing package with a massage and herbal tea.", "I recommend our relaxing package with a massage and tea."],
+          "zh": ["我们有一个放松套餐,包含按摩和花草茶。", "我推荐放松套餐,有按摩和花草茶。"]
+        },
+        "keywords": { "en": ["package", "massage", "relaxing"], "zh": ["套餐", "按摩", "放松"] },
+        "tipTh": "แนะนำแพ็กเกจที่ตรงกับความต้องการ (ผ่อนคลาย)"
+      },
+      {
+        "prompt": { "en": "I'd like the massage.", "zh": "我想做按摩。" },
+        "suggestedAnswers": {
+          "en": ["Excellent. A short consultation comes first. Please fill in this form.", "Excellent. We begin with a short consultation. Please fill in this form."],
+          "zh": ["好的,首先会有一个简短的咨询,请填写这张表格。", "好的,先进行简短的咨询,请填写这张表格。"]
+        },
+        "keywords": { "en": ["consultation", "short", "form"], "zh": ["咨询", "简短", "表格"] },
+        "tipTh": "อธิบายขั้นตอนก่อนเริ่มทรีตเมนต์ให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Okay. How long will it take?", "zh": "好的。需要多长时间?" },
+        "suggestedAnswers": {
+          "en": ["The package takes ninety minutes. Please follow me to the treatment room.", "It takes ninety minutes. Please follow me to the treatment room."],
+          "zh": ["套餐需要九十分钟,请跟我去护理室。", "大约九十分钟,请跟我到护理室。"]
+        },
+        "keywords": { "en": ["ninety minutes", "follow me", "treatment room"], "zh": ["九十分钟", "跟我", "护理室"] },
+        "tipTh": "บอกระยะเวลาและนำแขกไปยังห้องทรีตเมนต์"
+      }
+    ]
+  }
+}

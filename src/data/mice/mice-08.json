@@ -1,0 +1,91 @@
+{
+  "id": "mice-08",
+  "careerId": "mice",
+  "order": 8,
+  "titleTh": "สรุปงานหลังการประชุม",
+  "titleEn": "After the Event",
+  "titleZh": "会后总结",
+  "words": [
+    { "en": "attendance", "enPron": "อะ-เทน-เดินซ์", "th": "จำนวนผู้เข้าร่วม", "zh": "出席", "pinyin": "chūxí", "icon": "👥",
+      "exampleEn": "Attendance was over four hundred.", "exampleZh": "出席人数超过四百人。", "exampleTh": "ผู้เข้าร่วมมีมากกว่าสี่ร้อยคนค่ะ/ครับ" },
+    { "en": "certificate", "enPron": "เซอร์-ติ-ฟิ-เคท", "th": "ใบประกาศนียบัตร", "zh": "证书", "pinyin": "zhèngshū", "icon": "📜",
+      "exampleEn": "Each delegate will get a certificate.", "exampleZh": "每位代表都会收到证书。", "exampleTh": "ผู้เข้าร่วมทุกท่านจะได้รับประกาศนียบัตรค่ะ/ครับ" },
+    { "en": "evaluation", "enPron": "อิ-แวล-ลู-เอ-เชิน", "th": "การประเมินผล", "zh": "评估", "pinyin": "pínggū", "icon": "📈",
+      "exampleEn": "Please fill in the evaluation form.", "exampleZh": "请填写评估表。", "exampleTh": "กรุณากรอกแบบประเมินผลค่ะ/ครับ" },
+    { "en": "thank-you letter", "enPron": "แธงก์-ยู เลท-เทอร์", "th": "จดหมายขอบคุณ", "zh": "感谢信", "pinyin": "gǎnxièxìn", "icon": "✉️",
+      "exampleEn": "We will send a thank-you letter to all sponsors.", "exampleZh": "我们会向所有赞助商发送感谢信。", "exampleTh": "เราจะส่งจดหมายขอบคุณถึงผู้สนับสนุนทุกท่านค่ะ/ครับ" },
+    { "en": "report", "enPron": "รี-พอร์ต", "th": "รายงาน", "zh": "报告", "pinyin": "bàogào", "icon": "📑",
+      "exampleEn": "The final report will be ready next week.", "exampleZh": "最终报告下周完成。", "exampleTh": "รายงานฉบับสุดท้ายจะเสร็จสัปดาห์หน้าค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "will be + past participle (สิ่งที่จะเกิดขึ้น)",
+      "explanationTh": "will be sent, will be ready ใช้บอกสิ่งที่จะดำเนินการต่อหลังงาน โดยเน้นผลลัพธ์มากกว่าผู้ทำ",
+      "pattern": "Noun + will be + past participle / adjective + (time)",
+      "examples": [
+        { "text": "The report will be sent next week.", "th": "รายงานจะถูกส่งสัปดาห์หน้าค่ะ/ครับ" },
+        { "text": "Certificates will be emailed to all delegates.", "th": "ประกาศนียบัตรจะถูกส่งทางอีเมลถึงผู้เข้าร่วมทุกท่านค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "将在 / 会 + 动词 (สิ่งที่จะเกิดขึ้น)",
+      "explanationTh": "将在 + เวลา + กริยา ใช้บอกสิ่งที่จะดำเนินการในอนาคต อย่างเป็นทางการ",
+      "pattern": "名词 + 将在 + 时间 + 动词",
+      "examples": [
+        { "text": "最终报告将在下周发送。", "th": "รายงานฉบับสุดท้ายจะถูกส่งสัปดาห์หน้าค่ะ/ครับ" },
+        { "text": "证书会通过邮件发给所有代表。", "th": "ประกาศนียบัตรจะส่งทางอีเมลถึงผู้เข้าร่วมทุกท่านค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้จัดการงาน (Event Manager)",
+    "context": "งานประชุมจบแล้ว ผู้เข้าร่วมและผู้สนับสนุนสอบถามผลการจัดงาน คุณต้องรายงานจำนวนผู้เข้าร่วม แจ้งเรื่องประกาศนียบัตร ขอแบบประเมิน และบอกกำหนดการส่งรายงาน",
+    "steps": [
+      {
+        "prompt": { "en": "How many people attended?", "zh": "有多少人参加了?" },
+        "suggestedAnswers": {
+          "en": ["Attendance was over four hundred, which is higher than expected.", "Attendance was over four hundred, higher than we expected."],
+          "zh": ["出席人数超过四百人,比预期更高。", "出席人数超过四百,高于我们的预期。"]
+        },
+        "keywords": { "en": ["attendance", "four hundred", "higher"], "zh": ["出席", "四百", "预期"] },
+        "tipTh": "รายงานตัวเลขจริงและเทียบกับเป้าหมาย"
+      },
+      {
+        "prompt": { "en": "Will we get a certificate?", "zh": "我们会收到证书吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, each delegate will get a certificate by email.", "Yes, every delegate will receive a certificate by email."],
+          "zh": ["是的,每位代表都会通过邮件收到证书。", "会的,每位代表都会收到电子证书,发到邮件。"]
+        },
+        "keywords": { "en": ["certificate", "delegate", "email"], "zh": ["证书", "代表", "邮件"] },
+        "tipTh": "ยืนยันวิธีและช่องทางส่งประกาศนียบัตร"
+      },
+      {
+        "prompt": { "en": "Can I give feedback?", "zh": "我可以提供反馈吗?" },
+        "suggestedAnswers": {
+          "en": ["Please fill in the evaluation form. It takes only two minutes.", "Please fill in the evaluation form, which takes only two minutes."],
+          "zh": ["请填写评估表,只需要两分钟。", "请填写评估表,大约两分钟就能完成。"]
+        },
+        "keywords": { "en": ["evaluation", "form", "two minutes"], "zh": ["评估", "表", "两分钟"] },
+        "tipTh": "เชิญให้ประเมินและบอกว่าใช้เวลาไม่นาน เพื่อเพิ่มอัตราการตอบ"
+      },
+      {
+        "prompt": { "en": "Will the sponsors be thanked?", "zh": "赞助商会得到感谢吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we will send a thank-you letter to all sponsors.", "Yes, a thank-you letter will be sent to all sponsors."],
+          "zh": ["会的,我们会向所有赞助商发送感谢信。", "会的,所有赞助商都会收到感谢信。"]
+        },
+        "keywords": { "en": ["thank-you letter", "sponsors", "send"], "zh": ["感谢信", "赞助商", "发送"] },
+        "tipTh": "ให้ความสำคัญกับผู้สนับสนุนและบอกว่าจะทำอย่างไร"
+      },
+      {
+        "prompt": { "en": "When can I see the results?", "zh": "我什么时候能看到结果?" },
+        "suggestedAnswers": {
+          "en": ["The final report will be sent next week.", "The final report will be sent to you next week."],
+          "zh": ["最终报告将在下周发送。", "最终报告会在下周发送给您。"]
+        },
+        "keywords": { "en": ["report", "next week", "sent"], "zh": ["报告", "下周", "发送"] },
+        "tipTh": "ให้กรอบเวลาที่ชัดเจนในการส่งมอบรายงาน"
+      }
+    ]
+  }
+}

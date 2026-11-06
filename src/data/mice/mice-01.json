@@ -1,0 +1,91 @@
+{
+  "id": "mice-01",
+  "careerId": "mice",
+  "order": 1,
+  "titleTh": "ลงทะเบียนงานประชุม",
+  "titleEn": "Conference Registration",
+  "titleZh": "会议注册",
+  "words": [
+    { "en": "registration", "enPron": "เรจ-จิส-เทร-เชิน", "th": "การลงทะเบียน", "zh": "注册", "pinyin": "zhùcè", "icon": "📋",
+      "exampleEn": "Registration is at the main entrance.", "exampleZh": "注册台在正门入口处。", "exampleTh": "จุดลงทะเบียนอยู่ที่ทางเข้าหลักค่ะ/ครับ" },
+    { "en": "badge", "enPron": "แบดจ์", "th": "บัตรผู้เข้าร่วมงาน", "zh": "胸牌", "pinyin": "xiōngpái", "icon": "🪪",
+      "exampleEn": "Please wear your badge at all times.", "exampleZh": "请全程佩戴您的胸牌。", "exampleTh": "กรุณาติดบัตรผู้เข้าร่วมงานตลอดเวลาค่ะ/ครับ" },
+    { "en": "delegate", "enPron": "เดล-ลิ-เกท", "th": "ผู้แทน / ผู้เข้าร่วมประชุม", "zh": "代表", "pinyin": "dàibiǎo", "icon": "🧑‍💼",
+      "exampleEn": "Delegates may collect their bags here.", "exampleZh": "代表们可以在这里领取资料袋。", "exampleTh": "ผู้เข้าร่วมประชุมรับกระเป๋าเอกสารได้ที่นี่ค่ะ/ครับ" },
+    { "en": "agenda", "enPron": "อะ-เจน-ดะ", "th": "วาระการประชุม", "zh": "议程", "pinyin": "yìchéng", "icon": "🗒️",
+      "exampleEn": "Here is the agenda for today.", "exampleZh": "这是今天的议程。", "exampleTh": "นี่คือวาระการประชุมของวันนี้ค่ะ/ครับ" },
+    { "en": "handbook", "enPron": "แฮนด์-บุ๊ก", "th": "คู่มือการประชุม", "zh": "会议手册", "pinyin": "huìyì shǒucè", "icon": "📘",
+      "exampleEn": "The conference handbook has the full schedule.", "exampleZh": "会议手册里有完整的日程。", "exampleTh": "คู่มือการประชุมมีตารางเวลาครบถ้วนค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "You can + verb (บอกสิ่งที่ทำได้)",
+      "explanationTh": "You can + กริยาช่องที่ 1 ใช้บอกผู้เข้าร่วมว่าทำสิ่งใดได้ที่ไหน เป็นรูปแบบที่ชัดเจนและเป็นมิตร",
+      "pattern": "You can + verb + (object) + (place)",
+      "examples": [
+        { "text": "You can collect your badge at counter two.", "th": "คุณรับบัตรได้ที่เคาน์เตอร์สองค่ะ/ครับ" },
+        { "text": "You can find the agenda in the handbook.", "th": "คุณดูวาระการประชุมได้ในคู่มือค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您可以在……领取…… (บอกสิ่งที่ทำได้)",
+      "explanationTh": "您可以在 + สถานที่ + กริยา เป็นรูปแบบบอกว่าทำสิ่งใดได้ที่ไหน ใช้บ่อยในงานประชุมและงานแสดงสินค้า",
+      "pattern": "您可以在 + 地点 + 动词 + 名词",
+      "examples": [
+        { "text": "您可以在二号柜台领取胸牌。", "th": "คุณรับบัตรได้ที่เคาน์เตอร์สองค่ะ/ครับ" },
+        { "text": "您可以在手册里找到议程。", "th": "คุณดูวาระการประชุมได้ในคู่มือค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ลงทะเบียนงานประชุม (Registration Staff)",
+    "context": "เช้าวันเปิดงานประชุมนานาชาติ ผู้เข้าร่วมมาลงทะเบียน คุณต้องตรวจชื่อ มอบบัตร คู่มือ และบอกห้องประชุมเปิดงาน",
+    "steps": [
+      {
+        "prompt": { "en": "Hello, I'm here for the conference.", "zh": "你好,我来参加会议。" },
+        "suggestedAnswers": {
+          "en": ["Welcome to the conference. Registration is at the main entrance. May I have your name?", "Welcome. Registration is at the main entrance. May I have your name, please?"],
+          "zh": ["欢迎参加会议。注册台在正门入口处,请问您的姓名是?", "欢迎。注册台在正门入口,请问您的姓名是什么?"]
+        },
+        "keywords": { "en": ["welcome", "registration", "name"], "zh": ["欢迎", "注册", "姓名"] },
+        "tipTh": "ทักทายต้อนรับและขอชื่อเพื่อค้นข้อมูลผู้ลงทะเบียน"
+      },
+      {
+        "prompt": { "en": "My name is Linda Chen from Shanghai.", "zh": "我叫陈琳达,来自上海。" },
+        "suggestedAnswers": {
+          "en": ["Thank you, Ms. Chen. I found your registration. You are a delegate.", "Thank you, Ms. Chen. Your registration is confirmed. You are a delegate."],
+          "zh": ["谢谢陈女士,我找到您的注册信息了,您是代表。", "谢谢陈女士,您的注册已确认,身份是代表。"]
+        },
+        "keywords": { "en": ["registration", "delegate", "thank you"], "zh": ["注册", "代表", "谢谢"] },
+        "tipTh": "ยืนยันชื่อและประเภทผู้เข้าร่วม"
+      },
+      {
+        "prompt": { "en": "Where do I get my name tag?", "zh": "我在哪里领取名牌?" },
+        "suggestedAnswers": {
+          "en": ["You can collect your badge here. Please wear your badge at all times.", "You can collect your badge here, and please wear it at all times."],
+          "zh": ["您可以在这里领取胸牌,请全程佩戴您的胸牌。", "您可以在这里领取胸牌,会议期间请一直佩戴。"]
+        },
+        "keywords": { "en": ["badge", "collect", "wear"], "zh": ["胸牌", "领取", "佩戴"] },
+        "tipTh": "มอบบัตรพร้อมย้ำให้ติดตลอดงานเพื่อความปลอดภัย"
+      },
+      {
+        "prompt": { "en": "What's the schedule?", "zh": "日程是怎样的?" },
+        "suggestedAnswers": {
+          "en": ["Here is the agenda for today. The conference handbook has the full schedule.", "This is today's agenda. The handbook has the full schedule."],
+          "zh": ["这是今天的议程,会议手册里有完整的日程。", "这是今天的议程,完整的日程在会议手册里。"]
+        },
+        "keywords": { "en": ["agenda", "handbook", "schedule"], "zh": ["议程", "会议手册", "日程"] },
+        "tipTh": "ให้เอกสารสรุปวันนี้และบอกว่าตารางเต็มอยู่ที่ไหน"
+      },
+      {
+        "prompt": { "en": "Where is the opening session?", "zh": "开幕式在哪里?" },
+        "suggestedAnswers": {
+          "en": ["The opening session is in the Grand Ballroom on the second floor, at nine.", "The opening session starts at nine in the Grand Ballroom on the second floor."],
+          "zh": ["开幕式在二楼大宴会厅,九点开始。", "开幕式九点在二楼大宴会厅举行。"]
+        },
+        "keywords": { "en": ["opening session", "ballroom", "nine"], "zh": ["开幕式", "宴会厅", "九点"] },
+        "tipTh": "บอกชื่อห้อง ชั้น และเวลาให้ครบ"
+      }
+    ]
+  }
+}

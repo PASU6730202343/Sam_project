@@ -1,0 +1,91 @@
+{
+  "id": "spa-03",
+  "careerId": "spa",
+  "order": 3,
+  "titleTh": "ระดับแรงนวดและความสบาย",
+  "titleEn": "Pressure and Comfort",
+  "titleZh": "力度与舒适度",
+  "words": [
+    { "en": "pressure", "enPron": "เพรช-เชอร์", "th": "แรงกด", "zh": "力度", "pinyin": "lìdù", "icon": "💪",
+      "exampleEn": "Is the pressure okay for you?", "exampleZh": "力度合适吗?", "exampleTh": "แรงกดโอเคสำหรับคุณไหมคะ/ครับ" },
+    { "en": "gentle", "enPron": "เจน-เทิล", "th": "เบามือ / นุ่มนวล", "zh": "轻柔", "pinyin": "qīngróu", "icon": "🪶",
+      "exampleEn": "I will use gentle strokes.", "exampleZh": "我会用轻柔的手法。", "exampleTh": "ดิฉัน/ผมจะนวดด้วยมือที่เบานุ่มค่ะ/ครับ" },
+    { "en": "firm", "enPron": "เฟิร์ม", "th": "หนักแน่น", "zh": "用力", "pinyin": "yònglì", "icon": "✊",
+      "exampleEn": "Would you like firmer pressure?", "exampleZh": "您需要再用力一点吗?", "exampleTh": "คุณต้องการให้กดแรงขึ้นไหมคะ/ครับ" },
+    { "en": "sore", "enPron": "ซอร์", "th": "ปวดเมื่อย", "zh": "酸痛", "pinyin": "suāntòng", "icon": "😖",
+      "exampleEn": "Is your neck sore?", "exampleZh": "您的脖子酸痛吗?", "exampleTh": "คอของคุณปวดเมื่อยไหมคะ/ครับ" },
+    { "en": "relax", "enPron": "รี-แลกซ์", "th": "ผ่อนคลาย", "zh": "放松", "pinyin": "fàngsōng", "icon": "😌",
+      "exampleEn": "Please relax your shoulders.", "exampleZh": "请放松您的肩膀。", "exampleTh": "กรุณาผ่อนคลายหัวไหล่ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Please tell me if + clause (ขอให้บอกถ้า...)",
+      "explanationTh": "Please tell me if ... ใช้ขอให้แขกบอกเมื่อรู้สึกไม่สบายหรือมีปัญหา สำคัญมากในงานสปาเพื่อความปลอดภัยและความพึงพอใจ",
+      "pattern": "Please tell me if + subject + verb",
+      "examples": [
+        { "text": "Please tell me if it hurts.", "th": "กรุณาบอกดิฉัน/ผมถ้ารู้สึกเจ็บนะคะ/ครับ" },
+        { "text": "Please tell me if the pressure is too strong.", "th": "กรุณาบอกถ้าแรงกดแรงเกินไปนะคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "如果……,请告诉我 (ขอให้บอกถ้า...)",
+      "explanationTh": "如果 + เงื่อนไข, 请告诉我 ใช้ขอให้แขกแจ้งเมื่อรู้สึกไม่สบาย เป็นประโยคที่ใช้บ่อยมากในงานสปา",
+      "pattern": "如果 + 情况,请告诉我",
+      "examples": [
+        { "text": "如果觉得疼,请告诉我。", "th": "ถ้ารู้สึกเจ็บ กรุณาบอกนะคะ/ครับ" },
+        { "text": "如果力度太大,请告诉我。", "th": "ถ้าแรงกดแรงเกินไป กรุณาบอกนะคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "นักบำบัด/หมอนวด (Therapist)",
+    "context": "แขกนอนอยู่บนเตียงและเริ่มนวดแล้ว คุณต้องให้แขกผ่อนคลาย ถามเรื่องแรงกด ปรับตามอาการปวดเมื่อย และดูแลให้แขกสบาย",
+    "steps": [
+      {
+        "prompt": { "en": "Please start. I'm a bit nervous.", "zh": "请开始吧,我有点紧张。" },
+        "suggestedAnswers": {
+          "en": ["Please relax your shoulders and breathe slowly.", "Don't worry. Please relax your shoulders and breathe slowly."],
+          "zh": ["请放松您的肩膀,慢慢呼吸。", "别担心,请放松肩膀,慢慢呼吸。"]
+        },
+        "keywords": { "en": ["relax", "shoulders", "breathe"], "zh": ["放松", "肩膀", "呼吸"] },
+        "tipTh": "ปลอบใจแขกด้วยน้ำเสียงเบา และแนะนำให้หายใจช้าๆ"
+      },
+      {
+        "prompt": { "en": "This pressure feels strong.", "zh": "这个力度有点大。" },
+        "suggestedAnswers": {
+          "en": ["Is the pressure okay for you? I will use gentle strokes.", "Is the pressure okay? I will use gentle strokes now."],
+          "zh": ["力度合适吗?我会用轻柔的手法。", "力度合适吗?我改用轻柔的手法。"]
+        },
+        "keywords": { "en": ["pressure", "okay", "gentle"], "zh": ["力度", "合适", "轻柔"] },
+        "tipTh": "ถามแรงกดบ่อยๆ และปรับตามทันที"
+      },
+      {
+        "prompt": { "en": "That's better. My neck is sore.", "zh": "这样好多了。我的脖子很酸痛。" },
+        "suggestedAnswers": {
+          "en": ["Is your neck sore? Would you like firmer pressure there?", "Your neck is sore? Would you like firmer pressure there?"],
+          "zh": ["您的脖子酸痛吗?那里需要再用力一点吗?", "脖子酸痛吗?那里要不要再用力一点?"]
+        },
+        "keywords": { "en": ["sore", "neck", "firmer"], "zh": ["酸痛", "脖子", "用力"] },
+        "tipTh": "ทวนอาการที่แขกบอก แล้วถามว่าต้องการปรับแรงอย่างไร"
+      },
+      {
+        "prompt": { "en": "Yes, a bit firmer.", "zh": "是的,稍微用力一点。" },
+        "suggestedAnswers": {
+          "en": ["Of course, a bit firmer. Please tell me if it hurts.", "Of course. I will go a bit firmer. Please tell me if it hurts."],
+          "zh": ["好的,再用力一点。如果觉得疼,请告诉我。", "好的,我稍微用力一点,如果觉得疼请告诉我。"]
+        },
+        "keywords": { "en": ["firmer", "tell me", "hurts"], "zh": ["用力", "疼", "告诉"] },
+        "tipTh": "เมื่อเพิ่มแรงต้องย้ำให้แขกบอกทันทีถ้าเจ็บ"
+      },
+      {
+        "prompt": { "en": "That feels great.", "zh": "这样感觉太棒了。" },
+        "suggestedAnswers": {
+          "en": ["I'm glad you can relax. Take a deep breath and enjoy.", "I'm glad you feel good. Please relax, take a deep breath and enjoy."],
+          "zh": ["很高兴您能放松,深呼吸,好好享受。", "很高兴您满意,请放松,深呼吸,好好享受。"]
+        },
+        "keywords": { "en": ["glad", "relax", "deep breath"], "zh": ["高兴", "放松", "深呼吸"] },
+        "tipTh": "ตอบรับคำชมสั้นๆ แล้วปล่อยให้แขกพักผ่อนต่อ ไม่ชวนคุยมากเกินไป"
+      }
+    ]
+  }
+}

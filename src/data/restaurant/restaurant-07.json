@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-07",
+  "careerId": "restaurant",
+  "order": 7,
+  "titleTh": "ชำระเงิน",
+  "titleEn": "Paying the Bill",
+  "titleZh": "结账",
+  "words": [
+    { "en": "total", "enPron": "โท-เทิล", "th": "ยอดรวม", "zh": "总计", "pinyin": "zǒngjì", "icon": "🧮",
+      "exampleEn": "The total is one thousand two hundred baht.", "exampleZh": "总计一千二百泰铢。", "exampleTh": "ยอดรวมหนึ่งพันสองร้อยบาทค่ะ/ครับ" },
+    { "en": "tip", "enPron": "ทิป", "th": "ทิป", "zh": "小费", "pinyin": "xiǎofèi", "icon": "🪙",
+      "exampleEn": "You do not have to leave a tip.", "exampleZh": "您不需要留小费。", "exampleTh": "คุณไม่จำเป็นต้องให้ทิปค่ะ/ครับ" },
+    { "en": "cash", "enPron": "แคช", "th": "เงินสด", "zh": "现金", "pinyin": "xiànjīn", "icon": "💵",
+      "exampleEn": "Would you like to pay in cash?", "exampleZh": "您想用现金支付吗?", "exampleTh": "คุณต้องการชำระเป็นเงินสดไหมคะ/ครับ" },
+    { "en": "split the bill", "enPron": "สปลิท เดอะ บิล", "th": "แยกจ่าย", "zh": "分开结账", "pinyin": "fēnkāi jiézhàng", "icon": "➗",
+      "exampleEn": "Would you like to split the bill?", "exampleZh": "您想分开结账吗?", "exampleTh": "คุณต้องการแยกจ่ายไหมคะ/ครับ" },
+    { "en": "service charge", "enPron": "เซอร์-วิส ชาร์จ", "th": "ค่าบริการ", "zh": "服务费", "pinyin": "fúwùfèi", "icon": "🧾",
+      "exampleEn": "A ten percent service charge is included.", "exampleZh": "已包含百分之十的服务费。", "exampleTh": "รวมค่าบริการสิบเปอร์เซ็นต์แล้วค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "is included / is not included (รวม / ไม่รวม)",
+      "explanationTh": "ใช้ passive voice บอกว่ารายการใดรวมหรือไม่รวมในยอดชำระ is ใช้กับนามเอกพจน์ are ใช้กับพหูพจน์",
+      "pattern": "noun + is / are + (not) included",
+      "examples": [
+        { "text": "Service charge is included.", "th": "รวมค่าบริการแล้วค่ะ/ครับ" },
+        { "text": "Drinks are not included.", "th": "ไม่รวมเครื่องดื่มค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "已包含 / 不含 (รวม / ไม่รวม)",
+      "explanationTh": "已包含在内 แปลว่า 'รวมอยู่แล้ว' และ 不含在内 แปลว่า 'ไม่รวม' ใช้บอกรายการในใบเสร็จ",
+      "pattern": "名词 + 已包含 / 不含 + 在内",
+      "examples": [
+        { "text": "服务费已包含在内。", "th": "รวมค่าบริการแล้วค่ะ/ครับ" },
+        { "text": "饮料不含在内。", "th": "ไม่รวมเครื่องดื่มค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ/แคชเชียร์ (Waiter / Cashier)",
+    "context": "ลูกค้าอิ่มแล้วและขอเช็กบิล คุณต้องแจ้งยอด อธิบายค่าบริการ แยกบิล รับเงินสด และตอบเรื่องทิป",
+    "steps": [
+      {
+        "prompt": { "en": "Could we have the check, please?", "zh": "请帮我们结账。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. The total is one thousand two hundred baht.", "Of course. The total comes to one thousand two hundred baht."],
+          "zh": ["好的,总计一千二百泰铢。", "没问题,总共是一千二百泰铢。"]
+        },
+        "keywords": { "en": ["total", "baht", "certainly"], "zh": ["总计", "泰铢", "好的"] },
+        "tipTh": "แจ้งยอดรวมพร้อมหน่วยเงินให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Does that include the service charge?", "zh": "这个包含服务费吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, a ten percent service charge is included.", "Yes, the service charge of ten percent is included."],
+          "zh": ["是的,已包含百分之十的服务费。", "是的,百分之十的服务费已包含在内。"]
+        },
+        "keywords": { "en": ["service charge", "included", "ten percent"], "zh": ["服务费", "包含", "百分之十"] },
+        "tipTh": "ตอบเรื่องค่าบริการตรงๆ พร้อมตัวเลขเปอร์เซ็นต์"
+      },
+      {
+        "prompt": { "en": "Can we split the bill into two?", "zh": "我们可以分成两张账单吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. Would you like to split the bill equally?", "Certainly. Shall we split the bill equally?"],
+          "zh": ["当然可以,您想平均分开结账吗?", "没问题,我们平均分开结账,好吗?"]
+        },
+        "keywords": { "en": ["split the bill", "equally", "of course"], "zh": ["分开结账", "平均", "当然"] },
+        "tipTh": "ยืนยันวิธีแยกบิลก่อนดำเนินการ เช่น หารเท่ากันหรือแยกตามรายการ"
+      },
+      {
+        "prompt": { "en": "I'll pay in cash. Here's two thousand baht.", "zh": "我付现金,这是两千泰铢。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for paying in cash. Your change is eight hundred baht.", "Thank you. Here is your change, eight hundred baht, for paying in cash."],
+          "zh": ["感谢您用现金支付,找零八百泰铢。", "谢谢您,现金找零八百泰铢。"]
+        },
+        "keywords": { "en": ["cash", "change", "eight hundred"], "zh": ["现金", "找零", "八百"] },
+        "tipTh": "ขอบคุณและแจ้งเงินทอนด้วยตัวเลขที่ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Is tipping expected here?", "zh": "这里需要给小费吗?" },
+        "suggestedAnswers": {
+          "en": ["You do not have to leave a tip, but we appreciate it very much.", "You do not have to leave a tip, though we appreciate it."],
+          "zh": ["您不需要留小费,不过我们非常感谢。", "不需要留小费,但如果您愿意,我们非常感谢。"]
+        },
+        "keywords": { "en": ["tip", "appreciate", "do not have to"], "zh": ["小费", "不需要", "感谢"] },
+        "tipTh": "ตอบเรื่องทิปอย่างสุภาพ ไม่กดดันลูกค้า"
+      }
+    ]
+  }
+}

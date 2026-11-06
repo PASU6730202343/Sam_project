@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-04",
+  "careerId": "restaurant",
+  "order": 4,
+  "titleTh": "ข้อจำกัดด้านอาหารและอาการแพ้",
+  "titleEn": "Dietary Needs and Allergies",
+  "titleZh": "饮食禁忌与过敏",
+  "words": [
+    { "en": "spicy", "enPron": "สไปซ์-ซี่", "th": "เผ็ด", "zh": "辣", "pinyin": "là", "icon": "🌶️",
+      "exampleEn": "Is this dish too spicy for you?", "exampleZh": "这道菜对您来说会不会太辣?", "exampleTh": "อาหารจานนี้เผ็ดเกินไปสำหรับคุณไหมคะ/ครับ" },
+    { "en": "gluten-free", "enPron": "กลู-เตน-ฟรี", "th": "ปราศจากกลูเตน", "zh": "无麸质", "pinyin": "wú fūzhì", "icon": "🌾",
+      "exampleEn": "We have a gluten-free menu.", "exampleZh": "我们有无麸质菜单。", "exampleTh": "เรามีเมนูปราศจากกลูเตนค่ะ/ครับ" },
+    { "en": "seafood", "enPron": "ซี-ฟูด", "th": "อาหารทะเล", "zh": "海鲜", "pinyin": "hǎixiān", "icon": "🦐",
+      "exampleEn": "Do you eat seafood?", "exampleZh": "请问您吃海鲜吗?", "exampleTh": "คุณรับประทานอาหารทะเลไหมคะ/ครับ" },
+    { "en": "peanut", "enPron": "พี-นัท", "th": "ถั่วลิสง", "zh": "花生", "pinyin": "huāshēng", "icon": "🥜",
+      "exampleEn": "This dish contains peanuts.", "exampleZh": "这道菜含有花生。", "exampleTh": "อาหารจานนี้มีถั่วลิสงเป็นส่วนผสมค่ะ/ครับ" },
+    { "en": "vegan", "enPron": "วี-แกน", "th": "วีแกน (ไม่ทานผลิตภัณฑ์จากสัตว์)", "zh": "纯素", "pinyin": "chúnsù", "icon": "🥦",
+      "exampleEn": "We also offer vegan dishes.", "exampleZh": "我们也提供纯素菜品。", "exampleTh": "เรามีอาหารวีแกนด้วยค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "contains / without (บอกส่วนผสม)",
+      "explanationTh": "This dish contains ... บอกส่วนผสมที่มีอยู่ และ We can make it without ... เสนอทำโดยไม่ใส่ ข้อมูลนี้สำคัญมากกับผู้แพ้อาหาร",
+      "pattern": "This dish contains + noun. / We can make it without + noun.",
+      "examples": [
+        { "text": "This dish contains peanuts.", "th": "อาหารจานนี้มีถั่วลิสงค่ะ/ครับ" },
+        { "text": "We can make it without peanuts.", "th": "เราทำโดยไม่ใส่ถั่วลิสงได้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "含有 / 不含 + 名词 (บอกส่วนผสม)",
+      "explanationTh": "含有 แปลว่า 'มีส่วนผสมของ...' และ 不含 แปลว่า 'ไม่มี...' ใช้อธิบายส่วนผสมให้ลูกค้าที่แพ้อาหาร",
+      "pattern": "这道菜含有 / 不含 + 名词",
+      "examples": [
+        { "text": "这道菜含有花生。", "th": "อาหารจานนี้มีถั่วลิสงค่ะ/ครับ" },
+        { "text": "这道菜不含海鲜。", "th": "อาหารจานนี้ไม่มีอาหารทะเลค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานเสิร์ฟ (Waiter)",
+    "context": "ลูกค้ามีอาการแพ้อาหารและข้อจำกัดด้านอาหารหลายอย่าง คุณต้องถามให้ชัด แนะนำเมนูที่ปลอดภัย และตรวจสอบกับครัว",
+    "steps": [
+      {
+        "prompt": { "en": "I have a food allergy. Can you help?", "zh": "我有食物过敏,你能帮我吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. Please tell me what you are allergic to, and I will help you choose.", "Certainly. Please tell me what you are allergic to."],
+          "zh": ["当然可以。请告诉我您对什么过敏,我来帮您选。", "没问题,请告诉我您对什么食物过敏。"]
+        },
+        "keywords": { "en": ["allergic", "help", "tell"], "zh": ["过敏", "告诉", "帮"] },
+        "tipTh": "รับเรื่องแพ้อาหารอย่างจริงจังเสมอ และถามชนิดที่แพ้ให้ชัด"
+      },
+      {
+        "prompt": { "en": "I'm allergic to peanuts.", "zh": "我对花生过敏。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for telling me. This dish contains peanuts, so I recommend the fish.", "Thank you. That dish contains peanuts, so I recommend the grilled fish."],
+          "zh": ["谢谢告知。这道菜含有花生,我推荐鱼。", "谢谢您,那道菜含有花生,所以我推荐烤鱼。"]
+        },
+        "keywords": { "en": ["peanuts", "contains", "recommend"], "zh": ["花生", "含有", "推荐"] },
+        "tipTh": "บอกว่าจานไหนมีสารก่อภูมิแพ้ และเสนอทางเลือกที่ปลอดภัย"
+      },
+      {
+        "prompt": { "en": "My husband doesn't eat seafood, and he can't have gluten.", "zh": "我先生不吃海鲜,而且不能吃麸质。" },
+        "suggestedAnswers": {
+          "en": ["I understand. We have a gluten-free menu, and many dishes without seafood.", "Understood. Our gluten-free menu has several dishes without seafood."],
+          "zh": ["明白了,我们有无麸质菜单,也有不含海鲜的菜品。", "好的,我们的无麸质菜单里有几道不含海鲜的菜。"]
+        },
+        "keywords": { "en": ["gluten-free", "seafood", "menu"], "zh": ["无麸质", "海鲜", "菜单"] },
+        "tipTh": "ทวนข้อจำกัดทั้งหมดของลูกค้าเพื่อแสดงว่าเข้าใจ"
+      },
+      {
+        "prompt": { "en": "Is the curry spicy? My kids can't eat spicy food.", "zh": "咖喱辣吗?我的孩子不能吃辣。" },
+        "suggestedAnswers": {
+          "en": ["It is medium spicy, but I can ask the kitchen to make it mild. Is that okay?", "It is a little spicy. We can make it mild for the children. Is that okay?"],
+          "zh": ["有点辣,不过我可以请厨房做成不辣的,可以吗?", "是有点辣,我们可以为孩子做不辣的,可以吗?"]
+        },
+        "keywords": { "en": ["spicy", "mild", "okay"], "zh": ["辣", "不辣", "可以吗"] },
+        "tipTh": "บอกระดับความเผ็ดตามจริงและเสนอปรับให้เหมาะกับเด็ก"
+      },
+      {
+        "prompt": { "en": "I'm vegan, actually. Do you have anything for me?", "zh": "其实我吃纯素。你们有适合我的菜吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, we also offer vegan dishes. May I suggest the vegetable curry?", "Yes, we have vegan dishes. May I suggest our vegetable curry?"],
+          "zh": ["有的,我们也提供纯素菜品,推荐蔬菜咖喱好吗?", "有,我们有纯素菜品,我推荐蔬菜咖喱。"]
+        },
+        "keywords": { "en": ["vegan", "vegetable", "suggest"], "zh": ["纯素", "蔬菜", "推荐"] },
+        "tipTh": "ยืนยันว่ามีตัวเลือกและเสนอเมนูที่เหมาะสมทันที"
+      }
+    ]
+  }
+}

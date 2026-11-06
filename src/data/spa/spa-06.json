@@ -1,0 +1,91 @@
+{
+  "id": "spa-06",
+  "careerId": "spa",
+  "order": 6,
+  "titleTh": "สุขภาพและความปลอดภัย",
+  "titleEn": "Health and Safety",
+  "titleZh": "健康与安全",
+  "words": [
+    { "en": "pregnant", "enPron": "เพร็ก-แนนท์", "th": "ตั้งครรภ์", "zh": "怀孕", "pinyin": "huáiyùn", "icon": "🤰",
+      "exampleEn": "Are you pregnant or planning to be?", "exampleZh": "请问您是否怀孕?", "exampleTh": "คุณตั้งครรภ์หรือวางแผนจะตั้งครรภ์ไหมคะ/ครับ" },
+    { "en": "allergic", "enPron": "อะ-เลอร์-จิค", "th": "แพ้", "zh": "过敏", "pinyin": "guòmǐn", "icon": "🤧",
+      "exampleEn": "Are you allergic to any oil?", "exampleZh": "您对任何精油过敏吗?", "exampleTh": "คุณแพ้น้ำมันชนิดใดไหมคะ/ครับ" },
+    { "en": "injury", "enPron": "อิน-เจอ-รี", "th": "การบาดเจ็บ", "zh": "受伤", "pinyin": "shòushāng", "icon": "🩹",
+      "exampleEn": "Do you have any injury now?", "exampleZh": "您现在有受伤的地方吗?", "exampleTh": "ตอนนี้คุณมีบริเวณที่บาดเจ็บไหมคะ/ครับ" },
+    { "en": "blood pressure", "enPron": "บลัด เพรช-เชอร์", "th": "ความดันโลหิต", "zh": "血压", "pinyin": "xuèyā", "icon": "🩺",
+      "exampleEn": "I will check your blood pressure first.", "exampleZh": "我先为您测量血压。", "exampleTh": "ดิฉัน/ผมขอวัดความดันโลหิตของคุณก่อนค่ะ/ครับ" },
+    { "en": "consent form", "enPron": "คอน-เซนท์ ฟอร์ม", "th": "ใบยินยอม", "zh": "同意书", "pinyin": "tóngyìshū", "icon": "✍️",
+      "exampleEn": "Please sign the consent form.", "exampleZh": "请签署同意书。", "exampleTh": "กรุณาลงนามในใบยินยอมค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Are you + adjective? (ถามสถานะ)",
+      "explanationTh": "Are you + คำคุณศัพท์ ใช้ถามสถานะของแขก เช่น ตั้งครรภ์ หรือแพ้ ต้องถามด้วยท่าทีสุภาพและเป็นส่วนตัว",
+      "pattern": "Are you + adjective (+ to + noun)?",
+      "examples": [
+        { "text": "Are you pregnant?", "th": "คุณตั้งครรภ์หรือเปล่าคะ/ครับ" },
+        { "text": "Are you allergic to nuts?", "th": "คุณแพ้ถั่วไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您是否 + 动词 / 形容词? (ถามสถานะ)",
+      "explanationTh": "您是否 + ... เป็นรูปแบบถามที่เป็นทางการและสุภาพ เหมาะกับคำถามด้านสุขภาพซึ่งเป็นเรื่องส่วนตัว",
+      "pattern": "请问您是否 + 动词 / 形容词?",
+      "examples": [
+        { "text": "请问您是否怀孕?", "th": "ขอถามหน่อยค่ะ/ครับ คุณตั้งครรภ์หรือไม่" },
+        { "text": "请问您是否对坚果过敏?", "th": "ขอถามหน่อยค่ะ/ครับ คุณแพ้ถั่วหรือไม่" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "นักบำบัด (Therapist)",
+    "context": "ก่อนเริ่มทรีตเมนต์ คุณต้องซักประวัติสุขภาพของแขก เช่น ตั้งครรภ์ แพ้น้ำมัน บาดเจ็บ ความดัน และให้เซ็นใบยินยอมเพื่อความปลอดภัย",
+    "steps": [
+      {
+        "prompt": { "en": "Is there anything you need to know before my treatment?", "zh": "做护理之前,你们需要了解什么吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, for your safety, are you pregnant or planning to be?", "Yes, for your safety, are you pregnant or planning to be pregnant?"],
+          "zh": ["有的,为了您的安全,请问您是否怀孕?", "有的,为了您的安全,请问您是否怀孕或计划怀孕?"]
+        },
+        "keywords": { "en": ["safety", "pregnant", "planning"], "zh": ["安全", "怀孕", "请问"] },
+        "tipTh": "อธิบายเหตุผลที่ถามเรื่องส่วนตัว (เพื่อความปลอดภัย) ก่อนเสมอ"
+      },
+      {
+        "prompt": { "en": "No, I'm not.", "zh": "不,我没有怀孕。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Are you allergic to any oil or ingredient?", "Thank you. Are you allergic to any oil?"],
+          "zh": ["谢谢。您对任何精油或成分过敏吗?", "谢谢,您对精油过敏吗?"]
+        },
+        "keywords": { "en": ["allergic", "oil", "thank you"], "zh": ["过敏", "精油", "谢谢"] },
+        "tipTh": "ขอบคุณที่ให้ข้อมูล แล้วถามเรื่องการแพ้ต่อ"
+      },
+      {
+        "prompt": { "en": "I'm allergic to almond oil.", "zh": "我对杏仁油过敏。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for telling me. We will avoid almond oil and use coconut oil instead.", "Thank you. We will avoid almond oil and use coconut oil instead."],
+          "zh": ["谢谢告知,我们会避开杏仁油,改用椰子油。", "谢谢您,我们不会用杏仁油,改用椰子油。"]
+        },
+        "keywords": { "en": ["almond", "coconut", "instead"], "zh": ["杏仁油", "椰子油", "改用"] },
+        "tipTh": "ยืนยันว่าจะหลีกเลี่ยงสิ่งที่แพ้และเสนอสิ่งทดแทน"
+      },
+      {
+        "prompt": { "en": "I hurt my back last month.", "zh": "我上个月弄伤了背。" },
+        "suggestedAnswers": {
+          "en": ["Do you have any injury now? Please tell me which area to avoid.", "Do you have any injury now? Please tell me which area we should avoid."],
+          "zh": ["您现在还有受伤的地方吗?请告诉我需要避开的部位。", "您现在仍有受伤的地方吗?请告诉我要避开的部位。"]
+        },
+        "keywords": { "en": ["injury", "area", "avoid"], "zh": ["受伤", "部位", "避开"] },
+        "tipTh": "ถามว่ายังมีอาการอยู่ไหมและบริเวณที่ต้องเลี่ยง"
+      },
+      {
+        "prompt": { "en": "And I have high blood pressure.", "zh": "而且我有高血压。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Please sign the consent form, and I will check your blood pressure first.", "Thank you. Please sign the consent form. I will check your blood pressure first."],
+          "zh": ["谢谢,请签署同意书,我先为您测量血压。", "谢谢您,请签署同意书,我会先给您测量血压。"]
+        },
+        "keywords": { "en": ["consent form", "blood pressure", "sign"], "zh": ["同意书", "血压", "签署"] },
+        "tipTh": "เมื่อมีข้อควรระวังด้านสุขภาพ ให้ตรวจเพิ่มและให้เซ็นใบยินยอม"
+      }
+    ]
+  }
+}

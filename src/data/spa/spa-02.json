@@ -1,0 +1,91 @@
+{
+  "id": "spa-02",
+  "careerId": "spa",
+  "order": 2,
+  "titleTh": "ประเภทการนวด",
+  "titleEn": "Types of Massage",
+  "titleZh": "按摩类型",
+  "words": [
+    { "en": "Thai massage", "enPron": "ไทย มะ-ซาจ", "th": "นวดแผนไทย", "zh": "泰式按摩", "pinyin": "tàishì ànmó", "icon": "🇹🇭",
+      "exampleEn": "Thai massage uses stretching.", "exampleZh": "泰式按摩会用到拉伸。", "exampleTh": "นวดแผนไทยมีการยืดเหยียดค่ะ/ครับ" },
+    { "en": "oil massage", "enPron": "ออยล์ มะ-ซาจ", "th": "นวดน้ำมัน", "zh": "精油按摩", "pinyin": "jīngyóu ànmó", "icon": "🫗",
+      "exampleEn": "Oil massage is very relaxing.", "exampleZh": "精油按摩非常放松。", "exampleTh": "นวดน้ำมันผ่อนคลายมากค่ะ/ครับ" },
+    { "en": "foot massage", "enPron": "ฟุต มะ-ซาจ", "th": "นวดเท้า", "zh": "足部按摩", "pinyin": "zúbù ànmó", "icon": "🦶",
+      "exampleEn": "Foot massage takes sixty minutes.", "exampleZh": "足部按摩需要六十分钟。", "exampleTh": "นวดเท้าใช้เวลาหกสิบนาทีค่ะ/ครับ" },
+    { "en": "hot stone", "enPron": "ฮอท สโตน", "th": "หินร้อน", "zh": "热石", "pinyin": "rèshí", "icon": "🪨",
+      "exampleEn": "Hot stone helps tight muscles.", "exampleZh": "热石可以缓解肌肉紧张。", "exampleTh": "หินร้อนช่วยคลายกล้ามเนื้อที่ตึงค่ะ/ครับ" },
+    { "en": "aromatherapy", "enPron": "อะ-โร-มะ-เธอ-รา-พี", "th": "อโรมาเธอราพี", "zh": "香薰疗法", "pinyin": "xiāngxūn liáofǎ", "icon": "🌿",
+      "exampleEn": "Aromatherapy uses natural oils.", "exampleZh": "香薰疗法使用天然精油。", "exampleTh": "อโรมาเธอราพีใช้น้ำมันธรรมชาติค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "comparative: adjective-er than (เปรียบเทียบ)",
+      "explanationTh": "adjective + -er + than ใช้เปรียบเทียบสองสิ่ง เช่น stronger than, gentler than ใช้อธิบายความแตกต่างของการนวดแต่ละแบบ",
+      "pattern": "A + is + adjective-er + than + B",
+      "examples": [
+        { "text": "Thai massage is stronger than oil massage.", "th": "นวดแผนไทยแรงกว่านวดน้ำมันค่ะ/ครับ" },
+        { "text": "Oil massage is gentler than Thai massage.", "th": "นวดน้ำมันนุ่มนวลกว่านวดแผนไทยค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "A 比 B + 形容词 (เปรียบเทียบ)",
+      "explanationTh": "比 ใช้เปรียบเทียบสองสิ่ง โครงสร้าง A 比 B + คำคุณศัพท์ ไม่ต้องใช้ 很 นำหน้าคำคุณศัพท์",
+      "pattern": "A + 比 + B + 形容词",
+      "examples": [
+        { "text": "泰式按摩比精油按摩力度更大。", "th": "นวดแผนไทยแรงกว่านวดน้ำมันค่ะ/ครับ" },
+        { "text": "精油按摩比泰式按摩更轻柔。", "th": "นวดน้ำมันนุ่มนวลกว่านวดแผนไทยค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับสปา (Spa Receptionist)",
+    "context": "แขกสอบถามประเภทการนวด คุณต้องอธิบายความต่างของแต่ละแบบ แนะนำตามอาการ และเสนอบริการเสริม เช่น หินร้อนและอโรมา",
+    "steps": [
+      {
+        "prompt": { "en": "What types of massage do you have?", "zh": "你们有哪些按摩类型?" },
+        "suggestedAnswers": {
+          "en": ["We have Thai massage, oil massage and foot massage.", "We offer Thai massage, oil massage and foot massage."],
+          "zh": ["我们有泰式按摩、精油按摩和足部按摩。", "我们提供泰式按摩、精油按摩和足部按摩。"]
+        },
+        "keywords": { "en": ["thai massage", "oil massage", "foot massage"], "zh": ["泰式按摩", "精油按摩", "足部按摩"] },
+        "tipTh": "บอกรายการทั้งหมดให้ครบก่อนอธิบายรายละเอียด"
+      },
+      {
+        "prompt": { "en": "What's the difference?", "zh": "它们有什么不同?" },
+        "suggestedAnswers": {
+          "en": ["Thai massage is stronger than oil massage. Oil massage is gentler and very relaxing.", "Thai massage is stronger than oil massage, while oil massage is gentler and relaxing."],
+          "zh": ["泰式按摩比精油按摩力度更大,精油按摩更轻柔,非常放松。", "泰式按摩比精油按摩力度大,精油按摩更轻柔、更放松。"]
+        },
+        "keywords": { "en": ["stronger", "gentler", "relaxing"], "zh": ["比", "轻柔", "放松"] },
+        "tipTh": "เปรียบเทียบสองแบบด้วยโครงสร้าง than / 比"
+      },
+      {
+        "prompt": { "en": "My legs are tired from walking.", "zh": "我走了很多路,腿很累。" },
+        "suggestedAnswers": {
+          "en": ["A foot massage takes sixty minutes and will help your tired legs.", "A foot massage takes sixty minutes. It helps tired legs."],
+          "zh": ["足部按摩需要六十分钟,可以缓解您腿部的疲劳。", "足部按摩六十分钟,能缓解腿部疲劳。"]
+        },
+        "keywords": { "en": ["foot massage", "sixty minutes", "tired"], "zh": ["足部按摩", "六十分钟", "疲劳"] },
+        "tipTh": "เลือกบริการที่ตรงกับอาการที่แขกบอก"
+      },
+      {
+        "prompt": { "en": "I also have tight shoulders.", "zh": "我的肩膀也很僵硬。" },
+        "suggestedAnswers": {
+          "en": ["Hot stone can help tight muscles. Would you like to add hot stone?", "Hot stone helps tight muscles. Would you like to add it?"],
+          "zh": ["热石可以缓解肌肉紧张,您想加上热石吗?", "热石能缓解肌肉紧张,您要加上热石吗?"]
+        },
+        "keywords": { "en": ["hot stone", "muscles", "add"], "zh": ["热石", "肌肉", "加上"] },
+        "tipTh": "เสนอบริการเสริมที่ช่วยแก้ปัญหาของแขก"
+      },
+      {
+        "prompt": { "en": "What about the smell?", "zh": "香味怎么样?" },
+        "suggestedAnswers": {
+          "en": ["Aromatherapy uses natural oils. You can choose lavender or lemongrass.", "Aromatherapy uses natural oils, and you can choose lavender or lemongrass."],
+          "zh": ["香薰疗法使用天然精油,您可以选择薰衣草或香茅。", "香薰疗法用的是天然精油,您可以选薰衣草或香茅。"]
+        },
+        "keywords": { "en": ["aromatherapy", "natural oils", "lavender"], "zh": ["香薰疗法", "天然精油", "薰衣草"] },
+        "tipTh": "ให้แขกเลือกกลิ่นที่ชอบเพื่อเพิ่มความพึงพอใจ"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "tourism-06",
+  "careerId": "tourism",
+  "order": 6,
+  "titleTh": "ความปลอดภัยและสุขภาพ",
+  "titleEn": "Safety and Health",
+  "titleZh": "安全与健康",
+  "words": [
+    { "en": "sunscreen", "enPron": "ซัน-สกรีน", "th": "ครีมกันแดด", "zh": "防晒霜", "pinyin": "fángshàishuāng", "icon": "🧴",
+      "exampleEn": "Please put on sunscreen.", "exampleZh": "请涂防晒霜。", "exampleTh": "กรุณาทาครีมกันแดดค่ะ/ครับ" },
+    { "en": "life jacket", "enPron": "ไลฟ์ แจ็ค-เก็ต", "th": "เสื้อชูชีพ", "zh": "救生衣", "pinyin": "jiùshēngyī", "icon": "🦺",
+      "exampleEn": "Please wear a life jacket on the boat.", "exampleZh": "在船上请穿上救生衣。", "exampleTh": "กรุณาสวมเสื้อชูชีพบนเรือค่ะ/ครับ" },
+    { "en": "emergency", "enPron": "อิ-เมอร์-เจน-ซี", "th": "เหตุฉุกเฉิน", "zh": "紧急情况", "pinyin": "jǐnjí qíngkuàng", "icon": "🚨",
+      "exampleEn": "In an emergency, please call me.", "exampleZh": "紧急情况下请打电话给我。", "exampleTh": "ในเหตุฉุกเฉินกรุณาโทรหาดิฉัน/ผมค่ะ/ครับ" },
+    { "en": "insurance", "enPron": "อิน-ชัว-เรินซ์", "th": "ประกันภัย", "zh": "保险", "pinyin": "bǎoxiǎn", "icon": "🛡️",
+      "exampleEn": "Do you have travel insurance?", "exampleZh": "请问您有旅游保险吗?", "exampleTh": "คุณมีประกันการเดินทางไหมคะ/ครับ" },
+    { "en": "pharmacy", "enPron": "ฟาร์-มะ-ซี", "th": "ร้านขายยา", "zh": "药店", "pinyin": "yàodiàn", "icon": "💊",
+      "exampleEn": "There is a pharmacy near here.", "exampleZh": "这附近有一家药店。", "exampleTh": "แถวนี้มีร้านขายยาอยู่ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "You should + verb (ให้คำแนะนำ)",
+      "explanationTh": "should + กริยาช่องที่ 1 ใช้ให้คำแนะนำอย่างเป็นมิตร น้ำหนักเบากว่า must เหมาะกับการดูแลความปลอดภัยของนักท่องเที่ยว",
+      "pattern": "You should + verb + (object)",
+      "examples": [
+        { "text": "You should put on sunscreen and wear a hat.", "th": "คุณควรทาครีมกันแดดและสวมหมวกค่ะ/ครับ" },
+        { "text": "You should drink plenty of water.", "th": "คุณควรดื่มน้ำมากๆ ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您最好 + 动词 (ให้คำแนะนำ)",
+      "explanationTh": "最好 แปลว่า 'ดีที่สุดคือ...' ใช้แนะนำอย่างสุภาพ ฟังไม่แข็งกระด้างเหมือนสั่งให้ทำ",
+      "pattern": "您最好 + 动词 + (名词)",
+      "examples": [
+        { "text": "您最好涂防晒霜,戴上帽子。", "th": "คุณควรทาครีมกันแดดและสวมหมวกค่ะ/ครับ" },
+        { "text": "您最好多喝水。", "th": "คุณควรดื่มน้ำมากๆ ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ไกด์นำเที่ยว (Tour Guide)",
+    "context": "ทัวร์ทะเลวันที่แดดจัด คุณต้องดูแลความปลอดภัยของนักท่องเที่ยว แนะนำการป้องกันแดด การใช้เสื้อชูชีพ เมื่อมีคนไม่สบาย และการติดต่อบริษัทประกัน",
+    "steps": [
+      {
+        "prompt": { "en": "The sun is strong today.", "zh": "今天太阳很大。" },
+        "suggestedAnswers": {
+          "en": ["You should put on sunscreen and wear a hat.", "You should put on sunscreen. A hat will also help."],
+          "zh": ["您最好涂防晒霜,戴上帽子。", "最好涂防晒霜,再戴顶帽子。"]
+        },
+        "keywords": { "en": ["sunscreen", "hat", "should"], "zh": ["防晒霜", "帽子", "最好"] },
+        "tipTh": "ให้คำแนะนำป้องกันก่อนเกิดปัญหา"
+      },
+      {
+        "prompt": { "en": "We're going out on the boat.", "zh": "我们要坐船出海了。" },
+        "suggestedAnswers": {
+          "en": ["Please wear a life jacket on the boat. I will give you one.", "Please wear a life jacket on the boat. I'll hand you one."],
+          "zh": ["在船上请穿上救生衣,我给您拿一件。", "在船上请穿好救生衣,我给您一件。"]
+        },
+        "keywords": { "en": ["life jacket", "boat", "wear"], "zh": ["救生衣", "船", "穿"] },
+        "tipTh": "ย้ำเรื่องความปลอดภัยทางน้ำและแจกอุปกรณ์ให้"
+      },
+      {
+        "prompt": { "en": "My friend feels sick.", "zh": "我朋友觉得不舒服。" },
+        "suggestedAnswers": {
+          "en": ["Don't worry. There is a pharmacy near here. I will take you there.", "Don't worry. A pharmacy is near here, and I will take you there."],
+          "zh": ["别担心,这附近有一家药店,我带你们去。", "不用担心,附近有药店,我陪你们去。"]
+        },
+        "keywords": { "en": ["pharmacy", "near", "take"], "zh": ["药店", "附近", "带"] },
+        "tipTh": "ปลอบใจและพาไปยังแหล่งช่วยเหลือที่ใกล้ที่สุด"
+      },
+      {
+        "prompt": { "en": "What if it gets serious?", "zh": "如果情况严重怎么办?" },
+        "suggestedAnswers": {
+          "en": ["In an emergency, call me or the emergency number. I will contact the hospital.", "In an emergency, please call me. I will contact the hospital right away."],
+          "zh": ["紧急情况下请打电话给我,我会联系医院。", "遇到紧急情况请打电话给我,我马上联系医院。"]
+        },
+        "keywords": { "en": ["emergency", "call", "hospital"], "zh": ["紧急情况", "电话", "医院"] },
+        "tipTh": "บอกช่องทางติดต่อฉุกเฉินและสิ่งที่ไกด์จะทำ"
+      },
+      {
+        "prompt": { "en": "Does my travel insurance cover this?", "zh": "我的旅游保险能赔付吗?" },
+        "suggestedAnswers": {
+          "en": ["Please check your travel insurance. I will help you contact the insurance company.", "Please check your travel insurance. I can help you contact the company."],
+          "zh": ["请确认您的旅游保险,我帮您联系保险公司。", "请先查看旅游保险条款,我帮您联系保险公司。"]
+        },
+        "keywords": { "en": ["travel insurance", "contact", "company"], "zh": ["保险", "联系", "公司"] },
+        "tipTh": "ไม่รับรองสิ่งที่ไม่แน่ใจ แต่เสนอช่วยติดต่อบริษัทประกัน"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "retail-04",
+  "careerId": "retail",
+  "order": 4,
+  "titleTh": "แคชเชียร์และการชำระเงิน",
+  "titleEn": "Cashier and Payment",
+  "titleZh": "收银与付款",
+  "words": [
+    { "en": "cashier", "enPron": "แคช-เชียร์", "th": "แคชเชียร์", "zh": "收银台", "pinyin": "shōuyíntái", "icon": "🏧",
+      "exampleEn": "Please go to the cashier.", "exampleZh": "请到收银台付款。", "exampleTh": "กรุณาไปชำระเงินที่แคชเชียร์ค่ะ/ครับ" },
+    { "en": "change", "enPron": "เชนจ์", "th": "เงินทอน", "zh": "找零", "pinyin": "zhǎolíng", "icon": "🪙",
+      "exampleEn": "Your change is fifty baht.", "exampleZh": "您的找零是五十泰铢。", "exampleTh": "เงินทอนของคุณห้าสิบบาทค่ะ/ครับ" },
+    { "en": "scan", "enPron": "สแกน", "th": "สแกน", "zh": "扫码", "pinyin": "sǎomǎ", "icon": "📱",
+      "exampleEn": "Please scan the QR code.", "exampleZh": "请您扫码支付。", "exampleTh": "กรุณาสแกนคิวอาร์โค้ดค่ะ/ครับ" },
+    { "en": "bag", "enPron": "แบ็ก", "th": "ถุง", "zh": "袋子", "pinyin": "dàizi", "icon": "🛍️",
+      "exampleEn": "Would you like a bag?", "exampleZh": "请问您需要袋子吗?", "exampleTh": "คุณต้องการถุงไหมคะ/ครับ" },
+    { "en": "membership card", "enPron": "เมม-เบอร์-ชิป การ์ด", "th": "บัตรสมาชิก", "zh": "会员卡", "pinyin": "huìyuánkǎ", "icon": "💳",
+      "exampleEn": "Do you have a membership card?", "exampleZh": "请问您有会员卡吗?", "exampleTh": "คุณมีบัตรสมาชิกไหมคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "You can pay by + method (บอกวิธีชำระเงิน)",
+      "explanationTh": "pay by + วิธีชำระเงิน เช่น pay by card, pay by cash ใช้บอกวิธีที่รับชำระ ไม่ต้องมี the หรือ a นำหน้า",
+      "pattern": "You can pay by + card / cash / QR code",
+      "examples": [
+        { "text": "You can pay by card or cash.", "th": "คุณชำระด้วยบัตรหรือเงินสดได้ค่ะ/ครับ" },
+        { "text": "You can pay by QR code.", "th": "คุณชำระด้วยคิวอาร์โค้ดได้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "您可以用 + 方式 + 支付 (บอกวิธีชำระเงิน)",
+      "explanationTh": "用 + วิธี + 支付 แปลว่า 'ชำระด้วย...' ใช้บอกวิธีชำระเงินที่ร้านรับ",
+      "pattern": "您可以用 + 银行卡 / 现金 / 二维码 + 支付",
+      "examples": [
+        { "text": "您可以用银行卡或现金支付。", "th": "คุณชำระด้วยบัตรหรือเงินสดได้ค่ะ/ครับ" },
+        { "text": "您可以用二维码支付。", "th": "คุณชำระด้วยคิวอาร์โค้ดได้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "แคชเชียร์ (Cashier)",
+    "context": "ลูกค้าเลือกสินค้าเสร็จและมาชำระเงิน คุณต้องแนะนำจุดชำระ วิธีจ่าย สแกนคิวอาร์ ถามบัตรสมาชิก และมอบถุง",
+    "steps": [
+      {
+        "prompt": { "en": "Where do I pay?", "zh": "我在哪里付款?" },
+        "suggestedAnswers": {
+          "en": ["Please go to the cashier. It is next to the exit.", "Please go to the cashier, which is next to the exit."],
+          "zh": ["请到收银台付款,就在出口旁边。", "请到收银台付款,收银台在出口旁边。"]
+        },
+        "keywords": { "en": ["cashier", "exit", "please"], "zh": ["收银台", "出口", "付款"] },
+        "tipTh": "บอกจุดชำระเงินพร้อมจุดสังเกต"
+      },
+      {
+        "prompt": { "en": "Do you take cards?", "zh": "你们收银行卡吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you can pay by card, cash or QR code.", "Yes, we accept card, cash and QR code."],
+          "zh": ["可以,您可以用银行卡、现金或二维码支付。", "可以,我们收银行卡、现金和二维码。"]
+        },
+        "keywords": { "en": ["card", "cash", "qr code"], "zh": ["银行卡", "现金", "二维码"] },
+        "tipTh": "บอกวิธีชำระเงินทั้งหมดที่รับ"
+      },
+      {
+        "prompt": { "en": "QR code, please.", "zh": "我用二维码。" },
+        "suggestedAnswers": {
+          "en": ["Please scan the QR code with your phone.", "Please scan the QR code on the screen with your phone."],
+          "zh": ["请用手机扫码支付。", "请您用手机扫码支付。"]
+        },
+        "keywords": { "en": ["scan", "qr code", "phone"], "zh": ["扫码", "手机", "支付"] },
+        "tipTh": "บอกขั้นตอนทีละขั้นให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Do I get any points?", "zh": "我可以积分吗?" },
+        "suggestedAnswers": {
+          "en": ["Do you have a membership card? You get one point for every hundred baht.", "Do you have a membership card? Every hundred baht gives you one point."],
+          "zh": ["请问您有会员卡吗?每消费一百泰铢积一分。", "请问您有会员卡吗?每一百泰铢积一分。"]
+        },
+        "keywords": { "en": ["membership card", "point", "hundred baht"], "zh": ["会员卡", "积一分", "一百泰铢"] },
+        "tipTh": "ถามบัตรสมาชิกและอธิบายเงื่อนไขการสะสมแต้ม"
+      },
+      {
+        "prompt": { "en": "I'd like a bag, please.", "zh": "请给我一个袋子。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Here is your bag. Thank you for shopping with us.", "Of course. Here is your bag, and thank you for shopping with us."],
+          "zh": ["好的,这是您的袋子,谢谢光临。", "好的,这是您的袋子,欢迎下次光临,谢谢。"]
+        },
+        "keywords": { "en": ["bag", "thank you", "shopping"], "zh": ["袋子", "谢谢", "光临"] },
+        "tipTh": "ปิดท้ายด้วยการขอบคุณที่มาซื้อสินค้า"
+      }
+    ]
+  }
+}

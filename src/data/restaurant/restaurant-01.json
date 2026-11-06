@@ -1,0 +1,91 @@
+{
+  "id": "restaurant-01",
+  "careerId": "restaurant",
+  "order": 1,
+  "titleTh": "ต้อนรับและจัดที่นั่ง",
+  "titleEn": "Greeting and Seating",
+  "titleZh": "迎宾与安排座位",
+  "words": [
+    { "en": "table", "enPron": "เท-เบิล", "th": "โต๊ะอาหาร", "zh": "餐桌", "pinyin": "cānzhuō", "icon": "🪑",
+      "exampleEn": "Your table is by the window.", "exampleZh": "您的餐桌靠窗。", "exampleTh": "โต๊ะของคุณอยู่ริมหน้าต่างค่ะ/ครับ" },
+    { "en": "waiter", "enPron": "เว-เทอร์", "th": "พนักงานเสิร์ฟ", "zh": "服务员", "pinyin": "fúwùyuán", "icon": "🤵",
+      "exampleEn": "Your waiter will be with you shortly.", "exampleZh": "您的服务员马上就到。", "exampleTh": "พนักงานเสิร์ฟจะมาหาคุณในอีกสักครู่ค่ะ/ครับ" },
+    { "en": "high chair", "enPron": "ไฮ แชร์", "th": "เก้าอี้เด็ก", "zh": "儿童椅", "pinyin": "értóngyǐ", "icon": "👶",
+      "exampleEn": "Would you like a high chair for your child?", "exampleZh": "请问需要给孩子准备儿童椅吗?", "exampleTh": "ต้องการเก้าอี้เด็กสำหรับลูกของคุณไหมคะ/ครับ" },
+    { "en": "reserved", "enPron": "รี-เซิร์ฟดฺ", "th": "จองแล้ว", "zh": "已预订", "pinyin": "yǐ yùdìng", "icon": "📌",
+      "exampleEn": "I'm sorry, this table is reserved.", "exampleZh": "不好意思,这张桌子已预订。", "exampleTh": "ขออภัยค่ะ/ครับ โต๊ะนี้มีคนจองแล้ว" },
+    { "en": "wait", "enPron": "เวท", "th": "การรอคิว", "zh": "等位", "pinyin": "děngwèi", "icon": "⌛",
+      "exampleEn": "There is a ten-minute wait for a table.", "exampleZh": "现在需要等位十分钟。", "exampleTh": "ตอนนี้ต้องรอโต๊ะประมาณสิบนาทีค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "How many + noun ...? (ถามจำนวน)",
+      "explanationTh": "How many ใช้ถามจำนวนของนามนับได้ที่เป็นพหูพจน์ ใช้ถามจำนวนแขกหรือเด็กก่อนจัดโต๊ะ",
+      "pattern": "How many + plural noun + verb ...?",
+      "examples": [
+        { "text": "How many people are in your party?", "th": "กลุ่มของคุณมีกี่ท่านคะ/ครับ" },
+        { "text": "How many children are with you?", "th": "มีเด็กมากับคุณกี่คนคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请问几位? (ถามจำนวนคน)",
+      "explanationTh": "几位 ใช้ถามจำนวนแขกอย่างสุภาพ (位 เป็นลักษณนามสำหรับบุคคลที่ให้เกียรติ) ถ้าถามจำนวนเด็กใช้ 几个",
+      "pattern": "请问 + 几位 + (动词)?",
+      "examples": [
+        { "text": "请问几位用餐?", "th": "รับประทานกี่ท่านคะ/ครับ" },
+        { "text": "请问有几位小朋友?", "th": "มีเด็กๆ กี่คนคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับหน้าร้าน (Host / Hostess)",
+    "context": "คุณยืนอยู่ที่หน้าร้านอาหารในช่วงเย็นที่คนเยอะ ต้องต้อนรับลูกค้า ถามเรื่องการจอง แจ้งเวลารอ และพาไปที่โต๊ะ",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, a table for four, please.", "zh": "你好,请给我们安排一张四人桌。" },
+        "suggestedAnswers": {
+          "en": ["Welcome. Do you have a reservation under your name?", "Good evening, welcome. Do you have a reservation?"],
+          "zh": ["欢迎光临。请问您有预订吗?", "晚上好,欢迎。请问您是否预订了?"]
+        },
+        "keywords": { "en": ["welcome", "reservation", "name"], "zh": ["欢迎", "预订", "请问"] },
+        "tipTh": "ทักทายและถามเรื่องการจองเป็นอย่างแรก"
+      },
+      {
+        "prompt": { "en": "No, we don't.", "zh": "没有。" },
+        "suggestedAnswers": {
+          "en": ["No problem. There is a ten-minute wait for a table.", "That's fine. The wait for a table is about ten minutes."],
+          "zh": ["没关系,现在需要等位十分钟,您愿意等吗?", "没问题,大概要等位十分钟。"]
+        },
+        "keywords": { "en": ["wait", "ten", "table"], "zh": ["等位", "十分钟", "愿意"] },
+        "tipTh": "ไม่มีการจองก็ไม่เป็นไร บอกเวลารอที่ชัดเจน"
+      },
+      {
+        "prompt": { "en": "That's okay. We have a small child with us.", "zh": "可以。我们带了一个小孩。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Would you like a high chair for your child?", "Of course. Would you like a high chair for the child?"],
+          "zh": ["好的。请问需要给孩子准备儿童椅吗?", "没问题,请问孩子需要儿童椅吗?"]
+        },
+        "keywords": { "en": ["high chair", "child", "would you like"], "zh": ["儿童椅", "孩子", "请问"] },
+        "tipTh": "เสนออุปกรณ์สำหรับเด็กก่อนที่ลูกค้าจะขอ"
+      },
+      {
+        "prompt": { "en": "We've waited for ten minutes. Is our table ready?", "zh": "我们已经等了十分钟,桌子好了吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, your table is ready. Please follow me. It is by the window.", "Thank you for waiting. Please follow me to your table by the window."],
+          "zh": ["是的,您的餐桌准备好了,请跟我来,靠窗的位置。", "谢谢您的等候,请跟我来,在靠窗的位置。"]
+        },
+        "keywords": { "en": ["ready", "follow me", "window"], "zh": ["准备好", "跟我来", "靠窗"] },
+        "tipTh": "ขอบคุณที่รอ และนำลูกค้าไปที่โต๊ะพร้อมบอกตำแหน่ง"
+      },
+      {
+        "prompt": { "en": "Thank you. Who will serve us?", "zh": "谢谢。谁来为我们服务?" },
+        "suggestedAnswers": {
+          "en": ["Your waiter will be with you shortly. Please enjoy your meal.", "Your waiter will come shortly. Enjoy your dinner."],
+          "zh": ["您的服务员马上就到,祝您用餐愉快。", "服务员马上过来,祝您用餐愉快。"]
+        },
+        "keywords": { "en": ["waiter", "shortly", "enjoy"], "zh": ["服务员", "马上", "愉快"] },
+        "tipTh": "บอกว่าใครจะมาดูแลต่อ และอวยพรให้รับประทานอาหารอย่างมีความสุข"
+      }
+    ]
+  }
+}

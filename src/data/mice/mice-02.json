@@ -1,0 +1,91 @@
+{
+  "id": "mice-02",
+  "careerId": "mice",
+  "order": 2,
+  "titleTh": "จัดห้องประชุมและอุปกรณ์",
+  "titleEn": "Meeting Room Setup",
+  "titleZh": "会议室布置",
+  "words": [
+    { "en": "projector", "enPron": "โพร-เจค-เตอร์", "th": "โปรเจกเตอร์", "zh": "投影仪", "pinyin": "tóuyǐngyí", "icon": "📽️",
+      "exampleEn": "The projector is ready.", "exampleZh": "投影仪已经准备好了。", "exampleTh": "โปรเจกเตอร์พร้อมใช้งานแล้วค่ะ/ครับ" },
+    { "en": "microphone", "enPron": "ไมค์-โคร-โฟน", "th": "ไมโครโฟน", "zh": "麦克风", "pinyin": "màikèfēng", "icon": "🎙️",
+      "exampleEn": "Please test the microphone.", "exampleZh": "请试一下麦克风。", "exampleTh": "กรุณาทดสอบไมโครโฟนค่ะ/ครับ" },
+    { "en": "podium", "enPron": "โพ-เดียม", "th": "แท่นพูด", "zh": "讲台", "pinyin": "jiǎngtái", "icon": "🎤",
+      "exampleEn": "The podium is on the left.", "exampleZh": "讲台在舞台的左边。", "exampleTh": "แท่นพูดอยู่ทางซ้ายค่ะ/ครับ" },
+    { "en": "stage", "enPron": "สเตจ", "th": "เวที", "zh": "舞台", "pinyin": "wǔtái", "icon": "🎭",
+      "exampleEn": "The stage is ready for the speaker.", "exampleZh": "舞台已经为演讲者准备好了。", "exampleTh": "เวทีพร้อมสำหรับวิทยากรแล้วค่ะ/ครับ" },
+    { "en": "screen", "enPron": "สกรีน", "th": "จอภาพ", "zh": "屏幕", "pinyin": "píngmù", "icon": "🖥️",
+      "exampleEn": "The screen is a little small.", "exampleZh": "屏幕有点小。", "exampleTh": "จอภาพค่อนข้างเล็กค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Shall I + verb? (เสนอทำให้)",
+      "explanationTh": "Shall I + กริยาช่องที่ 1 ใช้เสนอตัวทำสิ่งใดสิ่งหนึ่งให้ ฟังสุภาพและเป็นทางการกว่า Do you want me to",
+      "pattern": "Shall I + verb + (object)?",
+      "examples": [
+        { "text": "Shall I move the projector closer?", "th": "ให้ดิฉัน/ผมขยับโปรเจกเตอร์เข้าใกล้อีกนิดไหมคะ/ครับ" },
+        { "text": "Shall I adjust the microphone?", "th": "ให้ดิฉัน/ผมปรับไมโครโฟนไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "要不要我……? (เสนอทำให้)",
+      "explanationTh": "要不要我 + กริยา ใช้เสนอตัวช่วยทำสิ่งใดให้ เป็นกันเองแต่ยังสุภาพ",
+      "pattern": "要不要我 + 动词 + 名词?",
+      "examples": [
+        { "text": "要不要我把投影仪移近一点?", "th": "ให้ดิฉัน/ผมขยับโปรเจกเตอร์เข้าใกล้อีกนิดไหมคะ/ครับ" },
+        { "text": "要不要我调一下麦克风?", "th": "ให้ดิฉัน/ผมปรับไมโครโฟนไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ช่างเทคนิคงานประชุม (Event Technician)",
+    "context": "ก่อนเริ่มประชุมครึ่งชั่วโมง ผู้จัดงานมาตรวจห้อง คุณต้องแจ้งความพร้อมของอุปกรณ์ เสนอปรับจอภาพ ทดสอบไมค์ และจัดเวทีสำหรับวิทยากร",
+    "steps": [
+      {
+        "prompt": { "en": "Is the room ready for the meeting?", "zh": "会议室准备好了吗?" },
+        "suggestedAnswers": {
+          "en": ["Almost. The projector is ready, and I'm checking the microphone.", "Almost ready. The projector is ready, and I am checking the microphone now."],
+          "zh": ["快好了,投影仪已经准备好了,我正在检查麦克风。", "快准备好了,投影仪已经好了,我正在检查麦克风。"]
+        },
+        "keywords": { "en": ["projector", "ready", "microphone"], "zh": ["投影仪", "准备好", "麦克风"] },
+        "tipTh": "รายงานสถานะอุปกรณ์ทีละรายการอย่างชัดเจน"
+      },
+      {
+        "prompt": { "en": "The screen looks too small.", "zh": "屏幕看起来太小了。" },
+        "suggestedAnswers": {
+          "en": ["Shall I move the projector closer? That will make the screen bigger.", "Shall I move the projector? Then the screen will be bigger."],
+          "zh": ["要不要我把投影仪移近一点?这样屏幕会更大。", "要不要我移动一下投影仪?这样屏幕会变大。"]
+        },
+        "keywords": { "en": ["shall i", "projector", "screen"], "zh": ["要不要", "投影仪", "屏幕"] },
+        "tipTh": "เสนอทางแก้ไขที่เป็นรูปธรรมพร้อมผลลัพธ์"
+      },
+      {
+        "prompt": { "en": "Where will the speaker stand?", "zh": "演讲者站在哪里?" },
+        "suggestedAnswers": {
+          "en": ["The speaker will stand at the podium. The podium is on the left of the stage.", "The speaker will use the podium, which is on the left of the stage."],
+          "zh": ["演讲者站在讲台,讲台在舞台左边。", "演讲者会在讲台发言,讲台在舞台左边。"]
+        },
+        "keywords": { "en": ["podium", "stage", "left"], "zh": ["讲台", "舞台", "左边"] },
+        "tipTh": "บอกตำแหน่งของแท่นพูดเทียบกับเวที"
+      },
+      {
+        "prompt": { "en": "Can we test the microphone?", "zh": "我们可以试一下麦克风吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. Please test the microphone, and I will adjust the volume.", "Of course. Please test the microphone while I adjust the volume."],
+          "zh": ["当然可以,请试一下麦克风,我来调整音量。", "当然可以,您试一下麦克风,我来调整音量。"]
+        },
+        "keywords": { "en": ["test", "microphone", "volume"], "zh": ["试", "麦克风", "音量"] },
+        "tipTh": "ให้ลูกค้าลองและปรับระดับเสียงไปพร้อมกัน"
+      },
+      {
+        "prompt": { "en": "Everything sounds fine now.", "zh": "现在声音都没问题了。" },
+        "suggestedAnswers": {
+          "en": ["Great. Everything is ready for the speaker on the stage. Shall I turn on the projector?", "Great. The stage is ready for the speaker. Shall I turn on the projector?"],
+          "zh": ["太好了,舞台已经为演讲者准备好了,要不要我打开投影仪?", "太好了,舞台已经准备好了,要不要我现在打开投影仪?"]
+        },
+        "keywords": { "en": ["ready", "stage", "projector"], "zh": ["准备好", "舞台", "投影仪"] },
+        "tipTh": "สรุปความพร้อมและถามขั้นตอนถัดไปทันที"
+      }
+    ]
+  }
+}

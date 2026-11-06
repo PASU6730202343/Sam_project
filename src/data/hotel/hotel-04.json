@@ -1,0 +1,91 @@
+{
+  "id": "hotel-04",
+  "careerId": "hotel",
+  "order": 4,
+  "titleTh": "แม่บ้านและทำความสะอาด",
+  "titleEn": "Housekeeping",
+  "titleZh": "客房清洁",
+  "words": [
+    { "en": "housekeeping", "enPron": "เฮาส์-คีพ-พิง", "th": "แม่บ้านฝ่ายห้องพัก", "zh": "客房服务", "pinyin": "kèfáng fúwù", "icon": "🧹",
+      "exampleEn": "Housekeeping will come to your room at ten.", "exampleZh": "客房服务人员十点会去您的房间。", "exampleTh": "แม่บ้านจะไปที่ห้องของคุณตอนสิบโมงค่ะ/ครับ" },
+    { "en": "clean", "enPron": "คลีน", "th": "ทำความสะอาด", "zh": "打扫", "pinyin": "dǎsǎo", "icon": "🧼",
+      "exampleEn": "May I clean your room now?", "exampleZh": "请问我现在可以打扫房间吗?", "exampleTh": "ขอทำความสะอาดห้องตอนนี้ได้ไหมคะ/ครับ" },
+    { "en": "pillow", "enPron": "พิล-โลว", "th": "หมอน", "zh": "枕头", "pinyin": "zhěntou", "icon": "💤",
+      "exampleEn": "I will bring you an extra pillow.", "exampleZh": "我给您拿一个额外的枕头。", "exampleTh": "ดิฉัน/ผมจะนำหมอนเพิ่มมาให้ค่ะ/ครับ" },
+    { "en": "blanket", "enPron": "แบลง-เกิท", "th": "ผ้าห่ม", "zh": "毯子", "pinyin": "tǎnzi", "icon": "🧣",
+      "exampleEn": "Would you like another blanket?", "exampleZh": "您还需要一条毯子吗?", "exampleTh": "คุณต้องการผ้าห่มอีกผืนไหมคะ/ครับ" },
+    { "en": "laundry", "enPron": "ลอน-ดรี", "th": "ซักรีด", "zh": "洗衣", "pinyin": "xǐyī", "icon": "👕",
+      "exampleEn": "Please put your laundry in this bag.", "exampleZh": "请把需要洗的衣服放进这个洗衣袋。", "exampleTh": "กรุณาใส่ผ้าที่ต้องการซักในถุงนี้ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Would you like me to + verb? (เสนอให้ช่วย)",
+      "explanationTh": "ใช้เสนอการช่วยเหลือเฉพาะเจาะจง โดยให้แขกเลือกว่าจะให้ทำหรือไม่ สุภาพและให้เกียรติแขกมากกว่าการถามว่า Do you want me to ...",
+      "pattern": "Would you like me to + verb + (object)?",
+      "examples": [
+        { "text": "Would you like me to clean the room now?", "th": "ให้ดิฉัน/ผมทำความสะอาดห้องตอนนี้เลยไหมคะ/ครับ" },
+        { "text": "Would you like me to bring another blanket?", "th": "ให้ดิฉัน/ผมนำผ้าห่มมาเพิ่มไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "需要我……吗?(เสนอให้ช่วย)",
+      "explanationTh": "ใช้ 需要我 + กริยา + 吗 เสนอความช่วยเหลือ แปลตรงตัวว่า 'ต้องการให้ฉัน...ไหม' สุภาพเหมาะกับงานบริการ",
+      "pattern": "需要我 + 动词 + 吗?",
+      "examples": [
+        { "text": "需要我现在打扫房间吗?", "th": "ต้องการให้ดิฉัน/ผมทำความสะอาดห้องตอนนี้ไหมคะ/ครับ" },
+        { "text": "需要我再送一个枕头吗?", "th": "ต้องการให้ดิฉัน/ผมนำหมอนมาเพิ่มอีกใบไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานแม่บ้าน/ฝ่ายห้องพัก (Housekeeping)",
+    "context": "แขกโทรมาที่ฝ่ายแม่บ้านเพื่อขอทำความสะอาดห้อง ขอของเพิ่ม และสอบถามบริการซักรีด คุณต้องรับเรื่องและเสนอความช่วยเหลืออย่างสุภาพ",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, could you clean my room, please?", "zh": "你好,请帮我打扫一下房间。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Would you like me to clean it now or later?", "Of course. Would you like us to clean the room now, or later today?"],
+          "zh": ["好的。需要我现在打扫,还是晚一点?", "没问题。您想现在打扫,还是晚一点?"]
+        },
+        "keywords": { "en": ["clean", "now", "later"], "zh": ["打扫", "现在", "晚一点"] },
+        "tipTh": "ถามเวลาที่แขกสะดวกก่อนเข้าไปทำความสะอาด"
+      },
+      {
+        "prompt": { "en": "Later, please. After 2 p.m.", "zh": "晚一点吧,下午两点以后。" },
+        "suggestedAnswers": {
+          "en": ["No problem. Housekeeping will come after two o'clock.", "Of course. Housekeeping will visit your room after two."],
+          "zh": ["没问题,客房服务人员下午两点以后会过去。", "好的,两点以后我们会安排客房服务。"]
+        },
+        "keywords": { "en": ["housekeeping", "two", "no problem"], "zh": ["客房服务", "两点", "没问题"] },
+        "tipTh": "ทวนเวลาที่นัดกับแขกเพื่อยืนยันความเข้าใจ"
+      },
+      {
+        "prompt": { "en": "Could I also have an extra pillow?", "zh": "我还想要一个额外的枕头,可以吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. Would you like a soft pillow or a firm one?", "Certainly. Do you prefer a soft pillow or a firm pillow?"],
+          "zh": ["当然可以。您要软的枕头还是硬的?", "好的。您喜欢软枕头还是硬枕头?"]
+        },
+        "keywords": { "en": ["pillow", "soft", "firm"], "zh": ["枕头", "软", "硬"] },
+        "tipTh": "ถามความต้องการเพิ่มเติมเพื่อให้ได้ของที่ตรงใจแขก"
+      },
+      {
+        "prompt": { "en": "A soft one. And it's a bit cold. Do you have a blanket?", "zh": "要软的。另外有点冷,有毯子吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, I will bring a soft pillow and another blanket.", "Certainly. I will bring you a soft pillow and a blanket."],
+          "zh": ["有的,我给您送一个软枕头和一条毯子。", "好的,我给您送软枕头和毯子。"]
+        },
+        "keywords": { "en": ["pillow", "blanket", "bring"], "zh": ["枕头", "毯子", "送"] },
+        "tipTh": "สรุปของที่จะนำไปให้ทั้งหมดในประโยคเดียว"
+      },
+      {
+        "prompt": { "en": "Thank you. I also need my laundry done. How does it work?", "zh": "谢谢。我还有衣服要洗,怎么办?" },
+        "suggestedAnswers": {
+          "en": ["Please put your laundry in the bag in the wardrobe. We will collect it.", "Please place your laundry in the laundry bag, and we will collect it from your room."],
+          "zh": ["请把要洗的衣服放进衣柜里的洗衣袋,我们会来取。", "请把衣服放进洗衣袋,我们会到房间来取。"]
+        },
+        "keywords": { "en": ["laundry", "bag", "collect"], "zh": ["衣服", "洗衣袋", "取"] },
+        "tipTh": "อธิบายขั้นตอนซักรีดสั้นๆ: ใส่ถุง แล้วทางโรงแรมมารับ"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-03",
+  "careerId": "customer-service",
+  "order": 3,
+  "titleTh": "ขอโทษและแสดงความเห็นใจ",
+  "titleEn": "Apologizing and Empathy",
+  "titleZh": "道歉与共情",
+  "words": [
+    { "en": "understand", "enPron": "อัน-เดอร์-แสตนด์", "th": "เข้าใจ", "zh": "理解", "pinyin": "lǐjiě", "icon": "🤗",
+      "exampleEn": "I understand how you feel.", "exampleZh": "我理解您的感受。", "exampleTh": "ดิฉัน/ผมเข้าใจความรู้สึกของคุณค่ะ/ครับ" },
+    { "en": "inconvenience", "enPron": "อิน-คอน-วีน-เนียนซ์", "th": "ความไม่สะดวก", "zh": "不便", "pinyin": "bùbiàn", "icon": "😓",
+      "exampleEn": "We apologize for the inconvenience.", "exampleZh": "对于给您带来的不便,我们深表歉意。", "exampleTh": "ขออภัยในความไม่สะดวกค่ะ/ครับ" },
+    { "en": "patience", "enPron": "เพ-เชินซ์", "th": "ความอดทน", "zh": "耐心", "pinyin": "nàixīn", "icon": "⏳",
+      "exampleEn": "Thank you for your patience.", "exampleZh": "感谢您的耐心。", "exampleTh": "ขอบคุณที่อดทนรอค่ะ/ครับ" },
+    { "en": "regret", "enPron": "รี-เกร็ท", "th": "เสียใจ", "zh": "遗憾", "pinyin": "yíhàn", "icon": "😔",
+      "exampleEn": "We regret the mistake.", "exampleZh": "我们对这个错误深感遗憾。", "exampleTh": "เราเสียใจกับความผิดพลาดครั้งนี้ค่ะ/ครับ" },
+    { "en": "appreciate", "enPron": "อะ-พรี-ชิ-เอท", "th": "ขอบคุณ / ซาบซึ้ง", "zh": "感谢", "pinyin": "gǎnxiè", "icon": "💐",
+      "exampleEn": "We appreciate your feedback.", "exampleZh": "我们非常感谢您的反馈。", "exampleTh": "เราซาบซึ้งในข้อเสนอแนะของคุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Thank you for + noun / -ing (ขอบคุณ)",
+      "explanationTh": "Thank you for ตามด้วยคำนามหรือกริยาเติม -ing ใช้ขอบคุณลูกค้าสำหรับสิ่งที่เขาทำ เช่น รอ เข้าใจ ให้ข้อมูล",
+      "pattern": "Thank you for + noun / verb-ing",
+      "examples": [
+        { "text": "Thank you for your patience.", "th": "ขอบคุณที่อดทนรอค่ะ/ครับ" },
+        { "text": "Thank you for waiting.", "th": "ขอบคุณที่รอค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "感谢您的 + 名词 / 谢谢您 (ขอบคุณ)",
+      "explanationTh": "感谢您的 + นาม ใช้ขอบคุณอย่างเป็นทางการ เช่น 感谢您的耐心 ส่วน 谢谢您 ใช้เป็นกันเองกว่าเล็กน้อย",
+      "pattern": "感谢您的 + 名词",
+      "examples": [
+        { "text": "感谢您的耐心。", "th": "ขอบคุณที่อดทนรอค่ะ/ครับ" },
+        { "text": "谢谢您的理解。", "th": "ขอบคุณที่เข้าใจค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ลูกค้ารอนานและไม่พอใจที่ระบบผิดพลาด คุณต้องแสดงความเข้าใจ ขอโทษอย่างจริงใจ อธิบายสาเหตุ ขอบคุณที่อดทน และปิดบทสนทนาด้วยความอบอุ่น",
+    "steps": [
+      {
+        "prompt": { "en": "I've been waiting for forty minutes!", "zh": "我已经等了四十分钟了!" },
+        "suggestedAnswers": {
+          "en": ["I understand how you feel, and I'm very sorry for the wait.", "I understand how you feel. I'm sorry to keep you waiting."],
+          "zh": ["我理解您的感受,对于让您久等,我们深表歉意。", "我理解您的感受,非常抱歉让您久等了。"]
+        },
+        "keywords": { "en": ["understand", "sorry", "wait"], "zh": ["理解", "歉意", "久等"] },
+        "tipTh": "เริ่มด้วยการเข้าใจความรู้สึก แล้วขอโทษ ไม่แก้ตัวทันที"
+      },
+      {
+        "prompt": { "en": "This is so inconvenient.", "zh": "这太不方便了。" },
+        "suggestedAnswers": {
+          "en": ["We apologize for the inconvenience. I will fix this right away.", "We apologize for the inconvenience. I will take care of this right away."],
+          "zh": ["对于给您带来的不便,我们深表歉意,我马上处理。", "给您带来不便,深表歉意,我马上为您处理。"]
+        },
+        "keywords": { "en": ["apologize", "inconvenience", "right away"], "zh": ["不便", "歉意", "马上"] },
+        "tipTh": "ขอโทษพร้อมบอกว่าจะลงมือแก้ทันที"
+      },
+      {
+        "prompt": { "en": "Why did this mistake happen?", "zh": "为什么会发生这个错误?" },
+        "suggestedAnswers": {
+          "en": ["We regret the mistake. Our system had an error, and we are fixing it.", "We regret the mistake. There was a system error, and we are fixing it."],
+          "zh": ["我们对这个错误深感遗憾,系统出现了故障,我们正在修复。", "我们对此深感遗憾,系统出现故障,正在修复。"]
+        },
+        "keywords": { "en": ["regret", "mistake", "system"], "zh": ["遗憾", "错误", "系统"] },
+        "tipTh": "อธิบายสาเหตุตามจริงโดยสั้น และบอกว่ากำลังแก้ไข"
+      },
+      {
+        "prompt": { "en": "Okay. Please do it quickly.", "zh": "好吧,请快一点。" },
+        "suggestedAnswers": {
+          "en": ["Thank you for your patience. I will update you in ten minutes.", "Thank you for your patience. I will give you an update in ten minutes."],
+          "zh": ["感谢您的耐心,我十分钟后向您更新进度。", "谢谢您的耐心,十分钟后我会更新进度。"]
+        },
+        "keywords": { "en": ["patience", "update", "ten minutes"], "zh": ["耐心", "更新", "十分钟"] },
+        "tipTh": "ให้กรอบเวลาที่ชัดเจนในการแจ้งความคืบหน้า"
+      },
+      {
+        "prompt": { "en": "Fine. I just want it solved.", "zh": "好,我只想把问题解决。" },
+        "suggestedAnswers": {
+          "en": ["We appreciate your understanding. Thank you for giving us the chance to help.", "We truly appreciate your understanding. Thank you for giving us the chance to help."],
+          "zh": ["我们非常感谢您的理解,谢谢您给我们机会帮助您。", "非常感谢您的理解,也谢谢您给我们机会帮助您。"]
+        },
+        "keywords": { "en": ["appreciate", "understanding", "thank you"], "zh": ["感谢", "理解", "机会"] },
+        "tipTh": "ปิดด้วยการขอบคุณที่ให้โอกาสแก้ไข สร้างความรู้สึกที่ดี"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "mice-07",
+  "careerId": "mice",
+  "order": 7,
+  "titleTh": "การวางแผนและเสนอราคา",
+  "titleEn": "Planning and Quotations",
+  "titleZh": "筹备与报价",
+  "words": [
+    { "en": "venue", "enPron": "เวน-นิว", "th": "สถานที่จัดงาน", "zh": "会场", "pinyin": "huìchǎng", "icon": "🏢",
+      "exampleEn": "The venue holds five hundred people.", "exampleZh": "会场可容纳五百人。", "exampleTh": "สถานที่จัดงานรองรับได้ห้าร้อยคนค่ะ/ครับ" },
+    { "en": "schedule", "enPron": "สเกด-จูล", "th": "ตารางเวลา", "zh": "日程", "pinyin": "rìchéng", "icon": "🗓️",
+      "exampleEn": "Here is the schedule for the three days.", "exampleZh": "这是三天的日程。", "exampleTh": "นี่คือตารางเวลาสามวันค่ะ/ครับ" },
+    { "en": "deadline", "enPron": "เด็ด-ไลน์", "th": "กำหนดเวลาสุดท้าย", "zh": "截止日期", "pinyin": "jiézhǐ rìqī", "icon": "⏰",
+      "exampleEn": "The deadline is next Friday.", "exampleZh": "截止日期是下周五。", "exampleTh": "กำหนดสุดท้ายคือวันศุกร์หน้าค่ะ/ครับ" },
+    { "en": "quotation", "enPron": "โคว-เท-เชิน", "th": "ใบเสนอราคา", "zh": "报价", "pinyin": "bàojià", "icon": "💲",
+      "exampleEn": "I will send you a quotation today.", "exampleZh": "我今天会把报价发给您。", "exampleTh": "ดิฉัน/ผมจะส่งใบเสนอราคาให้คุณวันนี้ค่ะ/ครับ" },
+    { "en": "contract", "enPron": "คอน-แทรคท์", "th": "สัญญา", "zh": "合同", "pinyin": "hétong", "icon": "📃",
+      "exampleEn": "Please sign the contract.", "exampleZh": "请签署合同。", "exampleTh": "กรุณาลงนามในสัญญาค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "by + time (ภายในเวลา)",
+      "explanationTh": "by + เวลา แปลว่า 'ภายใน / ก่อนถึง...' ใช้บอกเส้นตาย เช่น by Friday, by noon ต่างจาก until ที่แปลว่า 'จนถึง'",
+      "pattern": "verb + (object) + by + time / day",
+      "examples": [
+        { "text": "Please confirm by Friday.", "th": "กรุณายืนยันภายในวันศุกร์ค่ะ/ครับ" },
+        { "text": "We will send the quotation by tomorrow.", "th": "เราจะส่งใบเสนอราคาภายในพรุ่งนี้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "请在……之前…… (ภายในเวลา)",
+      "explanationTh": "在 + เวลา + 之前 แปลว่า 'ก่อนถึง...' ใช้บอกเส้นตาย ฟังสุภาพและชัดเจน",
+      "pattern": "请在 + 时间 + 之前 + 动词",
+      "examples": [
+        { "text": "请在周五之前确认。", "th": "กรุณายืนยันก่อนวันศุกร์ค่ะ/ครับ" },
+        { "text": "我们会在明天之前发送报价。", "th": "เราจะส่งใบเสนอราคาก่อนพรุ่งนี้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "ผู้ประสานงานฝ่ายขาย (MICE Sales Coordinator)",
+    "context": "บริษัทลูกค้าวางแผนจัดประชุม 400 คน คุณต้องแนะนำสถานที่ ตารางเวลา ส่งใบเสนอราคา บอกกำหนดสุดท้าย และปิดการขายด้วยสัญญา",
+    "steps": [
+      {
+        "prompt": { "en": "We plan a conference for four hundred people.", "zh": "我们计划举办一场四百人的会议。" },
+        "suggestedAnswers": {
+          "en": ["Our venue holds five hundred people. It is a good size for you.", "Our venue holds five hundred people, so it is a good size for your event."],
+          "zh": ["我们的会场可容纳五百人,很适合您的规模。", "我们的会场可容纳五百人,规模很适合您。"]
+        },
+        "keywords": { "en": ["venue", "five hundred", "size"], "zh": ["会场", "五百人", "规模"] },
+        "tipTh": "เสนอสถานที่ที่รองรับจำนวนคนได้พร้อมความจุ"
+      },
+      {
+        "prompt": { "en": "What is the schedule for booking?", "zh": "预订的日程是怎样的?" },
+        "suggestedAnswers": {
+          "en": ["Here is the schedule for the three days. Please confirm by Friday.", "This is the schedule for the three days. Please confirm by Friday."],
+          "zh": ["这是三天的日程,请在周五之前确认。", "这是三天的日程,请您在周五之前确认。"]
+        },
+        "keywords": { "en": ["schedule", "three days", "confirm"], "zh": ["日程", "三天", "确认"] },
+        "tipTh": "ให้ตารางเวลาและกำหนดเส้นตายในการยืนยัน"
+      },
+      {
+        "prompt": { "en": "How much will it cost?", "zh": "大概需要多少费用?" },
+        "suggestedAnswers": {
+          "en": ["I will send you a quotation today by email.", "I will email you a quotation today."],
+          "zh": ["我今天会通过邮件把报价发给您。", "我今天会把报价发到您的邮箱。"]
+        },
+        "keywords": { "en": ["quotation", "today", "email"], "zh": ["报价", "今天", "邮件"] },
+        "tipTh": "ไม่เดาราคา ให้สัญญาว่าจะส่งใบเสนอราคาที่แน่นอนและกำหนดเวลา"
+      },
+      {
+        "prompt": { "en": "What is the deadline for the decision?", "zh": "决定的截止日期是什么时候?" },
+        "suggestedAnswers": {
+          "en": ["The deadline is next Friday. After that, the price may change.", "The deadline is next Friday, and the price may change after that."],
+          "zh": ["截止日期是下周五,之后价格可能会变化。", "截止日期为下周五,之后价格可能会调整。"]
+        },
+        "keywords": { "en": ["deadline", "friday", "price"], "zh": ["截止日期", "周五", "价格"] },
+        "tipTh": "บอกเส้นตายและผลที่เกิดขึ้นหากเลยกำหนด"
+      },
+      {
+        "prompt": { "en": "We agree with the terms.", "zh": "我们同意这些条款。" },
+        "suggestedAnswers": {
+          "en": ["Wonderful. Please sign the contract, and we will confirm the venue.", "Wonderful. Please sign the contract so we can confirm the venue."],
+          "zh": ["太好了,请签署合同,我们就会确认会场。", "太好了,请签署合同,这样我们就能确认会场。"]
+        },
+        "keywords": { "en": ["contract", "sign", "venue"], "zh": ["合同", "签署", "会场"] },
+        "tipTh": "ปิดการขายด้วยขั้นตอนต่อไปที่ชัดเจน คือลงนามสัญญา"
+      }
+    ]
+  }
+}

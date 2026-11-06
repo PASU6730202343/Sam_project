@@ -1,0 +1,91 @@
+{
+  "id": "retail-03",
+  "careerId": "retail",
+  "order": 3,
+  "titleTh": "ราคาและส่วนลด",
+  "titleEn": "Prices and Discounts",
+  "titleZh": "价格与折扣",
+  "words": [
+    { "en": "price", "enPron": "ไพรซ์", "th": "ราคา", "zh": "价格", "pinyin": "jiàgé", "icon": "🏷️",
+      "exampleEn": "The price is eight hundred baht.", "exampleZh": "这件商品的价格是八百泰铢。", "exampleTh": "ราคาแปดร้อยบาทค่ะ/ครับ" },
+    { "en": "sale", "enPron": "เซล", "th": "ลดราคา", "zh": "打折", "pinyin": "dǎzhé", "icon": "🔖",
+      "exampleEn": "This item is on sale.", "exampleZh": "这件商品正在打折。", "exampleTh": "สินค้าชิ้นนี้กำลังลดราคาค่ะ/ครับ" },
+    { "en": "tax", "enPron": "แท็กซ์", "th": "ภาษี", "zh": "税", "pinyin": "shuì", "icon": "🧾",
+      "exampleEn": "The price includes tax.", "exampleZh": "这个价格已经含税。", "exampleTh": "ราคานี้รวมภาษีแล้วค่ะ/ครับ" },
+    { "en": "free", "enPron": "ฟรี", "th": "ฟรี", "zh": "免费", "pinyin": "miǎnfèi", "icon": "🆓",
+      "exampleEn": "Delivery is free over two thousand baht.", "exampleZh": "满两千泰铢可以免费配送。", "exampleTh": "ซื้อครบสองพันบาทส่งฟรีค่ะ/ครับ" },
+    { "en": "special offer", "enPron": "สเปช-เชิล ออฟ-เฟอร์", "th": "ข้อเสนอพิเศษ", "zh": "特价", "pinyin": "tèjià", "icon": "⭐",
+      "exampleEn": "Today it is a special offer.", "exampleZh": "今天这款商品是特价。", "exampleTh": "วันนี้เป็นข้อเสนอพิเศษค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "If you buy ..., you get ... (เงื่อนไขโปรโมชัน)",
+      "explanationTh": "If + you + buy + ..., you get ... ใช้อธิบายเงื่อนไขโปรโมชัน ประโยคแรกใช้ present simple และประโยคหลังก็ใช้ present simple เช่นกัน",
+      "pattern": "If you buy + quantity, you get + benefit",
+      "examples": [
+        { "text": "If you buy two, you get one free.", "th": "ซื้อสองชิ้น แถมหนึ่งชิ้นฟรีค่ะ/ครับ" },
+        { "text": "If you spend two thousand baht, delivery is free.", "th": "ถ้าซื้อครบสองพันบาท ส่งฟรีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "买……送…… / 满……可以…… (เงื่อนไขโปรโมชัน)",
+      "explanationTh": "买二送一 (ซื้อสองแถมหนึ่ง) และ 满 + จำนวนเงิน + 可以... (ซื้อครบ...จะได้...) เป็นโครงสร้างโปรโมชันที่ใช้บ่อยมาก",
+      "pattern": "买 + 数量 + 送 + 数量 / 满 + 金额 + 可以 + 优惠",
+      "examples": [
+        { "text": "买两件送一件。", "th": "ซื้อสองชิ้นแถมหนึ่งชิ้นค่ะ/ครับ" },
+        { "text": "满两千泰铢可以免费配送。", "th": "ซื้อครบสองพันบาทส่งฟรีค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานขาย (Shop Assistant)",
+    "context": "ลูกค้าสนใจกระเป๋าและถามเรื่องราคา ส่วนลด ภาษี โปรโมชัน และค่าส่ง คุณต้องตอบข้อมูลให้ตรงและเข้าใจง่าย",
+    "steps": [
+      {
+        "prompt": { "en": "How much is this bag?", "zh": "这个包多少钱?" },
+        "suggestedAnswers": {
+          "en": ["The price is eight hundred baht.", "The price of this bag is eight hundred baht."],
+          "zh": ["价格是八百泰铢。", "这个包的价格是八百泰铢。"]
+        },
+        "keywords": { "en": ["price", "eight hundred", "baht"], "zh": ["价格", "八百", "泰铢"] },
+        "tipTh": "บอกราคาพร้อมหน่วยเงินให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "Is there any discount?", "zh": "有折扣吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, this item is on sale. It is twenty percent off today.", "Yes, it is on sale. Today it is twenty percent off."],
+          "zh": ["有的,这件商品正在打折,今天优惠百分之二十。", "有,今天正在打折,优惠百分之二十。"]
+        },
+        "keywords": { "en": ["sale", "twenty percent", "today"], "zh": ["打折", "百分之二十", "今天"] },
+        "tipTh": "บอกเปอร์เซ็นต์ส่วนลดและช่วงเวลาที่ใช้ได้"
+      },
+      {
+        "prompt": { "en": "Does the price include tax?", "zh": "价格含税吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the price includes tax. There is no extra charge.", "Yes, the price includes tax, and there is no extra charge."],
+          "zh": ["是的,价格已含税,没有额外费用。", "是的,这个价格含税,没有额外费用。"]
+        },
+        "keywords": { "en": ["includes tax", "extra", "price"], "zh": ["含税", "额外", "价格"] },
+        "tipTh": "ตอบเรื่องภาษีให้ชัดเพื่อลดความกังวลเรื่องค่าใช้จ่ายซ่อนเร้น"
+      },
+      {
+        "prompt": { "en": "I want two. Any special offer?", "zh": "我要两个。有特价吗?" },
+        "suggestedAnswers": {
+          "en": ["Today it is a special offer: if you buy two, you get one free.", "Today we have a special offer. If you buy two, you get one free."],
+          "zh": ["今天是特价,买两件送一件。", "今天有特价活动,买两件送一件。"]
+        },
+        "keywords": { "en": ["special offer", "buy two", "free"], "zh": ["特价", "买两件", "送一件"] },
+        "tipTh": "อธิบายโปรโมชันด้วยโครงสร้างเงื่อนไขที่เข้าใจง่าย"
+      },
+      {
+        "prompt": { "en": "Is delivery free?", "zh": "配送免费吗?" },
+        "suggestedAnswers": {
+          "en": ["Delivery is free over two thousand baht.", "Delivery is free if you spend over two thousand baht."],
+          "zh": ["满两千泰铢可以免费配送。", "购物满两千泰铢,配送免费。"]
+        },
+        "keywords": { "en": ["delivery", "free", "two thousand"], "zh": ["免费", "配送", "两千"] },
+        "tipTh": "บอกเงื่อนไขขั้นต่ำสำหรับการส่งฟรี"
+      }
+    ]
+  }
+}

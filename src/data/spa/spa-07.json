@@ -1,0 +1,91 @@
+{
+  "id": "spa-07",
+  "careerId": "spa",
+  "order": 7,
+  "titleTh": "สมาชิก โปรโมชัน และการชำระเงิน",
+  "titleEn": "Membership and Payment",
+  "titleZh": "会员与付款",
+  "words": [
+    { "en": "membership", "enPron": "เมม-เบอร์-ชิป", "th": "สมาชิก", "zh": "会员", "pinyin": "huìyuán", "icon": "💳",
+      "exampleEn": "Would you like a membership?", "exampleZh": "您想办会员吗?", "exampleTh": "คุณต้องการสมัครสมาชิกไหมคะ/ครับ" },
+    { "en": "promotion", "enPron": "พรอ-โม-เชิน", "th": "โปรโมชัน", "zh": "优惠", "pinyin": "yōuhuì", "icon": "🏷️",
+      "exampleEn": "We have a promotion this month.", "exampleZh": "本月我们有优惠活动。", "exampleTh": "เดือนนี้เรามีโปรโมชันค่ะ/ครับ" },
+    { "en": "gift card", "enPron": "กิฟท์ การ์ด", "th": "บัตรของขวัญ", "zh": "礼品卡", "pinyin": "lǐpǐnkǎ", "icon": "🎁",
+      "exampleEn": "Do you have a gift card?", "exampleZh": "请问您有礼品卡吗?", "exampleTh": "คุณมีบัตรของขวัญไหมคะ/ครับ" },
+    { "en": "deposit", "enPron": "ดิ-พอ-ซิท", "th": "เงินมัดจำ", "zh": "订金", "pinyin": "dìngjīn", "icon": "💰",
+      "exampleEn": "A deposit of five hundred baht is needed.", "exampleZh": "需要支付五百泰铢订金。", "exampleTh": "ต้องชำระเงินมัดจำห้าร้อยบาทค่ะ/ครับ" },
+    { "en": "reschedule", "enPron": "รี-สเกด-จูล", "th": "เลื่อนนัด", "zh": "改期", "pinyin": "gǎiqī", "icon": "🔄",
+      "exampleEn": "You can reschedule up to one day before.", "exampleZh": "您最晚可以提前一天改期。", "exampleTh": "คุณเลื่อนนัดได้ล่วงหน้าอย่างน้อยหนึ่งวันค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "up to / at least + time (ขอบเขตเวลา)",
+      "explanationTh": "up to ใช้บอกขีดจำกัดสูงสุด และ at least ใช้บอกขั้นต่ำ ใช้กับเงื่อนไขการยกเลิกหรือเลื่อนนัด",
+      "pattern": "You can + verb + up to / at least + time + before",
+      "examples": [
+        { "text": "You can reschedule up to one day before.", "th": "คุณเลื่อนนัดได้ล่วงหน้าถึงหนึ่งวันค่ะ/ครับ" },
+        { "text": "Please arrive at least ten minutes early.", "th": "กรุณามาถึงก่อนอย่างน้อยสิบนาทีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "最晚 / 至少 + 时间 (ขอบเขตเวลา)",
+      "explanationTh": "最晚 แปลว่า 'ช้าที่สุด' และ 至少 แปลว่า 'อย่างน้อย' ใช้บอกเงื่อนไขเวลาของการนัดหมาย",
+      "pattern": "最晚可以提前 + 时间 + 动词 / 至少提前 + 时间",
+      "examples": [
+        { "text": "您最晚可以提前一天改期。", "th": "คุณเลื่อนนัดได้ช้าที่สุดล่วงหน้าหนึ่งวันค่ะ/ครับ" },
+        { "text": "请至少提前十分钟到达。", "th": "กรุณามาถึงก่อนอย่างน้อยสิบนาทีค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับสปา (Spa Receptionist)",
+    "context": "แขกสอบถามราคา โปรโมชัน การใช้บัตรของขวัญ การวางมัดจำ และการเลื่อนนัด คุณต้องอธิบายเงื่อนไขอย่างชัดเจนและเป็นมิตร",
+    "steps": [
+      {
+        "prompt": { "en": "How much is a massage?", "zh": "按摩多少钱?" },
+        "suggestedAnswers": {
+          "en": ["A massage is one thousand baht. We have a promotion this month.", "A massage is one thousand baht, and we have a promotion this month."],
+          "zh": ["按摩一千泰铢,本月我们有优惠活动。", "按摩是一千泰铢,本月有优惠活动。"]
+        },
+        "keywords": { "en": ["thousand", "baht", "promotion"], "zh": ["一千", "泰铢", "优惠"] },
+        "tipTh": "บอกราคาแล้วต่อด้วยโปรโมชันเพื่อกระตุ้นการตัดสินใจ"
+      },
+      {
+        "prompt": { "en": "What is the promotion?", "zh": "优惠是什么?" },
+        "suggestedAnswers": {
+          "en": ["If you buy a membership, you get twenty percent off.", "With a membership, you get twenty percent off."],
+          "zh": ["办理会员可享受百分之二十的优惠。", "办会员可以享受百分之二十的优惠。"]
+        },
+        "keywords": { "en": ["membership", "twenty percent", "off"], "zh": ["会员", "百分之二十", "优惠"] },
+        "tipTh": "อธิบายเงื่อนไขส่วนลดให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "I have a gift card.", "zh": "我有一张礼品卡。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. You can use your gift card for any treatment.", "Thank you. Your gift card can be used for any treatment."],
+          "zh": ["谢谢,礼品卡可以用于任何护理项目。", "谢谢,您的礼品卡可用于所有护理项目。"]
+        },
+        "keywords": { "en": ["gift card", "treatment", "use"], "zh": ["礼品卡", "护理", "用于"] },
+        "tipTh": "ยืนยันวิธีใช้บัตรของขวัญให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "I'd like to book for Saturday.", "zh": "我想预约星期六。" },
+        "suggestedAnswers": {
+          "en": ["A deposit of five hundred baht is needed to confirm the booking.", "We need a deposit of five hundred baht to confirm the booking."],
+          "zh": ["需要支付五百泰铢订金来确认预约。", "需要先付五百泰铢订金才能确认预约。"]
+        },
+        "keywords": { "en": ["deposit", "five hundred", "confirm"], "zh": ["订金", "五百", "确认"] },
+        "tipTh": "แจ้งเงินมัดจำพร้อมเหตุผลคือเพื่อยืนยันการจอง"
+      },
+      {
+        "prompt": { "en": "What if I can't come?", "zh": "如果我来不了怎么办?" },
+        "suggestedAnswers": {
+          "en": ["You can reschedule up to one day before. Just call us.", "You can reschedule up to one day before. Please call us."],
+          "zh": ["您最晚可以提前一天改期,请致电我们。", "您最晚提前一天可以改期,请致电我们。"]
+        },
+        "keywords": { "en": ["reschedule", "one day", "call"], "zh": ["改期", "一天", "致电"] },
+        "tipTh": "บอกเงื่อนไขการเลื่อนนัดอย่างชัดเจนและช่องทางติดต่อ"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "spa-08",
+  "careerId": "spa",
+  "order": 8,
+  "titleTh": "หลังทรีตเมนต์และส่งแขก",
+  "titleEn": "After the Treatment",
+  "titleZh": "护理结束后",
+  "words": [
+    { "en": "herbal tea", "enPron": "เฮอร์-เบิล ที", "th": "ชาสมุนไพร", "zh": "花草茶", "pinyin": "huācǎochá", "icon": "🍵",
+      "exampleEn": "Please enjoy a cup of herbal tea.", "exampleZh": "请享用一杯花草茶。", "exampleTh": "เชิญดื่มชาสมุนไพรสักแก้วนะคะ/ครับ" },
+    { "en": "rest", "enPron": "เรสท์", "th": "พักผ่อน", "zh": "休息", "pinyin": "xiūxi", "icon": "🛋️",
+      "exampleEn": "Please rest for a few minutes.", "exampleZh": "请休息几分钟。", "exampleTh": "กรุณาพักสักครู่นะคะ/ครับ" },
+    { "en": "therapist", "enPron": "เธอ-รา-พิสท์", "th": "นักบำบัด", "zh": "理疗师", "pinyin": "lǐliáoshī", "icon": "🧑‍⚕️",
+      "exampleEn": "Your therapist was Ann.", "exampleZh": "您的理疗师是安。", "exampleTh": "นักบำบัดของคุณคือคุณแอนค่ะ/ครับ" },
+    { "en": "review", "enPron": "รี-วิว", "th": "รีวิว / การประเมิน", "zh": "评价", "pinyin": "píngjià", "icon": "⭐",
+      "exampleEn": "We would love your review.", "exampleZh": "我们期待您的评价。", "exampleTh": "เรายินดีรับรีวิวจากคุณค่ะ/ครับ" },
+    { "en": "return visit", "enPron": "รี-เทิร์น วิส-ซิท", "th": "การกลับมาเยือนอีกครั้ง", "zh": "再次光临", "pinyin": "zàicì guānglín", "icon": "🔁",
+      "exampleEn": "We look forward to your return visit.", "exampleZh": "我们期待您再次光临。", "exampleTh": "เรารอต้อนรับคุณกลับมาอีกครั้งค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "We look forward to + noun / -ing (รอต้อนรับ)",
+      "explanationTh": "look forward to ตามด้วยคำนามหรือ -ing (to เป็นบุพบท) ใช้ปิดบทสนทนาอย่างอบอุ่นและเชิญแขกให้กลับมา",
+      "pattern": "We look forward to + noun / verb-ing",
+      "examples": [
+        { "text": "We look forward to seeing you again.", "th": "เรารอพบคุณอีกครั้งค่ะ/ครับ" },
+        { "text": "We look forward to your next visit.", "th": "เรารอต้อนรับการมาเยือนครั้งหน้าของคุณค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "期待 + 名词 / 动词 (รอต้อนรับ)",
+      "explanationTh": "期待 แปลว่า 'รอคอย / หวังว่าจะ...' ใช้ปิดการสนทนาอย่างอบอุ่น และเชิญลูกค้ากลับมาใหม่",
+      "pattern": "期待 + 您 + 动词 / 期待 + 名词",
+      "examples": [
+        { "text": "期待您再次光临。", "th": "รอต้อนรับคุณกลับมาอีกครั้งค่ะ/ครับ" },
+        { "text": "期待下次再为您服务。", "th": "รอให้บริการคุณอีกครั้งในคราวหน้าค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับสปา (Spa Receptionist)",
+    "context": "แขกทำทรีตเมนต์เสร็จแล้ว คุณต้องดูแลให้พัก เสิร์ฟชาสมุนไพร ตอบคำถามเรื่องนักบำบัด ขอรีวิว และเชิญกลับมาใหม่",
+    "steps": [
+      {
+        "prompt": { "en": "That was wonderful.", "zh": "太棒了。" },
+        "suggestedAnswers": {
+          "en": ["I'm glad you enjoyed it. Please rest for a few minutes.", "I'm so glad you enjoyed it. Please rest for a few minutes."],
+          "zh": ["很高兴您喜欢,请休息几分钟。", "很高兴您满意,请先休息几分钟。"]
+        },
+        "keywords": { "en": ["glad", "rest", "few minutes"], "zh": ["高兴", "休息", "几分钟"] },
+        "tipTh": "ตอบรับคำชมสั้นๆ และเชิญให้พักก่อนลุกขึ้น"
+      },
+      {
+        "prompt": { "en": "I feel a little dizzy.", "zh": "我有点头晕。" },
+        "suggestedAnswers": {
+          "en": ["That is normal. Please sit down and enjoy a cup of herbal tea.", "That is normal. Please sit down and have a cup of herbal tea."],
+          "zh": ["这是正常的,请坐下,享用一杯花草茶。", "这很正常,请坐下喝一杯花草茶。"]
+        },
+        "keywords": { "en": ["normal", "sit down", "herbal tea"], "zh": ["正常", "坐下", "花草茶"] },
+        "tipTh": "ให้ความมั่นใจและให้แขกนั่งพักพร้อมเครื่องดื่ม"
+      },
+      {
+        "prompt": { "en": "Please thank my therapist.", "zh": "请替我谢谢我的理疗师。" },
+        "suggestedAnswers": {
+          "en": ["Of course. Your therapist was Ann. I will tell her.", "Of course. Ann was your therapist. I will tell her."],
+          "zh": ["好的,您的理疗师是安,我会转告她。", "没问题,您的理疗师是安,我会转告她。"]
+        },
+        "keywords": { "en": ["therapist", "ann", "tell"], "zh": ["理疗师", "安", "转告"] },
+        "tipTh": "ยืนยันชื่อและรับปากว่าจะส่งต่อคำขอบคุณ"
+      },
+      {
+        "prompt": { "en": "Do you want my feedback?", "zh": "你们需要我的反馈吗?" },
+        "suggestedAnswers": {
+          "en": ["We would love your review. It will take only one minute.", "We would love your review, and it takes only one minute."],
+          "zh": ["我们期待您的评价,只需要一分钟。", "我们期待您的评价,只要一分钟就好。"]
+        },
+        "keywords": { "en": ["review", "one minute", "love"], "zh": ["评价", "一分钟", "期待"] },
+        "tipTh": "เชิญให้รีวิวและบอกว่าใช้เวลาน้อย"
+      },
+      {
+        "prompt": { "en": "I'll come again.", "zh": "我还会再来的。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. We look forward to seeing you again, and have a lovely day.", "Thank you. We look forward to seeing you again. Have a lovely day."],
+          "zh": ["谢谢您,期待您再次光临,祝您愉快。", "谢谢,期待您再次光临,祝您愉快。"]
+        },
+        "keywords": { "en": ["look forward", "again", "lovely day"], "zh": ["期待", "再次光临", "愉快"] },
+        "tipTh": "ปิดท้ายด้วยคำขอบคุณ คำเชิญ และอวยพรให้วันดี"
+      }
+    ]
+  }
+}

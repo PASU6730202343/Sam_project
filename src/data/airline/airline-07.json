@@ -1,0 +1,91 @@
+{
+  "id": "airline-07",
+  "careerId": "airline",
+  "order": 7,
+  "titleTh": "เที่ยวบินยกเลิกและเปลี่ยนเที่ยวบิน",
+  "titleEn": "Cancellations and Rebooking",
+  "titleZh": "取消与改签",
+  "words": [
+    { "en": "cancellation", "enPron": "แคน-เซิล-เล-เชิน", "th": "การยกเลิก", "zh": "取消", "pinyin": "qǔxiāo", "icon": "❌",
+      "exampleEn": "We are sorry about the cancellation.", "exampleZh": "对于航班取消,我们深表歉意。", "exampleTh": "เราขออภัยในการยกเลิกเที่ยวบินค่ะ/ครับ" },
+    { "en": "connecting flight", "enPron": "คอน-เน็ก-ทิง ไฟลต์", "th": "เที่ยวบินต่อเครื่อง", "zh": "转机", "pinyin": "zhuǎnjī", "icon": "🔁",
+      "exampleEn": "You may miss your connecting flight.", "exampleZh": "您可能会错过转机。", "exampleTh": "คุณอาจพลาดเที่ยวบินต่อเครื่องค่ะ/ครับ" },
+    { "en": "compensation", "enPron": "คอม-เพน-เซ-เชิน", "th": "ค่าชดเชย", "zh": "赔偿", "pinyin": "péicháng", "icon": "💰",
+      "exampleEn": "You are entitled to compensation.", "exampleZh": "您可以获得相应的赔偿。", "exampleTh": "คุณมีสิทธิ์ได้รับค่าชดเชยค่ะ/ครับ" },
+    { "en": "rebook", "enPron": "รี-บุ๊ก", "th": "จองใหม่ / เปลี่ยนเที่ยวบิน", "zh": "改签", "pinyin": "gǎiqiān", "icon": "📆",
+      "exampleEn": "I can rebook you on the next flight.", "exampleZh": "我可以帮您改签到下一班航班。", "exampleTh": "ดิฉัน/ผมจัดให้คุณเปลี่ยนไปเที่ยวบินถัดไปได้ค่ะ/ครับ" },
+    { "en": "voucher", "enPron": "เวา-เชอร์", "th": "คูปอง", "zh": "代金券", "pinyin": "dàijīnquàn", "icon": "🎁",
+      "exampleEn": "We will give you a meal voucher.", "exampleZh": "我们会给您一张餐饮代金券。", "exampleTh": "เราจะมอบคูปองอาหารให้คุณค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "I can + verb (เสนอทางเลือก)",
+      "explanationTh": "I can + กริยา ใช้เสนอสิ่งที่เจ้าหน้าที่ทำให้ได้ เมื่อมีปัญหา การเน้นสิ่งที่ 'ทำได้' ช่วยลดความหงุดหงิดของผู้โดยสาร",
+      "pattern": "I can + verb + (object) + (option)",
+      "examples": [
+        { "text": "I can rebook you on the next flight.", "th": "ดิฉัน/ผมจัดให้คุณไปเที่ยวบินถัดไปได้ค่ะ/ครับ" },
+        { "text": "I can give you a meal voucher.", "th": "ดิฉัน/ผมมอบคูปองอาหารให้คุณได้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "我可以 + 动词 (เสนอทางเลือก)",
+      "explanationTh": "我可以 + กริยา แปลว่า 'ฉันสามารถ...ให้คุณได้' ใช้เสนอการช่วยเหลือเมื่อมีปัญหา ควรบอกสิ่งที่ทำได้ก่อนเสมอ",
+      "pattern": "我可以 + 动词 + (名词)",
+      "examples": [
+        { "text": "我可以帮您改签。", "th": "ดิฉัน/ผมช่วยเปลี่ยนเที่ยวบินให้คุณได้ค่ะ/ครับ" },
+        { "text": "我可以给您一张代金券。", "th": "ดิฉัน/ผมมอบคูปองให้คุณได้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้าสายการบิน (Customer Service Agent)",
+    "context": "เที่ยวบินถูกยกเลิก ผู้โดยสารตกใจและกังวลเรื่องเที่ยวบินต่อเครื่อง คุณต้องขอโทษ เสนอเปลี่ยนเที่ยวบิน แจ้งสิทธิ์ชดเชย และดูแลเรื่องอาหาร",
+    "steps": [
+      {
+        "prompt": { "en": "My flight has been cancelled! What happened?", "zh": "我的航班被取消了!发生了什么?" },
+        "suggestedAnswers": {
+          "en": ["I'm very sorry about the cancellation. The flight was cancelled because of a technical problem.", "I apologize for the cancellation. There was a technical problem with the aircraft."],
+          "zh": ["对于航班取消,我们深表歉意,原因是技术故障。", "非常抱歉航班被取消,飞机出现了技术故障。"]
+        },
+        "keywords": { "en": ["sorry", "cancellation", "technical problem"], "zh": ["取消", "歉意", "技术故障"] },
+        "tipTh": "ขอโทษอย่างจริงใจ แล้วบอกสาเหตุอย่างตรงไปตรงมา"
+      },
+      {
+        "prompt": { "en": "I have a connecting flight in Seoul. Will I miss it?", "zh": "我在首尔还要转机,会错过吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you may miss your connecting flight. Let me check your options.", "You may miss your connecting flight, but I will check other options for you."],
+          "zh": ["是的,您可能会错过转机,我来帮您查看方案。", "您可能会错过转机,不过我帮您查一下其他方案。"]
+        },
+        "keywords": { "en": ["connecting flight", "miss", "options"], "zh": ["转机", "错过", "方案"] },
+        "tipTh": "พูดตรงๆ แต่ตามด้วยการลงมือช่วยหาทางออก"
+      },
+      {
+        "prompt": { "en": "Can you put me on another flight?", "zh": "你能帮我换到另一班航班吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. I can rebook you on the next flight at six p.m.", "Certainly. The next flight leaves at six p.m. I can rebook you now."],
+          "zh": ["当然可以,我可以帮您改签到下午六点的下一班航班。", "没问题,下一班下午六点起飞,我现在帮您改签。"]
+        },
+        "keywords": { "en": ["rebook", "next flight", "six"], "zh": ["改签", "下一班", "六点"] },
+        "tipTh": "ยืนยันว่าทำได้ พร้อมบอกเวลาของเที่ยวบินใหม่"
+      },
+      {
+        "prompt": { "en": "Do I get any compensation?", "zh": "我可以得到赔偿吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, you are entitled to compensation. I will give you the form to fill in.", "Yes, you can get compensation. Please fill in this form."],
+          "zh": ["可以,您可以获得相应的赔偿,我给您一份表格填写。", "可以的,请您填写这份表格申请赔偿。"]
+        },
+        "keywords": { "en": ["compensation", "entitled", "form"], "zh": ["赔偿", "表格", "获得"] },
+        "tipTh": "อธิบายสิทธิ์ของผู้โดยสารและขั้นตอนต่อไปให้ชัด"
+      },
+      {
+        "prompt": { "en": "I'm hungry. I've been waiting for hours.", "zh": "我饿了,已经等了好几个小时。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry for the wait. Here is a meal voucher for the restaurant.", "Sorry to keep you waiting. Please use this meal voucher."],
+          "zh": ["抱歉让您久等了,这是一张餐厅用的代金券。", "让您久等了,请使用这张餐饮代金券。"]
+        },
+        "keywords": { "en": ["voucher", "meal", "wait"], "zh": ["代金券", "餐厅", "久等"] },
+        "tipTh": "แสดงความเห็นอกเห็นใจและมอบสิ่งที่ช่วยได้ทันที"
+      }
+    ]
+  }
+}

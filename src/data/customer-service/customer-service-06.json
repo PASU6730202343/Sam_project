@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-06",
+  "careerId": "customer-service",
+  "order": 6,
+  "titleTh": "การเรียกเก็บเงินและชำระเงิน",
+  "titleEn": "Billing and Payment",
+  "titleZh": "账单与付款",
+  "words": [
+    { "en": "invoice", "enPron": "อิน-ฟอยซ์", "th": "ใบแจ้งหนี้", "zh": "发票", "pinyin": "fāpiào", "icon": "🧾",
+      "exampleEn": "I will send you the invoice by email.", "exampleZh": "我会通过邮件把发票发给您。", "exampleTh": "ดิฉัน/ผมจะส่งใบแจ้งหนี้ให้ทางอีเมลค่ะ/ครับ" },
+    { "en": "charge", "enPron": "ชาร์จ", "th": "ค่าธรรมเนียม / การเรียกเก็บ", "zh": "收费", "pinyin": "shōufèi", "icon": "💵",
+      "exampleEn": "There is an extra charge for delivery.", "exampleZh": "配送需要额外收费。", "exampleTh": "การจัดส่งมีค่าใช้จ่ายเพิ่มเติมค่ะ/ครับ" },
+    { "en": "payment", "enPron": "เพย์-เมนท์", "th": "การชำระเงิน", "zh": "付款", "pinyin": "fùkuǎn", "icon": "💳",
+      "exampleEn": "Your payment was received on the third.", "exampleZh": "我们已收到您三号的付款。", "exampleTh": "เราได้รับการชำระเงินของคุณเมื่อวันที่สามแล้วค่ะ/ครับ" },
+    { "en": "due date", "enPron": "ดู เดท", "th": "วันครบกำหนด", "zh": "到期日", "pinyin": "dàoqīrì", "icon": "📅",
+      "exampleEn": "The due date is the fifth of every month.", "exampleZh": "到期日是每月五号。", "exampleTh": "วันครบกำหนดคือวันที่ห้าของทุกเดือนค่ะ/ครับ" },
+    { "en": "subscription", "enPron": "ซับ-สคริป-เชิน", "th": "การสมัครสมาชิกรายเดือน", "zh": "订阅", "pinyin": "dìngyuè", "icon": "🔔",
+      "exampleEn": "Your subscription ends next month.", "exampleZh": "您的订阅下个月到期。", "exampleTh": "การสมัครสมาชิกของคุณจะสิ้นสุดเดือนหน้าค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "was / were + past participle (บอกเหตุการณ์ที่เกิดแล้ว)",
+      "explanationTh": "past passive ใช้บอกเหตุการณ์ในอดีตโดยเน้นสิ่งที่ถูกกระทำ เช่น ได้รับเงินแล้ว ถูกเรียกเก็บ ไม่ต้องระบุผู้กระทำ",
+      "pattern": "Noun + was / were + past participle",
+      "examples": [
+        { "text": "Your payment was received on the third.", "th": "เราได้รับการชำระเงินของคุณวันที่สามแล้วค่ะ/ครับ" },
+        { "text": "You were charged twice by mistake.", "th": "คุณถูกเรียกเก็บเงินสองครั้งโดยผิดพลาดค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "已经收到 / 被…… (บอกสถานะ)",
+      "explanationTh": "ใช้ 已经 + กริยา + 了 บอกสิ่งที่เสร็จแล้ว หรือ 被 + กริยา บอกว่าถูกกระทำ ใช้กับการเรียกเก็บเงินที่ผิดพลาด",
+      "pattern": "我们已经收到 + 名词 / 您被 + 动词",
+      "examples": [
+        { "text": "我们已经收到了您的付款。", "th": "เราได้รับการชำระเงินของคุณแล้วค่ะ/ครับ" },
+        { "text": "您被重复收费了。", "th": "คุณถูกเรียกเก็บเงินซ้ำค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า ฝ่ายบัญชี (Billing Support)",
+    "context": "ลูกค้าถูกเรียกเก็บเงินซ้ำและต้องการใบกำกับภาษี คุณต้องตรวจสอบรายการ ยืนยันการรับเงิน ส่งใบแจ้งหนี้ บอกวันครบกำหนด และแจ้งเรื่องการสมัครสมาชิก",
+    "steps": [
+      {
+        "prompt": { "en": "I was charged twice this month.", "zh": "这个月我被重复扣费了。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry. Let me check the charge on your account.", "I'm sorry about that. Let me check the charge on your account."],
+          "zh": ["很抱歉。我来查一下您账户上的收费。", "非常抱歉,我帮您查看账户上的收费。"]
+        },
+        "keywords": { "en": ["sorry", "charge", "account"], "zh": ["抱歉", "收费", "账户"] },
+        "tipTh": "ขอโทษและแจ้งว่ากำลังตรวจสอบบัญชีทันที"
+      },
+      {
+        "prompt": { "en": "Did you receive my payment?", "zh": "你们收到我的付款了吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, your payment was received on the third.", "Yes, we received your payment on the third."],
+          "zh": ["是的,我们已经收到了您三号的付款。", "收到了,您三号的付款已经到账。"]
+        },
+        "keywords": { "en": ["payment", "received", "third"], "zh": ["付款", "收到", "三号"] },
+        "tipTh": "ยืนยันการรับเงินพร้อมวันที่"
+      },
+      {
+        "prompt": { "en": "I need an invoice for my company.", "zh": "我需要一张公司用的发票。" },
+        "suggestedAnswers": {
+          "en": ["Of course. I will send you the invoice by email.", "Of course. The invoice will be sent to your email."],
+          "zh": ["没问题,我会通过邮件把发票发给您。", "没问题,发票会发到您的邮箱。"]
+        },
+        "keywords": { "en": ["invoice", "email", "of course"], "zh": ["发票", "邮件", "没问题"] },
+        "tipTh": "ยืนยันช่องทางส่งเอกสารให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "When is the due date?", "zh": "到期日是什么时候?" },
+        "suggestedAnswers": {
+          "en": ["The due date is the fifth of every month.", "The due date is on the fifth of each month."],
+          "zh": ["到期日是每月五号。", "每个月的到期日是五号。"]
+        },
+        "keywords": { "en": ["due date", "fifth", "month"], "zh": ["到期日", "每月", "五号"] },
+        "tipTh": "บอกวันที่ครบกำหนดเป็นรูปแบบรายเดือนที่ชัดเจน"
+      },
+      {
+        "prompt": { "en": "I want to cancel my subscription.", "zh": "我想取消我的订阅。" },
+        "suggestedAnswers": {
+          "en": ["I understand. Your subscription will end next month. Would you like to continue?", "I understand. Your subscription will end next month. Do you want to continue?"],
+          "zh": ["我理解,您的订阅下个月到期,您想继续吗?", "我理解,订阅下个月到期,请问您想继续吗?"]
+        },
+        "keywords": { "en": ["subscription", "next month", "continue"], "zh": ["订阅", "下个月", "继续"] },
+        "tipTh": "รับฟังคำขอและแจ้งเงื่อนไข พร้อมเสนอให้ต่ออายุอย่างสุภาพ ไม่กดดัน"
+      }
+    ]
+  }
+}

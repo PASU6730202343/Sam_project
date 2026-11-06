@@ -1,0 +1,91 @@
+{
+  "id": "airline-08",
+  "careerId": "airline",
+  "order": 8,
+  "titleTh": "เดินทางถึงและกระเป๋าสูญหาย",
+  "titleEn": "Arrival and Lost Baggage",
+  "titleZh": "抵达与行李丢失",
+  "words": [
+    { "en": "arrival", "enPron": "อะ-ไร-เวิล", "th": "การเดินทางถึง", "zh": "抵达", "pinyin": "dǐdá", "icon": "🛬",
+      "exampleEn": "The arrival time is six in the morning.", "exampleZh": "抵达时间是早上六点。", "exampleTh": "เวลาเดินทางถึงคือหกโมงเช้าค่ะ/ครับ" },
+    { "en": "baggage claim", "enPron": "แบ็ก-เกจ เคลม", "th": "จุดรับสัมภาระ", "zh": "行李提取处", "pinyin": "xíngli tíqǔchù", "icon": "🛄",
+      "exampleEn": "Your bags are at baggage claim number three.", "exampleZh": "您的行李在三号行李提取处。", "exampleTh": "สัมภาระของคุณอยู่ที่จุดรับสัมภาระหมายเลขสามค่ะ/ครับ" },
+    { "en": "lost", "enPron": "ลอสต์", "th": "สูญหาย", "zh": "丢失", "pinyin": "diūshī", "icon": "❓",
+      "exampleEn": "I am sorry that your bag is lost.", "exampleZh": "很抱歉,您的行李丢失了。", "exampleTh": "ขออภัยที่กระเป๋าของคุณสูญหายค่ะ/ครับ" },
+    { "en": "customs", "enPron": "คัส-ทัมส์", "th": "ศุลกากร", "zh": "海关", "pinyin": "hǎiguān", "icon": "🛃",
+      "exampleEn": "Please go through customs.", "exampleZh": "请您通过海关。", "exampleTh": "กรุณาผ่านด่านศุลกากรค่ะ/ครับ" },
+    { "en": "form", "enPron": "ฟอร์ม", "th": "แบบฟอร์ม", "zh": "表格", "pinyin": "biǎogé", "icon": "📋",
+      "exampleEn": "Please fill in this form.", "exampleZh": "请您填写这张表格。", "exampleTh": "กรุณากรอกแบบฟอร์มนี้ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "We are + verb-ing (กำลังดำเนินการ)",
+      "explanationTh": "ใช้ present continuous แจ้งว่าเจ้าหน้าที่กำลังดำเนินการอยู่ ทำให้ผู้โดยสารรู้ว่าเรื่องของตนกำลังถูกจัดการ",
+      "pattern": "We are + verb-ing + (object) + (now)",
+      "examples": [
+        { "text": "We are tracing your bag now.", "th": "ตอนนี้เรากำลังติดตามกระเป๋าของคุณอยู่ค่ะ/ครับ" },
+        { "text": "We are checking the system.", "th": "เรากำลังตรวจสอบระบบอยู่ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "正在 + 动词 (กำลังดำเนินการ)",
+      "explanationTh": "正在 + กริยา ใช้บอกว่าการกระทำนั้นกำลังเกิดขึ้น ตรงกับ -ing ในภาษาอังกฤษ",
+      "pattern": "我们正在 + 动词 + (名词)",
+      "examples": [
+        { "text": "我们正在查找您的行李。", "th": "เรากำลังค้นหากระเป๋าของคุณอยู่ค่ะ/ครับ" },
+        { "text": "我们正在检查系统。", "th": "เรากำลังตรวจสอบระบบอยู่ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการสัมภาระ (Baggage Service Agent)",
+    "context": "ผู้โดยสารมาถึงปลายทางแต่กระเป๋าไม่ออกมาที่สายพาน คุณต้องรับเรื่อง ให้กรอกแบบฟอร์ม อธิบายขั้นตอนการติดตาม และจัดส่งให้ถึงที่พัก",
+    "steps": [
+      {
+        "prompt": { "en": "My suitcase didn't come out on the belt.", "zh": "我的行李箱没有从传送带出来。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry to hear that. May I see your baggage tag?", "I am very sorry. May I see your baggage tag, please?"],
+          "zh": ["很抱歉。请问可以看一下您的行李牌吗?", "非常抱歉,请出示您的行李牌,好吗?"]
+        },
+        "keywords": { "en": ["sorry", "baggage tag", "may i"], "zh": ["抱歉", "行李牌", "请问"] },
+        "tipTh": "ขอโทษก่อน แล้วขอป้ายสัมภาระเพื่อเริ่มตรวจสอบ"
+      },
+      {
+        "prompt": { "en": "Here it is. What do I do?", "zh": "给您。我该怎么做?" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Please fill in this form. We are tracing your bag now.", "Thank you. Please complete this form while we trace your bag."],
+          "zh": ["谢谢。请填写这张表格,我们正在查找您的行李。", "谢谢您,请先填写表格,我们会查找您的行李。"]
+        },
+        "keywords": { "en": ["form", "tracing", "thank you"], "zh": ["表格", "正在", "谢谢"] },
+        "tipTh": "บอกขั้นตอนที่ผู้โดยสารต้องทำ และสิ่งที่ฝั่งสายการบินกำลังทำ"
+      },
+      {
+        "prompt": { "en": "Is my bag lost forever?", "zh": "我的行李会永远丢了吗?" },
+        "suggestedAnswers": {
+          "en": ["No, a lost bag is usually found within two days. We will call you.", "Most lost bags are found in two days. We will call you as soon as we find it."],
+          "zh": ["不会的,丢失的行李通常两天内能找到,我们会打电话通知您。", "大多数丢失的行李两天内能找到,找到后我们会立即打电话给您。"]
+        },
+        "keywords": { "en": ["lost", "two days", "call"], "zh": ["丢失", "两天", "电话"] },
+        "tipTh": "ให้ความมั่นใจด้วยข้อมูลจริง และบอกว่าจะติดต่อกลับอย่างไร"
+      },
+      {
+        "prompt": { "en": "Where should you deliver it?", "zh": "你们要把行李送到哪里?" },
+        "suggestedAnswers": {
+          "en": ["We can deliver it to your hotel. May I have the address, please?", "We will deliver it to your hotel. What is the address?"],
+          "zh": ["我们可以送到您的酒店,请问地址是什么?", "我们会送到您入住的酒店,请告诉我地址。"]
+        },
+        "keywords": { "en": ["deliver", "hotel", "address"], "zh": ["送到", "酒店", "地址"] },
+        "tipTh": "ถามที่อยู่จัดส่งให้ชัดเจน เพื่อป้องกันการส่งผิดที่"
+      },
+      {
+        "prompt": { "en": "What about customs? I have nothing with me.", "zh": "那海关怎么办?我身上什么都没带。" },
+        "suggestedAnswers": {
+          "en": ["You can go through customs now. We will handle your bag when it arrives.", "Please go through customs. We will handle everything when your bag arrives."],
+          "zh": ["您现在可以通过海关,行李到了我们会处理。", "请您通过海关,行李到了以后我们来处理。"]
+        },
+        "keywords": { "en": ["customs", "handle", "arrives"], "zh": ["海关", "处理", "到了"] },
+        "tipTh": "ปิดเรื่องด้วยการบอกขั้นตอนต่อไปให้ผู้โดยสารเดินทางต่อได้อย่างสบายใจ"
+      }
+    ]
+  }
+}

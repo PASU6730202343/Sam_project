@@ -1,0 +1,91 @@
+{
+  "id": "hotel-06",
+  "careerId": "hotel",
+  "order": 6,
+  "titleTh": "บริการคอนเซียร์จ",
+  "titleEn": "Concierge Services",
+  "titleZh": "礼宾服务",
+  "words": [
+    { "en": "luggage", "enPron": "ลัก-เกจ", "th": "สัมภาระ", "zh": "行李", "pinyin": "xíngli", "icon": "🧳",
+      "exampleEn": "May I take your luggage to the room?", "exampleZh": "请问我可以帮您把行李送到房间吗?", "exampleTh": "ขออนุญาตนำสัมภาระของคุณไปที่ห้องได้ไหมคะ/ครับ" },
+    { "en": "taxi", "enPron": "แท็ก-ซี่", "th": "แท็กซี่", "zh": "出租车", "pinyin": "chūzūchē", "icon": "🚕",
+      "exampleEn": "I will call a taxi for you.", "exampleZh": "我帮您叫一辆出租车。", "exampleTh": "ดิฉัน/ผมจะเรียกแท็กซี่ให้คุณค่ะ/ครับ" },
+    { "en": "map", "enPron": "แมพ", "th": "แผนที่", "zh": "地图", "pinyin": "dìtú", "icon": "🗺️",
+      "exampleEn": "Here is a map of the city.", "exampleZh": "这是城市地图。", "exampleTh": "นี่คือแผนที่ของเมืองค่ะ/ครับ" },
+    { "en": "wake-up call", "enPron": "เวค-อัพ คอล", "th": "บริการโทรปลุก", "zh": "叫醒服务", "pinyin": "jiàoxǐng fúwù", "icon": "⏰",
+      "exampleEn": "Would you like a wake-up call at six?", "exampleZh": "您需要六点的叫醒服务吗?", "exampleTh": "คุณต้องการบริการโทรปลุกตอนหกโมงไหมคะ/ครับ" },
+    { "en": "shuttle bus", "enPron": "ชัท-เทิล บัส", "th": "รถรับส่ง", "zh": "接驳车", "pinyin": "jiēbóchē", "icon": "🚌",
+      "exampleEn": "The shuttle bus leaves every thirty minutes.", "exampleZh": "接驳车每三十分钟一班。", "exampleTh": "รถรับส่งออกทุก 30 นาทีค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "I will + verb + for you (เสนอทำให้)",
+      "explanationTh": "ใช้ I will ... for you เพื่อรับปากว่าจะดำเนินการให้แขก ทำให้แขกรู้สึกว่าเรื่องนี้มีคนดูแล มักตามด้วย right away หรือ now",
+      "pattern": "I will + verb + (object) + for you",
+      "examples": [
+        { "text": "I will call a taxi for you.", "th": "ดิฉัน/ผมจะเรียกแท็กซี่ให้คุณค่ะ/ครับ" },
+        { "text": "I will arrange it for you right away.", "th": "ดิฉัน/ผมจะจัดการให้คุณทันทีค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "我帮您 + 动词 (เสนอทำให้)",
+      "explanationTh": "我帮您 + กริยา แปลว่า 'ฉันช่วยคุณ...' ใช้รับปากทำสิ่งต่างๆ ให้แขก ใช้ 您 เพื่อความสุภาพ",
+      "pattern": "我帮您 + 动词 (+ 名词)",
+      "examples": [
+        { "text": "我帮您叫车。", "th": "ดิฉัน/ผมช่วยเรียกรถให้คุณค่ะ/ครับ" },
+        { "text": "我帮您安排。", "th": "ดิฉัน/ผมจะจัดการให้คุณค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "คอนเซียร์จ (Concierge)",
+    "context": "แขกมาที่โต๊ะคอนเซียร์จเพื่อขอความช่วยเหลือเรื่องสัมภาระ การเดินทาง และบริการต่างๆ ของโรงแรม คุณต้องเสนอความช่วยเหลือและยืนยันรายละเอียด",
+    "steps": [
+      {
+        "prompt": { "en": "Hi, could you help me with my luggage?", "zh": "你好,可以帮我拿行李吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. May I take your luggage to your room?", "Of course. May I take your luggage up to your room?"],
+          "zh": ["当然可以。请问我可以把您的行李送到房间吗?", "好的。请问我帮您把行李送上房间,可以吗?"]
+        },
+        "keywords": { "en": ["luggage", "room", "may i"], "zh": ["行李", "房间", "请问"] },
+        "tipTh": "รับปากช่วยทันทีแล้วขออนุญาตก่อนนำสัมภาระไป"
+      },
+      {
+        "prompt": { "en": "Thanks. I'd like to visit the Grand Palace tomorrow. How do I get there?", "zh": "谢谢。我明天想去大皇宫,怎么去?" },
+        "suggestedAnswers": {
+          "en": ["I can give you a map and mark the route. A taxi takes about thirty minutes.", "Here is a map. I will mark the route for you. By taxi, it takes about thirty minutes."],
+          "zh": ["我给您一张地图,并标出路线。坐出租车大约三十分钟。", "这是地图,我帮您标出路线。坐出租车大约要三十分钟。"]
+        },
+        "keywords": { "en": ["map", "taxi", "route"], "zh": ["地图", "出租车", "路线"] },
+        "tipTh": "ให้แผนที่ บอกเส้นทาง และเวลาเดินทางคร่าวๆ"
+      },
+      {
+        "prompt": { "en": "Can you call a taxi for 8 a.m.?", "zh": "可以帮我预约早上八点的出租车吗?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. I will call a taxi for you at eight o'clock.", "Of course. I will book a taxi for you at eight in the morning."],
+          "zh": ["好的,我帮您预约早上八点的出租车。", "没问题,我帮您安排八点的出租车。"]
+        },
+        "keywords": { "en": ["taxi", "eight", "call"], "zh": ["出租车", "八点", "帮您"] },
+        "tipTh": "ทวนเวลาที่นัดเรียกรถเพื่อยืนยัน"
+      },
+      {
+        "prompt": { "en": "I need to wake up at 7. Can you help?", "zh": "我明天七点要起床,你能帮我吗?" },
+        "suggestedAnswers": {
+          "en": ["Of course. I will set a wake-up call for seven o'clock.", "Certainly. I will arrange a wake-up call for seven tomorrow morning."],
+          "zh": ["当然可以,我帮您设置七点的叫醒服务。", "好的,我帮您安排明早七点的叫醒服务。"]
+        },
+        "keywords": { "en": ["wake-up call", "seven", "set"], "zh": ["叫醒服务", "七点", "设置"] },
+        "tipTh": "ทวนเวลาและยืนยันการตั้งบริการโทรปลุก"
+      },
+      {
+        "prompt": { "en": "Is there a free ride to the airport on Friday?", "zh": "星期五有去机场的免费接送吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the shuttle bus to the airport leaves every thirty minutes from the lobby.", "Yes, we have a shuttle bus to the airport. It leaves from the lobby every thirty minutes."],
+          "zh": ["有的,去机场的接驳车每三十分钟从大堂发车。", "有,我们有去机场的接驳车,每三十分钟从大堂出发。"]
+        },
+        "keywords": { "en": ["shuttle bus", "airport", "lobby"], "zh": ["接驳车", "机场", "大堂"] },
+        "tipTh": "บอกจุดขึ้นรถและความถี่ของรอบรถ"
+      }
+    ]
+  }
+}

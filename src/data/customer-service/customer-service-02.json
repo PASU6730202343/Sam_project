@@ -1,0 +1,91 @@
+{
+  "id": "customer-service-02",
+  "careerId": "customer-service",
+  "order": 2,
+  "titleTh": "ทำความเข้าใจปัญหา",
+  "titleEn": "Understanding the Problem",
+  "titleZh": "了解问题",
+  "words": [
+    { "en": "problem", "enPron": "พรอบ-เบิ้ม", "th": "ปัญหา", "zh": "问题", "pinyin": "wèntí", "icon": "❗",
+      "exampleEn": "What seems to be the problem?", "exampleZh": "请问遇到了什么问题?", "exampleTh": "ปัญหาที่พบคืออะไรคะ/ครับ" },
+    { "en": "details", "enPron": "ดี-เทลส์", "th": "รายละเอียด", "zh": "详情", "pinyin": "xiángqíng", "icon": "🔍",
+      "exampleEn": "Could you give me more details?", "exampleZh": "能告诉我更多详情吗?", "exampleTh": "ช่วยบอกรายละเอียดเพิ่มเติมได้ไหมคะ/ครับ" },
+    { "en": "order number", "enPron": "ออร์-เดอร์ นัม-เบอร์", "th": "หมายเลขคำสั่งซื้อ", "zh": "订单号", "pinyin": "dìngdānhào", "icon": "🔢",
+      "exampleEn": "What is your order number?", "exampleZh": "您的订单号是多少?", "exampleTh": "หมายเลขคำสั่งซื้อของคุณคืออะไรคะ/ครับ" },
+    { "en": "repeat", "enPron": "รี-พีท", "th": "พูดซ้ำ", "zh": "重复", "pinyin": "chóngfù", "icon": "🔁",
+      "exampleEn": "Could you repeat that, please?", "exampleZh": "可以请您重复一遍吗?", "exampleTh": "ช่วยพูดซ้ำอีกครั้งได้ไหมคะ/ครับ" },
+    { "en": "confirm", "enPron": "คอน-เฟิร์ม", "th": "ยืนยัน", "zh": "确认", "pinyin": "quèrèn", "icon": "✅",
+      "exampleEn": "Let me confirm the information.", "exampleZh": "我来确认一下信息。", "exampleTh": "ขอยืนยันข้อมูลอีกครั้งนะคะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "Can you tell me + wh-clause? (ถามทางอ้อม)",
+      "explanationTh": "Can you tell me + what/when/where + ประธาน + กริยา เป็นคำถามทางอ้อม สุภาพกว่าถามตรงๆ และประโยคหลังคำ wh- ไม่ต้องกลับลำดับเป็นคำถาม",
+      "pattern": "Can you tell me + what / when / where + subject + verb?",
+      "examples": [
+        { "text": "Can you tell me what happened?", "th": "ช่วยเล่าให้ฟังได้ไหมคะ/ครับ ว่าเกิดอะไรขึ้น" },
+        { "text": "Can you tell me your order number?", "th": "ช่วยบอกหมายเลขคำสั่งซื้อของคุณได้ไหมคะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "能告诉我……吗? (ถามอย่างสุภาพ)",
+      "explanationTh": "能告诉我 + สิ่งที่อยากรู้ + 吗 เป็นรูปแบบถามข้อมูลอย่างสุภาพ นุ่มนวลกว่าการถามตรงๆ",
+      "pattern": "能告诉我 + 内容 + 吗?",
+      "examples": [
+        { "text": "能告诉我发生了什么吗?", "th": "ช่วยเล่าให้ฟังได้ไหมคะ/ครับ ว่าเกิดอะไรขึ้น" },
+        { "text": "能告诉我您的订单号吗?", "th": "ช่วยบอกหมายเลขคำสั่งซื้อของคุณได้ไหมคะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่บริการลูกค้า (Customer Service Agent)",
+    "context": "ลูกค้าแจ้งว่าสินค้าที่สั่งไม่มาถึง คุณต้องซักถามปัญหา ขอหมายเลขคำสั่งซื้อ ขอให้พูดซ้ำเมื่อฟังไม่ชัด ยืนยันข้อมูล และรับปากติดตามเรื่อง",
+    "steps": [
+      {
+        "prompt": { "en": "My order didn't arrive.", "zh": "我的订单没有送到。" },
+        "suggestedAnswers": {
+          "en": ["I'm sorry to hear that. What seems to be the problem?", "I'm sorry about that. What seems to be the problem with your order?"],
+          "zh": ["很抱歉。请问遇到了什么问题?", "非常抱歉,请问订单出现了什么问题?"]
+        },
+        "keywords": { "en": ["sorry", "problem", "seems"], "zh": ["抱歉", "问题", "请问"] },
+        "tipTh": "แสดงความเสียใจก่อน แล้วถามว่าปัญหาคืออะไรให้ชัด"
+      },
+      {
+        "prompt": { "en": "I ordered a jacket last week and nothing came.", "zh": "我上周订了一件外套,到现在还没收到。" },
+        "suggestedAnswers": {
+          "en": ["Can you tell me your order number, please?", "Could you tell me your order number, please?"],
+          "zh": ["能告诉我您的订单号吗?", "请问您能告诉我订单号吗?"]
+        },
+        "keywords": { "en": ["order number", "tell", "please"], "zh": ["订单号", "告诉", "吗"] },
+        "tipTh": "ขอเลขอ้างอิงเพื่อค้นหาข้อมูลได้เร็วที่สุด"
+      },
+      {
+        "prompt": { "en": "It's A one two three four.", "zh": "是A一二三四。" },
+        "suggestedAnswers": {
+          "en": ["Could you repeat that, please? I want to make sure I have it right.", "Could you repeat that, please? I want to make sure it is right."],
+          "zh": ["可以请您重复一遍吗?我想确认没有听错。", "请您重复一遍,好吗?我想确认没有听错。"]
+        },
+        "keywords": { "en": ["repeat", "sure", "right"], "zh": ["重复", "确认", "听错"] },
+        "tipTh": "ฟังไม่ชัดให้ขอพูดซ้ำอย่างสุภาพ ดีกว่าเดาเอง"
+      },
+      {
+        "prompt": { "en": "A, one, two, three, four.", "zh": "A,一,二,三,四。" },
+        "suggestedAnswers": {
+          "en": ["Thank you. Let me confirm the information. Could you give me more details about the delivery?", "Thank you. Let me confirm it. Could you give me more details about the delivery?"],
+          "zh": ["谢谢。我来确认一下信息,能告诉我更多关于配送的详情吗?", "谢谢,我确认一下,请告诉我配送的更多详情,好吗?"]
+        },
+        "keywords": { "en": ["confirm", "details", "delivery"], "zh": ["确认", "详情", "配送"] },
+        "tipTh": "ยืนยันข้อมูลแล้วขอรายละเอียดเพิ่มเกี่ยวกับปัญหา"
+      },
+      {
+        "prompt": { "en": "It was supposed to arrive on Monday.", "zh": "本来应该星期一就到的。" },
+        "suggestedAnswers": {
+          "en": ["I understand. I will check the problem and get back to you within one day.", "I understand. I will look into the problem and reply within one day."],
+          "zh": ["我理解。我会调查这个问题,一天内回复您。", "我理解您的心情,我会调查问题,一天内给您答复。"]
+        },
+        "keywords": { "en": ["understand", "problem", "within one day"], "zh": ["理解", "问题", "一天内"] },
+        "tipTh": "รับปากกรอบเวลาที่ทำได้จริง เพื่อสร้างความไว้วางใจ"
+      }
+    ]
+  }
+}

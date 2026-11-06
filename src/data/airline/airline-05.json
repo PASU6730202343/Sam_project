@@ -1,0 +1,91 @@
+{
+  "id": "airline-05",
+  "careerId": "airline",
+  "order": 5,
+  "titleTh": "บริการบนเครื่อง",
+  "titleEn": "In-flight Service",
+  "titleZh": "机上服务",
+  "words": [
+    { "en": "cabin crew", "enPron": "แค็บ-บิน ครู", "th": "ลูกเรือ", "zh": "空乘人员", "pinyin": "kōngchéng rényuán", "icon": "👩‍✈️",
+      "exampleEn": "Our cabin crew will assist you during the flight.", "exampleZh": "我们的空乘人员会在飞行中为您提供协助。", "exampleTh": "ลูกเรือของเราจะดูแลคุณตลอดเที่ยวบินค่ะ/ครับ" },
+    { "en": "seat belt", "enPron": "ซีท เบลท์", "th": "เข็มขัดนิรภัย", "zh": "安全带", "pinyin": "ānquándài", "icon": "🪢",
+      "exampleEn": "Please fasten your seat belt.", "exampleZh": "请您系好安全带。", "exampleTh": "กรุณาคาดเข็มขัดนิรภัยค่ะ/ครับ" },
+    { "en": "meal", "enPron": "มีล", "th": "อาหารบนเครื่อง", "zh": "餐食", "pinyin": "cānshí", "icon": "🍱",
+      "exampleEn": "Would you like chicken or fish for your meal?", "exampleZh": "您的餐食想要鸡肉还是鱼肉?", "exampleTh": "อาหารบนเครื่องคุณต้องการไก่หรือปลาคะ/ครับ" },
+    { "en": "beverage", "enPron": "เบฟ-เวอ-เรจ", "th": "เครื่องดื่ม", "zh": "饮料", "pinyin": "yǐnliào", "icon": "🥤",
+      "exampleEn": "Would you like a beverage?", "exampleZh": "请问您需要饮料吗?", "exampleTh": "คุณต้องการเครื่องดื่มไหมคะ/ครับ" },
+    { "en": "headphones", "enPron": "เฮด-โฟนส์", "th": "หูฟัง", "zh": "耳机", "pinyin": "ěrjī", "icon": "🎧",
+      "exampleEn": "We will give you headphones for the movie.", "exampleZh": "我们会给您一副耳机观看电影。", "exampleTh": "เราจะมอบหูฟังให้คุณดูภาพยนตร์ค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "I'm afraid + clause (แจ้งข่าวไม่ดีอย่างสุภาพ)",
+      "explanationTh": "I'm afraid ... ใช้นำก่อนบอกสิ่งที่ผู้โดยสารอาจไม่อยากได้ยิน เช่น ของหมด หรือทำไม่ได้ ช่วยลดความรู้สึกแข็งกระด้าง",
+      "pattern": "I'm afraid + subject + verb ...",
+      "examples": [
+        { "text": "I'm afraid we have run out of chicken.", "th": "เสียใจด้วยค่ะ/ครับ ไก่หมดแล้ว" },
+        { "text": "I'm afraid you cannot use your phone now.", "th": "เสียใจด้วยค่ะ/ครับ ตอนนี้ยังใช้โทรศัพท์ไม่ได้" }
+      ]
+    },
+    "zh": {
+      "title": "恐怕 + 句子 (แจ้งข่าวไม่ดีอย่างสุภาพ)",
+      "explanationTh": "恐怕 ใช้นำหน้าประโยคเพื่อบอกข่าวที่ไม่น่าพอใจอย่างสุภาพ มีความหมายประมาณ 'เกรงว่า...' ช่วยให้ฟังนุ่มนวล",
+      "pattern": "恐怕 + 句子",
+      "examples": [
+        { "text": "恐怕鸡肉已经没有了。", "th": "เกรงว่าไก่หมดแล้วค่ะ/ครับ" },
+        { "text": "恐怕现在不能使用手机。", "th": "เกรงว่าตอนนี้ใช้โทรศัพท์ไม่ได้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "พนักงานต้อนรับบนเครื่อง (Flight Attendant)",
+    "context": "ระหว่างเที่ยวบินระยะไกล คุณเสิร์ฟเครื่องดื่มและอาหาร ดูแลหูฟัง และสร้างความมั่นใจเมื่อเครื่องบินเจอแรงปั่นป่วน",
+    "steps": [
+      {
+        "prompt": { "en": "Excuse me, what can I have to drink?", "zh": "请问有什么可以喝的?" },
+        "suggestedAnswers": {
+          "en": ["We have water, juice, tea and coffee. Which beverage would you like?", "Would you like a beverage? We have tea and coffee."],
+          "zh": ["我们有水、果汁、茶和咖啡,请问您想喝什么饮料?", "请问您需要饮料吗?我们有茶和咖啡。"]
+        },
+        "keywords": { "en": ["water", "juice", "beverage"], "zh": ["果汁", "咖啡", "饮料"] },
+        "tipTh": "บอกตัวเลือกครบแล้วถามอย่างสุภาพว่าต้องการอะไร"
+      },
+      {
+        "prompt": { "en": "Coffee, please. And what is for dinner?", "zh": "请给我咖啡。晚餐有什么?" },
+        "suggestedAnswers": {
+          "en": ["Certainly. For your meal, we have chicken or fish.", "Of course. The meal today is chicken or fish."],
+          "zh": ["好的。您的餐食有鸡肉或鱼肉。", "没问题,今天的餐食是鸡肉或鱼肉。"]
+        },
+        "keywords": { "en": ["meal", "chicken", "fish"], "zh": ["餐食", "鸡肉", "鱼肉"] },
+        "tipTh": "รับออเดอร์เครื่องดื่มก่อน แล้วอธิบายเมนูอาหารให้ชัดเจน"
+      },
+      {
+        "prompt": { "en": "I'd like the chicken, please.", "zh": "我要鸡肉,谢谢。" },
+        "suggestedAnswers": {
+          "en": ["I'm afraid we have run out of chicken. Would you like the fish instead?", "Sorry, the chicken is finished. The fish is also delicious."],
+          "zh": ["恐怕鸡肉已经没有了,您要不要换成鱼肉?", "不好意思,鸡肉没有了,鱼肉也很好吃。"]
+        },
+        "keywords": { "en": ["afraid", "run out", "fish"], "zh": ["恐怕", "没有了", "鱼肉"] },
+        "tipTh": "แจ้งว่าของหมดด้วย I'm afraid แล้วเสนอทางเลือกทดแทนทันที"
+      },
+      {
+        "prompt": { "en": "Fish is fine. Also, I can't hear anything from the movie.", "zh": "鱼肉也行。另外,我听不到电影的声音。" },
+        "suggestedAnswers": {
+          "en": ["Certainly. Here are your headphones. Please plug them in under the screen.", "Let me bring you new headphones."],
+          "zh": ["好的,这是您的耳机,请插在屏幕下方。", "我给您拿一副新的耳机。"]
+        },
+        "keywords": { "en": ["headphones", "plug", "screen"], "zh": ["耳机", "插", "屏幕"] },
+        "tipTh": "อธิบายวิธีใช้อุปกรณ์สั้นๆ พร้อมบอกตำแหน่งที่เสียบ"
+      },
+      {
+        "prompt": { "en": "The plane is shaking! I'm scared.", "zh": "飞机在晃动!我很害怕。" },
+        "suggestedAnswers": {
+          "en": ["Please stay calm and fasten your seat belt. The cabin crew is here to help you.", "It is only turbulence. Please keep your seat belt fastened."],
+          "zh": ["请您保持冷静,系好安全带,空乘人员会协助您。", "只是气流颠簸,请一直系好安全带。"]
+        },
+        "keywords": { "en": ["seat belt", "calm", "cabin crew"], "zh": ["安全带", "冷静", "空乘人员"] },
+        "tipTh": "เมื่อผู้โดยสารตกใจ ใช้เสียงนุ่ม มั่นคง และให้คำสั่งสั้นๆ ที่ทำตามได้"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "tourism-04",
+  "careerId": "tourism",
+  "order": 4,
+  "titleTh": "การเดินทางและการขนส่ง",
+  "titleEn": "Transport",
+  "titleZh": "交通出行",
+  "words": [
+    { "en": "train", "enPron": "เทรน", "th": "รถไฟ", "zh": "火车", "pinyin": "huǒchē", "icon": "🚆",
+      "exampleEn": "The train leaves every hour.", "exampleZh": "火车每小时一班。", "exampleTh": "รถไฟออกทุกชั่วโมงค่ะ/ครับ" },
+    { "en": "boat", "enPron": "โบท", "th": "เรือ", "zh": "船", "pinyin": "chuán", "icon": "⛴️",
+      "exampleEn": "The boat ride takes twenty minutes.", "exampleZh": "坐船要二十分钟。", "exampleTh": "นั่งเรือใช้เวลายี่สิบนาทีค่ะ/ครับ" },
+    { "en": "tuk-tuk", "enPron": "ตุ๊ก-ตุ๊ก", "th": "รถตุ๊กตุ๊ก", "zh": "嘟嘟车", "pinyin": "dūdūchē", "icon": "🛺",
+      "exampleEn": "You can take a tuk-tuk to the market.", "exampleZh": "您可以坐嘟嘟车去市场。", "exampleTh": "คุณนั่งรถตุ๊กตุ๊กไปตลาดได้ค่ะ/ครับ" },
+    { "en": "subway", "enPron": "ซับ-เวย์", "th": "รถไฟใต้ดิน", "zh": "地铁", "pinyin": "dìtiě", "icon": "🚇",
+      "exampleEn": "The subway is fast and cheap.", "exampleZh": "地铁又快又便宜。", "exampleTh": "รถไฟใต้ดินทั้งเร็วและราคาถูกค่ะ/ครับ" },
+    { "en": "fare", "enPron": "แฟร์", "th": "ค่าโดยสาร", "zh": "车费", "pinyin": "chēfèi", "icon": "🎫",
+      "exampleEn": "The fare is fifty baht one way.", "exampleZh": "车费单程是五十泰铢。", "exampleTh": "ค่าโดยสารเที่ยวเดียวห้าสิบบาทค่ะ/ครับ" }
+  ],
+  "grammar": {
+    "en": {
+      "title": "You can take + transport (แนะนำการเดินทาง)",
+      "explanationTh": "take + พาหนะ ใช้บอกว่าเดินทางด้วยอะไร เช่น take the train, take a taxi ใช้ you can เมื่อเสนอทางเลือก",
+      "pattern": "You can take + the / a + transport",
+      "examples": [
+        { "text": "You can take the subway to the old town.", "th": "คุณนั่งรถไฟใต้ดินไปเมืองเก่าได้ค่ะ/ครับ" },
+        { "text": "You can take a boat along the river.", "th": "คุณนั่งเรือเลียบแม่น้ำได้ค่ะ/ครับ" }
+      ]
+    },
+    "zh": {
+      "title": "可以坐 + 交通工具 (แนะนำการเดินทาง)",
+      "explanationTh": "坐 ใช้กับพาหนะที่นั่งไป เช่น 坐地铁 坐火车 坐船 ส่วน 可以 แสดงทางเลือก",
+      "pattern": "您可以坐 + 交通工具 + 去 + 地点",
+      "examples": [
+        { "text": "您可以坐地铁去老城区。", "th": "คุณนั่งรถไฟใต้ดินไปเมืองเก่าได้ค่ะ/ครับ" },
+        { "text": "您可以坐船沿河游览。", "th": "คุณนั่งเรือเที่ยวชมริมแม่น้ำได้ค่ะ/ครับ" }
+      ]
+    }
+  },
+  "conversation": {
+    "role": "เจ้าหน้าที่ให้ข้อมูลนักท่องเที่ยว (Tourist Information)",
+    "context": "นักท่องเที่ยวสอบถามวิธีเดินทางไปเมืองเก่าและชายฝั่ง คุณต้องแนะนำพาหนะที่เหมาะสม ค่าโดยสาร และเวลาเดินทาง",
+    "steps": [
+      {
+        "prompt": { "en": "How do I go to the old town?", "zh": "去老城区怎么走?" },
+        "suggestedAnswers": {
+          "en": ["You can take the subway. It is fast and cheap.", "You can take the subway to the old town. It is fast and cheap."],
+          "zh": ["您可以坐地铁去,又快又便宜。", "您可以坐地铁去老城区,又快又便宜。"]
+        },
+        "keywords": { "en": ["subway", "fast", "cheap"], "zh": ["地铁", "快", "便宜"] },
+        "tipTh": "แนะนำพาหนะที่เหมาะที่สุดพร้อมเหตุผลสั้นๆ"
+      },
+      {
+        "prompt": { "en": "How much is the fare?", "zh": "车费是多少?" },
+        "suggestedAnswers": {
+          "en": ["The fare is fifty baht one way.", "The fare is fifty baht for a one-way ticket."],
+          "zh": ["车费单程五十泰铢。", "单程车费是五十泰铢。"]
+        },
+        "keywords": { "en": ["fare", "fifty", "baht"], "zh": ["车费", "五十", "泰铢"] },
+        "tipTh": "บอกราคาพร้อมหน่วยเงินและประเภทตั๋ว (เที่ยวเดียว/ไปกลับ)"
+      },
+      {
+        "prompt": { "en": "Is there a train to the coast?", "zh": "有去海边的火车吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, the train leaves every hour from the central station.", "Yes, a train leaves every hour from the central station."],
+          "zh": ["有的,火车每小时一班,从中央车站出发。", "有,火车每小时一班,在中央车站上车。"]
+        },
+        "keywords": { "en": ["train", "every hour", "central station"], "zh": ["火车", "每小时", "中央车站"] },
+        "tipTh": "บอกความถี่และสถานีต้นทาง"
+      },
+      {
+        "prompt": { "en": "I want something more fun.", "zh": "我想要更有趣的方式。" },
+        "suggestedAnswers": {
+          "en": ["Then try a tuk-tuk. It is a popular way to see the city.", "Why not try a tuk-tuk? It is a popular way to see the city."],
+          "zh": ["那就试试嘟嘟车吧,这是游览城市的热门方式。", "不妨试试嘟嘟车,这是游览城市的热门方式。"]
+        },
+        "keywords": { "en": ["tuk-tuk", "popular", "city"], "zh": ["嘟嘟车", "热门", "城市"] },
+        "tipTh": "เสนอทางเลือกที่ตอบความต้องการด้านประสบการณ์ของลูกค้า"
+      },
+      {
+        "prompt": { "en": "Can we go by boat?", "zh": "我们可以坐船去吗?" },
+        "suggestedAnswers": {
+          "en": ["Yes, a boat ride takes about twenty minutes along the river.", "Yes, the boat takes about twenty minutes along the river."],
+          "zh": ["可以,坐船沿河大约要二十分钟。", "可以,坐船沿着河走大约二十分钟。"]
+        },
+        "keywords": { "en": ["boat", "twenty minutes", "river"], "zh": ["船", "二十分钟", "河"] },
+        "tipTh": "ยืนยันว่าทำได้และบอกเวลาเดินทางโดยประมาณ"
+      }
+    ]
+  }
+}
