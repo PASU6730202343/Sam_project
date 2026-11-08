@@ -6,6 +6,8 @@ import { useSettings } from '../features/settings/settingsStore';
 import { useProgress } from '../hooks/useProgress';
 import { careers, getLessonsByCareer, lessons } from '../data';
 import { levelInfo, nextLessonToStudy, totalCompleted } from '../features/profile/stats';
+import { useJournal } from '../features/learning/journal';
+import { computeStreak, studyDays } from '../features/learning/streak';
 
 export default function HomePage() {
   const user = useAuth((s) => s.user);
@@ -16,6 +18,8 @@ export default function HomePage() {
   const xp = progress?.xp[lang] ?? 0;
   const lvl = levelInfo(xp);
   const next = nextLessonToStudy(progress, lang);
+  const journal = useJournal((s) => s.data);
+  const streak = computeStreak(studyDays(journal));
 
   return (
     <>
@@ -41,7 +45,12 @@ export default function HomePage() {
         </Card>
       )}
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <Card>
+          <p className="text-sm">เรียนติดต่อกัน</p>
+          <p className="text-3xl font-bold"><span aria-hidden>{streak.count > 0 ? '🔥 ' : ''}</span>{streak.count} วัน</p>
+          <p className="mt-1 text-xs">{streak.studiedToday ? 'วันนี้เรียนแล้ว เยี่ยมมาก!' : streak.count > 0 ? 'เรียนวันนี้เพื่อรักษา streak ไว้' : 'เรียนวันนี้เพื่อเริ่มนับ'}</p>
+        </Card>
         <Card>
           <p className="text-sm">XP ({lang.toUpperCase()}) · เลเวล {lvl.level}</p>
           <p className="text-3xl font-bold">{xp}</p>

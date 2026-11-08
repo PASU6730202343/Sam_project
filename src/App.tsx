@@ -15,6 +15,8 @@ import PracticePage from './pages/PracticePage';
 import StarredPage from './pages/StarredPage';
 import ProfilePage from './pages/ProfilePage';
 import ScoresPage from './pages/ScoresPage';
+import ReviewPage from './pages/ReviewPage';
+import ExamPage from './pages/ExamPage';
 
 export default function App() {
   const init = useAuth((s) => s.init);
@@ -32,6 +34,7 @@ export default function App() {
             <Route path="language" element={<LanguagePage />} />
             <Route path="careers" element={<CareersPage />} />
             <Route path="careers/:careerId" element={<CareersPage />} />
+            <Route path="careers/:careerId/exam" element={<ExamPage />} />
             <Route path="lesson/:lessonId" element={<LessonDetailPage />} />
             <Route path="lesson/:lessonId/vocab" element={<VocabularyPage />} />
             <Route path="lesson/:lessonId/grammar" element={<GrammarPage />} />
@@ -39,6 +42,7 @@ export default function App() {
             <Route path="lesson/:lessonId/conversation" element={<ConversationPage />} />
             <Route path="scores" element={<ScoresPage />} />
             <Route path="starred" element={<StarredPage />} />
+            <Route path="review/:lang" element={<ReviewPage />} />
             <Route path="profile" element={<ProfilePage />} />
           </Route>
         </Route>

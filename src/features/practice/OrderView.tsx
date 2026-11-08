@@ -38,7 +38,7 @@ export function OrderView({ q, locked, onAnswer }: Props) {
             className="rounded-xl bg-pistachio px-3 py-2 font-semibold text-ink transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-denim"
           >
             {q.tokens[ti]}
-            <Pinyin text={q.tokens[ti]} lang={q.lang} className="!text-xs !text-ink/80" />
+            <Pinyin text={q.tokens[ti]} lang={q.lang} plain className="!text-xs !text-ink/80" />
           </button>
         ))}
       </div>

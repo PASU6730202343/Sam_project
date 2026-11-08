@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { Badge, Card, ProgressBar } from '../components/ui';
+import { Badge, Button, Card, ProgressBar } from '../components/ui';
 import { PageHeader } from '../components/layout/PageHeader';
 import { Pinyin } from '../components/Pinyin';
 import { careers, getCareer, getLessonsByCareer } from '../data';
@@ -7,6 +7,7 @@ import { isLessonUnlocked } from '../features/learning/access';
 import { useSettings } from '../features/settings/settingsStore';
 import { useProgress } from '../hooks/useProgress';
 import { lessonTitle } from '../features/learning/wordView';
+import { useExam } from '../features/exam/exam';
 
 export default function CareersPage() {
   const { careerId } = useParams();
@@ -14,6 +15,7 @@ export default function CareersPage() {
   const { progress } = useProgress();
   const career = careerId ? getCareer(careerId) : undefined;
   const doneIds = new Set(progress?.completed.filter((c) => c.lang === lang).map((c) => c.lessonId));
+  const examRecords = useExam((s) => s.records);
 
   if (careerId && !career) {
     return (
@@ -48,6 +50,27 @@ export default function CareersPage() {
               </p>
               <ProgressBar value={(done / lessons.length) * 100} label={`ความคืบหน้าหมวด ${career.nameTh}`} />
             </Card>
+            {(() => {
+              const rec = examRecords[`${lang}:${career.id}`];
+              const ready = done === lessons.length;
+              return (
+                <Card className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="font-bold">🏆 สอบท้ายหมวด</p>
+                    <p className="text-sm">
+                      {rec ? `คะแนนดีที่สุด ${rec.best}% · ${rec.passed ? 'สอบผ่านแล้ว' : 'ยังไม่ผ่าน'}` : ready ? 'พร้อมสอบแล้ว' : `เรียนให้จบทุกบทเพื่อปลดล็อก (เหลือ ${lessons.length - done} บท)`}
+                    </p>
+                  </div>
+                  {ready ? (
+                    <Link to={`/careers/${career.id}/exam`}>
+                      <Button>{rec ? 'สอบอีกครั้ง' : 'เริ่มสอบ'}</Button>
+                    </Link>
+                  ) : (
+                    <Badge>🔒 ล็อก</Badge>
+                  )}
+                </Card>
+              );
+            })()}
             <p className="mb-3 text-sm">เรียนไปตามลำดับ: จบบทก่อนหน้าแล้วบทถัดไปจึงจะปลดล็อก</p>
             <ol className="grid gap-3 sm:grid-cols-2">
               {lessons.map((l, i) => {

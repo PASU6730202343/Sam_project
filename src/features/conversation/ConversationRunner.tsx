@@ -136,7 +136,7 @@ export function ConversationRunner({ lesson, lang }: Props) {
             <Pinyin text={steps[i].prompt[lang]} lang={lang} />
           </div>
           <div lang={htmlLang} className="ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-pistachio p-3 text-ink">
-            {t.skipped ? <span className="italic">(ข้ามขั้นนี้)</span> : <>{t.answer}<Pinyin text={t.answer} lang={lang} className="!text-ink/80" /></>}
+            {t.skipped ? <span className="italic">(ข้ามขั้นนี้)</span> : <>{t.answer}<Pinyin text={t.answer} lang={lang} plain className="!text-ink/80" /></>}
           </div>
         </div>
       ))}
@@ -175,7 +175,7 @@ export function ConversationRunner({ lesson, lang }: Props) {
               <>
                 <div lang={htmlLang} className="mb-3 ml-auto max-w-[90%] rounded-2xl rounded-br-sm bg-pistachio p-4 font-medium text-ink">
                   {answered.answer}
-                  <Pinyin text={answered.answer} lang={lang} className="!text-ink/80" />
+                  <Pinyin text={answered.answer} lang={lang} plain className="!text-ink/80" />
                 </div>
                 <Card role="status" className={answered.evaluation.appropriate ? 'border-pistachio' : 'border-red-300'}>
                   <p className="font-bold">{answered.evaluation.appropriate ? '✅ เหมาะสม' : '⚠️ ยังไม่เหมาะสม'}</p>

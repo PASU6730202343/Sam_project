@@ -1,7 +1,7 @@
 import type { Lang, Word } from '../types';
 import { Card, IconWord } from './ui';
 import { AudioButton } from './AudioButton';
-import { Pinyin } from './Pinyin';
+import { Pinyin, ToneText } from './Pinyin';
 import { StarButton } from './StarButton';
 import { pronunciation, targetExample, targetWord } from '../features/learning/wordView';
 
@@ -24,7 +24,7 @@ export function WordCard({ word, lang, showPinyin, large }: Props) {
           <p lang={lang === 'en' ? 'en' : 'zh-CN'} className={`break-words font-bold ${large ? 'text-3xl sm:text-4xl' : 'text-xl'}`}>
             {text}
           </p>
-          {pron && <p className={large ? 'text-lg' : 'text-sm'}>{pron}</p>}
+          {pron && <p className={large ? 'text-lg' : 'text-sm'}>{lang === 'zh' ? <ToneText text={pron} /> : pron}</p>}
           <p className={`mt-1 font-medium ${large ? 'text-2xl' : 'text-base'}`}>{word.th}</p>
         </div>
         <div className="ml-auto flex gap-2">

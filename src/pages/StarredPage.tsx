@@ -7,6 +7,7 @@ import { SpeechNotice } from '../components/SpeechNotice';
 import { PinyinToggle } from '../components/PinyinToggle';
 import { useProgress } from '../hooks/useProgress';
 import { useSettings } from '../features/settings/settingsStore';
+import { dueWordIds, useSrs } from '../features/review/srs';
 import { getWord } from '../data';
 import type { Lang, Word } from '../types';
 
@@ -14,7 +15,10 @@ export default function StarredPage() {
   const { lang: current, showPinyin } = useSettings();
   const [tab, setTab] = useState<Lang>(current);
   const { progress } = useProgress();
-  const words = (progress?.starred[tab] ?? []).map(getWord).filter((w): w is Word => !!w);
+  const deck = useSrs((s) => s.deck);
+  const starredIds = progress?.starred[tab] ?? [];
+  const dueCount = dueWordIds(starredIds, tab, deck).length;
+  const words = starredIds.map(getWord).filter((w): w is Word => !!w);
 
   return (
     <>
@@ -41,11 +45,19 @@ export default function StarredPage() {
           </Link>
         </Card>
       ) : (
+        <>
+        <Card className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <p>{dueCount > 0 ? `มี ${dueCount} คำที่ถึงเวลาทบทวน` : 'วันนี้ทบทวนครบแล้ว 🎉'}</p>
+          <Link to={`/review/${tab}`}>
+            <Button>🔁 ทบทวนคำติดดาว</Button>
+          </Link>
+        </Card>
         <div className="grid gap-3 md:grid-cols-2">
           {words.map((w) => (
             <WordCard key={w.id} word={w} lang={tab} showPinyin={showPinyin} />
           ))}
         </div>
+        </>
       )}
     </>
   );

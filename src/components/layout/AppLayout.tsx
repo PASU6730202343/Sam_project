@@ -3,6 +3,8 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../features/auth/authStore';
 import { useSettings } from '../../features/settings/settingsStore';
 import { useJournal } from '../../features/learning/journal';
+import { useSrs } from '../../features/review/srs';
+import { useExam } from '../../features/exam/exam';
 import { useProgressStore } from '../../features/learning/progressStore';
 import { PinyinToggle } from '../PinyinToggle';
 import { Button, ToastViewport } from '../ui';
@@ -21,10 +23,14 @@ export function AppLayout() {
   const navigate = useNavigate();
   const loadProgress = useProgressStore((s) => s.load);
   const loadJournal = useJournal((s) => s.load);
+  const loadSrs = useSrs((s) => s.load);
+  const loadExam = useExam((s) => s.load);
   useEffect(() => {
     loadJournal(user?.id ?? null);
+    loadSrs(user?.id ?? null);
+    loadExam(user?.id ?? null);
     void loadProgress(user?.id ?? null);
-  }, [user, loadProgress, loadJournal]);
+  }, [user, loadProgress, loadJournal, loadSrs, loadExam]);
 
   return (
     <div className="min-h-screen bg-frost text-denim">
